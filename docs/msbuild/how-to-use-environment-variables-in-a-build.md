@@ -67,6 +67,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="see-also"></a>请参阅  
-    [MSBuild ](../msbuild/msbuild.md)
-    [MSBuild Properties](../msbuild/msbuild-properties.md)
+
+ [MSBuild](../msbuild/msbuild.md)  
+ [MSBuild Properties](../msbuild/msbuild-properties.md)  
  [如何：使用不同选项生成相同的源文件](../msbuild/how-to-build-the-same-source-files-with-different-options.md)
