@@ -46,7 +46,7 @@ IDiaLoadCallback : IUnknown
   
  有关可以施加加载过程的其他限制，请参阅[IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)接口。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： Dia2.h  
   
  库： diaguids.lib  

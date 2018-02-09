@@ -45,7 +45,7 @@ HRESULT get_hasEHa(
 ## <a name="remarks"></a>备注  
  可以混合使用异步或结构化异常处理与 c + + 样式异常处理，但它需要特定的编译器开关，/EHa，若要启用它。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
   
 |需求|描述|  
 |-----------------|-----------------|  

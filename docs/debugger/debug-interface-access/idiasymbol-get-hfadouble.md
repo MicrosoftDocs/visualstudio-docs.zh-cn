@@ -44,7 +44,7 @@ HRESULT get_hfaDouble(
   
 ## <a name="remarks"></a>备注  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： Dia2.h  
   
  库： diaguids.lib  

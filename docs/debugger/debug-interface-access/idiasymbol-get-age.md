@@ -45,7 +45,7 @@ HRESULT get_age (
 ## <a name="remarks"></a>备注  
  保留时间不一定对应于任何已知的时间值，则为它通常用于确定是否有与相应的.exe 文件不同步的.pdb 文件。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
   
 |需求|描述|  
 |-----------------|-----------------|  

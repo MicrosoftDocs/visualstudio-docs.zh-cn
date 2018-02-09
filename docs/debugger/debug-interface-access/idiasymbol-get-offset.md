@@ -45,7 +45,7 @@ HRESULT get_offset (
 ## <a name="remarks"></a>备注  
  偏移量是从先前确定的一些已知点。 例如的偏移量`LocIsBitField`位置类型通常是从包含类的开头。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
   
 |需求|描述|  
 |-----------------|-----------------|  

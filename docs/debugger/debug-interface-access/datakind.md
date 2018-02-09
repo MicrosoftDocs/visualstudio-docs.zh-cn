@@ -75,7 +75,7 @@ enum DataKind {
 ## <a name="remarks"></a>备注  
  此枚举中的值由[idiasymbol:: Get_datakind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md)方法。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： cvconst.h  
   
 ## <a name="see-also"></a>请参阅  

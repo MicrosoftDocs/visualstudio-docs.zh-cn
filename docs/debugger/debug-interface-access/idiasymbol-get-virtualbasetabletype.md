@@ -49,7 +49,7 @@ HRESULT get_virtualBaseTableType(
   
  此方法返回[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)可以用于确定 vbtptr 的大小的对象。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
   
 |需求|描述|  
 |-----------------|-----------------|  

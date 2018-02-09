@@ -45,7 +45,7 @@ HRESULT get_isAggregated(
 ## <a name="remarks"></a>备注  
  [Idiasymbol:: Get_issplitted](../../debugger/debug-interface-access/idiasymbol-get-issplitted.md)方法是`TRUE`是聚合符号的父级的符号。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
   
 |需求|描述|  
 |-----------------|-----------------|  

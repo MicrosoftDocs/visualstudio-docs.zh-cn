@@ -45,7 +45,7 @@ HRESULT get_arrayIndexType (
 ## <a name="remarks"></a>备注  
  某些语言中可以指定为数组的索引使用的类型。 此方法返回的符号指定该类型。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
   
 |需求|描述|  
 |-----------------|-----------------|  

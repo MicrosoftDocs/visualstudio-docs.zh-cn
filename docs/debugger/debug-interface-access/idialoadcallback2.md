@@ -43,7 +43,7 @@ IDiaLoadCallback2 : IDiaLoadCallback
 ## <a name="remarks"></a>备注  
  客户端应用程序实现此接口，并提供对它的调用中的引用[idiadatasource:: Loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)方法。 实现所有中的方法，请务必[IDiaLoadCallback](../../debugger/debug-interface-access/idialoadcallback.md)以及接口。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： Dia2.h  
   
  库： diaguids.lib  

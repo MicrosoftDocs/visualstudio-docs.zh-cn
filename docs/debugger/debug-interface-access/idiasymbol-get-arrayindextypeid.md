@@ -45,7 +45,7 @@ HRESULT get_arrayIndexTypeId (
 ## <a name="remarks"></a>备注  
  标识符是由 DIA SDK，可将标记为唯一的所有符号的唯一值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
   
 |需求|描述|  
 |-----------------|-----------------|  

@@ -337,7 +337,7 @@ void DumpLocalVars( DWORD rva, IDiaSession *pSession )
 }  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  `Header:`Dia2.h  
   
  库： diaguids.lib  

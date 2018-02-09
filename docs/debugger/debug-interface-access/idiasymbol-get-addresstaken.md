@@ -50,7 +50,7 @@ int A  = 0;
 int* B = &A;  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
   
 |需求|描述|  
 |-----------------|-----------------|  

@@ -53,7 +53,7 @@ ULONGLONG   length;
 pSymbol->get_length( &length );  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
   
 |需求|描述|  
 |-----------------|-----------------|  

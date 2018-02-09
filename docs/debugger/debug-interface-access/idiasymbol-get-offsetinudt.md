@@ -45,7 +45,7 @@ HRESULT get_offsetInUdt(
 ## <a name="remarks"></a>备注  
  仅在优化版本中的本地记录中使用此函数。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： Dia2.h  
   
  库： diaguids.lib  

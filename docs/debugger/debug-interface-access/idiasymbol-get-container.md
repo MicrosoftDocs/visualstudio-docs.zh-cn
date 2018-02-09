@@ -42,7 +42,7 @@ HRESULT get_container(
 > [!NOTE]
 >  返回值为 S_FALSE 表示属性不是可用于符号。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
   
 |需求|描述|  
 |-----------------|-----------------|  

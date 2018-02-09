@@ -55,7 +55,7 @@ class B : public A {
   
  同时`A::f1`和`B::f1`是虚拟函数，但`A::f1`是引导性虚拟的。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
   
 |需求|描述|  
 |-----------------|-----------------|  

@@ -99,7 +99,7 @@ typedef enum CV_CPU_TYPE_e {
 ## <a name="remarks"></a>备注  
  此枚举中的值返回通过调用[idiasymbol:: Get_platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md)方法。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： cvconst.h  
   
 ## <a name="see-also"></a>请参阅  

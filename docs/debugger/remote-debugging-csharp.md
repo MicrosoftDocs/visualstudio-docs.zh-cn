@@ -33,7 +33,7 @@ ms.lasthandoff: 01/10/2018
   
 有关远程调试通用 Windows 应用 (UWP) 的信息，请参阅[调试安装的应用程序包](debug-installed-app-package.md)。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>需要
 
 远程调试器都支持 Windows 7 和更高版本 (不 phone) 和从 Windows Server 2008 Service Pack 2 的 Windows Server 版本。 有关要求的完整列表，请参阅[要求](../debugger/remote-debugging.md#requirements_msvsmon)。
 

@@ -47,7 +47,7 @@ ms.lasthandoff: 01/23/2018
 > 请务必删除时已完成本教程中的步骤创建 Azure 资源。 这样可以避免产生不必要的费用。
 
 
-### <a name="requirements"></a>惠?
+### <a name="requirements"></a>需要
 
 不支持调试通过代理连接的两台计算机之间。 国家/地区中调试通过高延迟或低带宽连接，如拨号 Internet，或通过 Internet 不建议和可能失败也是非常慢。 有关要求的完整列表，请参阅[要求](../debugger/remote-debugging.md#requirements_msvsmon)。
 

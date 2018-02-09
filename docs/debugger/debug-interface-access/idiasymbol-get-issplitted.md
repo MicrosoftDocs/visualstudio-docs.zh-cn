@@ -45,7 +45,7 @@ HRESULT get_isSplitted(
 ## <a name="remarks"></a>备注  
  [Idiasymbol:: Get_isaggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md)方法返回`TRUE`属于拆分符号的所有符号。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
   
 |需求|描述|  
 |-----------------|-----------------|  

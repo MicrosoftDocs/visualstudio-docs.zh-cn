@@ -32,7 +32,7 @@ ms.lasthandoff: 01/05/2018
 
 你可以调试从 Visual Studio 的 ASP.NET 应用程序。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>需要
 
 若要按照本主题中的说明，你需要：
 
