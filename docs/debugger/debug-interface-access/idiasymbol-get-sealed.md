@@ -45,7 +45,7 @@ HRESULT get_sealed(
 ## <a name="remarks"></a>备注  
  密封类不能用作基类。 密封的方法不能被重写。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： Dia2.h  
   
  库： diaguids.lib  

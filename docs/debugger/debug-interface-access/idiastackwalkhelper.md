@@ -53,7 +53,7 @@ IDiaStackWalkHelper: IUnknown
 ## <a name="notes-for-callers"></a>调用方的说明  
  客户端应用程序实现此接口以支持在程序执行期间审核堆栈。 此接口的实例传递给[IDiaStackWalker::getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md)或[IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md)方法。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： Dia2.h  
   
  库： diaguids.lib  

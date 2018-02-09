@@ -61,7 +61,7 @@ if (FAILED(hr))
 }  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： Dia2.h  
   
  库： diaguids.lib  

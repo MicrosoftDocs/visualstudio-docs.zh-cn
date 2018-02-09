@@ -45,7 +45,7 @@ HRESULT get_unmodifiedType(
 ## <a name="remarks"></a>备注  
  当前类型是返回的原始类型的修改。 可通过首先获取对符号类型，然后直接查询返回的原始类型的类型确定符号的原始类型。 请注意某些符号可能没有修改过的类型的原始类型。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： Dia2.h  
   
  库： diaguids.lib  

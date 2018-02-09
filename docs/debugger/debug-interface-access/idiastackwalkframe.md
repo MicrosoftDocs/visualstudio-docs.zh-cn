@@ -47,7 +47,7 @@ IDiaStackWalkFrame : IUnknown
 ## <a name="notes-for-callers"></a>调用方的说明  
  客户端应用程序实现此接口，并将传递到接口的实例[idiaframedata:: Execute](../../debugger/debug-interface-access/idiaframedata-execute.md)方法。 此接口的同一个实例用于反复每次调用期间维持的状态的寄存器`execute`方法。 `execute`方法还使用此接口来确定的寄信人地址。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： Dia2.h  
   
  库： diaguids.lib  

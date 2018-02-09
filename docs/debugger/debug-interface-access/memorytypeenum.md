@@ -51,7 +51,7 @@ enum MemoryTypeEnum {
 ## <a name="remarks"></a>备注  
  此枚举中的值传递给[IDiaStackWalkHelper::readMemory](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md)方法，以限制对不同类型的内存访问。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： cvconst.h  
   
 ## <a name="see-also"></a>请参阅  

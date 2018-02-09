@@ -43,7 +43,7 @@ IDiaReadExeAtRVACallback : IUnknown
 ## <a name="notes-for-callers"></a>调用方的说明  
  此方法是实现客户端应用程序并传递给[idiadatasource:: Loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)作为一种方法来读取文件的方法。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： Dia2.h  
   
  库： diaguids.lib  

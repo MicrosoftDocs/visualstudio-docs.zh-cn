@@ -55,7 +55,7 @@ HRESULT GetSymbolTable(IDiaEnumTables *pEnumTables, IDiaTable **pTable)
 }  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： dia2.h  
   
 ## <a name="see-also"></a>请参阅  

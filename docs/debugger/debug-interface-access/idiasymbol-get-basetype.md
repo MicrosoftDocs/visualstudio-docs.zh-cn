@@ -60,7 +60,7 @@ if (pType->get_type( &pBaseType ) == S_OK)
 }  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
   
 |需求|描述|  
 |-----------------|-----------------|  

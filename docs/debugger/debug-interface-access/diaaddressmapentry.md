@@ -53,7 +53,7 @@ struct DiaAddressMapEntry {
   
  数组`DiaAddressMapEntry`结构传递给[idiaaddressmap:: Set_addressmap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)方法。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： dia2.h  
   
 ## <a name="see-also"></a>请参阅  

@@ -50,7 +50,7 @@ IDiaAddressMap : IUnknown
 ## <a name="notes-for-callers"></a>调用方的说明  
  此接口是可从 DIA 会话对象。 客户端调用`QueryInterface`DIA 会话对象接口上，通常的方法[IDiaSession](../../debugger/debug-interface-access/idiasession.md)来检索`IDiaAddressMap`接口。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： Dia2.h  
   
  库： diaguids.lib  

@@ -54,7 +54,7 @@ HRESULT findChildrenEx (
 ## <a name="remarks"></a>备注  
  此方法是扩展的版本[idiasymbol:: Findchildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： Dia2.h  
   
  库： diaguids.lib  

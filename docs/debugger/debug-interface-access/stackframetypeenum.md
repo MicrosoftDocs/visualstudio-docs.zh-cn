@@ -59,7 +59,7 @@ enum StackFrameTypeEnum {
 ## <a name="remarks"></a>备注  
  此枚举中的值返回通过调用[idiastackframe:: Get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md)方法。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： cvconst.h  
   
 ## <a name="see-also"></a>请参阅  

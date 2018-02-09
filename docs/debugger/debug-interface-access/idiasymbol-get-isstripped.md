@@ -45,7 +45,7 @@ HRESULT get_isStripped(
 ## <a name="remarks"></a>备注  
  此属性是可从`SymTagExe`符号类型 (请参阅[Exe](../../debugger/debug-interface-access/exe.md))。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
   
 |需求|描述|  
 |-----------------|-----------------|  

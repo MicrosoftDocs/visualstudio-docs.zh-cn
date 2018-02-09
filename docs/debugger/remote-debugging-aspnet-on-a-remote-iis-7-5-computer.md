@@ -29,7 +29,7 @@ ms.lasthandoff: 01/23/2018
 这些过程已经过测试在这些服务器配置：
 * Windows Server 2012 R2 和 IIS 8 （对于 Windows Server 2008 R2 中，服务器步骤会有所不同，）
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>需要
 
 在从 Windows Server 2008 Service Pack 2 的 Windows Server 上支持远程调试器。 有关要求的完整列表，请参阅[要求](../debugger/remote-debugging.md#requirements_msvsmon)。
 

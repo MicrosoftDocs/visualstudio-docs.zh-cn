@@ -297,4 +297,4 @@ DXCap.exe -p regression_test_12.vsglog -toXML temp.xml
 </Method>  
 ```  
   
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>需要

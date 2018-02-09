@@ -51,7 +51,7 @@ enum UdtKind {
 ## <a name="remarks"></a>备注  
  此枚举中的值由[idiasymbol:: Get_udtkind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md)方法。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： cvconst.h  
   
 ## <a name="see-also"></a>请参阅  

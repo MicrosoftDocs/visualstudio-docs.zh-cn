@@ -45,7 +45,7 @@ HRESULT get_isDataAligned(
 ## <a name="remarks"></a>备注  
  如果使用非默认数据对齐编译可执行文件通常设置此属性。 例如，Microsoft c + + 编译器可以更改的数据对齐方式，使用命令行选项，/Zp*#*，其中 *#* 是一个字节值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
   
 |需求|描述|  
 |-----------------|-----------------|  

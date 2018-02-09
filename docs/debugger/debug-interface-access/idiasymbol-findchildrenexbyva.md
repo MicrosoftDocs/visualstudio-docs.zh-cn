@@ -58,7 +58,7 @@ HRESULT findChildrenExByVA (
 ## <a name="remarks"></a>备注  
  返回的本地符号包括实时范围信息。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  标头： Dia2.h  
   
  库： diaguids.lib  

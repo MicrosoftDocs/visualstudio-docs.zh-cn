@@ -44,7 +44,7 @@ HRESULT get_compilerName (
   
 ## <a name="remarks"></a>备注  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
   
 |需求|描述|  
 |-----------------|-----------------|  

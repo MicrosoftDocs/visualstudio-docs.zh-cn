@@ -22,7 +22,7 @@ ms.lasthandoff: 12/22/2017
 # <a name="getting-started-with-visual-studio-graphics-diagnostics"></a>Visual Studio 图形诊断入门
 在此部分中，你会准备首次使用图形诊断，然后从 Direct3D 应用捕获帧并在图形分析器中检查它们。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>需要  
  若要在 Visual Studio 中使用图形诊断，你必须使用 Visual Studio Enterprise、 Visual Studio Professional 或 Visual Studio Community。  其他版本，包括 Visual Studio 代码，不包含此功能。
  
  [!INCLUDE[downloadvs](../includes/downloadvs_md.md)]  
