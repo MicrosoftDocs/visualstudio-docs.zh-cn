@@ -26,7 +26,7 @@ ms.lasthandoff: 01/05/2018
 如果您从未编写过 Visual Studio 扩展之前，可能会出现一些问题。 我们已列出了一些最常见的。 如果看不到你正在寻找的信息，请使用反馈按钮 (**是很有帮助的此页面？**在屏幕底部) 以询问有关所需。  
   
 ## <a name="what-software-do-i-need-to-develop-visual-studio-extensions"></a>需要哪些软件开发 Visual Studio 扩展？  
- 你需要安装 Visual Studio 除了 Visual Studio SDK，以便开发 Visual Studio 扩展。 你可以作为正则安装的一部分安装 Visual Studio SDK 或更高版本上安装。 有关安装 Visual Studio SDK 的详细信息，请参阅[Visual Studio SDK](../extensibility/visual-studio-sdk.md)。  
+ 你需要在 Visual Studio 中安装 Visual Studio SDK，以便开发 Visual Studio 扩展。 你可以作为正则安装的一部分安装 Visual Studio SDK 或更高版本上安装。 有关安装 Visual Studio SDK 的详细信息，请参阅[Visual Studio SDK](../extensibility/visual-studio-sdk.md)。  
   
 ## <a name="what-kinds-of-things-can-i-do-with-visual-studio-extensions"></a>我可以使用 Visual Studio 扩展做何种操作？  
  Sky 的限制，就应该构想不同 Visual Studio 扩展。 当然，大多数扩展有一些与编写代码，但是，不一定是这种情况。 下面是可以生成的扩展的类型的一些示例：  
