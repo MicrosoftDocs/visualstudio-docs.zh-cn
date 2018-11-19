@@ -321,53 +321,53 @@ ms.locfileid: "51561668"
 
      ![使用 F10 单步跳过代码](../debugger/media/get-started-step-over.png "F10 Step Over")
 
-     请注意，这次调试器不会单步执行基类 (`Shape`) 的 `Draw` 方法。 按 F10 将使调试器前进，但不会单步执行应用代码中的函数或方法（代码仍将执行）。 通过在进行 `base.Draw`（或 `Shape::Draw`）方法调用时按 F10（而不是 F11），我们跳过了 `base.Draw` 的实现代码（我们现在可能对此不感兴趣）。
+     请注意，这次调试器不会单步执行基类 (`Shape`) 的 `Draw` 方法。 按 F10 将使调试器前进，但不会单步执行应用程序代码中的函数或方法（代码仍将执行）。 通过在进行 `base.Draw`（或 `Shape::Draw`）方法调用时按 F10（而不是 F11），我们跳过了 `base.Draw` 的实现代码（我们现在对此可能不感兴趣）。
 
-## <a name="navigate-code-using-run-to-click"></a>使用“运行时单击”导航代码
+## 使用“运行时单击”导航代码
 
-5. 在代码编辑器中，向下滚动并将鼠标悬停在 `Triangle` 类中的 `Console.WriteLine` 方法（C++ 中的 `std::cout`）上，直到左侧出现绿色的“运行时单击”按钮（![运行时单击](../debugger/media/dbg-tour-run-to-click.png "RunToClick")）。
+1. 在代码编辑器中，向下滚动并将鼠标悬停在 `Triangle` 类中的 `Console.WriteLine` 方法（C++ 中的 `std::cout`）上，直到左侧出现绿色的**运行时单击**按钮（![运行时单击](../debugger/media/dbg-tour-run-to-click.png "RunToClick")）。
 
-     ![使用“运行时单击”功能](../debugger/media/get-started-run-to-click.png "Run to Click")
+     ![使用“运行时单击”功能](../debugger/media/get-started-run-to-click.png "运行时单击")
 
    > [!NOTE]
    > “运行时单击”是 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] 中的新增按钮。 如果未看到绿色箭头按钮，请在此示例中改为使用 F11 以使调试器前进到正确的位置。
 
-6. 单击“运行时单击”按钮（![运行时单击](../debugger/media/dbg-tour-run-to-click.png "RunToClick")）。
+2. 单击**运行时单击**按钮（![运行时单击](../debugger/media/dbg-tour-run-to-click.png "RunToClick")）。
 
-    使用此按钮类似于设置临时断点。 “运行时单击”对于快速到达应用代码的可见区域十分方便（你可在任何打开的文件中单击）。
+    使用此按钮类似于设置临时断点。 **运行时单击**对于快速到达应用代码的可见区域十分方便（你可在任何打开的文件中单击）。
 
     调试器前进到 `Triangle` 类的 `Console.WriteLine` 方法实现（C++ 中的 `std::cout`）。
 
     暂停时，你注意到有拼写错误！ “Drawing a trangle”输出拼写错误。 在调试器中运行应用时，我们可直接在此处修复它。
 
-## <a name="edit-code-and-continue-debugging"></a>编辑代码并继续调试
+## 编辑代码并继续调试
 
 1. 单击“Drawing a trangle”内并键入校正，将“trangle”更改为“triangle”。
 
-1. 按一次 F11，你会看到调试器再次前进。
+1. 按一次 **F11**，你会看到调试器再次前进。
 
     > [!NOTE]
     > 根据你在调试器中编辑的代码类型，可能会看到一条警告消息。 在某些情况下，代码需要重新编译才能继续。
 
-## <a name="step-out"></a>单步跳出
+## 单步跳出
 
-假设你已完成了对 `Triangle` 类中 `Draw` 方法的检查，并且希望退出该函数但保持位于调试器中。 可使用“单步跳出”命令执行此操作。
+假设你已完成了对 `Triangle` 类中 `Draw` 方法的检查，并且希望退出该函数但继续留在调试器中。 可使用“单步跳出”命令执行此操作。
 
-1. 按 Shift + F11（或“调试”>“单步跳出”）。
+1. 按 **Shift** + **F11**（或**调试 > 单步跳出**）。
 
      此命令将恢复应用执行（并使调试器前进），直到当前函数返回。
 
      你应当会回到 `Main` 方法的 `foreach` 循环（C++ 中的 `for` 循环）中。
 
-## <a name="restart-your-app-quickly"></a>快速重启应用
+## 快速重启应用
 
-单击调试工具栏中的“重启”（![重启应用](../debugger/media/dbg-tour-restart.png "RestartApp")）按钮（Ctrl + Shift + F5）。
+单击调试工具栏中的**重启**（![重启应用](../debugger/media/dbg-tour-restart.png "RestartApp")）按钮（**Ctrl** + **Shift** + **F5**）。
 
-当你按下“重启”时，与停止应用并重启调试器相比，它节省了时间。 调试器在通过执行代码命中的第一个断点处暂停。
+当你按下**重启**时，与停止应用并重启调试器相比，它节省了时间。 调试器在通过执行代码命中的第一个断点处暂停。
 
 调试器再次在你在 `shape.Draw()` 方法（C++ 中的 `shape->Draw()`）上设置的断点处停止。
 
-## <a name="inspect-variables-with-data-tips"></a>使用数据提示检查变量
+## 使用数据提示检查变量
 
 允许你检查变量的功能是调试器最有用的功能之一，并且有不同的方法来执行此操作。 通常，当尝试调试问题时，你试图找出变量是否存储了你期望它们在特定时间具有的值。
 
@@ -375,17 +375,17 @@ ms.locfileid: "51561668"
 
 1. 展开 `shapes` 对象以查看其所有属性，例如数组 `[0]` 的第一个索引，其值为 `Rectangle` (C#) 或内存地址 (C++)。
 
-     ![查看数据提示](../debugger/media/get-started-data-tip.gif "View a Data Tip")
+     ![查看数据提示](../debugger/media/get-started-data-tip.gif "查看数据提示")
 
     可进一步展开对象以查看其属性，例如矩形的 `Height` 属性。
 
     通常，在调试时，你需要快速检查对象的属性值，数据提示是一种实现此目的的好方法。
 
-## <a name="inspect-variables-with-the-autos-and-locals-windows"></a>使用“自动”和“局部变量”窗口检查变量
+## 使用“自动”和“局部变量”窗口检查变量
 
 1. 查看代码编辑器底部的“自动”窗口。
 
-     ![在“自动”窗口中检查变量](../debugger/media/get-started-autos-window.png "Autos Window")
+     ![在“自动”窗口中检查变量](../debugger/media/get-started-autos-window.png "自动窗口")
 
     在“自动”窗口中，可看到变量及其当前值。 “自动”窗口显示当前行或前一行使用的所有变量（在 C++ 中，该窗口显示前三个代码行中的变量。 查看文档以了解特定于语言的行为）。
 
@@ -396,15 +396,15 @@ ms.locfileid: "51561668"
 
     “局部变量”窗口显示当前[作用域](https://www.wikipedia.org/wiki/Scope_(computer_science))中的变量。
 
-## <a name="set-a-watch"></a>设置监视
+## 设置监视
 
-1. 在主代码编辑器窗口中，右键单击 `shapes` 对象，然后选择“添加监视”。
+1. 在主代码编辑器窗口中，右键单击 `shapes` 对象，然后选择**添加监视**。
 
-    “监视”窗口将在代码编辑器的底部打开。 可使用“监视”窗口指定要关注的变量（或表达式）。
+    **监视**窗口将在代码编辑器的底部打开。 可使用**监视**窗口指定要关注的变量（或表达式）。
 
-    现在，你在 `shapes` 对象上设置好了监视，当你在调试器中移动时，可看到其值发生变化。 与其他变量窗口不同，“监视”窗口始终显示你正在监视的变量（当超出作用域时，它们会变灰）。
+    现在，你在 `shapes` 对象上设置好了监视，当你在调试器中移动时，可看到其值发生变化。 与其他变量窗口不同，**监视**窗口始终显示你正在监视的变量（当超出作用域时，它们会变灰）。
 
-## <a name="examine-the-call-stack"></a>检查调用堆栈
+## 检查调用堆栈
 
 1. 在 `foreach` 循环（C++ 中的 `for` 循环）中暂停时，单击“调用堆栈”窗口，默认情况下，该窗口在右下方窗格中打开。
 
