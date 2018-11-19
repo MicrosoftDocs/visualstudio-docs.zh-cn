@@ -28,23 +28,24 @@ ms.locfileid: "49933763"
 Visual Studio调试器可以帮助你通过检查一个应用的状态和执行流程解决代码难题。可以通过快捷键、调试命令、 断点、和其它功能快速的校对需要检验的代码。熟悉调试器导航命令和快捷键可以让你更快的发现和解决应用程序遇到的问题。如果现在是你第一次尝试调试代码，你可能需要在继续读本篇文章之前去阅读[使用Visual Studio写最好的C#代码](../debugger/write-better-code-with-visual-studio.md)和[调试零基础入门](../debugger/debugging-absolute-beginners.md)。
   
 ## 调试基础
- 通常情况下，启动调试会话使用**F5** (**调试** > **开始调试**)。 此命令启动附有调试器的应用。  
-  
- 绿色箭头还会启动调试器 (与相同**F5**)。  
+
+按 **F5**， 选择 **调试** > **启动调试**, 或者选择Visual Studio工具栏中的绿色箭头，启动并将调试器附加到你的应用。
   
  ![DBG&#95;Basics&#95;Start&#95;Debugging](../debugger/media/dbg_basics_start_debugging.png "DBG_Basics_Start_Debugging")  
-  
- 您可使用附加调试器启动该应用的一些其他方法包括**F11** ([单步执行代码](#BKMK_Step_into__over__or_out_of_the_code))， **F10** ([逐过程执行代码](#BKMK_Step_over_Step_out))，或通过使用**运行到光标处**。  这些选项所执行的操作，请参阅有关此主题中的其他部分。  
-  
- 调试时，黄线将显示下一步将执行的代码。  
+
+在进行调试时，下一步将会执行的代码会黄色高亮。
   
  ![DBG&#95;Basics&#95;Break&#95;Mode](../debugger/media/dbg_basics_break_mode.png "DBG_Basics_Break_Mode")  
-  
- 调试时，您可以类似的命令之间进行切换**F5**， **F11**和使用其他功能来快速转到想要查看的代码 （例如断点） 本主题中所述。  
-  
- 仅当调试器暂停时，大多数调试器功能，如局部变量窗口中查看变量值或在监视窗口中计算表达式是可用 (也称为*中断模式下*)。 调试器暂停时，应用程序状态已挂起函数，变量时，对象保留在内存中。 在中断模式下，可以检查元素的位置和状态，以查看存在冲突或 bug。 对于某些项目类型，您还可以在中断模式下应用所做的调整。 若要观看演示这些功能的视频，请参阅[开始使用调试器](https://www.youtube.com/watch?v=FtGCi5j30YU&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=6)。
-  
-##  <a name="BKMK_Step_into__over__or_out_of_the_code"></a> 单步执行代码，  
+
+调试的绝大多数窗口，像 **模块** 和 **监视** 窗口，只在调试器运行时可用。某些调试器功能，比如在**局部变量**窗口显示变量值或者在**监视**窗口中显示表达式, 只在调试器在某个断点暂停时可用（也被叫做*中断模式*）。
+
+在中断模式中，当应用程序执行被暂停时函数、变量和对象保留在内存中。你可以通过检查元素的位置和状态来寻找访问破坏和bug。对于某些类型的项目，你可以在中断模式下对应用程序进行调整。展示这些功能的视频, 请看 [调试器入门](https://www.youtube.com/watch?v=FtGCi5j30YU&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=6).
+
+If you break in code that doesn't have source or symbol (*.pdb*) files loaded, the debugger displays a **Source Files Not Found** or **Symbols Not Found** page that can help you find and load the files. See [Specify symbol (.pdb) and source files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md). If you can't load the symbol or source files, you can still debug the assembly instructions in the **Disassembly** window. 
+
+You don't always have to start debugging by starting an app at the beginning. You can also press **F11** to [step into code](#BKMK_Step_into__over__or_out_of_the_code), press **F10**  to [step over code](#BKMK_Step_over_Step_out), or [run to a specific location or function](#BKMK_Break_into_code_by_using_breakpoints_or_Break_All).    
+
+##  单步执行代码，  
  若要停止调试时代码 （每个语句） 的每一行上，使用**F11**键盘快捷方式 (或**调试** > **单步执行**菜单上)。  
   
 > [!TIP]
