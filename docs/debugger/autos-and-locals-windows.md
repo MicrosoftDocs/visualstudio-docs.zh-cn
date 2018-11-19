@@ -25,7 +25,7 @@ ms.locfileid: "51349645"
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows"></a>检查自动和局部变量窗口中的变量
 
-在调试时 **自动** 和 **局部变量** 窗口显示变量值。 在启调试会话时，这两个窗口才可用。 **自动** 窗口显示当前断点周围使用的变量。 **局部变量**窗口显示在当前代码作用域内定义的变量, 通常是当前函数或方法定义的变量。如果当前是你第一次尝试调试代码， 在开始之前，可能需要去阅读这些文章 [使用Visual Studio写最好的C#代码](../debugger/write-better-code-with-visual-studio.md) and [零基础调试代码](../debugger/debugging-absolute-beginners.md)。
+在调试时 **自动** 和 **局部变量** 窗口显示变量值。 在启调试会话时，这两个窗口才可用。 **自动** 窗口显示当前断点周围使用的变量。 **局部变量**窗口显示在当前代码作用域内定义的变量, 通常是当前函数或方法定义的变量。如果现在是你第一次尝试调试代码， 在开始之前，可能需要去阅读这些文章 [使用Visual Studio写最好的C#代码](../debugger/write-better-code-with-visual-studio.md) 和 [零基础调试代码](../debugger/debugging-absolute-beginners.md)。
 
 若要打开**自动**窗口中的，调试时，选择**调试** > **Windows** > **自动**，或按**Ctrl**+**Alt**+**V** > **A**。
 
@@ -151,7 +151,8 @@ private static int subtractVars(int i, int j)
 
   ![自动返回值C# ](../debugger/media/autosreturnvaluecsharp2.png "自动返回值C#")
 
-## <a name="see-also"></a>请参阅
-
-- [调试器窗口](../debugger/debugger-windows.md)
-- [在 Visual Studio for Mac 的数据可视化效果](/visualstudio/mac/data-visualizations)
+## 请参阅  
+ [什么是调试?](../debugger/what-is-debugging.md)  
+ [使用Visual Studio写最好的C#代码](../debugger/write-better-code-with-visual-studio.md)  
+ [首次了解调试](../debugger/debugger-feature-tour.md)
+ [调试器窗口](../debugger/debugger-windows.md)
