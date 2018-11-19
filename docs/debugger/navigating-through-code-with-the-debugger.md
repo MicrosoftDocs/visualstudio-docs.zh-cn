@@ -23,10 +23,11 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49933763"
 ---
-# <a name="navigate-code-with-the-visual-studio-debugger"></a>导航代码的 Visual Studio 调试器
-帮助熟悉命令和快捷方式在调试器中的代码中导航，这样做更快、 更轻松地查找和解决您的应用程序中的问题。 虽然导航代码在调试器中的，可以检查您的应用程序的状态或了解有关其执行流的详细信息。  
+# 通过Visual Studio 调试器解决代码难题
+
+Visual Studio调试器可以帮助你通过检查一个应用的状态和执行流程解决代码难题。可以通过快捷键、调试命令、 断点、和其它功能快速的校对需要检验的代码。熟悉调试器导航命令和快捷键可以让你更快的发现和解决应用程序遇到的问题。如果现在是你第一次尝试调试代码，你可能需要在继续读本篇文章之前去阅读[使用Visual Studio写最好的C#代码](../debugger/write-better-code-with-visual-studio.md)和[调试零基础入门](../debugger/debugging-absolute-beginners.md)。
   
-## <a name="start-debugging"></a>“启动调试”  
+## 调试基础
  通常情况下，启动调试会话使用**F5** (**调试** > **开始调试**)。 此命令启动附有调试器的应用。  
   
  绿色箭头还会启动调试器 (与相同**F5**)。  
