@@ -270,9 +270,9 @@ ms.locfileid: "51561668"
 
 ## <a name="start-the-debugger"></a>启动调试器！
 
-1. 按 F5（“调试”>“开始调试”）或调试工具栏中的“开始调试”按钮（![开始调试](../debugger/media/dbg-tour-start-debugging.png "Start Debugging")）。
+1. 按 **F5** (**调试 > 启动调试**) 或者 **启动调试** 按键 ![启动调试](../debugger/media/dbg-tour-start-debugging.png "启动调试") 在调试工具条。
 
-     通过 **F5** 启动应用时，调试器会附加到应用进程，但现在我们还未执行任何特殊操作来检查代码。 因此应用只会加载，控制台输出如你所见。
+     按**F5**启动应用时， 调试器会附加到应用进程, 但现在我们还未执行任何特殊操作来检查代码。所以应用只会加载，你会看到控制台输出。
 
     ```
     Drawing a rectangle
@@ -283,7 +283,7 @@ ms.locfileid: "51561668"
     Performing base class drawing tasks
     ```
 
-     在本教程中，我们将使用调试器仔细查看此应用，并查看调试器功能。
+     在本教程，我们将使用调试器仔细了解此应用，并了解调试器功能。
 
 2. 按红色的停止（![停止调试](../debugger/media/dbg-tour-stop-debugging.png "Stop Debugging")）按钮来停止调试器。
 
