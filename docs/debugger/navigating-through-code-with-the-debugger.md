@@ -41,13 +41,38 @@ Visual Studio调试器可以帮助你通过检查一个应用的状态和执行�
 
 在中断模式中，当应用程序执行被暂停时函数、变量和对象保留在内存中。你可以通过检查元素的位置和状态来寻找访问破坏和bug。对于某些类型的项目，你可以在中断模式下对应用程序进行调整。展示这些功能的视频, 请看 [调试器入门](https://www.youtube.com/watch?v=FtGCi5j30YU&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=6).
 
-如果你在没有源代码和符号文件被加载(*.pdb*)的情况下中断，调试器会显示 **未找到源文件** 或者 **未找到符号文件** page that can help you find and load the files. See [Specify symbol (.pdb) and source files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md). If you can't load the symbol or source files, you can still debug the assembly instructions in the **Disassembly** window. 
+如果你在没有源代码和符号文件被加载(*.pdb*)的情况下中断，调试器会显示 **未找到源文件** 或者 **未找到符号文件**页面来帮你找到和加载这些文件。请看 [指定符号(.pdb)和源代码文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。如果你没有加载需要的符号和源代码文件，你仍然可以调试汇编指令，在**反汇编**窗口。 
 
-You don't always have to start debugging by starting an app at the beginning. You can also press **F11** to [step into code](#BKMK_Step_into__over__or_out_of_the_code), press **F10**  to [step over code](#BKMK_Step_over_Step_out), or [run to a specific location or function](#BKMK_Break_into_code_by_using_breakpoints_or_Break_All).    
+你不需要每次启动调试都重新启动应用程序。你也可以按**F11**[单步步入](#BKMK_Step_into__over__or_out_of_the_code), 按 **F10** [单步步出](#BKMK_Step_over_Step_out), 或者[在指定的位置或者函数运行](#BKMK_Break_into_code_by_using_breakpoints_or_Break_All).    
 
-##  单步执行代码，  
- 若要停止调试时代码 （每个语句） 的每一行上，使用**F11**键盘快捷方式 (或**调试** > **单步执行**菜单上)。  
+##  单步执行代码
+
+
+调试器步骤命令帮助你检查你的应用程序状态，或者发现更多关于它的执行流程。 
+
+如果你需要找到你的应用程序入口点, 按**F10**或者**F11**启动。  
+
+### <a name="BKMK_Step_into__over__or_out_of_the_code"></a> 逐行进入代码 
+
+当调试时在每一行代码或者语句上停止时，使用**调试** > **步入**，或者按**F11**。  
+
+调试器逐步执行代码段， 而不是物理行。举个例子，一个`if`子语句可以写在一行：
   
+  ```csharp  
+  int x = 42;  
+  string s = "Not answered";  
+  if( int x == 42) s = "Answered!";  
+  ```  
+  
+  ```vb  
+  Dim x As Integer = 42  
+  Dim s As String = "Not answered"  
+  If x = 42 Then s = "Answered!"  
+  ```  
+
+However, when you step into this line, the debugger treats the condition as one step, and the consequence as another. In the preceding example, the condition is true.  
+  
+On a nested function call, **Step Into** steps into the most deeply nested function. For example, if you use **Step Into** on a call like `Func1(Func2())`, the debugger steps into the function `Func2`.  
 > [!TIP]
 >  执行每行代码，你可以悬停在变量，以查看它们的值，或者可以使用[局部变量](../debugger/autos-and-locals-windows.md)并[监视](../debugger/autos-and-locals-windows.md)windows 以监视更改其值。  
   
