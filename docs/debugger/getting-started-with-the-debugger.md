@@ -447,4 +447,4 @@ ms.locfileid: "51561668"
 在本教程中，你已了解了如何启动调试器、逐步执行代码以及检查变量。 你可能会希望更深入地了解调试器功能以及查看指向更多信息的链接。
 
 > [!div class="nextstepaction"]
-> [调试器提示和技巧](../debugger/debugger-tips-and-tricks.md)
+> [首次了解调试器](../debugger/debugger-feature-tour.md)

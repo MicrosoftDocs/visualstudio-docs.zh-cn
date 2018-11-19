@@ -154,5 +154,5 @@ private static int subtractVars(int i, int j)
 ## 请参阅  
  [什么是调试?](../debugger/what-is-debugging.md)  
  [使用Visual Studio写最好的C#代码](../debugger/write-better-code-with-visual-studio.md)  
- [首次了解调试](../debugger/debugger-feature-tour.md)
+ [首次了解调试器](../debugger/debugger-feature-tour.md)
  [调试器窗口](../debugger/debugger-windows.md)
