@@ -14,7 +14,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/09/2018
 ms.locfileid: "51348108"
 ---
-# <a name="debugging-in-visual-studio"></a>在 Visual Studio 中进行调试
+# 在 Visual Studio 中进行调试
 
 Visual Studio 调试程序有助于你观察程序的运行时行为并发现问题。 该调试器可用于所有 Visual Studio 编程语言及其关联的库。 使用调试程序时，可以中断程序的执行以检查代码、检查和编辑变量、查看寄存器、查看从源代码创建的指令，以及查看应用程序占用的内存空间。
 
@@ -56,42 +56,6 @@ Visual Studio 调试程序有助于你观察程序的运行时行为并发现问
         </a>
     </li>
     <li>
-        <a href="https://docs.microsoft.com/visualstudio/debugger/debugging-absolute-beginners">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_debug.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>零基础调试</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
-        <a href="https://docs.microsoft.com/visualstudio/debugger/getting-started-with-the-debugger">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_debug.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>了解如何调试</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
         <a href="https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171">
         <div class="cardSize">
             <div class="cardPadding">
@@ -102,14 +66,14 @@ Visual Studio 调试程序有助于你观察程序的运行时行为并发现问
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>观看介绍调试器用法的视频</h3>
+                        <h3>观看使用调试器视频</h3>
                     </div>
                 </div>
             </div>
         </div>
         </a>
     </li>
-    </ul>
+</ul>
 
 <h2>体验5分钟入门Visual Studio调试</h2>
 <ul class="panelContent cardsFTitle">
@@ -167,23 +131,6 @@ Visual Studio 调试程序有助于你观察程序的运行时行为并发现问
         </div>
         </a>
     </li>
-    <li>
-        <a href="https://docs.microsoft.com/visualstudio/debugger/remote-debugging">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_learn-about.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>了解远程调试</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
     </li>
         <li>
         <a href="https://docs.microsoft.com/visualstudio/debugger/quickstart-debug-aspnet">
@@ -334,6 +281,8 @@ Visual Studio 调试程序有助于你观察程序的运行时行为并发现问
         </a>
     </li>
 </ul>
+
+
 <hr>
 <h2>引用</h2>
 
