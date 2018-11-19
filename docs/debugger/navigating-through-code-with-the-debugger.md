@@ -41,7 +41,7 @@ Visual Studio调试器可以帮助你通过检查一个应用的状态和执行�
 
 在中断模式中，当应用程序执行被暂停时函数、变量和对象保留在内存中。你可以通过检查元素的位置和状态来寻找访问破坏和bug。对于某些类型的项目，你可以在中断模式下对应用程序进行调整。展示这些功能的视频, 请看 [调试器入门](https://www.youtube.com/watch?v=FtGCi5j30YU&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=6).
 
-If you break in code that doesn't have source or symbol (*.pdb*) files loaded, the debugger displays a **Source Files Not Found** or **Symbols Not Found** page that can help you find and load the files. See [Specify symbol (.pdb) and source files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md). If you can't load the symbol or source files, you can still debug the assembly instructions in the **Disassembly** window. 
+如果你在没有源代码和符号文件被加载(*.pdb*)的情况下中断，调试器会显示 **未找到源文件** 或者 **未找到符号文件** page that can help you find and load the files. See [Specify symbol (.pdb) and source files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md). If you can't load the symbol or source files, you can still debug the assembly instructions in the **Disassembly** window. 
 
 You don't always have to start debugging by starting an app at the beginning. You can also press **F11** to [step into code](#BKMK_Step_into__over__or_out_of_the_code), press **F10**  to [step over code](#BKMK_Step_over_Step_out), or [run to a specific location or function](#BKMK_Break_into_code_by_using_breakpoints_or_Break_All).    
 
