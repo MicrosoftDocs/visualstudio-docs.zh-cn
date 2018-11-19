@@ -56,7 +56,7 @@ Visual Studio调试器可以帮助你通过检查一个应用的状态和执行�
 
 当调试时在每一行代码或者语句上停止时，使用**调试** > **步入**，或者按**F11**。  
 
-调试器逐步执行代码段， 而不是物理行。举个例子，一个`if`子语句可以写在一行：
+调试器逐语句执行代码段， 而不是物理行。下例中`if`子语句写在一个物理行：
   
   ```csharp  
   int x = 42;  
@@ -70,7 +70,8 @@ Visual Studio调试器可以帮助你通过检查一个应用的状态和执行�
   If x = 42 Then s = "Answered!"  
   ```  
 
-However, when you step into this line, the debugger treats the condition as one step, and the consequence as another. In the preceding example, the condition is true.  
+
+然而，当你步入这行代码时, 调试器将判断条件做为一步，结果做为一步。在本例中， 判断条件结果为true.  
   
 On a nested function call, **Step Into** steps into the most deeply nested function. For example, if you use **Step Into** on a call like `Func1(Func2())`, the debugger steps into the function `Func2`.  
 > [!TIP]
