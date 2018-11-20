@@ -101,7 +101,7 @@ ms.workload:
 
 ## FAQ
 
-### How can I increase the chance of my problem getting resolved quickly?
+### 我如何快速增加解决问题的机会？
 
 We recommend using search to ensure that the problem you're about to report hasn't already been reported. If you find an existing item matching your problem, follow and vote on that problem ticket.
 
