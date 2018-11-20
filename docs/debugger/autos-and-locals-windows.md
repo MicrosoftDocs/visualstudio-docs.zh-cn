@@ -34,7 +34,7 @@ ms.locfileid: "51349645"
 如果您需要了解基本调试功能的更多信息，请参阅[开始使用调试器](../debugger/getting-started-with-the-debugger.md)。
 
 > [!NOTE]
-> 本主题适用于Visual Studio Windows版。 Visual Studio Mac 版 中，请参阅[在 Visual Studio for Mac 的数据可视化效果](/visualstudio/mac/data-visualizations)。
+> 本主题适用于Visual Studio Windows版。 对Visual Studio Mac 版，请参阅[在 Visual Studio for Mac 的数据可视化效果](/visualstudio/mac/data-visualizations)。
 
 ## <a name="use-the-autos-and-locals-windows"></a>使用自动和局部变量窗口
 
