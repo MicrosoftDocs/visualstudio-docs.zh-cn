@@ -1,5 +1,5 @@
 ﻿---
-title: 了解如何使用 Visual Studio 调试器进行调试
+title: 学习使用 Visual Studio 调试器进行调试
 ms.description: Learn how to start the Visual Studio debugger, step through code, and inspect data.
 ms.custom: debug-experiment
 ms.date: 08/01/2018
@@ -23,7 +23,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/12/2018
 ms.locfileid: "51561668"
 ---
-# <a name="tutorial-learn-to-debug-using-visual-studio"></a>教程：了解如何使用 Visual Studio 进行调试
+# <a name="tutorial-learn-to-debug-using-visual-studio"></a>教程：学习使用 Visual Studio 进行调试
 
 本文通过分步演练介绍了 Visual Studio 调试器的功能。 如果需要更加深入地了解调试器功能，请参阅[调试器功能浏览](../debugger/debugger-feature-tour.md)。 当你调试应用时，通常意味着运行附带有调试器的应用程序。 执行此操作时，调试器在运行过程中可提供许多方法让你查看代码的情况。 你可以逐步浏览代码、查看变量中存储的值、设置对变量的监视以查看值何时改变、检查代码的执行路径、查看代码分支是否正在运行等等。 如果这是你第一次尝试调试代码，可能需要在浏览本文之前阅读[零基础调试](../debugger/debugging-absolute-beginners.md)。
 
@@ -270,9 +270,9 @@ ms.locfileid: "51561668"
 
 ## <a name="start-the-debugger"></a>启动调试器！
 
-1. 按 **F5** (**调试 > 启动调试**) 或者 **启动调试** 按键 ![启动调试](../debugger/media/dbg-tour-start-debugging.png "启动调试") 在调试工具条。
+1. 在调试器工具条中按 **F5** (**调试 > 开始调试**) 或者 **开始调试** 按键 ![开始调试](../debugger/media/dbg-tour-start-debugging.png "开始调试")。
 
-     按**F5**启动应用时， 调试器会附加到应用进程, 但现在我们还未执行任何特殊操作来检查代码。所以应用只会加载，你会看到控制台输出。
+     按**F5**启动应用时，调试器会附加到应用进程, 但现在我们还未执行任何特殊操作来检查代码。所以应用只会加载，你可以看到控制台输出。
 
     ```
     Drawing a rectangle
@@ -283,13 +283,13 @@ ms.locfileid: "51561668"
     Performing base class drawing tasks
     ```
 
-     在本教程，我们将使用调试器仔细了解此应用，并了解调试器功能。
+     在本教程，我们将使用调试器仔细查看此应用，并了解调试器功能。
 
 2. 按红色的停止（![停止调试](../debugger/media/dbg-tour-stop-debugging.png "Stop Debugging")）按钮来停止调试器。
 
 ## <a name="set-a-breakpoi## 设置断点并启动调试器
 
-1. 在 `Main` 函数的 `foreach` 循环（C++ `main` 函数中的 `for` 循环）中，通过单击以下代码行的左边距来设置断点：
+1. 在 `Main` 函数的 `foreach` 循环（C++ `main` 函数中的 `for` 循环）中，通过单击以下代码行的左端来设置断点：
 
     `shape.Draw()`（或者，C++ 中的 `shape->Draw()`）
 
