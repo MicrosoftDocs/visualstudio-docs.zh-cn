@@ -27,22 +27,22 @@ ms.locfileid: "51349645"
 
 在调试时 **自动** 和 **局部变量** 窗口显示变量值。 在启调试会话时，这两个窗口才可用。 **自动** 窗口显示当前断点周围使用的变量。 **局部变量**窗口显示在当前代码作用域内定义的变量, 通常是当前函数或方法定义的变量。如果现在是你第一次尝试调试代码， 在开始之前，可能需要去阅读这些文章 [使用Visual Studio写最好的C#代码](../debugger/write-better-code-with-visual-studio.md) 和 [零基础调试代码](../debugger/debugging-absolute-beginners.md)。
 
-若要打开**自动**窗口中的，调试时，选择**调试** > **Windows** > **自动**，或按**Ctrl**+**Alt**+**V** > **A**。
+若要打开**自动**窗口中的，调试时，选择**调试** > **窗口** > **自动**，或按**Ctrl**+**Alt**+**V** > **A**。
 
-若要打开**局部变量**窗口中的，调试时，选择**调试** > **Windows** > **局部变量**，或按**Alt**+**4**。
+若要打开**局部变量**窗口中的，调试时，选择**调试** > **窗口** > **局部变量**，或按**Alt**+**4**。
 
-如果您需要了解基本调试的详细信息，请参阅[开始使用调试器](../debugger/getting-started-with-the-debugger.md)。
+如果您需要了解基本调试功能的更多信息，请参阅[开始使用调试器](../debugger/getting-started-with-the-debugger.md)。
 
 > [!NOTE]
-> 本主题适用于 Windows 上的 Visual Studio。 Visual Studio for Mac 中，请参阅[在 Visual Studio for Mac 的数据可视化效果](/visualstudio/mac/data-visualizations)。
+> 本主题适用于Visual Studio Windows版。 Visual Studio Mac 版 中，请参阅[在 Visual Studio for Mac 的数据可视化效果](/visualstudio/mac/data-visualizations)。
 
 ## <a name="use-the-autos-and-locals-windows"></a>使用自动和局部变量窗口
 
-数组和对象中显示**自动**并**局部变量**windows 为树控件。 选择要展开的视图，以显示字段和属性的变量名称左侧的箭头。 下面是举例<xref:System.IO.FileStream?displayProperty=fullName>对象中**局部变量**窗口：
+在**自动**和**局部变量**窗口中显示数组和对象树控件。选择变量名左侧的箭头以展开所属字段和属性。 下例<xref:System.IO.FileStream?displayProperty=fullName>对象中**局部变量**窗口：
 
 ![局部变量 FileStream](../debugger/media/locals-filestream.png "局部变量 FileStream")
 
-中的红色值**局部变量**或**自动**窗口意味着自上次评估以来已更改值。 此更改可能是从上一个调试会话，或因为您更改在窗口中的值。
+中的红色值**局部变量**或**自动**窗口意味着在最后一次计算中已更改值。 此更改可能是来自上一个调试会话，或因为您更改在窗口中的值。
 
 在调试器窗口中的默认数字格式为 decimal。 若要将其更改为十六进制，右键单击**局部变量**或**自动**窗口，然后选择**十六进制显示**。 此更改会影响所有调试器窗口。
 
