@@ -71,35 +71,15 @@ Visual Studio调试器可以帮助你通过单步调试检查一个应用的状�
   ```  
 
 
-然而，当你步入这行代码时, 调试器将判断条件做为一步，结果做为一步。在本例中， 判断条件结果为true.  
+然而，当你步入这行代码时, 调试器将判断条件做为一步，结果做为另一步。在本例中， 判断条件结果为true.  
   
-在一个内嵌的函数调用中, **逐语句** 在一个最深处嵌套函数中进行逐语句调试。 For example，如果你正在调用像 `Func1(Func2())` 函数时使用 **逐语句**，调试器将步入`Func2`函数。  
+在一个内嵌的函数调用中, **逐语句** 在一个最深处嵌套函数中进行逐语句调试。For example，如果你正在调用像 `Func1(Func2())` 函数时使用 **逐语句**，调试器将步入`Func2`函数。 
+
 > [!TIP]
->在行每行代码时，你可以悬停在变量，以查看它们的值，或者可以使用[局部变量](../debugger/autos-and-locals-windows.md) 和 [监视](watch-and-quickwatch-windows.md) 窗口查看变量的变化。你可以逐语句跟踪函数的可视化调用堆栈。请参阅 [当调试时在调用堆栈上映射方法](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md). 
+>在执行每行代码时，你可以悬停在变量，以查看它们的值，或者可以使用[局部变量](../debugger/autos-and-locals-windows.md) 和 [监视](watch-and-quickwatch-windows.md) 窗口查看变量的变化。你可以逐语句跟踪函数的可视化调用堆栈。请参阅 [当调试时在调用堆栈上映射方法](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md). 
   
- 下面是一些有关的行为的详细信息**单步执行**:  
-  
-- 在嵌套函数调用上， **“逐语句”** 将进入并单步执行嵌套最深的函数。 如果对类似 **的调用使用** “逐语句” `Func1(Func2())`，调试器将进入并单步执行函数 `Func2`。  
-  
-- 实际上，调试器逐句通过代码语句，而不是物理行。 例如， `if` 子句可以写在一行内：  
-  
-  ```csharp  
-  int x = 42;  
-  string s = "Not answered";  
-  if( int x == 42) s = "Answered!";  
-  ```  
-  
-  ```VB  
-  Dim x As Integer = 42  
-  Dim s As String = "Not answered"  
-  If x = 42 Then s = "Answered!"  
-  ```  
-  
-   当你单步执行此行时，调试器将该条件视为一步，将结果视为另一步（在此示例中，条件为 true）。  
-  
-  若要直观地跟踪调用堆栈，单步执行函数时，请参阅[调试时映射调用堆栈上的方法](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)。  
-  
-##  <a name="BKMK_Step_over_Step_out"></a> 单步执行代码，正在跳过函数  
+##  <a name="BKMK_Step_over_Step_out"></a> 忽略某些函数进行单步调调试
+
  当在调试器中运行代码，通常您会意识到不需要查看特定函数中会发生什么情况 (不关心或知道其工作方式，类似于经过全面测试的库代码)。 使用以下命令以跳过代码 （函数仍可以执行，当然，但调试器跳过它们）。  
   
 |键盘命令|菜单命令|描述|  
@@ -214,5 +194,11 @@ Visual Studio调试器可以帮助你通过单步调试检查一个应用的状�
   
 3.  在上下文菜单中选择 **“加载符号”** 。  
   
-##  <a name="BKMK_Step_into_properties_and_operators_in_managed_code"></a> 单步执行托管代码中的属性和运算符  
- 默认情况下，调试器将逐过程执行托管代码中的属性和运算符。 在多数情况下，这会提供较好的调试体验。 若要启用单步执行属性或运算符，请选择**调试** > **选项**。 在 **“调试”** > **“常规”** 页面上，清除 **“逐过程执行属性和运算符(仅限托管)”** 复选框
+##  <a name="BKMK_Step_into_properties_and_operators_in_managed_code"></a> 在托管代码中逐语句跟踪属性和运算符  
+
+ 默认情况下，调试器将逐过程执行托管代码中的属性和运算符。 在多数情况下，这会提供较好的调试体验。 若要启用逐语句跟踪属性或运算符，请选择**调试** > **选项**。 在 **“调试”** > **“常规”** 页面上，清除 **“逐过程执行属性和运算符(仅限托管)”** 复选框。
+
+ ## 请参阅
+ [什么是调试？](../debugger/what-is-debugging.md)  
+ [使用Visual Studio写出最好的C#代码](../debugger/write-better-code-with-visual-studio.md)  
+ [第一次了解调试](../debugger/debugger-feature-tour.md) 
