@@ -103,6 +103,7 @@ ms.workload:
 
 ### 我如何快速增加解决问题的机会？
 
+我们建议使用搜索来确保您将要报告的问题还没有被报告。 If you find an existing item matching your problem, follow and vote on that problem ticket.
 We recommend using search to ensure that the problem you're about to report hasn't already been reported. If you find an existing item matching your problem, follow and vote on that problem ticket.
 
  Provide all the information you can to help our teams reproduce what you're experiencing.  This information includes  necessary repro steps, code fragments, screenshots, repro recordings, log files, and other artifacts.  Here is [how to report a problem in Visual Studio](./how-to-report-a-problem-with-visual-studio-2017.md).
