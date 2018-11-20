@@ -37,26 +37,26 @@ Visual Studio调试器可以帮助你通过单步调试检查一个应用的状�
   
  ![DBG&#95;Basics&#95;Break&#95;Mode](../debugger/media/dbg_basics_break_mode.png "DBG_Basics_Break_Mode")  
 
-调试的绝大多数窗口，像 **模块** 和 **监视** 窗口，只在调试器运行时可用。某些调试器功能，比如在**局部变量**窗口显示变量值或者在**监视**窗口中显示表达式, 只在调试器在某个断点暂停时可用（也被叫做*中断模式*）。
+调试器的绝大多数窗口，像 **模块** 和 **监视** 窗口，只在调试器运行时可用。某些调试器功能，比如在**局部变量**窗口显示变量值或者在**监视**窗口中计算表达式, 只有调试器在某个断点暂停后可用（也被叫做*中断模式*）。
 
-在中断模式中，当应用程序执行被暂停时函数、变量和对象保留在内存中。你可以通过检查元素的位置和状态来寻找访问破坏和bug。对于某些类型的项目，你可以在中断模式下对应用程序进行调整。展示这些功能的视频, 请看 [调试器入门](https://www.youtube.com/watch?v=FtGCi5j30YU&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=6).
+在中断模式中，当应用程序执行状态被挂起时函数、变量和对象驻留在内存中。你可以通过检查元素的位置和状态来寻找访问破坏和bug。对于某些类型的项目，你可以在中断模式下对应用程序进行调整。如果需要展示这些功能的视频, 请看 [调试器入门](https://www.youtube.com/watch?v=FtGCi5j30YU&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=6).
 
-如果你在没有源代码和符号文件被加载(*.pdb*)的情况下中断，调试器会显示 **未找到源文件** 或者 **未找到符号文件**页面来帮你找到和加载这些文件。请看 [指定符号(.pdb)和源代码文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。如果你没有加载需要的符号和源代码文件，你仍然可以调试汇编指令，在**反汇编**窗口。 
+如果你在没有源代码和符号文件被加载(*.pdb*)的情况下中断，调试器会显示 **未找到源文件** 或者 **未找到符号文件** 页面来帮你找到和加载这些文件。请看 [指定符号(.pdb)和源代码文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。如果你没有加载需要的符号和源代码文件，你仍然可以在**反汇编**窗口中调试汇编指令。 
 
-你不需要每次启动调试都重新启动应用程序。你也可以按**F11**[单步步入](#BKMK_Step_into__over__or_out_of_the_code), 按 **F10** [单步步出](#BKMK_Step_over_Step_out), 或者[在指定的位置或者函数运行](#BKMK_Break_into_code_by_using_breakpoints_or_Break_All).    
+你不需要每次启动调试都重新打开应用程序。你也可以按**F11**[单步步入](#BKMK_Step_into__over__or_out_of_the_code), 按 **F10** [单步步出](#BKMK_Step_over_Step_out), 或者[在指定的位置或者函数运行](#BKMK_Break_into_code_by_using_breakpoints_or_Break_All).    
 
-##  单步执行代码
+##  逐步执行代码
 
 
 调试器步骤命令帮助你检查你的应用程序状态，或者发现更多关于它的执行流程。 
 
-如果你需要找到你的应用程序入口点, 按**F10**或者**F11**启动。  
+如果你需要找到应用程序的入口点, 按**F10**或者**F11**启动。  
 
-### <a name="BKMK_Step_into__over__or_out_of_the_code"></a> 逐行进入代码 
+### <a name="BKMK_Step_into__over__or_out_of_the_code"></a> 根据每行逐语句跟踪代码 
 
-当调试时在每一行代码或者语句上停止时，使用**调试** > **步入**，或者按**F11**。  
+在调试时使用**调试** > **步入**，或者按**F11**，将在每一行代码或者语句上停止时。  
 
-调试器逐语句执行代码段， 而不是物理行。下例中`if`子语句写在一个物理行：
+调试器逐语句执行代码段， 而不是实际行。下例中`if`子语句写在单独一行：
   
   ```csharp  
   int x = 42;  
@@ -73,7 +73,7 @@ Visual Studio调试器可以帮助你通过单步调试检查一个应用的状�
 
 然而，当你步入这行代码时, 调试器将判断条件做为一步，结果做为一步。在本例中， 判断条件结果为true.  
   
-On a nested function call, **Step Into** steps into the most deeply nested function. For example, if you use **Step Into** on a call like `Func1(Func2())`, the debugger steps into the function `Func2`.  
+在一个内嵌的函数调用中, **逐语句** 在一个最深处嵌套函数中进行逐语句调试。 For example，如果你正在调用像 `Func1(Func2())` 函数时使用 **逐语句**，调试器将步入`Func2`函数。  
 > [!TIP]
 >  执行每行代码，你可以悬停在变量，以查看它们的值，或者可以使用[局部变量](../debugger/autos-and-locals-windows.md)并[监视](../debugger/autos-and-locals-windows.md)windows 以监视更改其值。  
   
