@@ -81,21 +81,21 @@ ms.workload:
 
 - - -
 
-![Closed - Not Enough Info state for problem reporting on Developer Community](../ide/media/ProblemStates/ClosedNotEnoughInfo.jpg)
+![已关闭 - 开发者社区中所报告问题没有足够的信息](../ide/media/ProblemStates/ClosedNotEnoughInfo.jpg)
 
-**Closed - Not Enough Info** indicates that we don't have enough information to investigate this for you. We'll be happy to reconsider the feedback after the necessary information is available.
-
-- - -
-
-![Closed - Other Product state for problem reporting on Developer Community](../ide/media/ProblemStates/ClosedOtherProduct.jpg)
-
-**Closed - Other Product** indicates we've determined that your issue applies to another product. See the comment from Microsoft for which external product and any related links.
+**Closed - Not Enough Info** 表明我们对于你所报告的问题缺乏足够的信息去进行调查。我们很乐意在得到充足的信息后重新考虑。
 
 - - -
 
-![Closed - Won't Fix state for problem reporting on Developer Community](../ide/media/ProblemStates/ClosedWontFix.jpg)
+![已关闭 - 开发者社区中所报告问题另一个产品状态](../ide/media/ProblemStates/ClosedOtherProduct.jpg)
 
-**Closed - Won't Fix** indicates that we aren't pursuing this issue due to factors such as lack of product direction alignment or community impact. See the comment from Microsoft for any additional clarity.  Although we're unable to address this particular issue, be assured that all your feedback is valuable and helps improve Visual Studio.
+**Closed - Other Product** 表明我们决定将你的问题应用到另一个产品。请参阅微软对哪个外部产品和任何相关链接的评论。
+
+- - -
+
+![已关闭 - 开发者社区中所报告问题没有修复状态](../ide/media/ProblemStates/ClosedWontFix.jpg)
+
+**Closed - Won't Fix** 表明由于缺乏产品方向一致性或社区影响等问题，我们没有继续研究这个问题。请参阅提交的微软任何附加条款。虽然我们无法解决这个特别的问题，请放心你的所有反馈都很有价值，并有助于改善Visual Studio。
 
 - - -
 
