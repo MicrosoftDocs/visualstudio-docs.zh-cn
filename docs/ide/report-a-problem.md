@@ -29,13 +29,13 @@ ms.workload:
 
 ![在开发者社区中问题分级状态](../ide/media/ProblemStates/Triaged.jpg)
 
-**Triaged** indicates that preliminary steps such as moderation, translation, and  initial check for duplicates are  complete. Your ticket has been routed to the appropriate engineering team for consideration.
+**筛选** 表示适度的初级步骤，已完成对翻译和内容重复初始检查。你的通知单已经发送给适当的工程师团队审议。
 
 - - -
 
-![Under Consideration state for problem reporting on Developer Community](../ide/media/ProblemStates/UnderConsideration.jpg)
+![对所报告问题开发者社区正在考虑状态](../ide/media/ProblemStates/UnderConsideration.jpg)
 
-**Under Consideration** indicates that Microsoft is reviewing your problem for community impact and will prioritize it accordingly. If the community impact isn't clear or significant yet, we'll continue to monitor the problem in this state.
+**正在考虑** 表明微软正在审阅你的问题在社区造成的影响并将会给出相应的优先级。如果在社区造成的影响还不明显和显著，我们将会继续监视这种状态下的问题。
 
 - - -
 
