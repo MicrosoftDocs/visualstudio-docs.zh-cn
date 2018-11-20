@@ -19,11 +19,11 @@ ms.workload:
 
 ## 问题状态
 
-在你报告问题之后，报告问题的生命周期通过状态表明。当微软团队检查你的反馈时，they set it with an appropriate state.  Track the progress of your problem reports by referencing the states listed below, along with their meaning and color indicators.
+在你报告问题之后，报告问题的生命周期通过状态表明。当微软团队检查你的反馈时，他们将会设置一个适当的状态。通过参考下面列出的状态来跟踪问题报告的进度，以及它们的含义和颜色标志。
 
-![New state for problem reporting on Developer Community](../ide/media/ProblemStates/New.jpg)
+![在开发者社区中新问题状态](../ide/media/ProblemStates/New.jpg)
 
-**New** indicates that the bug or issue is newly reported, and no action has been taken on it yet.
+**新** 表示bug或者问题是最新报告的，并没有采取任何行动。
 
 - - -
 
