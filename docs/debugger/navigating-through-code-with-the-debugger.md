@@ -1,5 +1,5 @@
 ---
-title: 导航代码使用 Visual Studio 中调试程序 |Microsoft Docs
+title: 通过Visual Studio 调试器单步调试 |Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 02/07/2017
 ms.technology: vs-ide-debug
@@ -43,7 +43,7 @@ Visual Studio调试器可以帮助你通过单步调试检查一个应用的状�
 
 如果你在没有源代码和符号文件被加载(*.pdb*)的情况下中断，调试器会显示 **未找到源文件** 或者 **未找到符号文件** 页面来帮你找到和加载这些文件。请看 [指定符号(.pdb)和源代码文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。如果你没有加载需要的符号和源代码文件，你仍然可以在**反汇编**窗口中调试汇编指令。 
 
-你不需要每次启动调试都重新打开应用程序。你也可以按**F11**[单步步入](#BKMK_Step_into__over__or_out_of_the_code), 按 **F10** [单步步出](#BKMK_Step_over_Step_out), 或者[在指定的位置或者函数运行](#BKMK_Break_into_code_by_using_breakpoints_or_Break_All).    
+你不需要每次启动调试都重新打开应用程序。你也可以按**F11**[逐语句](#BKMK_Step_into__over__or_out_of_the_code), 按 **F10** [逐过程](#BKMK_Step_over_Step_out), 或者[运行到指定位置或者函数](#BKMK_Break_into_code_by_using_breakpoints_or_Break_All).    
 
 ##  逐步执行代码
 
@@ -52,7 +52,7 @@ Visual Studio调试器可以帮助你通过单步调试检查一个应用的状�
 
 如果你需要找到应用程序的入口点, 按**F10**或者**F11**启动。  
 
-### <a name="BKMK_Step_into__over__or_out_of_the_code"></a> 根据每行逐语句跟踪代码 
+### <a name="BKMK_Step_into__over__or_out_of_the_code"></a> 在每行代码中逐语句跟踪 
 
 在调试时使用**调试** > **步入**，或者按**F11**，将在每一行代码或者语句上停止时。  
 
