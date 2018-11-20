@@ -44,7 +44,7 @@ ms.lasthandoff: 10/23/2018
 ms.locfileid: "49816678"
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>在 Visual Studio 调试器中使用断点
-断点是开发人员的工具箱中最重要的调试技术之一。 若要暂停调试程序执行所需的位置设置断点。 例如，你可能想要查看代码变量的状态或查看调用堆栈的某些断点。  
+断点是开发人员的工具箱中最重要的调试技术之一。 你可以在任何需要暂停调试程序的地方设置断点。例如，你可能想要查看代码中变量的状态或查看调用堆栈的某些断点。如果这是你首次尝试调试代码，你可能在继续阅读本文之前需要去参阅 [零基础调试入门](../debugger/debugging-absolute-beginners.md)。
   
 ##  <a name="BKMK_Overview"></a> 在源代码中设置断点  
  可以在任意可执行代码行上设置断点。 例如，在以下 C# 代码，可以设置断点在变量声明`for`循环中或内的任何代码`for`循环。 命名空间或类声明或方法签名，无法设置断点。  
@@ -304,6 +304,10 @@ ms.locfileid: "49816678"
 
 跟踪点显示为红色方块中的源代码的左边距和**断点**windows。 
   
-## <a name="see-also"></a>请参阅  
 [在 Visual Studio 调试器中的断点疑难解答](../debugger/troubleshooting-breakpoints.md)  
 [使用调试器浏览代码](../debugger/navigating-through-code-with-the-debugger.md)
+## <a name="see-also"></a>请参阅  
+ [什么是调试？](../debugger/what-is-debugging.md)  
+ [使用Visual Studio写出最好的C#代码](../debugger/write-better-code-with-visual-studio.md)  
+ [首次了解调试](../debugger/debugger-feature-tour.md)  
+ [在Visual Studio调试器中使用断点排除故障](../debugger/troubleshooting-breakpoints.md)  
