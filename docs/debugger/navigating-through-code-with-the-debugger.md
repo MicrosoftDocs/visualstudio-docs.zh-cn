@@ -75,7 +75,7 @@ Visual Studio调试器可以帮助你通过单步调试检查一个应用的状�
   
 在一个内嵌的函数调用中, **逐语句** 在一个最深处嵌套函数中进行逐语句调试。 For example，如果你正在调用像 `Func1(Func2())` 函数时使用 **逐语句**，调试器将步入`Func2`函数。  
 > [!TIP]
->  执行每行代码，你可以悬停在变量，以查看它们的值，或者可以使用[局部变量](../debugger/autos-and-locals-windows.md)并[监视](../debugger/autos-and-locals-windows.md)windows 以监视更改其值。  
+>在行每行代码时，你可以悬停在变量，以查看它们的值，或者可以使用[局部变量](../debugger/autos-and-locals-windows.md) 和 [监视](watch-and-quickwatch-windows.md) 窗口查看变量的变化。你可以逐语句跟踪函数的可视化调用堆栈。请参阅 [当调试时在调用堆栈上映射方法](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md). 
   
  下面是一些有关的行为的详细信息**单步执行**:  
   
