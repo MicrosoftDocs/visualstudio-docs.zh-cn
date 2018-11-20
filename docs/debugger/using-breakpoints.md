@@ -304,8 +304,6 @@ ms.locfileid: "49816678"
 
 跟踪点显示为红色方块中的源代码的左边距和**断点**windows。 
   
-[在 Visual Studio 调试器中的断点疑难解答](../debugger/troubleshooting-breakpoints.md)  
-[使用调试器浏览代码](../debugger/navigating-through-code-with-the-debugger.md)
 ## <a name="see-also"></a>请参阅  
  [什么是调试？](../debugger/what-is-debugging.md)  
  [使用Visual Studio写出最好的C#代码](../debugger/write-better-code-with-visual-studio.md)  
