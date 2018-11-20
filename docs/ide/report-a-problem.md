@@ -27,6 +27,7 @@ ms.workload:
 
 - - -
 
+![在开发者社区中问题分级状态](../ide/media/ProblemStates/Triaged.jpg)
 ![Triaged state for problem reporting on Developer Community](../ide/media/ProblemStates/Triaged.jpg)
 
 **Triaged** indicates that preliminary steps such as moderation, translation, and  initial check for duplicates are  complete. Your ticket has been routed to the appropriate engineering team for consideration.
