@@ -13,17 +13,13 @@ ms.workload:
 ---
 # 综述：报告问题
 
-The Report a Problem tool enables the Visual Studio developer community to submit issues. Each one of your problem reports becomes a work item in our core engineering system, empowering you to engage directly with our product teams to help us identify and resolve impactful issues. Your feedback submitted with rich diagnostic information is critical to improving the Visual Studio product family. We really appreciate you taking the time to report problems.
+报告问题工具使Visual Studio开发者社区可以提交问题。你报告的每个问题都变成我们工程师团队的核心工作项，使你能参与帮助我们产品团队识别和解决有影响力的问题。提交丰富诊断信息的反馈对改善Visual Studio产品系列至关重要。我们感谢您花时间报告问题。
 
-In addition, you can vote on feedback from other community members to bring more attention to a problem and help fix it faster.
+另外，您可以对其他社区成员的反馈进行投票，以便更多地关注问题并帮助您更快地解决问题。
 
-The Report a Problem tool enables the Visual Studio developer community to submit issues. Each one of your problem reports becomes a work item in our core engineering system, empowering you to engage directly with our product teams to help us identify and resolve impactful issues. Your feedback submitted with rich diagnostic information is critical to improving the Visual Studio product family. We really appreciate you taking the time to report problems.
+## 问题状态
 
-In addition, you can vote on feedback from other community members to bring more attention to a problem and help fix it faster.
-
-## Problem status
-
-After you report a problem, states indicate where your submissions are in their lifecycle. As Microsoft teams review your feedback, they set it with an appropriate state.  Track the progress of your problem reports by referencing the states listed below, along with their meaning and color indicators.
+在你报告问题之后，报告问题的生命周期通过状态表明。当微软团队检查你的反馈时，they set it with an appropriate state.  Track the progress of your problem reports by referencing the states listed below, along with their meaning and color indicators.
 
 ![New state for problem reporting on Developer Community](../ide/media/ProblemStates/New.jpg)
 
