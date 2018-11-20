@@ -21,45 +21,45 @@ ms.workload:
 
 在你报告问题之后，报告问题的生命周期通过状态表明。当微软团队检查你的反馈时，他们将会设置一个适当的状态。通过参考下面列出的状态来跟踪问题报告的进度，以及它们的含义和颜色标志。
 
-![在开发者社区中新问题状态](../ide/media/ProblemStates/New.jpg)
+![开发者社区中所报告问题新提交状态](../ide/media/ProblemStates/New.jpg)
 
-**新** 表示bug或者问题是最新报告的，并没有采取任何行动。
-
-- - -
-
-![在开发者社区中问题分级状态](../ide/media/ProblemStates/Triaged.jpg)
-
-**筛选** 表示适度的初级步骤，已完成对翻译和内容重复初始检查。你的通知单已经发送给适当的工程师团队审议。
+**New** 表示bug或者问题是最新报告的，并没有采取任何行动。
 
 - - -
 
-![对所报告问题开发者社区正在考虑状态](../ide/media/ProblemStates/UnderConsideration.jpg)
+![开发者社区中所报告问题正在筛选状态](../ide/media/ProblemStates/Triaged.jpg)
 
-**正在考虑** 表明微软正在审阅你的问题在社区造成的影响并将会给出相应的优先级。如果在社区造成的影响还不明显和显著，我们将会继续监视这种状态下的问题。
-
-- - -
-
-![Under Investigation state for problem reporting on Developer Community](../ide/media/ProblemStates/UnderInvestigation.jpg)
-
-**Under Investigation** indicates that engineers are actively investigating your problem to find a resolution.
+**Triaged** 表示适度的初级步骤，已完成对翻译和内容重复初始检查。你的通知单已经发送给适当的工程师团队审议。
 
 - - -
 
-![Need More Info state for problem reporting on Developer Community](../ide/media/ProblemStates/NeedMoreInfo.jpg)
+![开发者社区中所报告问题正在考虑状态](../ide/media/ProblemStates/UnderConsideration.jpg)
 
-**Need More Info** indicates that we need more diagnostic information from you so that we can go forward with the investigation.  [Learn how to respond to Need More Info requests.](./how-to-report-a-problem-with-visual-studio-2017.md#when-further-information-is-needed-need-more-info)
-
-- - -
-
-![Fixed - Pending Release state for problem reporting on Developer Community](../ide/media/ProblemStates/FixedPendingRelease.jpg)
-
-**Fixed - Pending Release** indicates that we have a fix for the problem and it will be available in an upcoming preview or release.  When the fix becomes available in a preview, the problem is tagged with a 'fixed in' tag specifying the preview version.
+**Under Consideration** 表明微软正在审阅你的问题在社区造成的影响并将会给出相应的优先级。如果在社区造成的影响还不明显和显著，我们将会继续监视这种状态下的问题。
 
 - - -
 
-![Closed - Fixed state for problem reporting on Developer Community](../ide/media/ProblemStates/ClosedFixed.jpg) 
+![开发者社区中所报告问题正在调查状态](../ide/media/ProblemStates/UnderInvestigation.jpg)
 
-**Closed - Fixed** indicates that we've released a fix for the problem. The problem is also now tagged with a "fixed in:" tag specifying the release version.
+**Under Investigation** 表明工程师们正在积极调查你的问题，以找到解决方案。
+
+- - -
+
+![开发者社区中所报告问题需要更多信息状态](../ide/media/ProblemStates/NeedMoreInfo.jpg)
+
+**Need More Info** 表明我们需要你提供更多诊断信息使我们继续完成调查。  [学习如何回复需要更多信息请求。](./how-to-report-a-problem-with-visual-studio-2017.md#when-further-information-is-needed-need-more-info)
+
+- - -
+
+![已修复 - 开发者社区中所报告问题待发布状态](../ide/media/ProblemStates/FixedPendingRelease.jpg)
+
+**Fixed - Pending Release** 表面我们针对该问题已经有了一个修复，该修复将进入预览版或者正式版。当该修复进入预览版，问题将在预览版中被标记为'fixed in'标签。
+
+- - -
+
+![已关闭 - 开发者社区中所报告问题已修复状态](../ide/media/ProblemStates/ClosedFixed.jpg) 
+
+**Closed - Fixed** 表明针对该问题将发布一个修复。该问题现在在正式版中同样被标记为"fixed in:"。
 
 - - -
 
