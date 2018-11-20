@@ -63,7 +63,7 @@ ms.locfileid: "39637492"
 * 确保`InstallationTarget`包括 15.0。
 * 添加所需的安装必备组件 （如下面的示例中所示）。
   * 我们建议您指定仅组件的安装必备组件的 Id。
-  * 请参阅本文档末尾[标识组件 Id 的说明](#finding-component-ids)。
+  * 请参阅本文档末尾[标识组件 Id 的说明](#find-component-ids)。
 
 示例:
 
