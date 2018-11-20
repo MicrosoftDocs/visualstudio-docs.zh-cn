@@ -63,21 +63,21 @@ ms.workload:
 
 - - -
 
-![Closed - Duplicate state for problem reporting on Developer Community](../ide/media/ProblemStates/ClosedDuplicate.jpg)
+![已关闭 - 开发者社区中所报告问题重复状态](../ide/media/ProblemStates/ClosedDuplicate.jpg)
 
-**Closed - Duplicate** indicates that your issue has already been reported via another feedback. We'll provide you with the link where you can track the original problem report.
-
-- - -
-
-![Closed - Lower Priority state for problem reporting on Developer Community](../ide/media/ProblemStates/ClosedLowerPriority.jpg)
-
-**Closed - Lower Priority** To focus on bringing each of you in our developer community the best value, we prioritize issues with the highest customer impact. Although we're unable to address this particular issue at this time, be assured that all your feedback is valuable and helps improve Visual Studio.
+**Closed - Duplicate** 表面你的问题已通过另一个反馈报告给我们。我们将给你原始报告的链接。
 
 - - -
 
-![Closed - Not a Bug state for problem reporting on Developer Community](../ide/media/ProblemStates/ClosedNotaBug.jpg)
+![已关闭 - 开发者社区中所报告问题次低优先级状态](../ide/media/ProblemStates/ClosedLowerPriority.jpg)
 
-**Closed - Not a Bug**  indicates that we've determined that the reported functionality is by current design.
+**Closed - Lower Priority** 专注让每一个人加入开发者社区，获得最大价值，我们优先考虑对客户造成最大影响的问题。虽然我们不能立刻处理这个特别的问题，请放心你的所有反馈都很有价值，并有助于改善Visual Studio。
+
+- - -
+
+![已关闭 - 开发者社区中所报告问题不是Bug状态](../ide/media/ProblemStates/ClosedNotaBug.jpg)
+
+**Closed - Not a Bug**  表面我们已经确定所报告的功能是当前设计的。
 
 - - -
 
