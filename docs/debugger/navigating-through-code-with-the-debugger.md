@@ -23,17 +23,17 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49933763"
 ---
-# 通过Visual Studio 调试器解决代码难题
+# 通过Visual Studio 调试器单步调试
 
-Visual Studio调试器可以帮助你通过检查一个应用的状态和执行流程解决代码难题。可以通过快捷键、调试命令、 断点、和其它功能快速的校对需要检验的代码。熟悉调试器导航命令和快捷键可以让你更快的发现和解决应用程序遇到的问题。如果现在是你第一次尝试调试代码，你可能需要在继续读本篇文章之前去阅读[使用Visual Studio写最好的C#代码](../debugger/write-better-code-with-visual-studio.md)和[调试零基础入门](../debugger/debugging-absolute-beginners.md)。
+Visual Studio调试器可以帮助你通过单步调试检查一个应用的状态和执行流程。可以通过快捷键、调试命令、 断点、和其它功能快速的校对需要检验的代码。熟悉调试器导航命令和快捷键可以让你更快的发现和解决应用程序遇到的问题。如果现在是你第一次尝试调试代码，你可能需要在继续读本篇文章之前去阅读[使用Visual Studio写出最好的C#代码](../debugger/write-better-code-with-visual-studio.md)和[调试零基础入门](../debugger/debugging-absolute-beginners.md)。
   
 ## 调试基础
 
-按 **F5**， 选择 **调试** > **启动调试**, 或者选择Visual Studio工具栏中的绿色箭头，启动并将调试器附加到你的应用。
+按 **F5**， 选择 **调试** > **启动调试**, 或者选择Visual Studio工具栏中的绿色箭头，启动后调试器将附加到你的应用。
   
  ![DBG&#95;Basics&#95;Start&#95;Debugging](../debugger/media/dbg_basics_start_debugging.png "DBG_Basics_Start_Debugging")  
 
-在进行调试时，下一步将会执行的代码会黄色高亮。
+在进行调试时，下一步将执行的代码会黄色高亮。
   
  ![DBG&#95;Basics&#95;Break&#95;Mode](../debugger/media/dbg_basics_break_mode.png "DBG_Basics_Break_Mode")  
 
