@@ -105,9 +105,7 @@ ms.locfileid: "49912001"
 
 
 ### <a name="q-what-happens-when-my-pluralsight-subscription-runs-out"></a>问：Pluralsight 订阅到期后，会发生什么情况？
-答：免费 Pluralsight 订阅结束时，有两个选项可供选择：
-- 你获得了一套课程 12 个月的免费使用权限（请检查[资格表](#eligibility)，了解你的订阅是否符合条件），该课程仅限 50 节课，内容涉及以下三大关键领域之一：云上的应用开发；AI、机器学习和数据；以及云中的 DevOps。 请注意 Pluralsight 发送的电子邮件，在到期后索取免费使用权限。 可以在每个部分库下看到[课程列表](https://help.pluralsight.com/help/which-courses-are-included-with-the-visual-studio-benefit)。
-- 可以选择从 Pluralsight 以 10% 的折扣直接购买订阅，购买后便可访问完整课程目录。  请联系 [Pluralsight](http://www.pluralsight.com) 获取完整详细信息。
+答：在免费的Pluralsight订阅结束后，你可以选择直接购买Pluralsight订阅。请联系 [Pluralsight](http://www.pluralsight.com) 获取完整详细信息。
 
 ### <a name="q-my-company-renews-their-visual-studio-subscription-through-an-enterprise-agreement-does-the-pluralsight-benefit-reset"></a>问：公司通过企业协议续订 Visual Studio 订阅。 Pluralsight 权益是否会重置？
 答：不会。  Pluralsight 权益绑定到个人，仅限使用一次。  订阅者使用该权益后便无法再重置。  所有购买渠道（包括零售、云和批量许可证 (VL) 采购）都是如此。
@@ -116,3 +114,6 @@ ms.locfileid: "49912001"
 -  [Pluralsight 帮助中心](https://help.pluralsight.com/help)可以在参加 Pluralsight 课程或使用 Pluralsight 网站方面提供帮助。
 -  有关 Visual Studio 订阅的销售、订阅、帐户和账单的帮助，请与 Visual Studio [订阅支持](https://visualstudio.microsoft.com/subscriptions/support/)联系。
 -  对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
+
+## 下一步
+一旦你创建了账号，您就可以开始培训了。访问 [https://www.pluralsight.com](http://www.pluralsight.com) 并点击页面右上角的**登录**以开始新课程，或返回正在进行的课程。
