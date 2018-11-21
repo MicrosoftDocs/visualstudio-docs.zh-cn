@@ -105,15 +105,15 @@ ms.workload:
 
 我们建议使用搜索来确保您将要报告的问题还没有被报告。如果您发现现有项目符合您的问题，关注并对该问题工单进行投票。
 
- Provide all the information you can to help our teams reproduce what you're experiencing.  This information includes  necessary repro steps, code fragments, screenshots, repro recordings, log files, and other artifacts.  Here is [how to report a problem in Visual Studio](./how-to-report-a-problem-with-visual-studio-2017.md).
+提供您可以提供的所有信息，以帮助我们的团队重现您所遇到的问题。此信息包括必要的重复步骤，代码片段，屏幕截图，重现记录，日志文件和其他工件。这是[如何在Visual Studio中提交一个问题](./how-to-report-a-problem-with-visual-studio-2017.md).
 
-### How is my feedback prioritized?
+### 如何才能优先考虑我的反馈?
 
-We receive a large number of valuable problems from our customers. To ensure that we're bringing the best value to each of you in our developer community, we prioritize action on feedback that has the highest community impact.
+我们从客户那里收到了大量有价值的问题。确保我们为开发人员社区中的每个人带来最大价值，我们优先考虑对社区影响最大的反馈采取行动。
 
-If we aren't able to respond personally to your feedback, know that we fully appreciate your input. Be assured that all your feedback gets to the right team.
+如果我们无法亲自回复您的反馈，我们非常感谢您的意见。请放心，您的所有反馈都会传达给合适的团队。
 
-We truly value the time you invest in making Visual Studio better.
+我们非常重视您在Visual Studio中所投入的时间。
 
 ### What actions can I take if I'm not satisfied with the resolution?
 
