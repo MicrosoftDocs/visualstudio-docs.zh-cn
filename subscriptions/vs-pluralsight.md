@@ -5,7 +5,7 @@ ms.author: jaunger
 manager: evelynp
 ms.date: 01/04/2018
 ms.topic: Get-Started-Article
-description: 了解 Visual Studio 订阅中随附的 Pluralsight 培训订阅。
+description: 了解选定的 Visual Studio 订阅中随附的 Pluralsight 培训订阅。
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
@@ -79,13 +79,13 @@ ms.locfileid: "49912001"
 |         Visual Studio Professional（标准、年度云）          | VL、Azure、零售 |   3 个月    | 否<sup>2</sup> |
 |              Visual Studio Test Professional（标准）              |    VL、零售     |   3 个月    | 否<sup>2</sup> |
 |                      MSDN 平台（标准）                       |    VL、零售     |   3 个月    | 否<sup>2</sup> |
-|                     Visual Studio Dev Essentials                     |        NA         |   3 个月    |       否       |
+|                     Visual Studio Dev Essentials                     |        NA         |   1 个月    |       否       |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） |       Azure       | 不可用 |       NA       |
 |             Visual Studio Enterprise (NFR<sup>1</sup> )              |      计划      | 不可用 |       NA       |
 
 <sup>1</sup>包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员、MCT 软件和服务、Microsoft 最有价值专家 (MVP)、区域总监 (RD)、Microsoft 合作伙伴网络 (MPN)、FTE、Imagine。
 
-<sup>2</sup> *Pluralsight 权益绑定到个人，仅限使用一次。订阅者使用该权益后便无法再重置。有关详细信息，请参阅下列常见问题解答。Pluralsight 订阅过期后，你可能有资格在三个研究区域之一访问 50 个选定的 Pluralsight 课程，为期 12 个月。*
+<sup>2</sup> *Pluralsight 权益绑定到个人，仅限使用一次。订阅者使用该权益后便无法再重置。*
 
 无法确定正在使用哪些订阅？  连接到 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)，查看分配给电子邮件地址的所有订阅。 如果没有看到所有订阅，则可能是有一个或多个订阅分配给了不同的电子邮件地址。  你需要使用其他电子邮件地址登录来查看那些订阅。
 
