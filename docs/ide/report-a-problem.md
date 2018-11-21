@@ -115,13 +115,13 @@ ms.workload:
 
 我们非常重视您在Visual Studio中所投入的时间。
 
-### What actions can I take if I'm not satisfied with the resolution?
+### 如果我对决议不满意，我可以采取什么行动?
 
-Our teams do their best to diagnose and fix any issues you experience, however there may be times when you're not fully satisfied with our recommendation. Comment back on the feedback and let us know exactly what you're not satisfied with, and we'll try our best to ensure that we meet your needs.
+我们的团队会尽力诊断并解决您遇到的任何问题，然而，有时您可能对我们的建议不完全满意。 请回复反馈意见，让我们确切地知道您对此不满意, 我们会尽力确保满足您的需求。
 
-### How will I get notified of progress on my feedback?
+### 我如何收到有关反馈进度的通知?
 
-Microsoft engineering teams will communicate with you by commenting on the feedback ticket and changing the state of your ticket as they make progress. Watch for e-mail notifications that are sent when  ticket state changes or a comment is posted.  You can manage frequency of notifications in Profile and Preferences settings on Developer Community site.
+微软工程师团队将通过回复反馈工单和改变工单的状态来分享工作进度。查看工单状态更改或工单收到回复时发送的电子邮件通知.  您可以在开发者社区站点上的Profile和Preferences设置中管理通知的频率。
 
 ### Why can't I add a problem for Visual Studio IDE on the Developer Community website?
 
