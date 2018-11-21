@@ -115,7 +115,7 @@ ms.workload:
 
 我们非常重视您在Visual Studio中所投入的时间。
 
-### 如果我对决议不满意，我可以采取什么行动?
+### 如果我对解决方案不满意，我可以采取什么行动?
 
 我们的团队会尽力诊断并解决您遇到的任何问题，然而，有时您可能对我们的建议不完全满意。 请回复反馈意见，让我们确切地知道您对此不满意, 我们会尽力确保满足您的需求。
 
@@ -123,8 +123,8 @@ ms.workload:
 
 微软工程师团队将通过回复反馈工单和改变工单的状态来分享工作进度。查看工单状态更改或工单收到回复时发送的电子邮件通知.  您可以在开发者社区站点上的Profile和Preferences设置中管理通知的频率。
 
-### Why can't I add a problem for Visual Studio IDE on the Developer Community website?
+### 为什么我不能在开发者社区网站反馈对于Visual Studio IDE的问题?
 
-Reporting a problem through Visual Studio allows for diagnostic information to automatically be included in the report. It's essential information that gives our engineers the context they need to fully understand your issue and work to resolve it.
+报告的问题通过Visual Studio允许访问的自动诊断信息已包含在报告中。这些重要信息为我们的工程师提供了完全理解您的问题并努力解决问题所需的来龙去脉。
 
-When you report through Visual Studio, you can easily share rich diagnostic information with us, such as large log files, crash information, screenshots, repro recording, and other artifacts that help us deliver higher-quality resolutions faster to you.
+当你通过Visual Studio报告问题，你可以简单的分享丰富的诊断信息给我们，比如大型日志文件、崩溃信息、屏幕截图、重现步骤和其他帮助我们更快地向您交付高质量解决方案的工件。
