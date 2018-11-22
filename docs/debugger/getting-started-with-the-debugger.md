@@ -307,7 +307,7 @@ ms.locfileid: "51561668"
 
     当你想要详细检查代码行或代码段时，断点功能非常有用。
 
-## 在调试器中使用单步执行命令定位代码
+## <a name="navigate-code-in-the-debugger-using-step-commands"></a>在调试器中使用单步执行命令定位代码
 
 大多数情况下，我们使用键盘快捷方式，因为这是在调试器中快速执行应用的好方法（括号中显示了等效的命令，如菜单命令）。
 
@@ -323,7 +323,7 @@ ms.locfileid: "51561668"
 
      请注意，这次调试器不会单步执行基类 (`Shape`) 的 `Draw` 方法。 按 F10 将使调试器前进，但不会逐语句执行应用程序代码中的函数或方法（代码仍将执行）。 通过在进行 `base.Draw`（或 `Shape::Draw`）方法调用时按 F10（而不是 F11），我们跳过了 `base.Draw` 的实现代码（或许我们现在对此已不感兴趣）。
 
-## 使用“点击运行”定位代码
+## <a name="navigate-code-using-run-to-click"></a> 使用“点击运行”定位代码
 
 1. 在代码编辑器中，向下滚动并将鼠标悬停在 `Triangle` 类中的 `Console.WriteLine` 方法（C++ 中的 `std::cout`）上，直到左侧出现绿色的**点击运行**按钮（![点击](../debugger/media/dbg-tour-run-to-click.png "RunToClick")）。
 
@@ -340,7 +340,7 @@ ms.locfileid: "51561668"
 
     暂停时，你注意到有拼写错误！ “Drawing a trangle”输出拼写错误。 在调试器中运行应用时，我们可直接在此处修复它。
 
-## 编辑代码并继续调试
+## <a name="edit-code-and-continue-debugging"></a>编辑代码并继续调试
 
 1. 单击“Drawing a trangle”内并键入校正，将“trangle”更改为“triangle”。
 
@@ -349,7 +349,7 @@ ms.locfileid: "51561668"
     > [!NOTE]
     > 根据你在调试器中编辑的代码类型，可能会看到一条警告消息。 在某些情况下，代码需要重新编译才能继续。
 
-## 跳出
+## <a name="step-out"></a>跳出
 
 假设你已完成了对 `Triangle` 类中 `Draw` 方法的检查，并且希望退出该函数但想继续留在调试器中。 可使用**跳出**命令执行此操作。
 
@@ -359,7 +359,7 @@ ms.locfileid: "51561668"
 
      你应当会回到 `Main` 方法的 `foreach` 循环（C++ 中的 `for` 循环）中。
 
-## 快速重启应用
+## <a name="restart-your-app-quickly"></a>快速重启应用
 
 单击调试工具栏中的**重启**（![重启应用](../debugger/media/dbg-tour-restart.png "RestartApp")）按钮（**Ctrl** + **Shift** + **F5**）。
 
@@ -367,7 +367,7 @@ ms.locfileid: "51561668"
 
 调试器再次在 `shape.Draw()` 方法（C++ 中的 `shape->Draw()`）上设置的断点处停止。
 
-## 使用数据提示检查变量
+## <a name="inspect-variables-with-data-tips"></a>使用数据提示检查变量
 
 允许你检查变量的功能是调试器最有用的功能之一，并且有不同的方法来执行此操作。 通常，当尝试使用调试解决问题时，你试图在特定情况下查明变量中保存的值是否与预期相符。
 
@@ -381,7 +381,7 @@ ms.locfileid: "51561668"
 
     通常，在调试时，你需要快速检查对象的属性值，数据提示是一种实现此目的的好方法。
 
-## 使用“自动”和“局部变量”窗口检查变量
+## <a name="inspect-variables-with-the-autos-and-locals-windows"></a>使用“自动”和“局部变量”窗口检查变量
 
 1. 查看代码编辑器底部的“自动”窗口。
 
@@ -396,7 +396,7 @@ ms.locfileid: "51561668"
 
     **局部变量**窗口显示当前[作用域](https://www.wikipedia.org/wiki/Scope_(computer_science))中的变量。
 
-## 设置监视
+## <a name="set-a-watch"></a>设置监视
 
 1. 在主代码编辑器窗口中，右键单击 `shapes` 对象，然后选择**添加监视**。
 
@@ -404,7 +404,7 @@ ms.locfileid: "51561668"
 
     现在，你在 `shapes` 对象上设置好了监视，当你在调试器中移动时，可看到其值发生变化。 与其他变量窗口不同，**监视**窗口始终显示你正在监视的变量（当超出作用域时，它们会变灰）。
 
-## 检查调用堆栈
+## <a name="examine-the-call-stack"></a>检查调用堆栈
 
 1. 在 `foreach` 循环（C++ 中的 `for` 循环）中暂停时，单击**调用堆栈**窗口，默认情况下，该窗口在右下方窗格中打开。
 
@@ -423,7 +423,7 @@ ms.locfileid: "51561668"
 
     还可使用**调用堆栈**窗口中的右键单击菜单执行其他操作。 例如，你可将断点插入到指定的函数中，使用**运行到光标处**推进调试器，然后检查源代码。 有关详细信息，请参阅[如何：检查调用堆栈](../debugger/how-to-use-the-call-stack-window.md)。
 
-## 更改执行流
+## <a name="change-the-execution-flow"></a>更改执行流
 
 1. 在 `Circle.Draw` 方法调用中暂停调试器后，按几次 **F11**，直到调试器暂停于 `base.Draw` 方法调用（C++ 中的 `Shape::Draw`）。
 
@@ -442,7 +442,7 @@ ms.locfileid: "51561668"
 
     恭喜你完成本教程！
 
-## 后续步骤
+## <a name="next-steps"></a>后续步骤
 
 在本教程中，你已了解了如何启动调试器、逐步执行代码以及检查变量。 你可能会希望更深入地了解调试器功能以及查看指向更多信息的链接。
 
