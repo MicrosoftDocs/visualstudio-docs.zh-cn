@@ -1,5 +1,5 @@
 ---
-title: 将附加到正在运行使用 Visual Studio 中调试器的进程 |Microsoft Docs
+title:  使用Visual Studio调试器附加到运行中的进程 |Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 06/20/2018
 ms.technology: vs-ide-debug
@@ -36,17 +36,17 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49843257"
 ---
-# <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>使用 Visual Studio 调试器附加到运行的进程
-你可将 Visual Studio 调试器附加到正在本地或远程计算机上运行的进程上。 进程正在运行后，选择**调试** > **附加到进程**或按**Ctrl**+**Alt** +**P** Visual Studio 中，并使用**附加到进程**对话框，可以将调试器附加到进程。
+# <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>使用Visual Studio调试器附加到运行中的进程
+你可将 Visual Studio 调试器附加到正在本地或远程计算机上运行中的进程。 进程运行之后，在Visual Studio 中选择**调试** > **附加到进程**或按**Ctrl**+**Alt** +**P** ，并使用**附加到进程**对话框，可以将调试器附加到进程。
 
-可以使用**附加到进程**若要调试在本地或远程计算机上的运行应用，同时调试多个进程、 调试不 Visual Studio 中创建的应用或调试任何未启动从 Visual Studio 中使用的应用程序附加调试程序。 例如，如果您正在运行不带调试器的应用，并引发了异常，可以然后将调试器附加到进程中运行应用程序，并开始调试。
+可以在本地或远程计算机上使用**附加到进程**调试运行中的应用程序。调试器附加后可同时调试多个进程、 非 Visual Studio 中创建的应用或任何未从 Visual Studio 中启动的应用程序。 例如，如果您正在运行不带调试器的应用，并触发异常，可以将调试器附加到进程中运行应用程序，并开始调试。
 
-有关在 Visual Studio 基本调试的信息，请参阅[开始使用调试器](../debugger/getting-started-with-the-debugger.md)。
+有关在 Visual Studio 基本调试的信息，请参阅[调试器入门](../debugger/getting-started-with-the-debugger.md)。
 
 > [!TIP]
 > 不确定是否使用**附加到进程**为调试方案？ 请参阅[常见调试方案](#BKMK_Scenarios)。 
 
-##  <a name="BKMK_Attach_to_a_running_process"></a> 将附加到在本地计算机上正在运行的进程  
+##  <a name="BKMK_Attach_to_a_running_process"></a> 附加到在本地计算机上正在运行的进程  
 
 若要快速重新附加到以前附加到进程，请参阅[重新附加到进程](#BKMK_reattach)。 
 
@@ -69,18 +69,18 @@ ms.locfileid: "49843257"
    >[!TIP]
    >进程可以启动和停止在后台，而**附加到进程**对话框处于打开状态，因此运行进程的列表可能不始终是最新内容。 可以选择**刷新**任何时候若要查看当前列表。 
   
-3. 在中**将附加到**字段中，请确保你打算调试的代码类型已经列出。 默认值**自动**设置对于大多数应用程序类型的工作原理。 
+3. 在中**将附加到**字段中，请确保你打算调试的代码类型已经列出。 对大多数类型的应用程序工作时默认启动**自动**设置。 
   
    若要手动选择代码类型：
    1. 单击 **“选择”**。 
-   1. 在中**选择代码类型**对话框中，选择**调试这些代码类型**。
+   1. 在**选择代码类型**对话框中，选择**调试这些代码类型**。
    1. 选择你想要调试的代码类型。
-   1. 选择“确定”。
+   1. 选择**确定**。
   
 4. 选择**附加**。
   
 >[!NOTE]
->你可以附加到多个应用程序以进行调试，但一次只能有一个应用是在调试器中处于活动状态。 可以在 Visual Studio 中设置活动的应用程序**调试位置**工具栏或**进程**窗口。  
+>你可以附加到多个应用程序以进行调试，但在调试器中同时只能有一个应用是处于活动状态。 可以在 Visual Studio **调试位置**工具栏或**进程**窗口中设置活动的应用程序。  
 
 ##  <a name="BKMK_Attach_to_a_process_on_a_remote_computer"></a> 附加到远程计算机上的进程  
 
