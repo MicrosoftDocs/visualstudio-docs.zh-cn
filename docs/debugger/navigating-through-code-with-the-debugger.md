@@ -23,7 +23,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49933763"
 ---
-# 通过Visual Studio 调试器单步调试
+# <a name="navigate-code-with-the-visual-studio-debugger"></a>通过Visual Studio 调试器单步调试
 
 Visual Studio调试器可以帮助你通过单步调试检查一个应用的状态和执行流程。可以通过快捷键、调试命令、 断点、和其它功能快速的校对需要检验的代码。熟悉调试器导航命令和快捷键可以让你更快的发现和解决应用程序遇到的问题。如果现在是你第一次尝试调试代码，你可能需要在继续读本篇文章之前去阅读[使用Visual Studio写出最好的C#代码](../debugger/write-better-code-with-visual-studio.md)和[调试零基础入门](../debugger/debugging-absolute-beginners.md)。
   

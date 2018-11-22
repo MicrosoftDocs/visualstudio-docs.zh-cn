@@ -14,7 +14,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/09/2018
 ms.locfileid: "51348108"
 ---
-# 在 Visual Studio 中进行调试
+# <a name="debugging-in-visual-studio"></a> 在 Visual Studio 中进行调试
 
 Visual Studio 调试程序有助于你观察程序的运行时行为并发现问题。 该调试器可用于所有 Visual Studio 编程语言及其关联的库。 使用调试程序时，可以中断程序的执行以检查代码、检查和编辑变量、查看寄存器、查看从源代码创建的指令，以及查看应用程序占用的内存空间。
 
