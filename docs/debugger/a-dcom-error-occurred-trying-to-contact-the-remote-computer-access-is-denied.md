@@ -30,7 +30,7 @@ ms.lasthandoff: 10/25/2018
 ms.locfileid: "49900509"
 ---
 # <a name="a-dcom-error-occurred-trying-to-contact-the-remote-computer-access-is-denied"></a>尝试联系远程计算机时出现 DCOM 错误。 拒绝访问。
-远程调试使用 DCOM 在以下情况下进行本地和远程计算机之间的通信：  
+ 如下情景远程调试时，通过 DCOM 将本地和远程计算机进行通信：  
   
 - 调试器设置为**本机兼容模式**或**托管兼容模式**签入**工具 > 选项 > 调试**页  
   
@@ -52,4 +52,4 @@ ms.locfileid: "49900509"
   
 ## <a name="see-also"></a>请参阅  
  [远程调试错误和故障排除](../debugger/remote-debugging-errors-and-troubleshooting.md)   
- [Remote Debugging](../debugger/remote-debugging.md)
+ [远程调试](../debugger/remote-debugging.md)
