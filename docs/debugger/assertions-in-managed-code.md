@@ -199,7 +199,7 @@ Trace.Assert ( stacksize > 0, "Out of stack space", "Failed in inctemp" );
  [在本主题中](#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_Customizing_Assert_behavior"></a> 自定义断言行为  
- 如果在用户界面模式中运行你的应用程序`Assert`方法将显示**断言失败**对话框中的条件失败时。 断言失败时发生的操作受<xref:System.Diagnostics.Debug.Listeners%2A>或<xref:System.Diagnostics.Trace.Listeners%2A>属性。  
+ 如果在用户界面模式中运行你的应用程序，当条件失败时`Assert`方法将显示**断言失败**对话框中。 <xref:System.Diagnostics.Debug.Listeners%2A>或<xref:System.Diagnostics.Trace.Listeners%2A>属性控制断言失败时发生的操作。  
   
  可以通过向 <xref:System.Diagnostics.TraceListener> 集合添加 `Listeners` 对象、从 <xref:System.Diagnostics.TraceListener> 集合中移除 `Listeners` 或者重写现有 <xref:System.Diagnostics.TraceListener.Fail%2A?displayProperty=fullName> 的 `TraceListener` 方法来自定义输出行为，使其变得不同。  
   
