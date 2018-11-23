@@ -86,31 +86,31 @@ Visual Studio 提供了一些 *.natvis*中的文件 *%VSINSTALLDIR%\Common7\Pack
 
 Visual Studio 调试器自动加载 *.natvis* c + + 项目中的文件，并且默认情况下，还在生成项目时在 *.pdb* 文件包含它们。 如果调试生成的应用程序时，调试器将从 *.pdb* 文件加载 *.natvis* 文件，即使你没有打开该项目。 如果不想在 *.pdb* 文件中包含 *.natvis* 文件，你可以从生成中排除它 *.pdb* 文件。
 
-**若要排除 *.natvis*文件从 *.pdb*:**
+**从 *.pdb*文件中排除 *.natvis*文件:**
 
-1. 选择 *.natvis*中的文件**解决方案资源管理器**，然后选择**属性**图标，或右键单击该文件并选择**属性**.
+1. 在 **解决方案资源管理器** 中选择 *.natvis* 文件，然后选择**属性**图标，或右键单击该文件并选择**属性**.
    
-1. 下拉列表箭头旁边**从生成中排除**，然后选择**是**，然后选择**确定**。  
+1. 选择下拉列表箭头旁边的**从生成中排除**，然后选择**是**，选择**确定**。  
 
 >[!NOTE]
->对于调试可执行文件的项目，使用解决方案项添加任何 *.natvis*不在的文件 *.pdb*，因为没有可用的 c + + 项目。  
+>对于正在调试可执行文件的项目，使用解决方案项添加 *.pdb* 中任何不在的 *.natvis* 文件，因为没有可用的 c + + 项目。  
 
 >[!NOTE]
->从加载 Natvis 规则 *.pdb*仅适用于类型的模块中的 *.pdb*引用。 例如，如果*则 Module1.pdb*具有名为的类型的 Natvis 条目`Test`，它仅适用于`Test`类*Module1.dll*。 如果另一个模块还定义一个名为类`Test`，则*则 Module1.pdb* Natvis 条目将不适用于到它。  
+>*.pdb* 文件加载 Natvis 规则 仅适用于*.pdb* 模块中的文件类型引用。例如，如果 *Module1.pdb* 具有名为`Test`类型的 Natvis 条目，它仅适用于 *Module1.dll* 中的 `Test`类 。 如果另一个模块还定义一个名为`Test` 的类，则 *Module1.pdb* Natvis 条目将不适用于它。  
 
 ### <a name="BKMK_natvis_location"></a> Natvis 文件位置  
 
-您可以添加 *.natvis*文件到你的用户目录或系统目录中，如果你希望它们适用于多个项目。  
+您可以添加 *.natvis* 文件到你的用户目录或系统目录中，如果你希望它们适用于多个项目。  
 
-*.Natvis*文件按以下顺序计算：  
+*.Natvis* 文件按以下顺序计算：  
 
-1. 任何 *.natvis*文件中嵌入 *.pdb*你进行调试时，除非加载的项目中存在的同名文件。  
+1. 任何 *.natvis* 文件中嵌入 *.pdb* 你进行调试时，除非加载的项目中存在的同名文件。  
 
 1. 任何 *.natvis*中加载的 c + + 项目或顶级解决方案的文件。 此组包括所有已加载的 c + + 项目，包括其他语言中的类库，但不是项目。 
 
 1.  特定于用户的 Natvis 目录 (例如， *%USERPROFILE%\Documents\Visual Studio 2017\Visualizers*)。  
 
-1.  系统级 Natvis 目录 (*%VSINSTALLDIR%\Common7\Packages\Debugger\Visualizers*)。 此目录已 *.natvis*随 Visual Studio 一起安装的文件。 如果您具有管理员权限，可以将文件添加到此目录中。  
+1.  系统级 Natvis 目录 (*%VSINSTALLDIR%\Common7\Packages\Debugger\Visualizers*)。 此目录已 *.natvis* 随 Visual Studio 一起安装的文件。 如果您具有管理员权限，可以将文件添加到此目录中。  
 
 ## <a name="modify-natvis-files-while-debugging"></a>在调试时修改.natvis 文件  
 
