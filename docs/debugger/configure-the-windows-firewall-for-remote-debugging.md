@@ -84,7 +84,7 @@ Visual Studio 和远程调试器在安装或启动期间尝试打开正确的端
   
 *\<Visual Studio 安装目录\>\\Common7\\IDE\\远程调试器\\\<x86*， *x64*，或*Appx*\> 
   
-### <a name="allow-and-configure-the-remote-debugger-through-windows-firewall"></a>Windows 在防火墙中设置允许远程调试器通信
+### <a name="allow-and-configure-the-remote-debugger-through-windows-firewall"></a>Windows 在防火墙中设置允许远程调试器通过
   
 1. 在 Windows 中**开始**菜单中，搜索并打开**Windows 防火墙**，或**Windows Defender 防火墙**。 
   
@@ -102,9 +102,9 @@ Visual Studio 和远程调试器在安装或启动期间尝试打开正确的端
   
 如果您不能与远程调试器附加到您的应用程序，请确保远程调试的防火墙端口，协议、 网络类型和应用程序设置是否都正确。 
 
-- 在 Windows 中**启动**菜单中，搜索并打开**Windows 防火墙**，然后选择**允许的应用程序通过 Windows 防火墙**。 请确保**远程调试器**或**Visual Studio 远程调试器**将出现在**允许的应用程序和功能**列出了与所选的复选框和正确的网络类型选择。 如果不是，[添加正确的应用和设置](#configure-remote-debugging-through-windows-firewall)。
+- 在 Windows 中**开始**菜单中，搜索并打开**Windows 防火墙**，然后选择**允许的应用程序通过 Windows 防火墙**。 请确保**远程调试器**或**Visual Studio 远程调试器**将出现在**允许的应用程序和功能**列出了与所选的复选框和正确的网络类型选择。 如果不是，[添加正确的应用和设置](#configure-remote-debugging-through-windows-firewall)。
   
-- 在 Windows 中**启动**菜单中，搜索并打开**高级安全 Windows 防火墙**。 请确保**远程调试器**或**Visual Studio 远程调试器**下将显示**入站规则**(和 （可选），**出站规则**)使用一个绿色的复选标记图标，和的所有设置都均正确。 
+- 在 Windows 中**开始**菜单中，搜索并打开**高级安全 Windows 防火墙**。 请确保**远程调试器**或**Visual Studio 远程调试器**下将显示**入站规则**(和 （可选），**出站规则**)使用一个绿色的复选标记图标，和的所有设置都均正确。 
   
   - 若要查看或更改规则设置，请右键单击**远程调试器**应用程序在列表中，选择**属性**。 使用**属性**选项卡来启用或禁用规则，或更改端口号、 协议或网络类型。 
   - 如果规则列表中看不到远程调试器应用[添加并配置了正确的端口](#configure-ports-for-remote-debugging)。 
