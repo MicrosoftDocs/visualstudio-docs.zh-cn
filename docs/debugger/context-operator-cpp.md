@@ -1,5 +1,5 @@
 ---
-title: 上下文运算符在调试器中 （c + +） |Microsoft Docs
+title: 在调试器中的(C++)上下文运算符 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -31,7 +31,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49862393"
 ---
-# <a name="context-operator-in-the-visual-studio-debugger-c"></a>上下文运算符在 Visual Studio 调试器 （c + +）
+# <a name="context-operator-in-the-visual-studio-debugger-c"></a>在调试器中的(C++)上下文运算符
 可使用 C++ 中的上下文运算符来限定断点位置、变量名称或表达式。 上下文运算符可用于指定来自外部范围的但被本地名称隐藏的名称。  
   
 ##  <a name="BKMK_Using_context_operators_to_specify_a_symbol"></a> 语法  
@@ -65,11 +65,11 @@ ms.locfileid: "49862393"
   
   当表达式计算器遇到表达式中的符号时，它按下列顺序搜索该符号：  
   
-1.  词法范围向外，从当前块开始（括在大括号中的一系列语句），然后从该封闭块继续向外。 当前块是包含当前位置（指令指针地址）的代码。  
+1.  词汇作用域向外，从当前块开始（括在大括号中的一系列语句），然后从该封闭块继续向外。 当前块是包含当前位置（指令指针地址）的代码。  
   
-2.  函数范围。 当前函数。  
+2.  函数作用域，当前函数。  
   
-3.  类范围（如果当前位置在 C++ 成员函数内）。 类范围包含所有基类。 表达式计算器使用常规域控制规则。  
+3.  类作用域（如果当前位置在 C++ 成员函数内）。 类作用域包含所有基类。 表达式计算器使用常规域控制规则。  
   
 4.  当前模块中的全局符号。  
   
