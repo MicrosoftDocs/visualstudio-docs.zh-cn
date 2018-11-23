@@ -19,16 +19,16 @@ ms.locfileid: "50750931"
 ---
 # <a name="configure-windows-firewall-for-remote-debugging"></a>配置 Windows 防火墙以进行远程调试
 
-在网络中保护的 Windows 防火墙，防火墙必须配置为允许远程调试。 Visual Studio 和远程调试工具尝试在安装或启动时，打开正确的防火墙端口，但可能还需要打开端口或手动允许应用程序。 
+Windows防火墙保护电脑网络安全，进行远程调试时防火墙必须配置为允许。 在安装或启动时，Visual Studio 和远程调试工具尝试打开正确的防火墙端口，但可能还需要打开端口或手动允许应用程序。 
 
-本主题介绍如何配置 Windows 防火墙以启用 Windows 10，8/8.1 和 7; 上的远程调试和 Windows Server 2012 R2、 2012年和 2008 R2 计算机。 Visual Studio 和远程计算机无需运行相同的操作系统。 例如，在 Visual Studio 计算机可以运行 Windows 10 和远程计算机可以运行 Windows Server 2012 R2。      
+本主题介绍如何在Windows 10、8/8.1 和 7， 以及Windows Server 2012 R2、 2012年和 2008 R2上设置Windows 防火墙，进行远程调试。Visual Studio 和远程计算机无需运行相同的操作系统。 例如，运行Visual Studio 的计算机可以使用 Windows 10 ，远程计算机可以运行 Windows Server 2012 R2。      
   
 >[!NOTE]
->有关配置 Windows 防火墙的说明略有不同，在不同操作系统上和较旧版本的 Windows。 Windows 8/8.1、 Windows 10 和 Windows Server 2012 设置使用单词*应用程序*，而 Windows 7 和 Windows Server 2008 使用单词*程序*。  
+>在不同操作系统上和较旧版本的 Windows上，有关配置 Windows 防火墙的说明略有不同。 Windows 8/8.1、 Windows 10 和 Windows Server 2012 设置使用单词*应用程序*，而 Windows 7 和 Windows Server 2008 使用单词*程序*。  
 
 ## <a name="configure-ports-for-remote-debugging"></a>配置用于远程调试的端口  
 
-Visual Studio 和远程调试器尝试在安装或启动期间打开正确的端口。 但是，在某些情况下，如第三方防火墙，你可能需要手动打开端口。 
+Visual Studio 和远程调试器在安装或启动期间尝试打开正确的端口。 但是，在某些情况下，如第三方防火墙，你可能需要手动打开端口。 
 
 **若要打开的端口：**
   
