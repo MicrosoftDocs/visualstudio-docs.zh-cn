@@ -24,9 +24,9 @@ ms.locfileid: "51000856"
 ---
 # <a name="create-custom-views-of-native-objects-in-the-debugger"></a>在调试器中创建本机对象的自定义视图
 
-Visual Studio *Natvis* framework 自定义本机类型如出现在调试器变量窗口的方式**局部变量**和**观看**windows，在**数据提示**。 Natvis 可视化效果可使创建在调试期间更可见的类型。 
+Visual Studio *Natvis* framework 在调试器变量窗口中自定义本机类型，比如在**局部变量**和**观看**窗口，以及**数据提示**窗口。 Natvis 可视化效果在调试期间可使更多类型可见。 
 
-Natvis 替换*autoexp.dat*了 XML 语法、 更好的诊断、 版本控制，Visual Studio 的早期版本中的文件和支持的多个文件。  
+Natvis 替换了Visual Studio 的早期版本中的*autoexp.dat* XML 语法，提供了更好的诊断、版本控制，以及支持多个文件。  
 
 Natvis 并不适用于：
 
@@ -35,23 +35,23 @@ Natvis 并不适用于：
 
 ## <a name="BKMK_Why_create_visualizations_"></a>Natvis 可视化效果
 
-使用 Natvis 框架创建你创建的类型的可视化规则，以便开发人员可以查看其更轻松地在调试过程。  
+使用 Natvis 框架，可以为你创建的类型窗口可视化规则，以便开发人员在调试中可以更轻松地查看。  
 
-例如下, 图显示类型的变量[Windows::UI::Xaml::Controls::TextBox](http://go.microsoft.com/fwlink/?LinkId=258422)未应用任何自定义可视化的调试器窗口中。  
+例如，下 图显示类型的变量[Windows::UI::Xaml::Controls::TextBox](http://go.microsoft.com/fwlink/?LinkId=258422)在调试器窗口中未应用任何自定义可视化。  
 
 ![TextBox 默认可视化](../debugger/media/dbg_natvis_textbox_default.png "TextBox 默认可视化")  
 
-突出显示的行显示 `Text` 类的 `TextBox` 属性。 Complex 类层次结构使得难以找到此属性。 调试器不知道如何解释自定义字符串类型，因此你看不到文本框中的字符串。  
+高亮显示行显示 `Text` 类的 `TextBox` 属性。复杂的类层次结构使得难以找到此属性。 调试器不知道如何解释自定义字符串类型，因此你看不到文本框中的字符串。  
 
-相同`TextBox`看起来要简单得多变量窗口中应用 Natvis 可视化工具自定义规则时。 类的重要成员显示在一起，且调试器显示自定义字符串类型的基础字符串值。  
+在变量窗口中，当应用 Natvis 可视化工具自定义规则时，同样的`TextBox`看起来要简单得多。类的重要成员在一起显示，且调试器显示自定义字符串类型的基础字符串值。  
 
 ![使用可视化工具的 TextBox 数据](../debugger/media/dbg_natvis_textbox_visualizer.png "使用可视化工具的 TextBox 数据")  
 
-##  <a name="BKMK_Using_Natvis_files"></a>使用 c + + 项目中的.natvis 文件  
+##  <a name="BKMK_Using_Natvis_files"></a>使用 C++ 项目中的.natvis 文件  
 
 使用 Natvis *.natvis*文件指定可视化规则。 一个 *.natvis*文件是 XML 文件与 *.natvis*扩展。 Natvis 架构中定义 *%VSINSTALLDIR%\Xml\Schemas\natvis.xsd*。  
 
-基本结构 *.natvis*文件是一个或多个`Type`元素表示可视化条目。 每个的完全限定的名称`Type`元素中指定其`Name`属性。  
+可视化条目表示基本结构 *.natvis*文件是一个或多个`Type`元素。 每个的完全限定的名称`Type`元素中指定其`Name`属性。  
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>  
