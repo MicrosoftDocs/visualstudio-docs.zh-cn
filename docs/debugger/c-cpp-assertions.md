@@ -1,5 +1,5 @@
 ---
-title: C/c + + 断言 |Microsoft Docs
+title: C/C++ 断言 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
