@@ -84,7 +84,7 @@ Visual Studio 提供了一些 *.natvis*中的文件 *%VSINSTALLDIR%\Common7\Pack
    
    新文件添加到**解决方案资源管理器**，并在 Visual Studio 文档窗格中打开。 
 
-Visual Studio 调试器加载 *.natvis* c + + 项目中的文件自动，并且默认情况下，还包括在 *.pdb*文件时生成项目。 如果生成应用程序进行调试时，调试器将加载 *.natvis*文件从 *.pdb*文件，即使你没有打开该项目。 如果不想 *.natvis*文件中包含 *.pdb*，你可以从生成中排除它 *.pdb*文件。
+Visual Studio 调试器自动加载 *.natvis* c + + 项目中的文件，并且默认情况下，还在生成项目时在 *.pdb* 文件包含它们。 如果调试生成的应用程序时，调试器将从 *.pdb* 文件加载 *.natvis* 文件，即使你没有打开该项目。 如果不想在 *.pdb* 文件中包含 *.natvis* 文件，你可以从生成中排除它 *.pdb* 文件。
 
 **若要排除 *.natvis*文件从 *.pdb*:**
 
