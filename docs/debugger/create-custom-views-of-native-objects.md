@@ -93,10 +93,10 @@ Visual Studio 调试器自动加载 *.natvis* c + + 项目中的文件，并且�
 1. 选择下拉列表箭头旁边的**从生成中排除**，然后选择**是**，选择**确定**。  
 
 >[!NOTE]
->对于正在调试可执行文件的项目，使用解决方案项添加 *.pdb* 中任何不在的 *.natvis* 文件，因为没有可用的 c + + 项目。  
+>对于正在调试可执行文件的项目，使用解决方案项添加 *.pdb* 中任何不存在的 *.natvis* 文件，因为没有可用的 c + + 项目。  
 
 >[!NOTE]
->*.pdb* 文件加载 Natvis 规则 仅适用于*.pdb* 模块中的文件类型引用。例如，如果 *Module1.pdb* 具有名为`Test`类型的 Natvis 条目，它仅适用于 *Module1.dll* 中的 `Test`类 。 如果另一个模块还定义一个名为`Test` 的类，则 *Module1.pdb* Natvis 条目将不适用于它。  
+>*.pdb文件* 加载 Natvis 规则 仅适用于 *.pdb* 模块中的文件类型引用。例如，如果 *Module1.pdb* 具有名为`Test`类型的 Natvis 条目，它仅适用于 *Module1.dll* 中的 `Test`类 。 如果另一个模块还定义一个名为`Test` 的类，则 *Module1.pdb* Natvis 条目将不适用于它。  
 
 ### <a name="BKMK_natvis_location"></a> Natvis 文件位置  
 
@@ -104,23 +104,23 @@ Visual Studio 调试器自动加载 *.natvis* c + + 项目中的文件，并且�
 
 *.Natvis* 文件按以下顺序计算：  
 
-1. 任何 *.natvis* 文件中嵌入 *.pdb* 你进行调试时，除非加载的项目中存在的同名文件。  
+1. 任何嵌入 *.pdb文件* 中的 *.natvis* 文件中你进行调试时，除非加载的项目中存在的同名文件。  
 
-1. 任何 *.natvis*中加载的 c + + 项目或顶级解决方案的文件。 此组包括所有已加载的 c + + 项目，包括其他语言中的类库，但不是项目。 
+1. 任何c + + 项目或顶级解决方案中加载的 *.natvis* 文件。 此组包括所有已加载的 c + + 项目，包括其他语言中的类库，但不是项目。 
 
 1.  特定于用户的 Natvis 目录 (例如， *%USERPROFILE%\Documents\Visual Studio 2017\Visualizers*)。  
 
-1.  系统级 Natvis 目录 (*%VSINSTALLDIR%\Common7\Packages\Debugger\Visualizers*)。 此目录已 *.natvis* 随 Visual Studio 一起安装的文件。 如果您具有管理员权限，可以将文件添加到此目录中。  
+1.  系统级 Natvis 目录 (*%VSINSTALLDIR%\Common7\Packages\Debugger\Visualizers*)。 此目录随 Visual Studio 一起安装的 *.natvis* 文件。 如果您具有管理员权限，可以将文件添加到此目录中。  
 
 ## <a name="modify-natvis-files-while-debugging"></a>在调试时修改.natvis 文件  
 
-您可以修改 *.natvis*调试其项目时 IDE 中的文件。 在进行调试的 Visual Studio 的相同实例中打开该文件，修改它，并将其保存。 立即保存该文件， **Watch**并**局部变量**windows 更新以反映更改。 
+您可以修改在IDE调试项目时修改 *.natvis文件* 。 在Visual Studio 正在调试同一个实例时，打开并修改它，然后将其保存。 在该文件保存后， **监视** 和 **局部变量** 窗口自动更新，表现出已改变的内容。 
 
-此外可以添加或删除 *.natvis*中进行调试，并且 Visual Studio 将添加或删除相关的可视化效果的解决方案文件。  
+此外，在正在调试的解决方案中添加或删除 *.natvis文件* ，并且 Visual Studio 将添加或删除相关的可视化效果的解决方案文件。  
 
-无法更新 *.natvis*文件中嵌入 *.pdb*文件进行调试时。  
+在进行调试时无法更新已嵌入 *.pdb文件* 中的 *.natvis文件*。  
 
-如果你修改 *.natvis*文件在 Visual Studio 外部所做的更改不会自动生效。 若要更新在调试器窗口，可以重新评估 **.natvisreload**命令，在**监视**窗口。 然后更改才会生效，无需重新启动调试会话。  
+如果你在 Visual Studio 外部修改 *.natvis文件* ，所做的更改不会自动生效。 若要更新调试器窗口，可以在 **监视** 窗口中，使用 **.natvisreload** 命令重新计算。 然后无需重新启动调试会话，更改才会生效。  
 
 此外使用 **.natvisreload**命令，将升级 *.natvis*到较新版本的文件。 例如， *.natvis*文件可能签入源代码管理，并且你想要的其他人所做选取最新更改。 
 
