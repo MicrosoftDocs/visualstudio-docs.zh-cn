@@ -205,7 +205,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 #### <a name="templated-classes"></a>模板化类
 `Name`的属性`Type`元素接受一个星号`*`作为可用于模板化类名的通配符字符。  
 
-在以下示例中，无论对象是使用相同的可视化效果`CAtlArray<int>`或`CAtlArray<float>`。 如果没有为特定可视化条目`CAtlArray<float>`，则它将优先于泛型条目。  
+在以下示例中，无论对象是`CAtlArray<int>`或`CAtlArray<float>`，都使用相同的可视化效果。如果可视化条目指定`CAtlArray<float>`。 ，则它将优先于泛型条目。  
 
 ```xml
 <Type Name="ATL::CAtlArray&lt;*&gt;">  
@@ -213,7 +213,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 </Type>  
 ```  
 
-可以使用宏 $T1 和 $T2，引用在可视化条目中的模板参数等。 若要查找这些宏的示例，请参阅 *.natvis*文件随 Visual Studio。  
+在可视化条目中可以使用宏 $T1 和 $T2，引用的模板参数等。 若要查找这些宏的示例，请参阅 *.natvis*文件与 Visual Studio。  
 
 ####  <a name="BKMK_Visualizer_type_matching"></a> 可视化工具类型匹配  
 如果可视化条目无法进行验证，则使用下一个可用的可视化效果。  
