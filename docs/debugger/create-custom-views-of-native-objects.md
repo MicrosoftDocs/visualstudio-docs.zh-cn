@@ -152,13 +152,13 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 ```  
 
 
-在中**Watch**窗口中，使用 **，查看**格式说明符来指定替代视图。 简单视图将显示为**vec,view(simple)**:  
+在中**监视**窗口中，使用 **，查看**格式说明符来指定替代视图。 简单视图将显示为**vec,view(simple)**:  
 
 ![具有简单视图的监视窗口](../debugger/media/watch-simpleview.png "具有简单视图的监视窗口")  
 
 ##  <a name="BKMK_Diagnosing_Natvis_errors"></a> Natvis 错误  
 
-当调试器遇到可视化条目中的错误时，它将忽略它们。 它在其原始格式显示的类型或选取其他适当的可视化效果时。 可以使用 Natvis 诊断若要了解为什么调试器忽略可视化条目，还可以查看基础语法和分析错误。 
+当调试器遇到可视化条目中的错误时，它将忽略它们。 它在其原始格式显示的类型，或选取其他适当的可视化效果时。 可以使用 Natvis 诊断，来帮助了解为什么调试器忽略可视化条目，还可以查看基础语法和分析错误。 
 
 **若要打开 Natvis 诊断：**
 
@@ -169,7 +169,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 ##  <a name="BKMK_Syntax_reference"></a> Natvis 语法参考  
 
 ###  <a name="BKMK_AutoVisualizer"></a> AutoVisualizer 元素  
-`AutoVisualizer`元素是根节点 *.natvis*文件，并包含命名空间`xmlns:`属性。 
+`AutoVisualizer`元素是*.natvis*文件的根节点，并包含命名空间`xmlns:`属性。 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>  
@@ -200,7 +200,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
    
 2. 该类型的对象的值是什么样的（ `DisplayString` 元素）。  
    
-3. 该类型的成员应如下所示在用户展开变量窗口中的类型 (`Expand`节点)。  
+3. 该类型的成员应如下所示在变量窗口中展开的类型 (`Expand`节点)。  
    
 #### <a name="templated-classes"></a>模板化类
 `Name`的属性`Type`元素接受一个星号`*`作为可用于模板化类名的通配符字符。  
