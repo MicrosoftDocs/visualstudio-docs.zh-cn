@@ -135,7 +135,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
 ## <a name="natvis-views"></a>Natvis 视图  
 
-您可以定义不同的 Natvis 视图以不同方式显示类型。 例如，下面是的可视化效果`std::vector`，它定义一个名为的简化的视图`simple`。 `DisplayString`和`ArrayItems`的元素的默认视图中显示和`simple`视图中，而`[size]`并`[capacity]`项中未显示`simple`视图。 
+您可以定义不同的 Natvis 视图以不同方式显示类型。 例如，下面是的可视化效果`std::vector`，它定义一个名为`simple`的简化的视图。 在默认视图和`simple`视图中显示`DisplayString`和`ArrayItems`元素，而`[size]`并`[capacity]`项中未显示`simple`视图。 
 
 ```xml
 <Type Name="std::vector&lt;*&gt;">  
