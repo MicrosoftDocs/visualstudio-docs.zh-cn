@@ -216,10 +216,10 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 在可视化条目中可以使用宏 $T1 和 $T2，引用的模板参数等。 若要查找这些宏的示例，请参阅 *.natvis*文件与 Visual Studio。  
 
 ####  <a name="BKMK_Visualizer_type_matching"></a> 可视化工具类型匹配  
-如果可视化条目无法进行验证，则使用下一个可用的可视化效果。  
+如果可视化条目验证失败，则使用下一个可用的可视化效果。  
 
 #### <a name="inheritable-attribute"></a>可继承的特性  
-可选`Inheritable`属性指定一个可视化效果仅适用于基类型，还是对基类型及其所有派生类型。 `Inheritable` 的默认值为 `true`。  
+可选`Inheritable`属性指定一个可视化效果仅适用于基类型，或者适用于基类型及其所有派生类型。 `Inheritable` 的默认值为 `true`。  
 
 在以下示例中，可视化效果仅适用于`BaseClass`类型：  
 
@@ -231,9 +231,9 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
 #### <a name="priority-attribute"></a>优先级特性  
 
-可选`Priority`属性指定要在其中使用备用定义的顺序，如果某个定义无法分析。 可能值`Priority`是： `Low`， `MediumLow`，`Medium`， `MediumHigh`，并`High`。 默认值为 `Medium`。 `Priority`属性用于区分仅内相同的优先级 *.natvis*文件。  
+可选`Priority`属性指定要在其中使用备用定义的顺序，如果某个定义分析失败。 可能`Priority`值为： `Low`， `MediumLow`，`Medium`， `MediumHigh`，和`High`。 默认值为 `Medium`。 `Priority`属性用于区分仅相同的 *.natvis* 文件优先级 。  
 
-下面的示例首先分析与 2015 STL 匹配的条目。 如果分析失败，它会使用 STL 的 2013年版本的备用条目：  
+下面的示例首先分析与 2015 STL 匹配的条目。 如果分析失败，它会使用 STL 2013版本的备用条目：  
 
 ```xml
 <!-- VC 2013 -->  
