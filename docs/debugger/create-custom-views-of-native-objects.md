@@ -120,18 +120,18 @@ Visual Studio 调试器自动加载 *.natvis* c + + 项目中的文件，并且�
 
 在进行调试时无法更新已嵌入 *.pdb* 文件中的 *.natvis* 文件。  
 
-如果你在 Visual Studio 外部修改 *.natvis文件* ，所做的更改不会自动生效。 若要更新调试器窗口，可以在 **监视** 窗口中，使用 **.natvisreload** 命令重新计算。 然后无需重新启动调试会话，更改才会生效。  
+如果你在 Visual Studio 外部修改 *.natvis文件* ，所做的更改不会自动生效。 若要更新调试器窗口，可以在 **监视** 窗口中，使用 **.natvisreload** 命令重新计算。 然后无需重新启动调试会话，更改自动生效。  
 
 此外使用 **.natvisreload** 命令，将升级 *.natvis* 文件到较新版本。 例如， *.natvis* 文件可能签入源代码管理，并且你需要获得其它人最近所做的改动。 
 
 ##  <a name="BKMK_Expressions_and_formatting"></a> 表达式和格式化  
-Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了增强功能和限制的调试器中的 c + + 表达式，其中所述[上下文运算符 （c + +）](../debugger/context-operator-cpp.md)，要注意以下事项：  
+Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[上下文运算符 （c + +）](../debugger/context-operator-cpp.md)所述，在调试器中增强和限制 c + + 表达式功能，还要注意以下事项：  
 
 - Natvis 表达式在可视化对象上下文而非当前堆栈框架中进行计算。 例如，`x`在 Natvis 表达式引用了名为字段**x**中不到名为的本地变量进行可视化的对象**x**位于当前函数。 但您可以访问全局变量，不能访问 Natvis 表达式中的局部变量。  
 
-- Natvis 表达式不允许函数求值或副作用。 函数调用和赋值运算符将被忽略。 由于 [调试器内部函数](../debugger/expressions-in-the-debugger.md#BKMK_Using_debugger_intrinisic_functions_to_maintain_state) 没有副作用，因此可以从所有 Natvis 表达式自由调用它们，即使不允许其他函数调用也是如此。  
+- Natvis 表达式不允许函数求值或副作用。 函数调用和赋值运算符将被忽略。 由于 [调试器内部函数](../debugger/expressions-in-the-debugger.md#BKMK_Using_debugger_intrinisic_functions_to_maintain_state) 没有副作用，因此可以从所有 Natvis 表达式自由调用它们，即使不允许其他函数调用。  
 
-- 若要控制表达式的显示方式，可以使用任何中所述的格式说明符[格式说明符在 c + +](format-specifiers-in-cpp.md#BKMK_Visual_Studio_2012_format_specifiers)。 在内部使用可视化条目 natvis，如时，将忽略格式说明符`Size`中的表达式[ArrayItems 展开](../debugger/create-custom-views-of-native-objects.md#BKMK_ArrayItems_expansion)。  
+- 若要控制表达式的显示方式，可以使用[格式说明符在 c + +](format-specifiers-in-cpp.md#BKMK_Visual_Studio_2012_format_specifiers)中所述的任何格式说明符。 在natvis内部时，将忽略格式说明符，如[ArrayItems 展开](../debugger/create-custom-views-of-native-objects.md#BKMK_ArrayItems_expansion)中的`Size`表达式。  
 
 ## <a name="natvis-views"></a>Natvis 视图  
 
