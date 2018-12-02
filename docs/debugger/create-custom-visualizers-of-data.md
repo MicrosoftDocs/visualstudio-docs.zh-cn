@@ -42,19 +42,19 @@ ms.locfileid: "51607817"
  > [!NOTE]
  > 若要创建的本机代码的自定义可视化工具，请参阅[SQLite 本机调试器可视化工具](https://github.com/Microsoft/VSSDK-Extensibility-Samples/tree/master/SqliteVisualizer)示例。 对于 UWP 和 Windows 8.x 应用程序不支持自定义可视化工具。
 
-您可以编写除任何托管类的对象的自定义可视化工具<xref:System.Object>和<xref:System.Array>。  
+您可以编写除<xref:System.Object>和<xref:System.Array>之外，任何托管类对象的自定义可视化工具。  
   
 调试器可视化工具的结构由两部分组成：  
   
-- *调试器端*运行在 Visual Studio 调试器中，并创建并显示可视化工具用户界面。  
+- 在 Visual Studio 调试器中运行 *调试器端* ，并创建并显示可视化工具用户界面。  
   
-- *调试对象端*在 Visual Studio 正在调试的进程中运行 (*调试对象*)。 调试对象进程中存在要实现可视化效果 （例如，字符串对象） 的数据对象。 调试对象端将对象发送到调试器端，在您创建的用户界面中显示。  
+- *调试对象端* 在 Visual Studio 正在调试的进程中运行 (*调试对象*)。 调试对象进程中存在要实现可视化效果 （例如，字符串对象） 的数据对象。 调试对象端将对象发送到调试器端，在您创建的用户界面中显示。  
 
-在调试器端接收中的数据对象*对象提供程序*实现<xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider>接口。 调试对象端将通过对象发送*对象源*，它派生自<xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource>。 
+在调试器端从 *对象提供程序* 实现<xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider>接口中接收的数据对象。 调试对象端将通过 *对象源* 发送对象，它派生自<xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource>。 
 
-对象提供程序还可以发送数据返回到对象源，使你可以编写可视化工具，可以编辑数据。 重写要与表达式计算器和对象源的对象提供程序。  
+对象提供程序还可以发送数据返回到对象源，使你可以编写可视化工具，可以编辑数据。 重写对象提供程序，使表达式计算器和对象源通信。  
   
-调试对象端和调试器端通过与其他通信<xref:System.IO.Stream>方法将数据序列化对象插入<xref:System.IO.Stream>和反序列化<xref:System.IO.Stream>回数据对象。  
+调试对象端和调试器端通过与其他通信<xref:System.IO.Stream>方法，将数据序列化对象插入<xref:System.IO.Stream>和反序列化<xref:System.IO.Stream>返回数据对象。  
 
 仅当类型为开放类型，可以为泛型类型编写可视化工具。 此限制与使用 `DebuggerTypeProxy` 特性时的限制相同。 有关详细信息，请参阅[使用 DebuggerTypeProxy 特性](../debugger/using-debuggertypeproxy-attribute.md)。  
   
