@@ -456,7 +456,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
 ####  <a name="BKMK_IndexListItems_expansion"></a> IndexListItems 展开  
 
-可以使用`ArrayItems`扩展仅当数组元素连续排列在内存中。 调试器通过其指针递增只需获取的下一个元素。 如果您需要处理的值节点的索引，使用`IndexListItems`节点。 下面是使用可视化`IndexListItems`节点：  
+仅当数组元素连续排列在内存中，可以使用`ArrayItems`扩展。 调试器通过其指针递增获取下一个元素。 如果您需要处理值节点的索引，使用`IndexListItems`节点。 下面是`IndexListItems`节点的可视化：  
 
 ```xml
 <Type Name="Concurrency::multi_link_registry&lt;*&gt;">  
@@ -471,7 +471,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 </Type>  
 ```  
 
-之间的唯一区别`ArrayItems`并`IndexListItems`是`ValueNode`，它应在整个表达式的 i<sup>th</sup>具有隐式元素`$i`参数。  
+`ArrayItems`和`IndexListItems`之间的唯一区别是`ValueNode`，它期望带有隐式元素`$i`参数的i<sup>th</sup>元素带有完整表达式。  
 
 >[!NOTE]
 >可以使用`[]`运算符，例如`vector[i]`，使用任何一维数组可视化效果`IndexListItems`，即使该类型本身 (例如`CATLArray`) 不允许此运算符。  
@@ -497,7 +497,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
 `Size` 元素引用该列表的长度。 `HeadPointer` 指向第一个元素， `NextPointer` 引用下一个元素，而 `ValueNode` 引用项的值。  
 
-调试器将计算`NextPointer`并`ValueNode`的上下文中的表达式`LinkedListItems`节点元素中，不是父列表类型。 在前面的示例中，`CAtlList`已`CNode`类 (位于`atlcoll.h`)，它是链接列表的节点。 `m_pNext` 并`m_element`是的字段`CNode`类，不是`CAtlList`类。  
+调试器将在`LinkedListItems`节点元素上下文中，计算`NextPointer`和`ValueNode`的表达式，不是父列表类型。 在前面的示例中，`CAtlList`有一个`CNode`类 (位于`atlcoll.h`)，它是链接列表的节点。 `m_pNext` 和`m_element`是`CNode`类的字段，不是`CAtlList`类。  
 
 `ValueNode` 可以留空，或使用`this`来指代`LinkedListItems`节点本身。  
 
