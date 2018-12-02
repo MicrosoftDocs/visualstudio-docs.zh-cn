@@ -643,7 +643,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 ```  
 
 ###  <a name="BKMK_UIVisualizer"></a> UIVisualizer 元素 
-`UIVisualizer` 元素向调试器注册图形可视化工具插件。 图形可视化工具创建对话框或其他变量或对象的方法显示其数据类型与一致的接口。 可视化工具插件必须编写为[VSPackage](../extensibility/internals/vspackages.md)，并且必须公开调试器可以通过使用的服务。 *.Natvis*文件包含注册插件的信息，例如其名称、 公开的服务，以及它可以直观显示的类型的 GUID。  
+在调试器中，`UIVisualizer` 元素注册图形可视化工具插件。 图形可视化工具创建对话框，或其他数据类型与其一致的接口，显示变量或对象的方法。 可视化工具插件必须编写为[VSPackage](../extensibility/internals/vspackages.md)，并且必须暴露调试器可以使用的服务。 *.Natvis*文件包含注册插件的信息，例如名称、公开服务的GUID，以及可直观显示的类型。  
 
 下面是 UIVisualizer 元素的示例：  
 
@@ -659,13 +659,13 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 </AutoVisualizer>  
 ```  
 
-- 一个`ServiceId`  -  `Id`特性对标识`UIVisualizer`。 `ServiceId`是包公开的服务，可视化工具的 GUID。 `Id` 如果服务提供多个，是可视化工具，用于区分开来的唯一标识符。 在上述示例中，相同的可视化工具服务提供两个可视化工具。  
+- 一个`ServiceId`  -  `Id`特性组成一对`UIVisualizer`标识。 `ServiceId`是可视化工具包公开的服务GUID。 如果服务提供多个不同的可视化工具，`Id`是用于区分的唯一标识符。 在上述示例中，相同的可视化工具服务提供两个可视化工具。  
   
-- `MenuName`属性定义要在调试器中的放大镜图标旁边的下拉列表中显示的可视化工具名称。 例如：  
+- 在调试器中的放大镜图标旁边的下拉列表中，`MenuName`属性定义要显示的可视化工具名称。 例如：  
 
   ![UIVisualizer 菜单快捷方式菜单](../debugger/media/dbg_natvis_vectorvisualizer.png "UIVisualizer 菜单快捷方式菜单")  
 
-每种类型中定义 *.natvis*文件都必须显式列出可以将其显示任何 UI 可视化工具。 调试器会匹配类型条目中的可视化工具引用的已注册的可视化工具。 例如，以下类型条目`std::vector`引用`UIVisualizer`在前面的示例。  
+在*.natvis*文件中每种类型定义，必须显式列出可以显示的任何 UI 可视化工具。 调试器在类型条目的可视化工具中，会匹配引用的已注册可视化工具。 例如，以下类型条目`std::vector`引用`UIVisualizer`在前面的示例。  
 
 ```xml
 <Type Name="std::vector&lt;int,*&gt;">  
@@ -676,8 +676,8 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
  您可以看到的示例`UIVisualizer`中[图像监视](https://marketplace.visualstudio.com/items?itemName=VisualCPPTeam.ImageWatch2017)扩展用于查看内存中的位图。 
 
 ### <a name="BKMK_CustomVisualizer"></a>CustomVisualizer 元素  
- `CustomVisualizer` 是指定 VSIX 扩展，用于控制在 Visual Studio code 中的可视化效果编写一个扩展点。 有关编写 VSIX 扩展的详细信息，请参阅[Visual Studio SDK](../extensibility/visual-studio-sdk.md)。 
+ `CustomVisualizer` 是一个扩展点，用于在 Visual Studio code 中指定 VSIX 扩展，控制可视化效果的编写。 有关编写 VSIX 扩展的更多信息，请参阅[Visual Studio SDK](../extensibility/visual-studio-sdk.md)。 
 
-它是要编写 XML Natvis 定义比自定义可视化工具的更多工作，但您可以随时从有关 Natvis 支持或不支持的约束。 自定义可视化工具有权访问调试器扩展性 Api，它可以查询和修改调试对象进程或与 Visual Studio 的其他部分进行通信的完整集。  
+编写自定义可视化工具比 XML Natvis 定义，要做更多工作，但您可以随时限制相关的 Natvis 支持或不支持。 自定义可视化工具有访问所有调试器扩展性 Api的权限，它可以查询和修改调试对象进程或与 Visual Studio 的其他部分进行通信。  
 
- 可以使用`Condition`， `IncludeView`，并`ExcludeView`上的特性`CustomVisualizer`元素。
+ 可使用`CustomVisualizer`元素中`Condition`， `IncludeView`，和`ExcludeView`特性。
