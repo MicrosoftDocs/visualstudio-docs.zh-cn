@@ -152,13 +152,13 @@ typedef struct _CrtMemBlockHeader
  调试堆中的每个内存块都分配以五种分配类型之一。 出于泄漏检测和状态报告目的对这些类型进行不同地跟踪和报告。 可以指定块的类型，方法是使用类似于直接调用调试堆分配函数之一来分配[_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg)。 调试堆中内存块的五种类型 (在中设置**nBlockUse**的成员 **_CrtMemBlockHeader**结构) 如下所示：  
   
  **_NORMAL_BLOCK**  
- 调用[malloc](/cpp/c-runtime-library/reference/malloc)或[calloc](/cpp/c-runtime-library/reference/calloc)创建普通块。 如果你想要使用普通的块，而不需要对客户端块，您可能想要定义[_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc)，这将导致所有堆分配调用映射到其调试版本中的调试等效项。 这将允许将关于每个分配调用的文件名和行号信息存储到对应的块头中。  
+ 调用[malloc](/cpp/c-runtime-library/reference/malloc)或[calloc](/cpp/c-runtime-library/reference/calloc)创建普通块。 如果你想要使用普通块，而不需要客户端块，您可能想要定义[_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc)，这将导致所有堆分配调用映射到其调试版本中的调试等效项。 这将允许将关于每个分配调用的文件名和行号信息存储到对应的块头中。  
   
  `_CRT_BLOCK`  
- 由许多运行库函数内部分配的内存块被标记为 CRT 块，以便可以单独处理这些块。 结果，泄漏检测和其他操作不需要受这些块影响。 分配永不可以分配、重新分配或释放任何 CRT 类型的块。  
+ 由许多运行库函数内部分配的内存块被标记为 CRT 块，以便可以单独处理这些块。 结果，泄漏检测和其他操作不需要受这些块影响。 分配操作永不可以分配、重新分配或释放任何 CRT 类型的块。  
   
  `_CLIENT_BLOCK`  
- 出于调试目的，应用程序可以专门跟踪一组给定的分配，方法是使用对调试堆函数的显式调用将它们作为该类型的内存块进行分配。 MFC 中，例如，分配所有**Cobject**作为客户端块; 其他应用程序可能会使不同的内存对象在客户端块中。 还可以指定“客户端”块的子类型以获得更大的跟踪粒度。 若要指定“客户端”块子类型，请将该数字向左移 16 位，并将它与 `OR` 进行 `_CLIENT_BLOCK` 运算。 例如：  
+ 出于调试目的，应用程序可以专门跟踪一组给定的分配，方法是使用对调试堆函数的显式调用，将它们作为该类型的内存块进行分配。 MFC 中，例如，分配所有**Cobject**作为客户端块; 其他应用程序在客户端块中可能会使不同的内存对象。 还可以指定“客户端”块的子类型以获得更大的跟踪粒度。 若要指定“客户端”块子类型，请将该数字向左移 16 位，并将它与 `OR` 进行 `_CLIENT_BLOCK` 运算。 例如：  
   
 ```cpp
 #define MYSUBTYPE 4  
