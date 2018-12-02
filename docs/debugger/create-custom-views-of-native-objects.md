@@ -610,7 +610,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 **Nd**格式说明符，将关闭与派生类匹配的可视化效果，这是必要的。 否则`*(CFrameworkElement*)this`表达式会导致再次应用`CPanel`可视化效果，同样，因为认为最适合的选项，是默认可视化类型匹配规则。 如果基类没有可视化效果，使用**nd**格式说明符指示调试器使用基类可视化效果或默认扩展。  
 
 ####  <a name="BKMK_Synthetic_Item_expansion"></a> 综合 item 展开  
- 虽然`ExpandedItem`元素通过消除层次结构，提供数据的逼真的内容视图`Synthetic`节点则恰好相反。 它允许你创建人工子元素的不是表达式的结果。 人工元素可以具有其自己的子元素。 在下面的示例中， `Concurrency::array` 类型的可视化效果使用 `Synthetic` 节点向用户显示诊断消息：  
+ 虽然`ExpandedItem`元素通过消除层次结构，提供数据的平面图，`Synthetic`节点则恰好相反。 它允许你创建不是表达式结果的人工子元素。 人工元素可以具有其自己的子元素。 在下面的示例中， `Concurrency::array` 类型的可视化效果使用 `Synthetic` 节点向用户显示诊断消息：  
 
 ```xml
 <Type Name="Concurrency::array&lt;*,*&gt;">  
@@ -632,7 +632,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
  ![通过综合元素扩展的 concurrency:: array](../debugger/media/dbg_natvis_expand_synthetic.png "具有综合元素扩展的 concurrency:: array")  
 
 ###  <a name="BKMK_HResult"></a> HResult 元素 
- `HResult`元素可用于自定义显示的信息**HRESULT**调试器窗口中。 `HRValue`元素必须包含的 32 位值**HRESULT**要进行自定义。 `HRDescription`元素包含要在调试器窗口中显示的信息。  
+在调试器窗口中，`HResult`元素可用于自定义显示的信息**HRESULT**。 `HRValue`元素必须包含自定义的 32 位值**HRESULT**。 在调试器窗口中，`HRDescription`元素包含要显示的信息。  
 
 ```xml
 
