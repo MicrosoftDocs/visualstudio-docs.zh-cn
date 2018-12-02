@@ -319,7 +319,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 ```  
 
 ###  <a name="BKMK_DisplayString"></a> DisplayString 元素 
-`DisplayString`元素指定要显示为变量的值的字符串。 它接受混合表达式的任意字符串。 大括号内的所有内容都可解释为表达式。 例如，以下`DisplayString`条目：  
+`DisplayString`元素指定要显示为变量的值的字符串。 它接受混合表达式中的任意字符串。 大括号内的所有内容都可解释为表达式。 例如，以下`DisplayString`条目：  
 
 ```xml
 <Type Name="CPoint">  
@@ -331,14 +331,14 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
  ![使用 DisplayString 元素](../debugger/media/dbg_natvis_cpoint_displaystring.png "使用 DisplayString 元素")  
 
-中`DisplayString`表达式中，`x`和`y`，这属于`CPoint`，是大括号内，因此它们的值进行评估。 该示例还演示如何通过使用双大括号转义大括号 (`{{`或`}}`)。  
+在`DisplayString`表达式中，在大括号内的`x`和`y`属于`CPoint`成员，因此计算它们的值。 该示例还演示如何在双大括号中使用一对大括号 (`{{`或`}}`)。  
 
 > [!NOTE]
 > `DisplayString` 元素是唯一接受任意字符串和大括号语法的元素。 所有其他可视化元素接受调试器可以计算的表达式。  
 
 ###  <a name="BKMK_StringView"></a> StringView 元素 
 
-`StringView`元素定义一个值，调试器可以将发送到内置文本可视化工具。 例如，给定以下可视化效果`ATL::CStringT`类型：  
+`StringView`元素定义一个值，调试器可以将其发送到内置文本可视化工具。 例如，给定以下`ATL::CStringT`类型可视化效果：  
 
 ```xml
 <Type Name="ATL::CStringT&lt;wchar_t,*&gt;">  
@@ -346,7 +346,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 </Type>
 ```  
 
-`CStringT`如下例所示的变量窗口中显示的对象：   
+如下例所示的变量窗口中显示`CStringT`对象：   
 
 ![CStringT DisplayString 元素](../debugger/media/dbg_natvis_displaystring_cstringt.png "CStringT DisplayString 元素")  
 
@@ -363,15 +363,15 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
  ![使用 StringView 可视化工具的 CStringT 数据](../debugger/media/dbg_natvis_stringview_cstringt.png "使用 StringView 可视化工具的 CStringT 数据")  
 
-表达式`{m_pszData,su}`包含 c + + 格式说明符**su**，以将值显示为 Unicode 字符串。 有关详细信息，请参阅[格式说明符在 c + +](../debugger/format-specifiers-in-cpp.md)。  
+表达式`{m_pszData,su}`包含 c + + 格式说明符**su**，以将值显示为 Unicode 字符串。 有关详细信息，请参阅[在 c + +中的格式说明符](../debugger/format-specifiers-in-cpp.md)。  
 
 ###  <a name="BKMK_Expand"></a> 展开元素 
 
-可选`Expand`节点自定义可视化类型的子级时展开变量窗口中的类型。 `Expand`节点接受定义子元素的子节点的列表。  
+在变量窗口中展开类型时，可选`Expand`节点自定义可视化类型的子级。 `Expand`节点接受定义子元素子节点的列表。  
 
-- 如果`Expand`节点不指定在可视化条目中，子级使用默认展开规则。  
+- 如果在可视化条目不指定`Expand`节点，子级使用默认展开规则。  
   
-- 如果`Expand`节点指定与在其下没有子节点类型在调试器窗口中无法进行扩展。  
+- 如果`Expand`节点指定与在其下没有子节点，在调试器窗口中无法进行类型扩展。  
 
 ####  <a name="BKMK_Item_expansion"></a> Item 展开  
 
