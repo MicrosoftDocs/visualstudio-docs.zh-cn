@@ -267,7 +267,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
 ###  <a name="BKMK_Condition_attribute"></a> 条件属性  
 
-可选`Condition`属性可用于许多可视化元素，并指定何时使用可视化规则。 如果条件特性内的表达式解析为`false`，则可视化规则不适用。 如果其计算结果为`true`，或者没有任何`Condition`应用特性，可视化效果。 此属性可用于在可视化条目中 if-else 逻辑。 
+可选`Condition`属性可用于许多可视化元素，并指定何时使用可视化规则。 如果条件特性内的表达式解析为`false`，则可视化规则不适用。 如果其计算结果为`true`，或者没有任何`Condition`应用特性，则应用可视化。 此属性可在可视化条目中应用 if-else 逻辑。 
 
 例如，以下可视化效果具有两个`DisplayString`智能指针类型的元素。 当`_Myptr`成员为空，第一个条件`DisplayString`元素解析为`true`，因此该窗体显示。 当`_Myptr`成员不为空，该条件计算结果为`false`，第二个`DisplayString`元素显示。  
 
@@ -283,7 +283,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
 ### <a name="includeview-and-excludeview-attributes"></a>IncludeView 和 ExcludeView 特性  
 
-`IncludeView`和`ExcludeView`属性指定要显示或不在特定视图中显示的元素。 例如，在以下的 Natvis 规范`std::vector`，则`simple`视图不显示`[size]`和`[capacity]`项。
+`IncludeView`和`ExcludeView`属性在特定视图中指定显示或不显示的元素。 例如，在以下的 Natvis `std::vector`规则中，`simple`视图不显示`[size]`和`[capacity]`项。
 
 ```xml
 <Type Name="std::vector&lt;*&gt;">  
@@ -299,7 +299,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 </Type>  
 ```  
 
-可以使用`IncludeView`和`ExcludeView`类型及各个成员属性。  
+可在类型及各个成员中使用`IncludeView`和`ExcludeView`属性。  
 
 ###  <a name="BKMK_Versioning"></a> Version 元素  
 `Version`元素的范围限定为特定模块及版本的可视化条目。 `Version`元素可帮助避免发生名称冲突，可减少无意匹配，并允许不同类型的版本的不同可视化效果。  
