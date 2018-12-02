@@ -375,7 +375,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
 ####  <a name="BKMK_Item_expansion"></a> Item 展开  
 
- `Item`元素是在最基本的常见元素`Expand`节点。 `Item` 定义单个子元素。 例如，`CRect`类的字段`top`， `left`， `right`，和`bottom`具有以下可视化条目：  
+ `Item`元素是在`Expand`节点中最基本的常见元素。 `Item` 定义单个子元素。 例如，`CRect`类的`top`， `left`， `right`，和`bottom`字段具有以下可视化条目：  
 
 ```xml
 <Type Name="CRect">  
@@ -391,15 +391,15 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
 ![具有 Item 元素扩展的 CRect](../debugger/media/dbg_natvis_expand_item_crect1.png "具有 Item 元素扩展的 CRect")  
 
-调试器将计算中指定的表达式`Width`并`Height`元素，并显示中的值**值**变量窗口中的列。 
+调试器将计算`Width`和`Height`元素中指定的表达式，并显示中**值**变量窗口中列的值。 
 
-调试器会自动创建 **[原始视图]** 为每个自定义扩展的节点。 上面的屏幕截图显示 **[原始视图]** 展开节点，以显示该对象的默认原始视图与其 Natvis 可视化的区别。 默认展开创建基类的子树，并列出所有数据成员的类的基类作为子级。  
+调试器会为每个自定义扩展的节点自动创建 **[原始视图]** 。 上面的屏幕截图显示 **[原始视图]** 展开节点，以显示该对象的默认原始视图与其 Natvis 可视化的区别。 默认展开创建基类的子树，并列出所有基类的数据成员作为子级。  
 
 > [!NOTE]
 > 如果项元素的表达式指向一个复杂类型，**项**节点本身是可展开。  
 
-####  <a name="BKMK_ArrayItems_expansion"></a> Size  
-使用 `ArrayItems` 节点使 Visual Studio 调试器将类型解释为数组并显示其各个元素。 `std::vector` 的可视化效果是一个很好的示例：  
+####  <a name="BKMK_ArrayItems_expansion"></a> ArrayItems扩展  
+使用 `ArrayItems` 节点使 Visual Studio 调试器将类型解释为数组，并显示其各个元素。 `std::vector` 的可视化效果是一个很好的示例：  
 
 ```xml
 <Type Name="std::vector&lt;*&gt;">  
@@ -415,19 +415,19 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 </Type>  
 ```  
 
-`std::vector` 在变量窗口中展开时显示其自身的元素：  
+在变量窗口当 `std::vector` 展开显示其自身的元素时：  
 
 ![使用 ArrayItems 扩展的 std:: vector](../debugger/media/dbg_natvis_expand_arrayitems_stdvector.png "std:: vector 使用 ArrayItems 扩展")  
 
 `ArrayItems`节点必须具有：  
 
-- 一个`Size`（求值表达式必须为整数） 为使调试器了解数组长度。  
-- 一个`ValuePointer`指向第一个元素的表达式 (它必须是不是元素类型的指针`void*`)。  
+- 一个`Size`表达式（求值结果必为整数）使调试器了解数组长度。  
+- 一个`ValuePointer`表达式，指向第一个元素 (它必须是不是元素类型的指针`void*`)。  
 
-数组下限的默认值为 0。 若要覆盖的值，请使用`LowerBound`元素。 *.Natvis*文件随 Visual Studio 提供了示例。  
+数组下限的默认值为 0。 若要覆盖此值，请使用`LowerBound`元素。 *.Natvis*文件随 Visual Studio 提供了示例。  
 
 >[!NOTE]
->可以使用`[]`运算符，例如`vector[i]`，使用任何一维数组可视化效果`ArrayItems`，即使该类型本身 (例如`CATLArray`) 不允许此运算符。  
+>可以使用`[]`运算符，例如`vector[i]`，任何一维数组可视化效果使用 `ArrayItems`，即使该类型本身 (例如`CATLArray`) 不允许此运算符。  
 
 此外可以指定多维数组。 在这种情况下，调试器需要稍多的信息来正确显示子元素：  
 
@@ -446,11 +446,11 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 </Type>  
 ```  
 
-- `Direction` 指定数组是行优先顺序还是列优先顺序中。 
+- `Direction` 指定数组是行优先顺序还是列优先顺序。 
 - `Rank` 指定数组的秩。 
-- `Size`元素接受的隐式`$i`参数，它将替换为维索引以查找该维度中数组的长度。 在上一示例中，表达式`_M_extent.M_base[0]`应为提供的第 0 个维度长度`_M_extent._M_base[1]`当月 1 日起，依次类推。  
+- `Size`元素接受的隐式`$i`参数，它将替换为维索引以查找该维度中数组的长度。 在上一示例中，表达式`_M_extent.M_base[0]`应为提供的第 0 个维度长度，`_M_extent._M_base[1]`为当月 1 日，依次类推。  
 
-下面是一个二维`Concurrency::array`对象在调试器窗口中所示：  
+下面是在调试器窗口中，所示的一个二维`Concurrency::array`对象：  
 
 ![具有 ArrayItems 扩展的二维数组](../debugger/media/dbg_natvis_expand_arrayitems_2d.png "具有 ArrayItems 扩展的二维数组")  
 
