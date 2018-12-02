@@ -103,11 +103,11 @@ ms.locfileid: "49897077"
 ##  <a name="BKMK_Find_buffer_overruns_with_debug_heap"></a> 利用调试堆查找缓冲区溢出  
  覆盖已分配缓冲区的末尾以及内存泄漏，是两种程序员最常遇到又棘手的问题（未能在不再需要某些分配后将其释放）。 调试堆提供功能强大的工具来解决这类内存分配问题。  
   
- 堆函数的“Debug”版本调用“Release”版本中使用的标准版本或基版本。 当请求内存块时，调试堆管理器从基堆分配略大于所请求的块的内存块，并返回指向该块中属于您的部分的指针。 例如，假定应用程序包含调用：`malloc( 10 )`。 在发布版本中， [malloc](/cpp/c-runtime-library/reference/malloc)将调用基堆分配例程以请求分配 10 个字节。 在调试版本中，但是，`malloc`将调用[_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg)，随后就其可以调用基堆分配例程以请求分配 10 个字节加上大约 36 个字节的额外内存。 调试堆中产生的所有内存块在单个链接列表中连接起来，按照分配时间排序。  
+ 堆函数的“Debug”版本调用“Release”版本中使用的标准版本或基版本。 当请求内存块时，调试堆管理器从基堆分配略大于所请求块的内存块，并返回指向该块中属于您的部分的指针。 例如，假定应用程序包含调用：`malloc( 10 )`。 在发布版本中， [malloc](/cpp/c-runtime-library/reference/malloc)将调用基堆分配例程以请求分配 10 个字节。 在调试版本中，但是，`malloc`将调用[_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg)，随后就其可以调用基堆分配例程，以请求分配 10 个字节加上大约 36 个字节的额外内存。 调试堆中产生的所有内存块，在单个链接列表中连接起来，按照分配时间排序。  
   
  调试堆例程分配的附加内存的用途为：存储簿记信息，存储将调试内存块链接在一起的指针，以及形成数据两侧的小缓冲区（用于捕捉已分配区域的覆盖）。  
   
- 当前，用于存储调试堆的簿记信息的块头结构在 DBGINT.H 头文件中声明如下：  
+ 当前，用于存储调试堆的簿记信息块的头结构在 DBGINT.H 头文件中声明如下：  
   
 ```cpp
 typedef struct _CrtMemBlockHeader  
@@ -132,10 +132,10 @@ typedef struct _CrtMemBlockHeader
  */  
 ```  
   
- `NoMansLand`块的用户数据区域两侧的缓冲区目前大小为 4 个字节，使用调试堆例程用于验证尚未覆盖用户的内存块的限制的已知的字节值填充。 调试堆还用已知值填充新的内存块。 如果选择在堆的链接列表中保留已释放块（如下文所述），则这些已释放块也用已知值填充。 当前，所用的实际字节值如下所示：  
+ `NoMansLand`块的用户数据区域两侧的缓冲区目前大小为 4 个字节，使用调试堆例程验证用户的内存块，限制的已知的字节值填充。 调试堆同样用已知值填充新的内存块。 如果选择在堆的链接列表中保留已释放块（如下文所述），则这些已释放块也用已知值填充。 当前，所用的实际字节值如下所示：  
   
  NoMansLand (0xFD)  
- 应用程序所用内存两侧的“NoMansLand”缓冲区当前用 0xFD 填充。  
+ 应用程序用当前用 0xFD 填充内存两侧的“NoMansLand”缓冲区。  
   
  已释放块 (0xDD)  
  设置 `_CRTDBG_DELAY_FREE_MEM_DF` 标志后，调试堆的链接列表中保留未使用的已释放块当前用 0xDD 填充。  
@@ -148,7 +148,8 @@ typedef struct _CrtMemBlockHeader
  ![返回页首](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [目录](#BKMK_Contents)  
   
 ##  <a name="BKMK_Types_of_blocks_on_the_debug_heap"></a> 调试堆上的块类型  
- 调试堆中的每个内存块都分配以五种分配类型之一。 出于泄漏检测和状态报告目的对这些类型进行不同地跟踪和报告。 可以指定块的类型，方法是使用类似于直接调用调试堆分配函数之一来分配[_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg)。 五种类型的调试堆中的内存块 (在中设置**nBlockUse**的成员 **_CrtMemBlockHeader**结构) 如下所示：  
+
+ 调试堆中的每个内存块都分配以五种分配类型之一。 出于泄漏检测和状态报告目的对这些类型进行不同地跟踪和报告。 可以指定块的类型，方法是使用类似于直接调用调试堆分配函数之一来分配[_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg)。 调试堆中内存块的五种类型 (在中设置**nBlockUse**的成员 **_CrtMemBlockHeader**结构) 如下所示：  
   
  **_NORMAL_BLOCK**  
  调用[malloc](/cpp/c-runtime-library/reference/malloc)或[calloc](/cpp/c-runtime-library/reference/calloc)创建普通块。 如果你想要使用普通的块，而不需要对客户端块，您可能想要定义[_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc)，这将导致所有堆分配调用映射到其调试版本中的调试等效项。 这将允许将关于每个分配调用的文件名和行号信息存储到对应的块头中。  
