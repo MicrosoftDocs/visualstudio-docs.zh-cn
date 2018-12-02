@@ -114,7 +114,7 @@ Visual Studio 调试器自动加载 *.natvis* c + + 项目中的文件，并且�
 
 ## <a name="modify-natvis-files-while-debugging"></a>在调试时修改.natvis 文件  
 
-您可以在IDE调试时，修改项目的 *.natvis* 文件。 在Visual Studio打开同一个文件实例，进行调试时，修改然后保存该文件。 在该文件保存后， **监视** 和 **局部变量** 窗口自动刷新，显示已改变的内容。 
+您可以在IDE调试时，修改项目的 *.natvis* 文件。 使用Visual Studio打开同一个文件实例进行调试时，修改并保存该文件。 在该文件保存后， **监视** 和 **局部变量** 窗口自动刷新，显示已改变的内容。 
 
 在调试解决方案时，可以添加或删除 *.natvis* 文件，并且 Visual Studio 将随之添加或删除相关的可视化效果。  
 
@@ -254,7 +254,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 ```  
 
 ### <a name="optional-attribute"></a>可选特性  
-可以将`Optional`的任何节点上的属性。 如果无法分析可选节点内的子表达式，调试器将忽略该节点，但将应用`Type`规则的其余部分。 在下面的类型中， `[State]` 不可选，但 `[Exception]` 可选。  如果`MyNamespace::MyClass`有一个字段名为 _`M_exceptionHolder`，将显示`[State]`节点和`[Exception]`节点，但是，如果没有`_M_exceptionHolder`字段，仅显示`[State]`节点。
+可以在任何节点上放置`Optional`属性。 如果无法分析可选节点内的子表达式，调试器将忽略该节点，但将应用`Type`规则的其余部分。 在下面的类型中， `[State]` 不可选，但 `[Exception]` 可选。  如果`MyNamespace::MyClass`有一个字段名为 _`M_exceptionHolder`，将显示`[State]`节点和`[Exception]`节点，但是，如果没有`_M_exceptionHolder`字段，仅显示`[State]`节点。
 
 ```xml
 <Type Name="MyNamespace::MyClass">  
@@ -346,7 +346,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 </Type>
 ```  
 
-如下例所示的变量窗口中显示`CStringT`对象：   
+如下例所示变量窗口中显示`CStringT`对象：   
 
 ![CStringT DisplayString 元素](../debugger/media/dbg_natvis_displaystring_cstringt.png "CStringT DisplayString 元素")  
 
@@ -391,7 +391,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
 ![具有 Item 元素扩展的 CRect](../debugger/media/dbg_natvis_expand_item_crect1.png "具有 Item 元素扩展的 CRect")  
 
-调试器将计算`Width`和`Height`元素中指定的表达式，并显示中**值**变量窗口中列的值。 
+调试器将计算`Width`和`Height`元素中指定的表达式，并在变量窗口中列的**值**中显示值。 
 
 调试器会为每个自定义扩展的节点自动创建 **[原始视图]** 。 上面的屏幕截图显示 **[原始视图]** 展开节点，以显示该对象的默认原始视图与其 Natvis 可视化的区别。 默认展开创建基类的子树，并列出所有基类的数据成员作为子级。  
 
@@ -422,7 +422,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 `ArrayItems`节点必须具有：  
 
 - 一个`Size`表达式（求值结果必为整数）使调试器了解数组长度。  
-- 一个`ValuePointer`表达式，指向第一个元素 (它必须是不是元素类型的指针`void*`)。  
+- 一个`ValuePointer`表达式，指向第一个元素 (它必须不是元素类型的指针`void*`)。  
 
 数组下限的默认值为 0。 若要覆盖此值，请使用`LowerBound`元素。 *.Natvis*文件随 Visual Studio 提供了示例。  
 
@@ -502,9 +502,9 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 `ValueNode` 可以留空，或使用`this`来指代`LinkedListItems`节点本身。  
 
 #### <a name="customlistitems-expansion"></a>CustomListItems 展开  
-`CustomListItems` 展开允许编写自定义逻辑，以遍历数据结构（如哈希表）。 使用`CustomListItems`可视化数据结构，可以使用 c + + 表达式的都需要评估，但不完全适合窗口`ArrayItems`， `IndexListItems`，或`LinkedListItems`。  
+`CustomListItems` 展开允许编写遍历数据结构（如哈希表）的自定义逻辑。 使用`CustomListItems`可视化数据结构，可以使用 c + + 表达式进行所需的运算，但不完全适合`ArrayItems`， `IndexListItems`，或`LinkedListItems`模式。  
 
-以下可视化工具`CAtlMap`是一个极好示例其中`CustomListItems`适用。  
+以下可视化工具`CAtlMap`，是适用于`CustomListItems`的一个极好示例。  
 
 ```xml
 <Type Name="ATL::CAtlMap&lt;*,*,*,*&gt;">  
@@ -535,7 +535,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 </Type>  
 ```  
 
-可以使用`Exec`若要执行的内部代码`CustomListItems`扩展，使用变量和扩展中定义的对象。 可以使用逻辑运算符、 算术运算符和赋值运算符与`Exec`。 不能使用`Exec`来计算函数。
+可以在`CustomListItems`扩展中使用`Exec`执行内部代码，在扩展中使用变量和对象定义。 可以使用逻辑运算符、 算术运算符和赋值运算符与`Exec`。 不能使用`Exec`来计算函数。
 
 `CustomListItems` 支持以下内部函数：
 
