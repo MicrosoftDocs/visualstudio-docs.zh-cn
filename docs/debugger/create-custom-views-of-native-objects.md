@@ -573,16 +573,16 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 </Type>  
 ```  
 
-语法是类似于`LinkedListItems`节点。 `LeftPointer``RightPointer`，和`ValueNode`树节点类的上下文中计算。 `ValueNode` 可以保留为空或使用`this`来指代`TreeItems`节点本身。  
+语法是类似于`LinkedListItems`节点。 在树节点类的上下文中计算`LeftPointer``RightPointer`，和`ValueNode`。 `ValueNode` 可以保留为空或使用`this`来指代`TreeItems`节点本身。  
 
 ####  <a name="BKMK_ExpandedItem_expansion"></a> ExpandedItem 展开  
- `ExpandedItem`元素通过显示基的类或数据成员的属性，就好像该可视化类型的子级生成合成的子视图。 调试器将计算指定的表达式，并将结果的子节点追加到该可视化类型的子列表。 
+ `ExpandedItem`元素通过可视化类型的子级生成聚合的子视图，显示基类或数据成员的属性。 调试器将计算指定的表达式，并将子节点的结果追加到该可视化类型的子列表。 
 
 例如，智能指针类型`auto_ptr<vector<int>>`通常显示为：  
 
  ![自动&#95;ptr&#60;矢量&#60;int&#62; &#62;默认扩展](../debugger/media/dbg_natvis_expand_expandeditem_default.png "默认扩展")  
 
- 若要查看矢量的值，必须向下钻取两个级别在变量窗口中，通过传递`_Myptr`成员。 通过添加`ExpandedItem`元素，则可以消除`_Myptr`变量，从层次结构，并直接查看矢量元素：  
+ 若要查看矢量的值，必须在变量窗口中，通过`_Myptr`成员，向下深入两个级别。通过添加`ExpandedItem`元素，可以消除`_Myptr`变量，从层次结构并直接查看矢量元素：  
 
 ```xml
 <Type Name="std::auto_ptr&lt;*&gt;">  
@@ -595,7 +595,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
  ![自动&#95;ptr&#60;矢量&#60;int&#62; &#62; ExpandedItem 扩展](../debugger/media/dbg_natvis_expand_expandeditem_visualized.png "ExpandedItem 扩展")  
 
-下面的示例演示如何从派生类中的基类聚合属性。 假定 `CPanel` 类派生自 `CFrameworkElement`。 而不是重复来自基属性`CFrameworkElement`类，`ExpandedItem`节点的可视化效果将这些属性追加到的子列表`CPanel`类。 
+下面的示例演示如何从派生类的基类中聚合属性。 假定 `CPanel` 类派生自 `CFrameworkElement`。 而不是重复来自基属性`CFrameworkElement`类，`ExpandedItem`节点的可视化效果将这些属性追加到的子列表`CPanel`类。 
 
 ```xml
 <Type Name="CPanel">  
