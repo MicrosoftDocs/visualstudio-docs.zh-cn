@@ -56,11 +56,11 @@ ms.locfileid: "51607817"
   
 调试对象端和调试器端通过与其他通信<xref:System.IO.Stream>方法，将数据序列化对象插入<xref:System.IO.Stream>和反序列化<xref:System.IO.Stream>返回数据对象。  
 
-仅当类型为开放类型，可以为泛型类型编写可视化工具。 此限制与使用 `DebuggerTypeProxy` 特性时的限制相同。 有关详细信息，请参阅[使用 DebuggerTypeProxy 特性](../debugger/using-debuggertypeproxy-attribute.md)。  
+如果类型为开放类型，可以为泛型类型编写可视化工具。 此限制与使用 `DebuggerTypeProxy` 特性时的限制相同。 有关详细信息，请参阅[使用 DebuggerTypeProxy 特性](../debugger/using-debuggertypeproxy-attribute.md)。  
   
 自定义可视化工具可能有安全性问题。 请参阅[可视化工具安全注意事项](../debugger/visualizer-security-considerations.md)。  
   
-以下步骤进行可视化工具创建了高级概述。 有关详细说明，请参阅[演练： 编写可视化工具C#](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)或[演练： 用 Visual Basic 编写可视化工具](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)。  
+以下步骤创建了可视化工具高级概述。 有关详细说明，请参阅[演练： 编写可视化工具C#](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)或[演练： 用 Visual Basic 编写可视化工具](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)。  
   
 ### <a name="to-create-the-debugger-side"></a>创建调试器端  
   
