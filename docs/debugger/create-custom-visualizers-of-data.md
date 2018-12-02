@@ -29,13 +29,13 @@ ms.lasthandoff: 11/13/2018
 ms.locfileid: "51607817"
 ---
 # <a name="create-custom-data-visualizers"></a>创建自定义数据可视化工具 
- 一个*可视化工具*属于[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]调试器用户界面中以适合其数据类型的方式显示变量或对象。 例如，HTML 可视化工具解释 HTML 字符串，并显示结果，就像在浏览器窗口中显示。 位图可视化工具解释位图结构并显示它所代表的图形。 某些可视化工具可让你还可以查看的数据修改。
+ 一个*可视化工具* 在[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]调试器用户界面中，以适当的方式显示数据类型的变量或对象。 例如，HTML 可视化工具如浏览器窗口中一样显示，解释 HTML 字符串，并显示结果。位图可视化工具解释位图结构并显示它所代表的图形。 某些可视化工具可如查看数据一样，修改数据。
 
- [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 调试器包括六个标准可视化工具。 文本、 HTML、 XML 和 JSON 可视化工具处理字符串对象。 WPF 树可视化工具显示 WPF 对象可视化树的属性。 数据集可视化工具一种用于 DataSet、 DataView 和 DataTable 对象。 
+ [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 调试器包括六个标准可视化工具。 文本、 HTML、 XML 和 JSON 可视化工具处理字符串对象。 WPF 树可视化工具显示 WPF 对象可视化树的属性。 数据集可视化工具用于 DataSet、 DataView 和 DataTable 对象。 
 
 可从 Microsoft、 第三方和社区下载更多可视化工具。 此外可以编写自己的可视化工具，并将它们安装在[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]调试器。
 
-在调试器中，可视化工具由一个放大镜图标表示![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "可视化工具图标")。 可以选择在图标**数据提示**，调试器**监视**窗口中，或**快速监视**对话框中，并选择相应的对象的相应可视化工具。
+在调试器中，可视化工具由一个放大镜图标表示![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "可视化工具图标")。 可以在**数据提示**中，调试器**监视**窗口中，或**快速监视**对话框中选择图标，并选择相应的对象的相应可视化工具。
 
 ## <a name="write-custom-visualizers"></a>编写自定义可视化工具
 
