@@ -254,7 +254,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 ```  
 
 ### <a name="optional-attribute"></a>可选特性  
-可以将`Optional`的任何节点上的属性。 如果无法分析可选节点内的子表达式，调试器将忽略该节点，但将应用的其余部分`Type`规则。 在下面的类型中， `[State]` 不可选，但 `[Exception]` 可选。  如果`MyNamespace::MyClass`有一个名为 _`M_exceptionHolder`，这两种`[State]`节点和`[Exception]`节点显示，但是，如果没有`_M_exceptionHolder`字段中，仅`[State]`节点出现。
+可以将`Optional`的任何节点上的属性。 如果无法分析可选节点内的子表达式，调试器将忽略该节点，但将应用`Type`规则的其余部分。 在下面的类型中， `[State]` 不可选，但 `[Exception]` 可选。  如果`MyNamespace::MyClass`有一个字段名为 _`M_exceptionHolder`，将显示`[State]`节点和`[Exception]`节点，但是，如果没有`_M_exceptionHolder`字段，仅显示`[State]`节点。
 
 ```xml
 <Type Name="MyNamespace::MyClass">  
