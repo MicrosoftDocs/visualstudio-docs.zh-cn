@@ -57,18 +57,18 @@ ms.locfileid: "44284102"
 
 ## <a name="issue-i-only-see-throttled-snapshots-in-the-diagnostic-tools"></a>问题： 我只看到在诊断工具中限制快照
 
-![Throttled 被阻止的 snappoint](../debugger/media/snapshot-troubleshooting-throttled-snapshots.png "限制吸附点")
+![Throttled 被阻止的 snappoint](../debugger/media/snapshot-troubleshooting-throttled-snapshots.png "限制快照点")
 
 执行以下步骤：
 
-- 快照占用很少的内存，但具有认可用量。 如果快照调试程序检测到你的服务器是大量的内存负载下，它将不会快照。 可以通过停止快照调试程序会话，然后重试删除已捕获的快照。
+- 快照占用的内存很少，但仍占用内存。 如果快照调试器检测到你的服务器内存负载过高下，它将不会创建快照。 可以通过停止快照调试器会话，然后重试删除已捕获的快照。
 
 ## <a name="known-issues"></a>已知问题
 
-- 当前不支持使用多个 Visual Studio 客户端针对同一个应用服务进行快照调试。
+- 当前不支持使用多个 Visual Studio 客户端对同一个应用服务进行快照调试。
 - ASP.NET Core 项目不完全支持 Roslyn IL 优化。 对于某些 ASP.NET Core 项目，你可能无法看到某些变量或条件语句中使用某些变量。 
-- 特殊变量，如 *$FUNCTION*或 *$CALLER*，无法计算条件语句或 logpoints 对于 ASP.NET Core 项目中。
-- 快照调试不适用于具有的应用服务[本地缓存](/azure/app-service/app-service-local-cache)开启。
+- 特殊变量，如 *$FUNCTION*或 *$CALLER*，在 ASP.NET Core 项目中无法计算条件语句或 logpoints。
+- 快照调试不适用于具有[本地缓存]的应用服务(/azure/app-service/app-service-local-cache)开启。
 - 目前不支持调试 API 应用的快照。
 
 ## <a name="site-extension-upgrade"></a>站点扩展升级
