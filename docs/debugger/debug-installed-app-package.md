@@ -47,21 +47,21 @@ Visual Studio 可以调试在 Windows 10 计算机、 Xbox、 HoloLens 和 IoT �
    
    ![DebugInstalledAppPackage](../debugger/media/debug-installed-app-pkg.png "DebugInstalledAppPackage")
    
-1. 如有必要，更改下面的代码类型**调试此代码类型**，并选择其他选项。 
-   - 选择**不启动，但在启动时调试我的代码**开始调试时启动该应用程序。 启动调试时在应用启动是调试中的控制路径的有效途径[不同的启动方法](/windows/uwp/xbox-apps/automate-launching-uwp-apps)，如使用自定义参数的协议激活。
+1. 如有必要，更改**调试此代码类型** 下面的代码类型，并选择其他选项。 
+   - 选择**不启动，但在启动时调试我的代码** ，当该应用程序启动时启动调试。 当应用启动时启动调试是调试来自 [不同的启动方法](/windows/uwp/xbox-apps/automate-launching-uwp-apps) 控制路径的有效方法，如使用自定义参数激活协议。
    
 1. 选择**启动**，或如果应用正在运行，选择**附加**。
 
 > [!NOTE]
-> 此外可以通过选择附加到任何正在运行的 UWP 或其他应用程序的进程**调试** > **附加到进程**Visual Studio 中。 您不需要原始的 Visual Studio 项目，以将附加到正在运行的进程，但加载应用程序的符号将起到显著作用调试不含的原始代码的进程时。 请参阅[在调试器中指定符号和源文件](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。
+> 在Visual Studio 中选择 **调试** > **附加到进程** ，附加到任何正在运行的 UWP 或其他应用程序的进程。 附到正在运行进程时，不需要原始的 Visual Studio 项目，调试不含的原始代码的进程时，加载应用程序的符号将起到显著作用。 请参阅[在调试器中指定符号和源文件](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。
   
 ## <a name="remote"></a> 调试远程计算机或设备上已安装的 UWP 应用
 
-Visual Studio 调试已安装的 UWP 应用的 Windows 10 设备或远程 post 的创建者的更新 Windows 10 计算机上的第一次它在目标设备上安装远程调试工具。 
+ 在Windows 10 设备或远程 post 的创建者的更新 Windows 10 计算机上，Visual Studio 第一次调试已安装的 UWP 应用时，它在目标设备上安装远程调试工具。 
 
-1. [启用开发人员模式](/windows/uwp/get-started/enable-your-device-for-development)Visual Studio 计算机和远程设备或计算机上。
+1. Visual Studio 计算机、远程设备或计算机上[启用开发人员模式](/windows/uwp/get-started/enable-your-device-for-development)。
    
-1. 如果要连接到远程计算机运行前的创建者的更新 Windows 10 中，[手动安装并启动远程调试器](../debugger/remote-debugging.md)远程计算机上。
+1. 如果要连接到运行创建者更新预览版的 Windows 10 远程计算机，在远程计算机上[手动安装并启动远程调试器](../debugger/remote-debugging.md)。
    
 1. 在 Visual Studio 计算机上，选择**调试** > **其他调试目标** > **调试安装的应用程序包**。
    
@@ -69,7 +69,7 @@ Visual Studio 调试已安装的 UWP 应用的 Windows 10 设备或远程 post �
    
    如果选择**设备**，计算机必须以物理方式连接到 Windows 10 设备。
    
-   为远程计算机，如果计算机地址没有旁边出现**地址**，选择**更改**。 
+   对于远程计算机，如果计算机地址没有旁边出现**地址**，选择**更改**。 
       
    1. 在中**远程连接**对话框旁边**地址**，键入名称或你想要连接到计算机的 IP 地址。
       
