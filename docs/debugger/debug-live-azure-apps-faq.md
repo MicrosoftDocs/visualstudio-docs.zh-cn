@@ -32,11 +32,11 @@ ms.locfileid: "39154341"
 
 #### <a name="how-does-the-snapshot-debugger-load-symbols"></a>快照调试程序如何加载符号？
 
-快照调试程序要求您具有匹配的符号为本地或已部署应用程序到 Azure 应用服务。 （嵌入式的 Pdb 当前不支持。）快照调试程序将自动从 Azure 应用服务下载符号。 截至 Visual Studio 2017 版本 15.2，部署到 Azure 应用服务部署应用程序的符号。
+快照调试器要求您为本地或已部署应用程序到 Azure 应用服务匹配符号。 （嵌入式的 Pdb 当前不支持。）快照调试程序将自动从 Azure 应用服务下载符号。 截至 Visual Studio 2017 版本 15.2，部署Azure 应用服务时，同时部署应用程序的符号。
 
-#### <a name="does-the-snapshot-debugger-work-against-release-builds-of-my-application"></a>快照调试程序的工作原理与我的应用程序的发布版本？
+#### <a name="does-the-snapshot-debugger-work-against-release-builds-of-my-application"></a>快照调试器的工作原理与我的应用程序的release版本？
 
-是-快照调试程序旨在针对发布版本工作。 当吸附点放置在函数中时，该函数返回到的调试版本，使其成为可调试重新编译。 快照调试器停止时，函数将返回到其发布版本。 
+是-快照调试程序旨在针对release版本工作。 当快照点放置在函数中时，该函数被重新编译为debug版本，使其可调试。 快照调试器停止时，函数将返回到其release版本。 
 
 #### <a name="can-logpoints-cause-side-effects-in-my-production-application"></a>记录点可能导致在生产应用程序的负面影响？
 
