@@ -168,7 +168,7 @@ freedbg(pbData, _CLIENT_BLOCK|(MYSUBTYPE<<16));
  可以使用安装客户端提供的挂钩函数，以转储存储在客户端块中的对象[_CrtSetDumpClient](/cpp/c-runtime-library/reference/crtsetdumpclient)，然后将每当调试函数转储客户端块时调用。 此外， [_CrtDoForAllClientObjects](/cpp/c-runtime-library/reference/crtdoforallclientobjects)可用于调用应用程序在调试堆中的每个客户端块所提供的给定的函数。  
   
  **_FREE_BLOCK**  
- 通常，所释放的块将从列表中移除。 为了检查并未仍在向已释放的内存写入数据，或为了模拟内存不足情况，可以选择在链接列表上保留已释放块，将其标记为“可用”，并用已知字节值（当前为 0xDD）填充。  
+ 通常，所释放的块将从列表中移除。 检查已释放内存，是否仍在写入数据，或模拟内存不足情况，可以选择在链接列表上保留已释放块，将其标记为“可用”，并用已知字节值（当前为 0xDD）填充。  
   
  **_IGNORE_BLOCK**  
  有可能在一段时间内关闭调试堆操作。 在该时间段内，内存块保留在列表上，但被标记为“忽略”块。  
@@ -189,7 +189,7 @@ freedbg(pbData, _CLIENT_BLOCK|(MYSUBTYPE<<16));
  可以使用调用[_CrtCheckMemory](/cpp/c-runtime-library/reference/crtcheckmemory)，例如，若要查看任何时候堆的完整性。 该函数检查堆中的每个内存块，验证内存块头信息有效，并确认尚未修改缓冲区。  
   
  `_CrtSetDbgFlag`  
- 您可以控制如何将跟踪调试堆的分配使用的内部标志[_crtDbgFlag](/cpp/c-runtime-library/crtdbgflag)，这可以读取和使用设置[_CrtSetDbgFlag](/cpp/c-runtime-library/reference/crtsetdbgflag)函数。 通过更改该标志，可以指示调试堆在程序退出时检查内存泄漏，并报告检测到的所有泄漏。 类似地，可以指定不将已释放的内存块从链接列表移除，以模拟内存不足情况。 当检查堆时，将完全检查这些已释放的块，以确保它们未受打扰。  
+ 您可以控制使用内部标志[_crtDbgFlag](/cpp/c-runtime-library/crtdbgflag)跟踪调试堆的分配，这可以使用[_CrtSetDbgFlag](/cpp/c-runtime-library/reference/crtsetdbgflag)函数读取和设置。 通过更改该标志，可以指示调试堆在程序退出时检查内存泄漏，并报告检测到的所有泄漏。 类似地，可以指定不将已释放的内存块从链接列表移除，以模拟内存不足情况。 当检查堆时，将完全检查这些已释放的块，以确保它们未受打扰。  
   
  **_CrtDbgFlag**标志包含下列位域：  
   
