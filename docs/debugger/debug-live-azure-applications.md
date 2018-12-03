@@ -54,32 +54,32 @@ Snappoint 和 logpoint 类似于断点，但与断点不同，snappoint 在命�
     > [!IMPORTANT]
     > 对于快照调试，您需要打开与发布到 Azure 应用服务**相同版本的源代码**。
 
-1. 在云资源管理器 (**视图 > 云资源管理器**)，右键单击您的项目部署到 Azure 应用服务，然后选择**附加 Snapshot Debugger**。
+1. 在云资源管理器 (**视图 > 云资源管理器**)，右键单击您的项目部署到 Azure 应用服务，然后选择**附加快照调试器**。
 
    ![启动快照调试程序](../debugger/media/snapshot-launch.png)
 
-    选择第一次**附加 Snapshot Debugger**，系统会提示你在 Azure 应用服务上安装 Snapshot Debugger 站点扩展。 此安装需要重新启动你的 Azure 应用服务。
+    选择第一次**附加快照调试器**，系统会提示你在 Azure 应用服务上安装快照调试器站点扩展。 此安装需要重新启动你的 Azure 应用服务。
 
-   Visual Studio 现在处于调试模式下的快照。
+   Visual Studio 现在处于快照调试模式下。
 
     > [!NOTE]
     > Application Insights 站点扩展还支持快照调试。 如果你遇到的"站点扩展已过期"错误消息，请参阅[故障排除提示和已知的问题的快照调试](../debugger/debug-live-azure-apps-troubleshooting.md)升级的详细信息。
 
    ![快照调试模式](../debugger/media/snapshot-message.png)
 
-   **模块**窗口中显示为 Azure 应用服务的所有模块已都加载时 (选择**调试 / Windows / 模块**要打开此窗口)。
+   **模块**窗口中会显示在Azure 应用服务中，所有已加载模块 (选择**调试 / Windows / 模块**要打开此窗口)。
 
    ![检查模块窗口](../debugger/media/snapshot-modules.png)
 
-## <a name="set-a-snappoint"></a>设置吸附点
+## <a name="set-a-snappoint"></a>设置捕获点
 
-1. 在代码编辑器中，单击你感兴趣设置吸附点的代码行旁边的左滚动条槽。 请确保它是您知道将执行的代码。
+1. 在代码编辑器中，单击你感兴趣设置捕获点的代码行旁边的左滚动条槽。 请确保它是您知道将执行的代码。
 
-   ![设置吸附点](../debugger/media/snapshot-set-snappoint.png)
+   ![设置捕获点](../debugger/media/snapshot-set-snappoint.png)
 
-2. 单击**开始收集**若要打开吸附点。
+2. 单击**开始收集**若要打开捕获点。
 
-   ![开启吸附点](../debugger/media/snapshot-start-collection.png)
+   ![开启捕获点](../debugger/media/snapshot-start-collection.png)
 
     > [!TIP]
     > 不能步骤时查看快照，但可以将多个吸附点放置在你的代码遵循不同的代码行处的执行。 如果在代码中有多个吸附点，快照调试程序可以确保相应快照从相同的最终用户会话。 快照调试程序执行此操作即使有多个用户点击您的应用程序。
