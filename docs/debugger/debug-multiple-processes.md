@@ -180,7 +180,7 @@ ms.locfileid: "49910753"
   例如，如果在 Visual Studio 解决方案中开启调试之后调试的进程，或者附加到已运行的其它进程，然后选择 **停止调试** ，则在调试会话结束后，在 Visual Studio 中启动的进程被终止，而您附加的进程将保持运行。 您可以使用以下过程控制停止调试的方法。  
   
 > [!NOTE]
->  **一个进程中断时则中断所有进程**选项不影响停止调试或终止进程以及与进程分离。  
+>  **一个进程中断时则中断所有进程** 选项不影响停止调试或终止进程以及与进程分离。  
   
  **若要更改如何停止调试影响单个进程**  
   
@@ -201,7 +201,7 @@ ms.locfileid: "49910753"
   
 ## <a name="see-also"></a>请参阅  
  [指定符号 (.pdb) 和源文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
- [将附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
- [Navigating through Code with the Debugger](../debugger/navigating-through-code-with-the-debugger.md) （使用调试器浏览代码）  
- [在实时调试](../debugger/just-in-time-debugging-in-visual-studio.md)   
+ [附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
+ [使用调试器单步调试代码](../debugger/navigating-through-code-with-the-debugger.md) （使用调试器浏览代码）  
+ [实时调试](../debugger/just-in-time-debugging-in-visual-studio.md)   
  [调试多线程应用程序](../debugger/debug-multithreaded-applications-in-visual-studio.md)
