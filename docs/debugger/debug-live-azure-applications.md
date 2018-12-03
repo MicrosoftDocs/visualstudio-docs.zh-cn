@@ -21,22 +21,22 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/19/2018
 ms.locfileid: "39154458"
 ---
-# <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>调试实时 ASP.NET Azure 应用程序使用快照调试程序
+# <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>使用快照调试器调试实时 ASP.NET Azure 应用程序
 
-你感兴趣的代码执行时，快照调试程序将生产中应用的快照。 要指示调试程序拍摄快照，可在代码中设置 snappoints 和 logpoints。 使用调试程序，可精确查看出错的内容，而不影响生产应用程序的流量。 快照调试程序有助于大幅减少用于解决生产环境中发生的问题的时间。
+你感兴趣的代码执行时，快照调试程序给生产中应用创建快照。 要指示调试程序创建快照，可在代码中设置 snappoints 和 logpoints。 使用调试程序可精确查看出错的内容，而不影响生产应用程序的流量。 快照调试程序有助于在生产环境中，大幅减少解决出现的问题花费的时间。
 
-Snappoint 和 logpoint 类似于断点，但与断点不同，snappoint 不暂停应用程序时命中。 通常情况下，捕获快照在吸附点需 10-20 毫秒。
+Snappoint 和 logpoint 类似于断点，但与断点不同，snappoint 在命中时不暂停应用程序。 通常情况下，在捕获点捕获快照需 10-20 毫秒。
 
 在本教程中，你将：
 
 > [!div class="checklist"]
 > * 启动快照调试器
-> * 设置吸附点，以及查看快照
+> * 设置捕获点，以及查看快照
 > * 设置记录点
 
 ## <a name="prerequisites"></a>系统必备
 
-* 快照调试器功能仅适用于 Visual Studio 2017 Enterprise 版本 15.5 或更高版本与**ASP.NET 和 web 开发工作负荷**。 有关 ASP.NET Core，你还需要。**NET 核心开发**安装的工作负荷。
+* 快照调试器功能仅适用于 Visual Studio 2017 Enterprise 版本 15.5 或更高版本与**ASP.NET 和 web 开发工作负荷**。 有关 ASP.NET Core，你还需要已安装 **.NET 核心开发** 的工作负荷。
 
     如果尚未安装，安装[Visual Studio 2017 Enterprise 版本 15.5](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)或更高版本。 如果要从以前的 Visual Studio 2017 安装更新，运行 Visual Studio 安装程序并签入的快照调试器组件**ASP.NET 和 web 开发工作负荷**。
 
@@ -52,7 +52,7 @@ Snappoint 和 logpoint 类似于断点，但与断点不同，snappoint 不暂�
 1. 打开你想要快照调试的项目。
 
     > [!IMPORTANT]
-    > 您需要打开到快照调试**相同版本的源代码**，它发布到 Azure 应用服务。
+    > 对于快照调试，您需要打开与发布到 Azure 应用服务**相同版本的源代码**。
 
 1. 在云资源管理器 (**视图 > 云资源管理器**)，右键单击您的项目部署到 Azure 应用服务，然后选择**附加 Snapshot Debugger**。
 
