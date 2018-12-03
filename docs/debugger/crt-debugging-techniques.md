@@ -28,8 +28,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/18/2018
 ms.locfileid: "31458422"
 ---
-# <a name="crt-debugging-techniques"></a>CRT 调试方法
-如果调试使用 C 运行库的程序，这些调试方法可能会有用。  
+# <a name="crt-debugging-techniques"></a>CRT 调试技术
+如果调试使用 C 运行库的程序，这些调试技术可能会有用。  
   
 ## <a name="in-this-section"></a>本节内容  
  [CRT 调试库使用](../debugger/crt-debug-library-use.md)  
