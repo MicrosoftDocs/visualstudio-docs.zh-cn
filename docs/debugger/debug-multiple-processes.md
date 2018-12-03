@@ -74,33 +74,33 @@ ms.locfileid: "49910753"
  若要更改启动项目的解决方案，在解决方案资源管理器中选择项目，然后从上下文菜单中选择 **设为启动项目** 。  
   
 ####  <a name="BKMK_Start_a_specific_project_in_a_solution"></a> 在解决方案中启动特定项目  
- 若要启动的项目的解决方案而无需更改默认启动项目，在解决方案资源管理器中选择项目，然后选择**调试**从上下文菜单。 然后，可以选择**启动新实例**或**单步执行新实例**。  
+ 若要启动项目的解决方案，无需更改默认启动项目，在解决方案资源管理器中选择项目，然后从上下文菜单中选择 **调试** 。 然后，可以选择**启动新实例**或**单步执行新实例**。  
   
  ![返回页首](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [启动 VS 解决方案中的多个进程，附加到进程，自动在调试器中启动的进程](../debugger/debug-multiple-processes.md#BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger)  
   
 ####  <a name="BKMK_Start_multiple_projects_in_a_solution"></a> 启动解决方案中的多个项目  
   
-1. 在解决方案资源管理器中选择该解决方案，然后选择**属性**上下文菜单上。  
+1. 在解决方案资源管理器中选择该解决方案，然后选择上下文菜单中的 **属性** 。  
   
 2. 选择**常见属性**，**启动项目**上**属性**对话框。  
   
-3. 对于你想要更改每个项目，选择**启动**，**启动但不调试**，或**None**。  
+3. 对于每个你想要更改的项目，选择**启动**，**启动但不调试**，或**None**。  
   
    ![返回页首](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [启动 VS 解决方案中的多个进程，附加到进程，自动在调试器中启动的进程](../debugger/debug-multiple-processes.md#BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger)  
   
 ###  <a name="BKMK_Attach_to_a_process"></a> 附加到进程  
- 调试器还可以*附加*到在 Visual Studio 外部的进程中运行的程序，包括在远程设备运行的程序。 一旦附加到某个程序，就可以使用调试器执行命令、检查程序状态，等等。 检查程序的能力可能会受到某些限制，这取决于程序是否用调试信息生成，是否可以访问程序源代码，以及公共语言运行时 JIT 编译器是否在跟踪调试信息。  
+ 调试器还可以*附加* 到在 Visual Studio 外部的进程中运行的程序，包括在远程设备运行的程序。 一旦附加到某个程序，就可以使用调试器执行命令、检查程序状态、等等。 检查程序的能力可能会受到某些限制，这取决于程序是否用调试信息生成，是否可以访问程序源代码，以及公共语言运行时 JIT 编译器是否在跟踪调试信息。  
   
- 请参阅[将附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)有关详细信息。  
+ 请参阅[附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)有关更多信息。  
   
- **附加到在本地计算机运行的进程**  
+ **附加到在本地计算机中运行的进程**  
   
- 单击**调试 > 附加到进程**。 上**附加到进程**对话框框中，选择从进程**可用进程**列表，，然后选择**附加**。  
+ 单击 **调试 > 附加到进程** 。 在 **附加到进程** 对话框中，从 **可用进程** 列表中选择进程，，然后选择 **附加** 。  
   
- ![将附加到进程对话框](../debugger/media/dbg_attachtoprocessdlg.png "DBG_AttachToProcessDlg")  
+ ![附加到进程对话框](../debugger/media/dbg_attachtoprocessdlg.png "DBG_AttachToProcessDlg")  
   
 ###  <a name="BKMK_Automatically_start_an_process_in_the_debugger"></a> 自动在调试器中启动的进程  
- 有时，你可能需要调试由另一个进程启动的程序的启动代码。 这样的示例包括服务和自定义设置操作。 在这些情况下，可以让调试器在应用程序启动时启动并自动附加。  
+ 有时，你需要调试的程序启动代码，由另一个进程启动的。这样的示例包括服务和自定义安装操作。 在这些情况下，可以让调试器在应用程序启动时启动并自动附加。  
   
 1. 启动注册表编辑器 (**regedit.exe**)。  
   
