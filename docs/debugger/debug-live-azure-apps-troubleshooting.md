@@ -18,15 +18,15 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 09/10/2018
 ms.locfileid: "44284102"
 ---
-# <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>快照调试 Visual Studio 中的疑难解答和已知问题
+# <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Visual Studio 中的快照调试疑难解答和已知问题
 
 如果在这篇文章中所述的步骤未解决你遇到的问题，请联系snaphelp@microsoft.com。
 
-## <a name="issue-snappoint-does-not-turn-on"></a>问题： 吸附点不会启用
+## <a name="issue-snappoint-does-not-turn-on"></a>问题： 快照点不能开启
 
-如果看到警告图标![吸附点警告图标](../debugger/media/snapshot-troubleshooting-snappoint-warning-icon.png "吸附点警告图标")与你吸附点而不是常规的吸附点图标，然后吸附点未打开。
+如果看到警告图标![快照点警告图标](../debugger/media/snapshot-troubleshooting-snappoint-warning-icon.png "快照点警告图标") 代替快照点常规图标，然后快照点没有打开。
 
-![吸附点未开启](../debugger/media/snapshot-troubleshooting-dont-turn-on.png "吸附点不会启用")
+![快照点不能开启](../debugger/media/snapshot-troubleshooting-dont-turn-on.png "快照点不能开启")
 
 执行以下步骤：
 
