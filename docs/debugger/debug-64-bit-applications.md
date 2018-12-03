@@ -28,7 +28,7 @@ ms.locfileid: "44284076"
 # <a name="debug-64-bit-applications"></a>调试 64 位应用程序
 您可以调试运行于本地计算机或远程计算机上的 64 位应用程序。  
   
- 若要调试在远程计算机上运行的 64 位应用程序，请参阅 [Remote Debugging](../debugger/remote-debugging.md)。  
+ 若要调试在远程计算机上运行的 64 位应用程序，请参阅 [远程调试](../debugger/remote-debugging.md)。  
   
  若要在本地调试 64 位应用程序，Visual Studio 将使用 64 位辅助进程 (msvsmon.exe) 执行不能在 32 位 Visual Studio 进程内执行的低级别操作。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "44284076"
   
 1.  创建一个 Visual Studio 解决方案，例如 C# 控制台应用程序。  
   
-2.  使用配置管理器将配置设置为 64 位。 有关详细信息，请参阅 [How to: Configure Projects to Target Platforms](../ide/how-to-configure-projects-to-target-platforms.md)。  
+2.  使用配置管理器将配置设置为 64 位。 有关详细信息，请参阅 [如何：配置项目以面向目标平台](../ide/how-to-configure-projects-to-target-platforms.md)。  
   
-3.  此时将启动 64 位版本的远程调试器 (msvsmon.exe)。 只要使用 64 位配置的解决方案处于打开状态，它就会运行。  
+3.  此时将启动 64 位版本的远程调试器 (msvsmon.exe)。 只要使用的解决方案 64 位配置为打开状态，它就会运行。  
   
-4.  开始调试。 这与使用 32 位配置时应该具有相同的体验。 如果出现错误，请参阅下面的“疑难解答”一节。  
+4.  开始调试。 你应该具有与 32 位配置相同的体验。 如果出现错误，请参阅下面的“疑难解答”一节。  
   
 ## <a name="troubleshooting-64-bit-debugging"></a>64 位调试疑难解答  
  可能会遇到错误:"64 位调试操作比预期长。" 在这种情况下，则说明 Visual Studio 已向 64 位版本的 msvsmon.exe 发送请求，返回该请求的结果花费了较长的时间。  
