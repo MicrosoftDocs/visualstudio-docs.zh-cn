@@ -38,24 +38,24 @@ ms.locfileid: "39154341"
 
 是-快照调试程序旨在针对release版本工作。 当快照点放置在函数中时，该函数被重新编译为debug版本，使其可调试。 快照调试器停止时，函数将返回到其release版本。 
 
-#### <a name="can-logpoints-cause-side-effects-in-my-production-application"></a>记录点可能导致在生产应用程序的负面影响？
+#### <a name="can-logpoints-cause-side-effects-in-my-production-application"></a>记录点可能对在生产应用程序产生负面影响？
 
-否-几乎计算添加到您的应用程序的任何日志消息。 它们不能在应用程序中会产生任何副作用。 但是，某些本机属性可能无法访问使用记录点。 
+否- 任何添加到您的应用程序的日志消息都是经过虚拟评估的。 它们不会在应用程序中产生任何副作用。 但是，某些本机属性可能无法通过记录点访问。 
 
-#### <a name="does-the-snapshot-debugger-work-if-my-server-is-under-load"></a>如果我的服务器是在负载下，快照调试程序是否起作用了？
+#### <a name="does-the-snapshot-debugger-work-if-my-server-is-under-load"></a>如果我的服务器是在负载中，快照调试程序是否起作用了？
 
-是的快照调试可用于在负载下的服务器。 快照调试程序限制并不会捕获快照的情况下没有在服务器上的低可用内存量。
+是的，快照调试可用于在负载下的服务器。 快照调试器不会在服务器的内存过低时捕获快照。
 
-#### <a name="how-do-i-uninstall-the-snapshot-debugger"></a>如何卸载快照调试程序？
+#### <a name="how-do-i-uninstall-the-snapshot-debugger"></a>如何卸载快照调试器？
 
-通过执行以下步骤在应用服务，可以卸载 Snapshot Debugger 站点扩展：
+通过执行以下步骤在应用服务中，可以卸载快照调试器的站点扩展：
 
-1. 关闭你的应用服务通过在 Visual Studio 或 Azure 门户中的云资源管理器。
+1. 通过在 Visual Studio 或 Azure 门户中的云资源管理器，关闭你的应用服务。
 1. 导航到你的应用服务 Kudu 站点 (即，yourappservice。**scm**。 azurewebsites.net) 并导航到**站点扩展**。
-1. 单击的 X 上 Snapshot Debugger 站点扩展，以将其删除。
+1. 单击Snapshot Debugger 站点扩展上点击 X，将其删除。
 
 ## <a name="see-also"></a>请参阅
 
 [在 Visual Studio 中进行调试](../debugger/index.md)  
-[调试实时 ASP.NET 应用中使用快照调试程序](../debugger/debug-live-azure-applications.md)  
+[使用快照调试器调试实时 ASP.NET 应用](../debugger/debug-live-azure-applications.md)  
 [快照调试疑难解答和已知问题](../debugger/debug-live-azure-apps-troubleshooting.md)
