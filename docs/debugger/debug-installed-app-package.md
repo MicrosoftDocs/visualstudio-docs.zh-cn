@@ -1,5 +1,5 @@
 ---
-title: 调试安装的 UWP 应用包 |Microsoft Docs
+title: 调试已安装的 UWP 应用包 |Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 11/07/2018
 ms.technology: vs-ide-debug
@@ -28,12 +28,12 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51784411"
 ---
-# <a name="debug-an-installed-uwp-app-package-in-visual-studio"></a>调试 Visual Studio 中安装的 UWP 应用包
+# <a name="debug-an-installed-uwp-app-package-in-visual-studio"></a>调试 Visual Studio 中已安装的 UWP 应用包
 
-Visual Studio 可以调试在 Windows 10 计算机和 Xbox、 HoloLens 和 IoT 设备上的已安装通用 Windows 平台 (UWP) 应用程序包。 
+Visual Studio 可以调试在 Windows 10 计算机、 Xbox、 HoloLens 和 IoT 设备上的已安装通用 Windows 平台 (UWP) 应用程序包。 
 
 >[!NOTE]
->在电话上不支持的 visual Studio 调试已安装的 UWP 应用的。
+>在手机上不支持的 visual Studio 调试已安装的 UWP 应用的。
    
 有关调试 UWP 应用的详细信息，请参阅博客文章上[调试已安装的应用包](https://blogs.msdn.microsoft.com/devops/2016/03/30/updates-for-debugging-installed-app-packages-in-visual-studio-2015-update-2/)并[构建通用 Windows 应用 (UWP)](https://blogs.msdn.microsoft.com/visualstudio/2016/08/02/universal-windows-apps-targeting-windows-10-anniversary-sdk/)。
 
@@ -41,9 +41,9 @@ Visual Studio 可以调试在 Windows 10 计算机和 Xbox、 HoloLens 和 IoT �
 
 1. 在 Visual Studio 中，选择**调试** > **其他调试目标** > **调试安装的应用程序包**。
    
-1. 在中**调试安装的应用程序包**对话框下**连接类型**，选择**本地计算机**。
+1. 在**调试安装的应用程序包**对话框中的 **连接类型** 下面，选择**本地计算机**。
    
-1. 下**安装的应用程序包**，选择想要调试的应用或搜索框中键入其名称。 在运行非已安装的应用包会出现下**未在运行**，且正在运行的应用属于**运行**。 
+1. 在**安装的应用程序包** 下面，选择想要调试的应用或搜索框中键入其名称。 **未在运行** 下方会显示未运行的已安装应用包，正在运行的应用会显示在 **运行** 下方。 
    
    ![DebugInstalledAppPackage](../debugger/media/debug-installed-app-pkg.png "DebugInstalledAppPackage")
    
