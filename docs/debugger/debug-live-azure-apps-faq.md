@@ -18,11 +18,11 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/19/2018
 ms.locfileid: "39154341"
 ---
-# <a name="frequently-asked-questions-for-snapshot-debugging-in-visual-studio"></a>快照调试 Visual Studio 中的常见问题
+# <a name="frequently-asked-questions-for-snapshot-debugging-in-visual-studio"></a> Visual Studio 中进行快照调试的常见问题
 
-下面是一系列调试实时 Azure 应用程序使用快照调试程序时可能出现的问题。
+下面是一系列使用快照调试器，调试实时 Azure 应用程序时可能出现的问题。
 
-#### <a name="what-is-the-performance-cost-of-taking-a-snapshot"></a>什么是拍摄快照的性能成本？
+#### <a name="what-is-the-performance-cost-of-taking-a-snapshot"></a>什么是创建快照的性能成本？
 
 当快照调试器捕获您的应用程序的快照时，它是创建分支应用的过程和挂起的分支的副本。 当调试快照时，调试针对进程的分支的副本。 此过程，只需 10-20 毫秒，但不复制应用的完整的堆。 相反，它将复制仅页表并页面设置为复制写入。 如果某些堆更改上的应用程序的对象，然后复制其相应页。 因此，每个快照具有较小的内存中成本 （大约几百个对于大多数应用程序的千字节为单位）。 
 
