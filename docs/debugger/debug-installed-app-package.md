@@ -37,17 +37,17 @@ Visual Studio 可以调试在 Windows 10 计算机、 Xbox、 HoloLens 和 IoT �
    
 有关调试 UWP 应用的详细信息，请参阅博客文章上[调试已安装的应用包](https://blogs.msdn.microsoft.com/devops/2016/03/30/updates-for-debugging-installed-app-packages-in-visual-studio-2015-update-2/)并[构建通用 Windows 应用 (UWP)](https://blogs.msdn.microsoft.com/visualstudio/2016/08/02/universal-windows-apps-targeting-windows-10-anniversary-sdk/)。
 
-## <a name="debug-an-installed-uwp-app-on-a-local-machine"></a>调试本地计算机上已安装的 UWP 应用
+## <a name="debug-an-installed-uwp-app-on-a-local-machine"></a>调试本地计算机中已安装的 UWP 应用
 
 1. 在 Visual Studio 中，选择**调试** > **其他调试目标** > **调试安装的应用程序包**。
    
-1. 在**调试安装的应用程序包**对话框中的 **连接类型** 下面，选择**本地计算机**。
+1. 在**调试安装的应用程序包**对话框中的 **连接类型** 中，选择**本地计算机**。
    
-1. 在**安装的应用程序包** 下面，选择想要调试的应用或搜索框中键入其名称。 **未在运行** 下方会显示未运行的已安装应用包，正在运行的应用会显示在 **运行** 下方。 
+1. 在**安装的应用程序包** 中，选择想要调试的应用或搜索框中键入其名称。 **未在运行** 中会显示未运行的已安装应用包，正在运行的应用会显示在 **运行** 中。 
    
    ![DebugInstalledAppPackage](../debugger/media/debug-installed-app-pkg.png "DebugInstalledAppPackage")
    
-1. 如有必要，更改**调试此代码类型** 下面的代码类型，并选择其他选项。 
+1. 如有必要，更改**调试此代码类型** 中的代码类型，并选择其他选项。 
    - 选择**不启动，但在启动时调试我的代码** ，当该应用程序启动时启动调试。 当应用启动时启动调试是调试来自 [不同的启动方法](/windows/uwp/xbox-apps/automate-launching-uwp-apps) 控制路径的有效方法，如使用自定义参数激活协议。
    
 1. 选择**启动**，或如果应用正在运行，选择**附加**。
@@ -57,13 +57,13 @@ Visual Studio 可以调试在 Windows 10 计算机、 Xbox、 HoloLens 和 IoT �
   
 ## <a name="remote"></a> 调试远程计算机或设备上已安装的 UWP 应用
 
- 在Windows 10 设备或远程 post 的创建者的更新 Windows 10 计算机上，Visual Studio 第一次调试已安装的 UWP 应用时，它在目标设备上安装远程调试工具。 
+ 在Windows 10 设备或远程 post 的创建者的更新 Windows 10 计算机中，Visual Studio 第一次调试已安装的 UWP 应用时，它在目标设备上安装远程调试工具。 
 
 1. Visual Studio 计算机、远程设备或计算机上[启用开发人员模式](/windows/uwp/get-started/enable-your-device-for-development)。
    
-1. 如果要连接到运行创建者更新预览版的 Windows 10 远程计算机，在远程计算机上[手动安装并启动远程调试器](../debugger/remote-debugging.md)。
+1. 如果要连接到运行创建者更新预览版的 Windows 10 远程计算机，在远程计算机中[手动安装并启动远程调试器](../debugger/remote-debugging.md)。
    
-1. 在 Visual Studio 计算机上，选择**调试** > **其他调试目标** > **调试安装的应用程序包**。
+1. 在 Visual Studio 计算机中，选择**调试** > **其他调试目标** > **调试安装的应用程序包**。
    
 1. 在中**调试安装的应用程序包**对话框，**连接类型**中，选择**远程计算机**或者**设备**。
    
@@ -83,7 +83,7 @@ Visual Studio 可以调试在 Windows 10 计算机、 Xbox、 HoloLens 和 IoT �
 
 1. **安装的应用程序包**中，选择想要调试的应用或搜索框中键入其名称。 **未在运行**中会显示未运行的已安装的应用包，**运行** 中会显示正在运行的应用。 
    
-1. 如有必要，**调试此代码类型**中更改下面的代码类型，并选择其他选项。 
+1. 如有必要，**调试此代码类型**中更改其中的代码类型，并选择其他选项。 
    - 选择**不启动，但在启动时调试我的代码**启动应用程序时启动调试。 启动应用程序时启动调试，是调试来自[不同的启动方法](/windows/uwp/xbox-apps/automate-launching-uwp-apps)有效控制路径，如使用自定义参数激活协议。
    
 1. 选择**启动**，如果应用正在运行，选择**附加**。
