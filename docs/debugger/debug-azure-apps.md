@@ -20,9 +20,9 @@ ms.locfileid: "31458598"
 ---
 # <a name="debug-azure-services-in-visual-studio"></a>调试 Visual Studio 中的 Azure 服务
 
-可以使用 Visual Studio 调试在不同方案中的 Azure 服务：
+可以使用 Visual Studio 在不同方案中调试 Azure 服务：
 
-- 若要调试在 Azure App Service 中托管的生产应用程序，请参阅[调试实时 ASP.NET 应用程序使用快照调试器](../debugger/debug-live-azure-applications.md)。
+- 若要调试在 Azure App Service 中托管的生产应用程序，请参阅[使用快照调试器调试实时 ASP.NET 应用程序](../debugger/debug-live-azure-applications.md)。
 
 - 若要调试使用 Application Insights 的生产应用程序和托管在 Azure App Service 或 Service Fabric 中，请参阅[调试.NET 应用中的异常上的快照](/azure/application-insights/app-insights-snapshot-debugger)。
 
