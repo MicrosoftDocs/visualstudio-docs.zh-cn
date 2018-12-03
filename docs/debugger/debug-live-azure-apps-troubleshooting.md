@@ -52,10 +52,10 @@ ms.locfileid: "44284102"
 
 执行以下步骤：
 
-- 请确保安装了快照调试程序组件。 打开 Visual Studio 安装程序，并检查**快照调试器**组件中的 Azure 工作负荷。
-- 请确保您的应用程序支持。 目前，只有 ASP.NET (4.6.1+) 和 ASP.NET Core （2.0 +） 应用部署到 Azure 应用程序服务都受支持。
+- 请确保安装了快照调试器组件。 打开 Visual Studio 安装程序，并检查 **快照调试器** 组件中的 Azure 工作负荷。
+- 请确保您的应用程序支持。 目前，只支持 ASP.NET (4.6.1+) 和 ASP.NET Core （2.0 +） 应用部署到 Azure 应用程序服务。
 
-## <a name="issue-i-only-see-throttled-snapshots-in-the-diagnostic-tools"></a>问题： 我只看到限制在诊断工具的快照
+## <a name="issue-i-only-see-throttled-snapshots-in-the-diagnostic-tools"></a>问题： 我只看到在诊断工具中限制快照
 
 ![Throttled 被阻止的 snappoint](../debugger/media/snapshot-troubleshooting-throttled-snapshots.png "限制吸附点")
 
