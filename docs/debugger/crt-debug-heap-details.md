@@ -324,7 +324,7 @@ typedef struct _CrtMemState
   
  **创建分配例程的调试版本**  
   
- 稍微复杂一些，方法是创建类似于您自己分配例程的调试版本 **_dbg**新版[堆分配函数](../debugger/debug-versions-of-heap-allocation-functions.md)。 然后，可以将源文件和行号自变量传递给基础堆分配例程，并能立即看到错误分配的出处。  
+ 稍微复杂一些的方法，是创建类似于您自己分配例程的调试版本 **_dbg**新版[堆分配函数](../debugger/debug-versions-of-heap-allocation-functions.md)。 然后，可以将源文件和行号自变量传递给基础堆分配例程，并能立即看到错误分配的出处。  
   
  例如，假定您的应用程序包含与下面类似的常用例程：  
   
