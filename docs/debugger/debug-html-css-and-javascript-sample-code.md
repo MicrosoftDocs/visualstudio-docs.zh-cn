@@ -27,7 +27,7 @@ ms.locfileid: "31456788"
  本主题中的代码是示例文件[快速入门： 调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)。 此版本的代码中修复了快速入门中有意出现的错误。  
   
 ## <a name="sample-code"></a>代码示例  
- 中使用了以下 HTML 代码\<正文 > 了快速入门中的标记。  
+ 快速入门的 \<body > 标记中使用以下 HTML 代码。  
   
 ```html  
 <div id="flipTemplate" data-win-control="WinJS.Binding.Template"  
