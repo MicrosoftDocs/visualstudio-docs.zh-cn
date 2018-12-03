@@ -73,9 +73,9 @@ ms.locfileid: "44284102"
 
 ## <a name="site-extension-upgrade"></a>站点扩展升级
 
-快照调试和 Application Insights 依赖于 ICorProfiler，它将加载到站点过程并在升级过程中将导致文件锁定问题。 我们建议使用此过程以确保没有任何停机的情况下为您的生产站点。
+快照调试和 Application Insights 依赖于 ICorProfiler，它将加载到站点进程并在升级过程中，导致文件锁定问题。 我们建议使用此过程，以确保您的生产站点没有任何停机的情况。
 
-- 创建[部署槽](/azure/app-service/web-sites-staged-publishing)让应用服务中并将您的网站部署到槽。
+- 创建[部署槽](/azure/app-service/web-sites-staged-publishing)在应用服务中并将您的网站部署到槽。
 - 从 Visual Studio 中的云资源管理器或从 Azure 门户交换使用的生产槽。
 - 停止槽站点。 这将需要几秒钟来关闭从所有实例的站点 w3wp.exe 进程终止。
 - 从 Kudu 站点或 Azure 门户升级槽站点扩展 (*应用服务边栏选项卡 > 开发工具 > 扩展 > 更新*)。
@@ -85,5 +85,5 @@ ms.locfileid: "44284102"
 ## <a name="see-also"></a>请参阅
 
 [在 Visual Studio 中进行调试](../debugger/index.md)  
-[调试实时 ASP.NET 应用中使用快照调试程序](../debugger/debug-live-azure-applications.md)  
+[使用快照调试器调试实时 ASP.NET 应用中](../debugger/debug-live-azure-applications.md)  
 [快照调试常见问题解答](../debugger/debug-live-azure-apps-faq.md)  
