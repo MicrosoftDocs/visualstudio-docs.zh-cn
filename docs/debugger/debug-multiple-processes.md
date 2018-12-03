@@ -32,20 +32,20 @@ ms.locfileid: "49910753"
 下面介绍了如何启动调试进程、 进程之间切换、 中断和继续执行、 逐步执行源、 停止调试，并终止进程或与进程分离。  
   
 ##  <a name="BKMK_Configure_the_execution_behavior_of_multiple_processes"></a> 配置多个进程的执行行为  
- 默认情况下，当多个进程在调试器中运行时，中断、分步和停止调试器命令通常会影响所有进程。 例如，在断点处暂停一个进程时，所有其他进程的执行也会被暂停。 您可以更改此默认行为以获取对执行命令的目标的更多控制。  
+ 默认情况下，当多个进程在调试器中运行时，中断、分步和停止调试器命令通常会影响所有进程。 例如，在断点处暂停一个进程时，所有其他进程的执行也会被暂停。 您可以更改此默认行为，以获取对被执行命令目标的更多控制。  
   
-1.  单击**调试 > 选项和设置**。  
+1.  单击 **调试 > 选项和设置** 。  
   
-2.  上**调试**，**常规**页上，清除**一个进程中断时则中断所有进程**复选框。  
+2.  在 **调试** ，**常规** 页上，清除 **一个进程中断时则中断所有进程** 复选框。  
   
 ##  <a name="BKMK_Find_the_source_and_symbol___pdb__files"></a> 查找源文件和符号 (.pdb) 文件  
  若要浏览进程的源代码，调试器需要访问进程的源文件和符号文件。 请参阅[指定符号 (.pdb) 和源文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。  
   
- 如果无法访问进程的文件，可以通过使用反汇编窗口中进行导航。 请参阅[如何： 使用反汇编窗口](../debugger/how-to-use-the-disassembly-window.md)  
+ 如果无法访问进程的源文件，可以通过使用反汇编窗口中进行导航。 请参阅[如何： 使用反汇编窗口](../debugger/how-to-use-the-disassembly-window.md)  
   
-##  <a name="BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger"></a> 启动 VS 解决方案中的多个进程，附加到进程，自动在调试器中启动的进程  
+##  <a name="BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger"></a> 在VS 解决方案中启动多个进程，附加到进程，自动在调试器中启动的进程  
   
--   [开始调试 Visual Studio 解决方案中的多个进程](#BKMK_Start_debugging_multiple_processes_in_a_Visual_Studio_solution)  
+-   [在Visual Studio 解决方案中开始调试多个进程](#BKMK_Start_debugging_multiple_processes_in_a_Visual_Studio_solution)  
   
 -   [更改启动项目](#BKMK_Change_the_startup_project)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "49910753"
 > - 在子进程启动后附加到该子进程。  
 > 
 >   或  
->   -   配置 Windows 以自动启动调试器的新实例中的子进程。  
+>   -   配置 Windows 以自动启动调试器新实例中的子进程。  
   
 ###  <a name="BKMK_Start_debugging_multiple_processes_in_a_Visual_Studio_solution"></a> 开始调试 Visual Studio 解决方案中的多个进程  
  如果您在 Visual Studio 解决方案中有多个可独立运行的项目（在独立进程中运行的项目），则可以选择调试器将启动的项目。  
@@ -71,9 +71,9 @@ ms.locfileid: "49910753"
  ![更改项目的启动类型](../debugger/media/dbg_execution_startmultipleprojects.png "DBG_Execution_StartMultipleProjects")  
   
 ####  <a name="BKMK_Change_the_startup_project"></a> 更改启动项目  
- 若要更改启动项目的解决方案，在解决方案资源管理器中选择项目，然后选择**设为启动项目**从上下文菜单。  
+ 若要更改启动项目的解决方案，在解决方案资源管理器中选择项目，然后从上下文菜单中选择 **设为启动项目** 。  
   
-####  <a name="BKMK_Start_a_specific_project_in_a_solution"></a> 在解决方案中启动的特定项目  
+####  <a name="BKMK_Start_a_specific_project_in_a_solution"></a> 在解决方案中启动特定项目  
  若要启动的项目的解决方案而无需更改默认启动项目，在解决方案资源管理器中选择项目，然后选择**调试**从上下文菜单。 然后，可以选择**启动新实例**或**单步执行新实例**。  
   
  ![返回页首](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [启动 VS 解决方案中的多个进程，附加到进程，自动在调试器中启动的进程](../debugger/debug-multiple-processes.md#BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger)  
