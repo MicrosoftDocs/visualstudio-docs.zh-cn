@@ -43,13 +43,13 @@ Visual Studio 提供不同的工具用于调试多线程应用程序。
 
 - 线程的主要调试工具是 **线程** 窗口，用于源窗口中的线程标记主要工具是 **并行堆栈** 窗口、**并行监视**窗口、和**调试位置**工具栏。 若要了解如何**线程**窗口和**调试位置**工具栏中，请参阅[演练： 使用线程窗口进行调试](../debugger/how-to-use-the-threads-window.md)。 若要了解如何使用**并行堆栈** 和 **并行监视** 窗口，请参阅[开始调试多线程应用程序](../debugger/get-started-debugging-multithreaded-apps.md)。 这两个主题显示如何使用线程标记。
   
-- 在代码中使用的 [任务并行库 (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)或[并发运行时](/cpp/parallel/concrt/concurrency-runtime/) 主要调试工具是**并行堆栈**窗口、 **并行监视** 窗口中、和 **任务**窗口中，它还支持 JavaScript。 若要开始，请参阅[演练： 调试并行应用程序](../debugger/walkthrough-debugging-a-parallel-application.md)和 [演练： 调试 c + + AMP 应用程序](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)。 
+- 对于使用代码库 [任务并行库 (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)或[并发运行时](/cpp/parallel/concrt/concurrency-runtime/) 的项目 ， 主要调试工具是**并行堆栈**窗口、 **并行监视** 窗口中、和 **任务**窗口中，它还支持 JavaScript。 若要开始，请参阅[演练： 调试并行应用程序](../debugger/walkthrough-debugging-a-parallel-application.md)和 [演练： 调试 c + + AMP 应用程序](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)。 
 
 - GPU 上的线程主要调试工具是 **GPU 线程** 窗口。 请参阅[如何： 使用 GPU 线程窗口](../debugger/how-to-use-the-gpu-threads-window.md)。  
 
 - 进程的主要调试工具是 **附加到进程**对话框、 **进程**窗口、 和**调试位置**工具栏。  
   
-Visual Studio 还提供功能强大的断点和跟踪点，在调试多线程应用程序时，可以很有用。 使用断点条件和筛选器将断点置于单个线程上。 跟踪点，您可以跟踪你的程序的执行，而不会中断，研究问题，例如死锁。 有关详细信息，请参阅[断点操作和跟踪点](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)。
+Visual Studio 还提供功能强大的断点和跟踪点，在调试多线程应用程序时，非常有用。 使用断点条件和筛选器将断点置于单个线程上。 使用跟踪点，可以在跟踪程序的执行时，不会造成中断，可用来研究问题，例如死锁。 有关更多信息，请参阅[断点操作和跟踪点](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)。
 
 调试具有用户界面的多线程应用程序可能会特别困难。 您可以考虑在另一台计算机上运行应用程序并使用远程调试。 有关详细信息，请参阅[远程调试](../debugger/remote-debugging.md)。  
   
