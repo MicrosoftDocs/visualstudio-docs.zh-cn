@@ -59,38 +59,38 @@ F11 是详细检查执行流的好方法。 （若要更快的浏览代码，我
 
 在应用的代码中，按 F10 使用调试器无需单步步入函数或方法 （其中的代码仍执行）。 按 F10，您可以跳过您不感兴趣的代码。 这样一来，你可以快速转到你更感兴趣的代码。
 
-## <a name="step-into-a-property"></a> 逐语句步入属性
+## <a name="step-into-a-property"></a> 单步执行属性
 
-如前所述，默认情况下，调试器跳过托管的属性和字段，但**逐语句至特定处**命令允许你重写此行为。
+如前所述，默认情况下，调试器跳过托管的属性和字段，但**单步执行特定函数**命令允许你重写此行为。
 
-右键单击某个属性或字段，然后选择**逐语句至特定处**，然后选择一个可用的选项。
+右键单击某个属性或字段，然后选择**单步执行特定函数**，然后选择一个可用的选项。
 
-![逐语句至特定处](../debugger/media/dbg-tour-step-into-specific.png "逐语句至特定处")
+![单步执行特定函数](../debugger/media/dbg-tour-step-into-specific.png "单步执行特定函数")
 
-在此示例中，**逐语句至特定处**获取我们的代码`Path.set`。
+在此示例中，**单步执行特定函数**获取我们的代码`Path.set`。
 
-![逐语句至特定处](../debugger/media/dbg-tour-step-into-specific-2.png "逐语句至特定处")
+![单步执行特定函数](../debugger/media/dbg-tour-step-into-specific-2.png "单步执行特定函数")
 
 ## <a name="run-to-a-point-in-your-code-quickly-using-the-mouse"></a>使用鼠标将代码快速运行到指定位置
 
-在调试器中，悬停在一行代码直到**运行时单击**（运行执行到此处） 按钮![运行时单击](../debugger/media/dbg-tour-run-to-click.png "RunToClick")显示在左侧。
+在调试器中，悬停在一行代码直到**运行到光标处**（执行运行到此处） 按钮![运行到光标处](../debugger/media/dbg-tour-run-to-click.png "RunToClick")显示在左侧。
 
-![运行时单击](../debugger/media/dbg-tour-run-to-click-2.png "运行时单击")
+![运行到光标处](../debugger/media/dbg-tour-run-to-click-2.png "运行到光标处")
 
 > [!NOTE]
-> **运行时单击**（运行执行到此处） 按钮中的新增功能[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]。
+> **运行到光标处**（执行运行到此处） 按钮中的新增功能[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]。
 
-单击**运行时单击**（运行执行到此处） 按钮。 调试器将进入到的代码行上，单击的位置。
+单击**运行到光标处**（执行运行到此处） 按钮。 调试器将进入到代码行上单击的位置。
 
-使用此按钮将类似于设置临时断点。 此命令也会非常方便快速入门应用程序代码在可见区域内。 可以使用**运行时单击**中任何打开的文件。
+使用此按钮将类似于设置临时断点。 这个命令还可以方便的在应用程序代码的可见区域内快速移动。 可以使用**运行到光标处**中任何打开的文件。
 
-## <a name="advance-the-debugger-out-of-the-current-function"></a>继续学习跳出当前函数调试器
+## <a name="advance-the-debugger-out-of-the-current-function"></a>将调试器跳出当前函数之外
 
-有时，你可能想要继续调试会话但前进直到当前函数的调试器。
+有时，你可能想要继续调试会话，但要调试器跳过当前函数。
 
 按**Shift + F11** (或**调试 > 跳出**)。
 
-此命令恢复应用程序执行 （和使调试器），直到当前函数返回。
+此命令将当前函数返回，恢复应用程序执行 （和调试器）。
 
 ## <a name="run-to-cursor"></a>运行到光标处
 
