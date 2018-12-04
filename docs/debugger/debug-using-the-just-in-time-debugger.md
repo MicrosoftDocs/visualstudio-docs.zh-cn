@@ -22,33 +22,33 @@ ms.locfileid: "49382737"
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>在 Visual Studio 中使用实时调试器进行调试
 
-在实时调试可以 Visual Studio 会自动启动时运行外部 Visual Studio 错误或崩溃的应用。 使用中的实时调试，可以测试在 Visual Studio 外部的应用程序，并打开 Visual Studio 开始调试时出现问题。
+应用运行在 Visual Studio 之外，发生错误或崩溃时，实时调试可自动启动 Visual Studio。 在实时调试时，可以测试在 Visual Studio 外部的应用程序，当出现问题打开 Visual Studio 开始调试。
 
-在实时调试适用于 Windows 桌面应用。 它并不适用于通用 Windows 应用，或对于本机应用程序，例如可视化工具中托管的托管代码。
+在实时调试适用于 Windows 桌面应用。 它并不适用于通用 Windows 应用，也不适用于托管在本机应用程序(如可视化器)中的托管代码。
 
 > [!TIP]
-> 如果只是想要停止实时调试器对话框中，使其不显示，但不安装 Visual Studio，请参阅[禁用实时调试器](../debugger/just-in-time-debugging-in-visual-studio.md)。 如果一次安装 Visual Studio，您可能需要[禁用在实时调试从 Windows 注册表](#disable-just-in-time-debugging-from-the-windows-registry)。 
+> 如果只想停止出现实时调试器对话框，但不安装 Visual Studio，请参阅[禁用实时调试器](../debugger/just-in-time-debugging-in-visual-studio.md)。 如果已安装 Visual Studio，您可能需要[禁用在实时调试从 Windows 注册表](#disable-just-in-time-debugging-from-the-windows-registry)。 
 
-##  <a name="BKMK_Enabling"></a> 启用或禁用在实时 Visual Studio 中调试
+##  <a name="BKMK_Enabling"></a> 在 Visual Studio 中启用或禁用实时调试
 
 >[!NOTE]
->若要启用或禁用在实时调试，您必须运行 Visual Studio 以管理员身份。 启用或禁用在实时调试会设置一个注册表项，并可能需要管理员权限来更改该密钥。 若要打开 Visual Studio 以管理员身份，请右键单击 Visual Studio 应用程序，然后选择**以管理员身份运行**。 
+>若要启用或禁用实时调试，必须 以管理员身份运行 Visual Studio 。启用或禁用实时调试会设置一个注册表项，可能需要管理员权限来更改注册表项。此时以管理员身份打开 Visual Studio ，右键单击 Visual Studio 应用程序，然后选择**以管理员身份运行**。 
 
-可以配置在实时调试 Visual Studio**工具** > **选项**(或**调试** > **选项**)对话框。 
+可以使用 Visual Studio 配置实时调试 **工具** > **选项**(或**调试** > **选项**)对话框。 
 
-**启用或禁用在实时调试：**
+**启用或禁用实时调试：**
 
-1. 上**工具**或**调试**菜单中，选择**选项** > **调试** >  **在实时**。
+1. 在**工具**或**调试**菜单中，选择**选项** > **调试** >  **在实时**。
 
    ![启用或禁用 JIT 调试](../debugger/media/dbg-jit-enable-or-disable.png "启用或禁用 JIT 调试")
 
-1. 在中**启用实时调试对这些类型的代码**框中，选择你希望在实时调试来调试的代码的类型：**托管**，**本机**，和/或**脚本**。
+1. 在**启用实时调试对这些类型的代码**框中，选择要进行实时调试的代码的类型：**托管**，**本机**，和/或**脚本**。
    
 1. 选择“确定”。
 
-如果启用了实时中调试器，但它未打开时应用程序崩溃或错误，请参阅[进行故障排除实时调试](#jit_errors)。
+如果启动了实时调试器，但应用程序崩溃或错误时，它没有自动打开，请参阅[进行故障排除实时调试](#jit_errors)。
 
-## <a name="disable-just-in-time-debugging-from-the-windows-registry"></a>禁用在实时调试从 Windows 注册表
+## <a name="disable-just-in-time-debugging-from-the-windows-registry"></a>从 Windows 注册表禁用实时调试
 
 即便在你的计算机中不再安装有 Visual Studio，仍可启用实时调试。 如果不能再安装 Visual Studio，则可以禁用中实时调试通过编辑 Windows 注册表。
 
