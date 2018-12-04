@@ -90,7 +90,7 @@ ms.locfileid: "49382737"
     </configuration>
     ```
     
--  在 c + + Windows Form 应用程序中，*.config* 文件或代码中设置 `DebuggableAttribute` 为 `true` 。 如果使用编译[/Zi](/cpp/build/reference/z7-zi-zi-debug-information-format)且无[/Og](/cpp/build/reference/og-global-optimizations)，编译器会为您设置此属性。如果你想要调试非优化发布版本，但是，你必须在应用中 *AssemblyInfo.cpp* 文件，如下设置 `DebuggableAttribute` ：
+-  在 c + + Windows Form 应用程序中，*.config* 文件或代码中设置 `DebuggableAttribute` 为 `true` 。 如果使用编译[/Zi](/cpp/build/reference/z7-zi-zi-debug-information-format)且无[/Og](/cpp/build/reference/og-global-optimizations)，编译器会为您设置此属性。如果你想要调试非优化发布版本，你必须在应用中 *AssemblyInfo.cpp* 文件，如下设置 `DebuggableAttribute` ：
 
    ```cpp
    [assembly:System::Diagnostics::DebuggableAttribute(true, true)];
@@ -98,18 +98,18 @@ ms.locfileid: "49382737"
    
    有关详细信息，请参阅 <xref:System.Diagnostics.DebuggableAttribute> 。
 
-## <a name="BKMK_Using_JIT"></a>使用在实时调试
- 此示例将指导你完成在实时调试时，应用程序引发错误。
+## <a name="BKMK_Using_JIT"></a>使用实时调试
+ 此示例将指导您在应用程序引发错误时开始实时调试。
 
- - 您必须具有 Visual Studio 安装，请遵循以下步骤。 如果未安装 Visual Studio，则可以下载免费[Visual Studio Community Edition](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=15)。
+ - 您必须遵循以下步骤安装 Visual Studio。 如果未安装 Visual Studio，则可以下载免费[Visual Studio 社区版](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=15)。
    
- - 请确保在实时调试[启用](#BKMK_Enabling)中**工具** > **选项** > **调试** > **中实时**。
+ - 请确保在实时调试中通过 **工具** > **选项** > **调试** > **实时** [启用](#BKMK_Enabling)。
 
-对于此示例中，你将使C#控制台应用，在 Visual Studio 中，将引发[NullReferenceException](/dotnet/api/system.nullreferenceexception)。
+对于此示例中，你将在 Visual Studio 中，使C#控制台应用引发[NullReferenceException](/dotnet/api/system.nullreferenceexception)。
 
 1. 在 Visual Studio 中，创建C#控制台应用程序 (**文件** > **新建** > **项目** > **Visual C#**   > **控制台应用程序**) 名为*ThrowsNullException*。 在 Visual Studio 中创建项目的详细信息，请参阅[演练： 创建简单应用程序](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)。
    
-1. 当在 Visual Studio 中打开项目时，打开*Program.cs*文件。 将打印到控制台的行，然后引发 NullReferenceException 的以下代码替换为 main （） 方法：
+1. 在 Visual Studio 中打开项目，打开 *Program.cs* 文件。替换Main()函数为如下代码，在控制台打印一行，然后引发 NullReferenceException 异常：
    
    ```csharp
    static void Main(string[] args)
