@@ -1,5 +1,5 @@
 ---
-title: 若要调试线程和进程的工具 |Microsoft Docs
+title: 调试线程和进程的工具 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/21/2017
 ms.technology: vs-ide-debug
@@ -28,27 +28,27 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49888815"
 ---
-# <a name="tools-to-debug-threads-and-processes-in-visual-studio"></a>若要调试线程和进程在 Visual Studio 中的工具
-*线程*并*进程*是计算机科学中相关的概念。 二者都表示必须按特定顺序执行的指令序列。 但是不同线程或进程中的指令可以并行执行。  
+# <a name="tools-to-debug-threads-and-processes-in-visual-studio"></a>在 Visual Studio 中调试线程和进程的工具
+*线程* 和 *进程* 是计算机科学中相关的概念。 二者都表示必须按特定顺序执行的指令序列。 但是不同线程或进程中的指令可以并行执行。  
   
- 进程存在于操作系统内，并对应于用户可看作为程序或应用程序的事物。 另一方面，线程存在于进程内。 出于此原因，线程有时称为*轻量进程*。 每个进程都由一个或多个线程组成。  
+ 进程存在于操作系统内，比如程序或应用程序。 另一方面，线程存在于进程内。 出于此原因，线程有时称为*轻量进程*。 每个进程都由一个或多个线程组成。  
   
- 多个进程的存在使得计算机能够一次执行多个任务。 而多个线程的存在使得进程能够分解工作以便并行执行。 在多处理器计算机上，进程或线程可以在不同的处理器中运行。 这使得真正的并行处理成为可能。  
+ 多个进程的存在使计算机能够同时执行多任务。 而多个线程的存在使进程能够将工作分解并行执行。 在多处理器计算机上，进程或线程可以在不同的处理器中运行。 这使得真正的并行处理成为可能。  
   
- 并不总是能够完全并行处理。 有时候必须要同步线程。 一个线程可能必须等待另一个线程的结果，或者一个线程可能需要独占访问另一个线程正在使用的资源。 同步问题是多线程应用程序中出现 Bug 的一个常见原因。 有时候线程可能最终等待的是永远不会变得可用的资源。 这会导致一种称为状况*死锁*。  
+ 并不总是能够完全并行处理。 有时候必须要同步线程。 一个线程可能必须等待另一个线程返回，或者一个线程可能需要占用另一个线程正在使用的资源。 同步问题是多线程应用程序中出现 Bug 的一个常见原因。 有时候线程等待的是永远不会可用的资源。 这会导致一种称为 *死锁* 的状况。  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 调试器为调试线程和进程提供了功能强大但易于使用的工具。  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 调试器为调试线程和进程，提供了功能强大但易于使用的工具。  
   
 ## <a name="tools-and-features"></a>工具和功能
-若要在中使用所需的工具[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]取决于你尝试调试的代码类型：
+在[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]中需要使用的工具，取决于调试的代码类型：
 
-- 主要工具是执行过程，这**附加到进程**对话框中，**进程**窗口中，并且**调试位置**工具栏。
+- 对于进程的主要调试工具 **附加到进程**对话框、**进程**窗口、**调试位置**工具栏。
 
-- 对于线程，用于调试线程的主要工具是**线程**窗口中，源窗口中的线程标记**并行堆栈**窗口中，**并行监视**窗口中，并**调试位置**工具栏。  
+- 对于线程的主要调试工具 **线程**窗口，源窗口中的线程标记工具 **并行堆栈**窗口、**并行监视**窗口、和**调试位置**工具栏。  
   
-- 使用的代码<xref:System.Threading.Tasks.Task>中[任务并行库 (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)，则[并发运行时](/cpp/parallel/concrt/concurrency-runtime/)（本机代码），用于调试多线程应用程序的主要工具是**并行堆栈**窗口中，**并行监视**窗口中，并且**任务**窗口 (**任务**窗口还支持JavaScript promise 对象）。
+- 使用<xref:System.Threading.Tasks.Task>中[任务并行库 (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)，则[并发运行时](/cpp/parallel/concrt/concurrency-runtime/)（本机代码）代码库的项目，使用多线程应用程序的主要调试工具 **并行堆栈**窗口、 **并行监视**窗口、和**任务**窗口 (**任务**窗口还支持JavaScript promise 对象）。
 
-- 主要工具是用于调试在 GPU 上的线程， **GPU 线程**windows。  
+- 对于 GPU 上线程的主要调试工具 **GPU 线程** 窗口。  
   
   下表显示了可用信息以及可在以上每个位置执行的操作：  
   
@@ -65,6 +65,6 @@ ms.locfileid: "49888815"
 |**GPU 线程**窗口|的将标记要特别注意的线程标记列。<br />-当前线程列，其中的黄色箭头指示当前线程。<br />-**线程计数**列，在同一位置显示的线程数。<br />-**行**列，显示的每组线程所在的位置的代码行。<br />-**地址**列，显示每组线程所在的位置的指令地址。<br />-**位置**列中，这是在代码中的地址的位置。<br />-**状态**列，显示的线程是否有效或锁定。<br />-**磁贴**列，显示的行中的线程的平铺索引。|-将更改为不同的线程<br />-显示特定平铺和线程<br />-显示或隐藏列<br />-按列排序<br />-组线程<br />-冻结或解冻线程<br />-标记或取消标记线程<br />仅显示标记的线程|  
   
 ## <a name="see-also"></a>请参阅  
- [将附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
+ [附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
  [调试多线程应用程序](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [调试 GPU 代码](../debugger/debugging-gpu-code.md)
