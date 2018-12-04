@@ -50,11 +50,11 @@ ms.locfileid: "49382737"
 
 ## <a name="disable-just-in-time-debugging-from-the-windows-registry"></a>从 Windows 注册表禁用实时调试
 
-即便在你的计算机中不再安装有 Visual Studio，仍可启用实时调试。 如果不能再安装 Visual Studio，则可以禁用中实时调试通过编辑 Windows 注册表。
+即便在你的计算机中不再安装 Visual Studio，仍可启动实时调试。 如果不再安装 Visual Studio，通过编辑 Windows 注册表禁用实时调试。
 
-**若要禁用中实时调试通过编辑注册表：**
+**若要通过编辑注册表禁用实时调试：**
 
-1.  从 Windows**启动**菜单中，运行**注册表编辑器**(*regedit.exe*)。
+1.  从 Windows**开始**菜单中，运行**注册表编辑器**(*regedit.exe*)。
 
 2.  在中**注册表编辑器**窗口中，找到并删除以下注册表项：
 
@@ -74,15 +74,15 @@ ms.locfileid: "49382737"
 
 5.  关闭**注册表编辑器**窗口。
 
-## <a name="enable-just-in-time-debugging-of-a-windows-form"></a>启用在实时调试的 Windows 窗体
+## <a name="enable-just-in-time-debugging-of-a-windows-form"></a>启动Windows Form的实时调试 
 
-默认情况下，Windows 窗体应用程序有一个顶级异常处理程序，可让应用能够恢复时保持运行。 如果 Windows 窗体应用程序将引发未处理的异常，则会显示以下对话框：
+默认情况下，Windows Form应用程序有一个顶级异常处理程序，可让应用能够恢复时保持运行。 如果 Windows Form应用程序引发未处理的异常，则会显示以下对话框：
 
-![Windows 窗体未经处理的异常](../debugger/media/windowsformsunhandledexception.png "Windows 窗体未经处理的异常")
+![Windows Form未经处理的异常](../debugger/media/windowsformsunhandledexception.png "Windows Form未经处理的异常")
 
-若要启用实时调试而不标准 Windows 窗体错误处理，请添加这些设置：
+若要启用实时调试代替标准 Windows Form错误处理，请添加这些设置：
 
--  在中`system.windows.forms`一部分*machine.config*或*\<应用名称 >。 exe.config*文件中，将`jitDebugging`值设为`true`:
+-  在`system.windows.forms`的 *machine.config* 或 *\<应用名称 >。 exe.config* 文件中，将`jitDebugging`值设为`true`:
     
     ```xml
     <configuration>
@@ -90,7 +90,7 @@ ms.locfileid: "49382737"
     </configuration>
     ```
     
--  在 c + + Windows 窗体应用程序中，还设置`DebuggableAttribute`到`true`中 *.config*文件或代码中。 如果使用编译[/Zi](/cpp/build/reference/z7-zi-zi-debug-information-format)且无[/Og](/cpp/build/reference/og-global-optimizations)，编译器会为您设置此属性。 如果你想要调试非优化发布版本，但是，你必须设置`DebuggableAttribute`通过在应用中添加以下行*AssemblyInfo.cpp*文件：
+-  在 c + + Windows Form 应用程序中，*.config* 文件或代码中设置 `DebuggableAttribute` 为 `true` 。 如果使用编译[/Zi](/cpp/build/reference/z7-zi-zi-debug-information-format)且无[/Og](/cpp/build/reference/og-global-optimizations)，编译器会为您设置此属性。如果你想要调试非优化发布版本，但是，你必须在应用中 *AssemblyInfo.cpp* 文件，如下设置 `DebuggableAttribute` ：
 
    ```cpp
    [assembly:System::Diagnostics::DebuggableAttribute(true, true)];
