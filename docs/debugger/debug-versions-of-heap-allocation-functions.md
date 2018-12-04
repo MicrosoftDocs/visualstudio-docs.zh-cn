@@ -43,11 +43,11 @@ C 运行库包含堆分配函数的特殊“Debug”版本。 这些函数的名
   
 - 存储分配请求所在的源文件和行号。  
   
-  如果不希望将您`malloc`调用`_malloc_dbg`，可以通过定义[_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc)获取源文件信息，这将导致预处理器将对直接映射到的所有调用`malloc`到`_malloc_dbg`而不是依靠周围的包装器`malloc`。  
+  如果不希望将您`malloc`调用`_malloc_dbg`，可以通过定义[_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc)获取源文件信息，这将导致预处理器将对直接映射所有`malloc`到`_malloc_dbg`的调用，而不是依靠周围的包装器`malloc`。  
   
   若要跟踪客户端块中各种类型的分配，必须直接调用 `_malloc_dbg`，并将 `blockType` 参数设置为 `_CLIENT_BLOCK`。  
   
-  未定义 _DEBUG，调用`malloc`不受干扰，而对调用`_malloc_dbg`将解析为`malloc`，定义[_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc)被忽略，并且源与相关的文件信息未提供分配请求。 因为 `malloc` 没有块类型参数，所以将对 `_CLIENT_BLOCK` 类型的请求作为标准分配处理。  
+  未定义 _DEBUG 时，调用`malloc`不受干扰，而对`_malloc_dbg`的调用将解析为`malloc`，[_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc) 定义将被忽略，并且没有提供与分配请求相关的源文件信息。因为 `malloc` 没有块类型参数，所以将对 `_CLIENT_BLOCK` 类型的请求作为标准分配处理。  
   
 ## <a name="see-also"></a>请参阅  
  [CRT 调试方法](../debugger/crt-debugging-techniques.md)
