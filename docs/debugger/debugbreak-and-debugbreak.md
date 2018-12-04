@@ -29,9 +29,9 @@ ms.lasthandoff: 04/18/2018
 ms.locfileid: "31470468"
 ---
 # <a name="debugbreak-and-debugbreak"></a>DebugBreak 和 __debugbreak
-你可以调用 DebugBreak Win32 函数或[__debugbreak](/cpp/intrinsics/debugbreak)在代码中的任何时刻内部函数。 `DebugBreak` 和 `__debugbreak` 具有与在该位置设置断点相同的效果。  
+你可以在代码内部的任何位置调用 DebugBreak Win32 函数或[__debugbreak](/cpp/intrinsics/debugbreak)。 `DebugBreak` 和 `__debugbreak` 具有与在该位置设置断点相同的效果。  
   
- 由于 `DebugBreak` 是对系统函数的调用，因此必须安装系统调试符号以确保中断后显示正确的调用堆栈信息。 否则，调试器可能在显示一帧调用堆栈信息后就停止显示。 如果使用 `__debugbreak`，则不需要符号。  
+ 由于 `DebugBreak` 是对系统函数的调用，因此必须安装系统调试符号，以确保中断后显示正确的调用堆栈信息。 否则，调试器可能在显示一条调用堆栈信息后就停止显示。 如果使用 `__debugbreak`，则不需要符号。  
   
 ## <a name="see-also"></a>请参阅  
  [编译器内部函数](/cpp/intrinsics/compiler-intrinsics)   
