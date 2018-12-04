@@ -119,14 +119,14 @@ ms.locfileid: "49382737"
    }
    ```
    
-1. 若要生成解决方案，选择**调试**（默认值） 或**发行**配置，并选择**生成** > **重新生成解决方案**. 
+1. 若要生成解决方案，选择 **调试**（默认值） 或 **发行** 配置，并选择 **生成** > **重新生成解决方案** . 
    
    >[!NOTE]
    >- 选择**调试**配置完整的调试体验。 
-   >- 如果选择[发行](../debugger/how-to-set-debug-and-release-configurations.md)配置，必须先关闭[仅我的代码](../debugger/just-my-code.md)若要运行此过程。 下**工具** > **选项** > **调试**，取消选择**启用 ' 仅我的代码**。
+   >- 如果已选择[发行](../debugger/how-to-set-debug-and-release-configurations.md)配置，想要此过程有效，必须关闭[仅我的代码](../debugger/just-my-code.md) 。 在**工具** > **选项** > **调试** 中，取消选择**启用 ' 仅我的代码**。
    有关生成配置的详细信息，请参阅[了解生成配置](../ide/understanding-build-configurations.md)。
    
-1. 打开生成的应用*ThrowsNullException.exe*中将C#项目文件夹 (*...\ThrowsNullException\ThrowsNullException\bin\Debug*或 *...\ThrowsNullException\ThrowsNullException\bin\Release*)。 
+1. 在C#项目文件夹中打开生成的应用*ThrowsNullException.exe* (*...\ThrowsNullException\ThrowsNullException\bin\Debug*或 *...\ThrowsNullException\ThrowsNullException\bin\Release*)。 
    
    应会看到下面的命令窗口：
    
@@ -136,24 +136,23 @@ ms.locfileid: "49382737"
    
    ![JustInTimeDialog](../debugger/media/justintimedialog.png "JustInTimeDialog")
    
-   下**可用调试器**，选择**的新实例\<你首选 Visual Studio 版本 >**，如果未处于选中状态。 
+   在 **可用调试器** 中，如果未处于选中状态，选择 **的新实例\<你首选 Visual Studio 版本 >** 。 
    
 1. 选择“确定”。
-   
-   ThrowsNullException 项目可打开 Visual Studio 的新实例中引发异常的代码行处停止执行：
+   将在 Visual Studio 的新实例中打开 ThrowsNullException 项目，并在引发异常的代码行处停止执行：
    
    ![NullReferenceSecondInstance](../debugger/media/nullreferencesecondinstance.png "NullReferenceSecondInstance")
 
-你可以开始调试在这里。 如果调试真正的应用程序，您需要找出原因代码抛出异常。
+你可以在这里开始调试。如果正在调试真正的应用程序，您需要找出抛出异常的原因代码。
 
 > [!CAUTION]
-> 如果您的应用程序包含不受信任的代码，则会出现安全警告对话框中，使您决定是否要继续进行调试。 继续调试之前，确定是否信任相应代码。 代码是你自己编写的吗？ 如果该应用程序正在远程计算机上运行，你是否认识进程的名称？ 如果在本地运行应用程序，请考虑在您的计算机上运行的恶意代码的可能性。 如果您决定是否值得信任的代码，选择**确定**。 否则，选择“取消”。
+> 如果您的应用程序包含不受信任的代码，则会出现安全警告对话框中，使您决定是否要继续进行调试。 继续调试之前，确定是否信任相应代码。 代码是你自己编写的吗？ 如果该应用程序正在远程计算机上运行，你是否认识进程的名称？ 如果在本地运行应用程序，请考虑在您的计算机上运行恶意代码的可能性。 如果您决定信任该代码，选择**确定**。 否则，选择“取消”。
 
 ## <a name="jit_errors"></a> 排查在实时调试 
 
-如果在实时调试不时启动应用程序崩溃，即使它在 Visual Studio 中启用：
+如果在应用程序崩溃时不启动实时调试，即使之前它在 Visual Studio 中启用的：
 
-- Windows 错误报告无法接管的错误处理您的计算机上。 
+- 在您的计算机上Windows 错误报告无法接管错误处理。 
   
   若要解决此问题，请使用注册表编辑器中添加**DWORD 值**的**禁用**，与**值数据**的**1**，对以下注册表项：
   
@@ -163,9 +162,9 @@ ms.locfileid: "49382737"
     
   - （适用于 64 位计算机）： **HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows\Windows 错误报告**
   
-  有关详细信息，请参阅[。WER 设置](https://docs.microsoft.com/windows/desktop/wer/wer-settings)。
+  有关详细信息，请参阅[.WER 设置](https://docs.microsoft.com/windows/desktop/wer/wer-settings)。
   
-- 已知的 Windows 问题可能导致实时中调试程序失败。 
+- 已知的 Windows 问题可能导致实时调试器启动失败。 
   
   解决方法是添加**DWORD 值**的**自动**，与**值数据**的**1**，对以下注册表项：
   
@@ -180,17 +179,17 @@ ms.locfileid: "49382737"
 
     调试器尝试附加到另一个用户下运行的进程。
 
-    若要解决此问题，请在 Visual Studio 中，打开**调试** > **附加到进程**，并找到你想要在调试的进程**可用进程**列表。 如果不知道进程名称，查找中的进程 ID **Visual Studio 实时调试器**对话框。 选择中的过程**可用进程**列表，然后选择**附加**。 选择**否**关闭实时中调试器的对话框。
+    若要解决此问题，请在 Visual Studio 中，打开**调试** > **附加到进程**，并找到在 **可用进程** 列表想要调试的进程。 如果不知道进程名称，在 **Visual Studio 实时调试器** 对话框中查找进程 ID 。在 **可用进程** 列表中选择该进程，然后选择 **附加** 。 选择 **否** 关闭实时调试器对话框。
 
-- **无法启动调试器，因为没有用户登录。**
+- **因为没有用户登录，无法启动调试器。**
 
-    没有用户登录到控制台，因此没有用户会话来显示实时中调试对话框。
+    没有用户登录到控制台，因此没有用户会话来显示实时调试对话框。
 
     要解决此问题，请登录到计算机。
 
 - **未注册的类。**
 
-    调试器尝试创建未注册，可能由于安装问题的 COM 类。
+    调试器可能由于安装问题， 尝试创建未注册的 COM 类。
 
     若要解决此问题，请使用 Visual Studio 安装程序重新安装或修复 Visual Studio 安装。
 
