@@ -149,7 +149,7 @@ typedef struct _CrtMemBlockHeader
   
 ##  <a name="BKMK_Types_of_blocks_on_the_debug_heap"></a> 调试堆上的块类型  
 
- 调试堆中的每个内存块都分配以五种分配类型之一。 出于泄漏检测和状态报告目的对这些类型进行不同地跟踪和报告。 可以指定块的类型，方法是使用类似于直接调用调试堆分配函数之一来分配[_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg)。 调试堆中内存块的五种类型 (在中设置**nBlockUse**的成员 **_CrtMemBlockHeader**结构) 如下所示：  
+ 调试堆中的每个内存块都分配五种分配类型之一。 出于泄漏检测和状态报告目的对这些类型进行不同地跟踪和报告。 可以指定块的类型，方法是使用类似于直接调用调试堆分配函数之一来分配[_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg)。 调试堆中内存块的五种类型 (在中设置**nBlockUse**的成员 **_CrtMemBlockHeader**结构) 如下所示：  
   
  **_NORMAL_BLOCK**  
  调用[malloc](/cpp/c-runtime-library/reference/malloc)或[calloc](/cpp/c-runtime-library/reference/calloc)创建普通块。 如果你想要使用普通块，而不需要客户端块，您可能想要定义[_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc)，这将导致所有堆分配调用映射到其调试版本中的调试等效项。 这将允许将关于每个分配调用的文件名和行号信息存储到对应的块头中。  

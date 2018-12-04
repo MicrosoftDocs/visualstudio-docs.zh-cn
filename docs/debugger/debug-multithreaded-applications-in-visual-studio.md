@@ -35,19 +35,19 @@ ms.locfileid: "51349525"
   
 具有多个处理器、 多核处理器或超线程进程的计算机可以运行多个并发线程。 并行处理使用多个线程可以极大地提高程序性能，但它还会使调试更加困难因为跟踪多个线程。  
   
-多线程处理可能会引入新类型的潜在 bug。 例如，两个或多个线程可能需要访问同一个资源，但一次只有一个线程可以安全地访问资源。 某种形式的互相排斥，才可确保只有一个线程在任何时候访问资源。 如果未正确实现互相排斥时，它可以创建*死锁*任何线程将执行的条件。 死锁很难解决的问题进行调试。
+多线程处理可能会引入新类型的潜在 bug。 例如，两个或多个线程可能需要访问同一个资源，但一次只有一个线程可以安全地访问资源。 某种形式的互相排斥，才可确保只有一个线程在任何时候访问资源。 如果未正确实现互相排斥时，它将创建没有线程可继续执行的 *死锁* 状况。 进行调试很难解决死锁问题。
 
 ## <a name="tools-for-debugging-multithreaded-apps"></a>用于调试多线程应用程序的工具
 
-Visual Studio 提供用于在调试多线程应用程序中使用不同的工具。
+Visual Studio 提供不同的工具用于调试多线程应用程序。
 
-- 对于线程，用于调试线程的主要工具是**线程**窗口中，源窗口中的线程标记**并行堆栈**窗口中，**并行监视**窗口中，并**调试位置**工具栏。 若要了解如何**线程**窗口和**调试位置**工具栏中，请参阅[演练： 使用线程窗口进行调试](../debugger/how-to-use-the-threads-window.md)。 若要了解如何使用**并行堆栈**并**并行监视**windows，请参阅[开始调试多线程应用程序](../debugger/get-started-debugging-multithreaded-apps.md)。 这两个主题显示如何使用线程标记。
+- 线程的主要调试工具是 **线程** 窗口，用于源窗口中的线程标记主要工具是 **并行堆栈** 窗口、**并行监视**窗口、和**调试位置**工具栏。 若要了解如何**线程**窗口和**调试位置**工具栏中，请参阅[演练： 使用线程窗口进行调试](../debugger/how-to-use-the-threads-window.md)。 若要了解如何使用**并行堆栈** 和 **并行监视** 窗口，请参阅[开始调试多线程应用程序](../debugger/get-started-debugging-multithreaded-apps.md)。 这两个主题显示如何使用线程标记。
   
-- 使用的代码[任务并行库 (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)或[并发运行时](/cpp/parallel/concrt/concurrency-runtime/)，用于调试的主要工具是**并行堆栈**窗口中， **并行监视**窗口中，并**任务**窗口中，它还支持 JavaScript。 若要开始，请参阅[演练： 调试并行应用程序](../debugger/walkthrough-debugging-a-parallel-application.md)并[演练： 调试 c + + AMP 应用程序](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)。 
+- 在代码中使用的 [任务并行库 (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)或[并发运行时](/cpp/parallel/concrt/concurrency-runtime/) 主要调试工具是**并行堆栈**窗口、 **并行监视** 窗口中、和 **任务**窗口中，它还支持 JavaScript。 若要开始，请参阅[演练： 调试并行应用程序](../debugger/walkthrough-debugging-a-parallel-application.md)和 [演练： 调试 c + + AMP 应用程序](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)。 
 
-- 主要工具是用于调试在 GPU 上的线程， **GPU 线程**窗口。 请参阅[如何： 使用 GPU 线程窗口](../debugger/how-to-use-the-gpu-threads-window.md)。  
+- GPU 上的线程主要调试工具是 **GPU 线程** 窗口。 请参阅[如何： 使用 GPU 线程窗口](../debugger/how-to-use-the-gpu-threads-window.md)。  
 
-- 主要工具是执行过程，这**附加到进程**对话框中，**进程**窗口中，并且**调试位置**工具栏。  
+- 进程的主要调试工具是 **附加到进程**对话框、 **进程**窗口、 和**调试位置**工具栏。  
   
 Visual Studio 还提供功能强大的断点和跟踪点，在调试多线程应用程序时，可以很有用。 使用断点条件和筛选器将断点置于单个线程上。 跟踪点，您可以跟踪你的程序的执行，而不会中断，研究问题，例如死锁。 有关详细信息，请参阅[断点操作和跟踪点](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)。
 
