@@ -191,17 +191,17 @@ F11 是详细检查执行流的好方法。 （若要更快的浏览代码，我
 > [!NOTE]
 > 异常帮助器将替换中[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]的助手异常。
 
-展开**异常设置**节点以查看更多选项如何处理此异常类型，但你无需更改此教程中的任何内容 ！
+展开**异常设置**节点以查看更多如何处理此异常类型的选项，但你无需更改此教程中的任何内容 ！
 
 ## <a name="debug-live-aspnet-apps-in-azure-app-service"></a>调试 Azure 应用服务中的实时 ASP.NET 应用
 
-**快照调试器**感兴趣的代码执行时，获取在生产中的应用的快照。 要指示调试程序拍摄快照，可在代码中设置 snappoints 和 logpoints。 使用调试程序，可精确查看出错的内容，而不影响生产应用程序的流量。 快照调试程序有助于大幅减少用于解决生产环境中发生的问题的时间。
+**快照调试器** 在执行感兴趣的代码时，可给生产中的应用创建快照。 要指示调试器创建快照，可在代码中设置快照点和 记录点。 使用调试器，可精确查看出错的内容，而不影响生产应用程序的流量。 快照调试程序有助于大幅减少在解决生产环境中处理问题的时间。
 
-![启动快照调试器](../debugger/media/snapshot-launch.png "启动快照调试程序")
+![启动快照调试器](../debugger/media/snapshot-launch.png "启动快照调试器")
 
-快照集合是可用于在 Azure 应用服务中运行的 ASP.NET 应用程序。 必须在.NET Framework 4.6.1 上运行 ASP.NET 应用程序或更高版本，并且必须在.NET Core 2.0 或更高版本在 Windows 上运行 ASP.NET Core 应用程序。
+快照集合是可用于在 Azure 应用服务中运行的 ASP.NET 应用程序。 必须在.NET Framework 4.6.1 或更高版本中运行 ASP.NET 应用程序，且必须在.NET Core 2.0 或更高版本的 Windows 中运行 ASP.NET Core 应用程序。
 
-有关详细信息，请参阅[调试实时 ASP.NET 应用中使用快照调试程序](../debugger/debug-live-azure-applications.md)。
+有关详细信息，请参阅[使用快照调试器调试实时 ASP.NET 应用](../debugger/debug-live-azure-applications.md)。
 
 ## <a name="view-snapshots-with-intellitrace-step-back-visual-studio-enterprise"></a>使用 IntelliTrace 后退 (Visual Studio Enterprise) 查看快照
 
