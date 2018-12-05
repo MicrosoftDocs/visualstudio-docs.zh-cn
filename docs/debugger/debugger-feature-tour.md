@@ -203,9 +203,9 @@ F11 是详细检查执行流的好方法。 （若要更快的浏览代码，我
 
 有关详细信息，请参阅[使用快照调试器调试实时 ASP.NET 应用](../debugger/debug-live-azure-applications.md)。
 
-## <a name="view-snapshots-with-intellitrace-step-back-visual-studio-enterprise"></a>使用 IntelliTrace 后退 (Visual Studio Enterprise) 查看快照
+## <a name="view-snapshots-with-intellitrace-step-back-visual-studio-enterprise"></a>查看快照和IntelliTrace 后退 (Visual Studio 企业版) 
 
-**IntelliTrace 后退**单步执行事件也会自动编制每个断点和调试程序应用程序的快照。 凭借记录的快照便可以返回到上一个断点或步骤，并查看当时应用程序的状态。 如果希望查看以前的应用程序状态，但不想重新启动调试或重新创建所需应用状态，使用 IntelliTrace 后退可以节省时间。
+**IntelliTrace 后退** 每次调试器断点和单步执行事件，都会自动创建应用程序的快照。 凭借记录的快照便可以返回到上一个断点或步骤，并查看当时应用程序的状态。 如果希望查看应用程序之前的状态，但不想重新启动调试或重新创建所需应用状态，可使用 IntelliTrace 后退节省时间。
 
 可以通过使用调试工具栏中的“后退”和前进”按钮浏览和查看快照。 这些按钮用于浏览“诊断工具”窗口中“事件”选项卡上显示的事件。
 
