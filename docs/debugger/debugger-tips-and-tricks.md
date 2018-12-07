@@ -1,6 +1,6 @@
 ---
-title: 提示和 Visual Studio 调试器中的技巧
-description: 了解有关的一些鲜为人知的功能支持的 Visual Studio 调试器
+title: Visual Studio 调试器中的提示和技巧
+description: 了解Visual Studio 调试器中一些鲜为人知的功能
 ms.custom: ''
 ms.date: 06/15/2017
 ms.technology: vs-ide-debug
@@ -22,23 +22,23 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 09/14/2018
 ms.locfileid: "45612722"
 ---
-# <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>了解 Visual Studio 中调试器的工作效率提示和技巧
+# <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>学习 Visual Studio 调试器的工作效率提示和技巧
 
-阅读本主题以了解为 Visual Studio 调试器的工作效率的提示和技巧。 有关调试器的基本功能的信息，请参阅[调试器功能简介](../debugger/debugger-feature-tour.md)。 在本主题中，我们介绍功能教程中不包括某些区域。
+通过阅读本主题学习 Visual Studio 调试器的一些工作效率提示和技巧。 有关调试器的基本功能的信息，请参阅[调试器功能简介](../debugger/debugger-feature-tour.md)。 在本主题中，我们介绍一些功能介绍中不包括的某些领域。
 
 ## <a name="pin-data-tips"></a>固定数据提示
 
-如果您经常悬停在数据提示调试时，你可能想要固定变量以便自己给快速访问的数据提示。 变量在重新启动后保持固定。 若要固定数据提示，请将鼠标悬停其上时单击固定图标。 可以将固定多个变量。
+如果在调试时您经常悬停在数据提示，你可能想要为变量固定数据提示，以便快速访问。 甚至重新启动后，变量仍保持固定。 若要固定数据提示，请将鼠标悬停其上，然后单击固定图标。 可以将固定多个变量。
 
 ![固定数据提示](../debugger/media/dbg-tips-data-tips-pinned.png "PinningDataTip")
 
 ## <a name="edit-your-code-and-continue-debugging-c-vb-c"></a>编辑代码并继续调试 （C#、 VB、 c + +）
 
-在 Visual Studio 支持的大多数语言中，可以编辑在调试会话的中间代码，并继续调试。 若要使用此功能，请单击到你的代码使用光标在暂停时在调试器中，请编辑按**F5**， **F10**，或**F11**继续调试。
+在 Visual Studio 支持的大多数语言中，可以在调试会话时编辑代码，并继续调试。 若要使用此功能，在调试器暂停时，用鼠标点击进入代码编辑，编辑完成后，**F5**， **F10**，或**F11**继续调试。
 
 ![编辑并继续调试](../debugger/media/dbg-tips-edit-and-continue.gif "EditAndContinue")
 
-使用功能和功能限制的详细信息，请参阅[编辑并继续](../debugger/edit-and-continue.md)。
+使用该功能和该功能限制的详细信息，请参阅[编辑并继续](../debugger/edit-and-continue.md)。
 
 ## <a name="debug-issues-that-are-hard-to-reproduce"></a>调试难以再现的问题
 
