@@ -87,19 +87,19 @@ ms.locfileid: "45612722"
 
 ## <a name="view-return-values-for-functions"></a>查看函数的返回值
 
-若要查看您的函数返回值，请在单步跟踪代码时，查看**自动**窗口中显示的函数。 若要查看函数的返回值，请确保您感兴趣的函数已执行 (如果当前函数调用停止，请按一下**F10**)。 如果窗口已关闭，则使用**调试 > Windows > 自动**打开**自动**窗口。
+若要查看您的函数返回值，请在单步跟踪代码时，查看**自动**窗口中显示的函数。 若要查看函数的返回值，请确保您感兴趣的函数已执行 (如果当前函数调用停止，请按一下**F10**)。 如果窗口已关闭，使用**调试 > Windows > 自动**打开**自动**窗口。
 
-![自动变量窗口](../debugger/media/dbg-tips-autos-window.png "AutosWindow")
+![自动变量窗口](../debugger/media/dbg-tips-autos-window.png "自动变量窗口")
 
 此外，可以在**即时**窗口中输入函数来查看返回值。 (使用打开它**调试 > 窗口 > 即时**。)
 
-![即时窗口](../debugger/media/dbg-tips-immediate-window.png "ImmediateWindow")
+![即时窗口](../debugger/media/dbg-tips-immediate-window.png "即时窗口")
 
 此外可以在**监视**和**即时**窗口中使用[伪变量](../debugger/pseudovariables.md)，如`$ReturnValue`。
 
 ## <a name="string_visualizer"></a>检查可视化工具中的字符串
 
-在使用字符串，它可以是有助于查看整个带格式的字符串。 若要查看纯文本、 XML、 HTML 或 JSON 字符串，请单击放大镜图标![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "可视化工具图标")当悬停在包含一个字符串值的变量。
+可视化工具可处理字符串，它有助于查看整个带格式的字符串。 若要查看纯文本、 XML、 HTML 或 JSON 字符串，当悬停在包含一个字符串值的变量，请单击放大镜图标![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "可视化工具图标")。
 
 ![打开字符串可视化工具](../debugger/media/dbg-tips-string-visualizers.png "OpenStringVisualizer")
 
