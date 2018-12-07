@@ -71,11 +71,11 @@ ms.locfileid: "45612722"
 
 #### <a name="to-create-an-object-id"></a>如何创建的对象 ID
 
-1.  附近设置断点，您想要跟踪的变量。
+1.  在要跟踪的变量附近设置断点。
 
 2.  启动调试器 (**F5**)，并在断点处停止。
 
-3. 查找中的变量**局部变量**窗口 (**调试 > Windows > 局部变量**)，右键单击该变量，然后选择**创建对象 ID**。
+3. 查找**局部变量**窗口 (**调试 > Windows > 局部变量**)中的变量，右键单击该变量，然后选择**创建对象 ID**。
 
     ![创建对象 ID](../debugger/media/dbg-tips-watch-create-object-id.png "CreateObjectID")
   
@@ -87,15 +87,15 @@ ms.locfileid: "45612722"
 
 ## <a name="view-return-values-for-functions"></a>查看函数的返回值
 
-若要查看你的函数的返回值，请查看中显示的函数**自动**窗口时在逐句通过代码。 若要查看函数的返回值，请确保已执行您感兴趣的函数 (按**F10**如果您当前已停止在函数调用上一次)。 如果窗口已关闭，则使用**调试 > Windows > 自动**以打开**自动**窗口。
+若要查看您的函数返回值，请在单步跟踪代码时，查看**自动**窗口中显示的函数。 若要查看函数的返回值，请确保您感兴趣的函数已执行 (如果当前函数调用停止，请按一下**F10**)。 如果窗口已关闭，则使用**调试 > Windows > 自动**打开**自动**窗口。
 
 ![自动变量窗口](../debugger/media/dbg-tips-autos-window.png "AutosWindow")
 
-此外，可以输入中的函数**即时**窗口来查看返回值。 (使用打开它**调试 > Windows > 即时**。)
+此外，可以在**即时**窗口中输入函数来查看返回值。 (使用打开它**调试 > 窗口 > 即时**。)
 
 ![即时窗口](../debugger/media/dbg-tips-immediate-window.png "ImmediateWindow")
 
-此外可以使用[伪变量](../debugger/pseudovariables.md)中**监视**并**即时**窗口中，如`$ReturnValue`。
+此外可以在**监视**和**即时**窗口中使用[伪变量](../debugger/pseudovariables.md)，如`$ReturnValue`。
 
 ## <a name="string_visualizer"></a>检查可视化工具中的字符串
 
