@@ -42,28 +42,28 @@ ms.locfileid: "45612722"
 
 ## <a name="debug-issues-that-are-hard-to-reproduce"></a>调试难以再现的问题
 
-如果很难或耗费大量时间重新创建应用程序中的某一特定状态，请考虑使用条件断点是否可以帮助。 可以使用[条件断点](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)和筛选断点，以免影响到你的应用程序代码，直到应用程序进入所需的状态 （例如变量会将错误数据存储在其中状态）。 你可以设置条件使用表达式、 筛选器、 命中的计数等。
+如果重新创建应用程序中的某一特定状态很难或耗费大量时间，请考虑使用条件断点是否可以帮助。 可以使用[条件断点](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)和筛选断点，以免影响到你的应用程序代码，直到应用程序进入所需的状态 （例如变量会将错误数据存储在其中状态）。 你可以设置条件使用表达式、 筛选器、 命中的计数等。
 
-#### <a name="to-create-a-conditional-breakpoint"></a>若要创建一个条件断点
+#### <a name="to-create-a-conditional-breakpoint"></a>创建一个条件断点
 
 1. 右键单击断点图标 （红色的球），然后选择**条件**。
 
-2. 在中**断点设置**窗口中，键入的表达式。
+2. 在**断点设置**窗口中，键入的表达式。
 
     ![条件断点](../debugger/media/dbg-multithreaded-conditional-breakpoint.png "ConditionalBreakpoint")
 
-3. 如果您感兴趣的条件的另一种类型，选择**筛选器**而不是**条件表达式**中**断点设置**对话框中，并遵循筛选器的提示。
+3. 如果您对另一个条件感兴趣，在**断点设置**对话框中选择**筛选器**代替**条件表达式**，并遵循筛选器提示。
 
 ## <a name="change-the-execution-flow"></a>更改执行流
 
-使用调试器暂停的代码行上，使用鼠标来获取在左侧的黄色箭头指针。 将黄色箭头指针移动到代码执行路径中的不同点。 然后使用 F5 或步骤命令继续运行该应用程序。
+当调试器暂停在某代码行时，使用鼠标来获取左侧的黄色箭头指针。将黄色箭头指针移动到代码执行路径中的不同点。 然后使用 F5 或步骤命令继续运行该应用程序。
 
-![将执行指针移至](../debugger/media/dbg-tour-move-the-execution-pointer.gif "将执行指针移动")
+![移至执行指针](../debugger/media/dbg-tour-move-the-execution-pointer.gif "移至执行指针")
 
 通过更改执行流，可以执行某些操作，如测试不同的代码执行路径或重新运行代码，而无需重新启动调试器。
 
 > [!WARNING]
-> 通常需要谨慎使用此功能，并查看工具提示中的警告。 您也可能会看到其他警告。 移动指针不能还原到以前的应用程序状态应用程序。
+> 通常需要谨慎使用此功能，并查看工具提示中的警告。 您也可能会看到其他警告。 移动指针不能还原应用程序到之前状态。
 
 ## <a name="track-an-out-of-scope-object-c-visual-basic"></a>跟踪范围外的对象 （C#、 Visual Basic）
 
