@@ -119,31 +119,31 @@ ms.locfileid: "45612722"
 
 ## <a name="debug-deadlocks-and-race-conditions"></a>调试死锁和竞态条件
 
-如果需要通过调试，解决多线程应用程序的问题，在调试时查看线程的位置，通常有所帮助。 可使用**源中显示线程**按钮轻松完成此操作。
+如果需要通过调试，解决多线程应用程序的问题，在调试时查看线程的位置，通常会有所帮助。 可使用**源中显示线程**按钮轻松完成此操作。
 
 #### <a name="to-show-threads-in-your-source-code"></a在源代码中显示线程
 
 1.  调试时，单击**源中显示线程**按钮![在源中显示线程](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker")中**调试**工具栏。
   
-2.  查看窗口左侧的滚动条槽。 在这行内容，您可以看到*线程标记*图标![线程标记](../debugger/media/dbg-thread-marker.png "ThreadMarker") ，类似于两根细线。 线程标记指示线程在此位置停止。
+2.  查看窗口左侧的滚动条。 在这行内容，您可以看到 *线程标记* 图标![线程标记](../debugger/media/dbg-thread-marker.png "ThreadMarker") ，类似于两根细线。 线程标记指示线程在此位置停止。
 
-    请注意，可能会通过断点部分隐藏线程标记。
+    注意，线程标记可能被断点部分隐藏。
   
-3.  将指针悬停在线程标记上。 屏幕上显示数据提示。 数据提示将告诉您每个已停止线程的名称和线程 ID 号。
+3.  将指针悬停在线程标记上。 将显示数据提示。 数据提示将告诉您每个已停止线程的名称和线程 ID。
 
     你还可以查看中的线程的位置[并行堆栈窗口](../debugger/get-started-debugging-multithreaded-apps.md)。
 
 ## <a name="examine-payloads-for-web-services-and-network-resources-uwp"></a>检查 web 服务和网络资源 (UWP) 的有效负载
 
-在 UWP 应用中，你可以分析执行使用的网络操作`Windows.Web.Http`API。 可以使用此工具来帮助调试 web 服务和网络资源。 若要使用该工具，请选择**调试 > 性能 Profiler**。 选择**网络**，然后选择**启动**。 在应用中，浏览使用 `Windows.Web.Http` 的应用场景，然后选择“停止收集”生成报表。
+在 UWP 应用中，你可以分析使用 `Windows.Web.Http` API执行的网络操作。 可以使用此工具来帮助调试 web 服务和网络资源。 若要使用该工具，请选择**调试 > 性能探查器**。 选择**网络**，然后选择**启动**。 在应用中，浏览使用 `Windows.Web.Http` 的应用场景，然后选择 **停止收集** 生成报表。
 
-![网络使用情况分析工具](../profiling/media/prof-tour-network-usage.png "NetworkUsageProfTool")
+![网络使用率探查工具](../profiling/media/prof-tour-network-usage.png "NetworkUsageProfTool")
 
-选择摘要视图中的操作以查看更多详细信息。
+在摘要视图中选择一个操作，查看更多详细信息。
 
-![中的网络使用情况工具的详细信息](../profiling/media/prof-tour-network-usage-details.png "DetailedViewNetworkUsage")
+![网络使用率工具中的详细信息](../profiling/media/prof-tour-network-usage-details.png "DetailedViewNetworkUsage")
 
-有关详细信息，请参阅[网络使用情况](../profiling/network-usage.md)。
+有关详细信息，请参阅[网络使用率](../profiling/network-usage.md)。
 
 ## <a name="modules_window"></a> 更深入了解如何将调试器附加到您的应用程序
 
