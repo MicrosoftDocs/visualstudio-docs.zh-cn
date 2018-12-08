@@ -147,24 +147,24 @@ ms.locfileid: "45612722"
 
 ## <a name="modules_window"></a> 更深入了解如何将调试器附加到您的应用程序
 
-若要附加到正在运行的应用，调试器将加载为想要调试的应用的确切相同内部版本生成的符号 (.pdb) 文件。 在某些情况下，符号文件的一些知识非常有用。 你可以检查 Visual Studio 将使用的符号文件的加载**模块**窗口。
+附加到正在运行的应用，调试器调试同一版本号应用，加载生成的符号 (.pdb) 文件。 在某些情况下，一些符号文件的知识非常有用。 你可在**模块**窗口中检查 Visual Studio 如何加载符号文件。
 
-打开**模块**窗口中的通过选择进行调试时**调试 > Windows > 模块**。 **模块**窗口可以告知调试器将视为用户代码，以及模块或[*我的代码*](../debugger/just-my-code.md)，和符号加载模块的状态。 在大多数情况下，调试器会自动查找符号文件中的用户代码，但如果你想要单步执行 （或调试）.NET framework 代码、 系统代码或第三方库代码，将执行其他步骤才能获取正确的符号文件。
+在调试时，通过选择 **调试 > Windows > 模块** 打开**模块**窗口。 **模块** 窗口可以告诉调试器，将哪些模块或[*我的代码*](../debugger/just-my-code.md)视为用户代码，以及符号加载模块的状态。 在大多数情况下，调试器会自动查找符号文件中的用户代码，但如果你想要单步跟踪 （或调试）.NET framework 代码、 系统代码或第三方库代码，必须执行其他步骤获取正确的符号文件。
 
 ![在模块窗口中查看符号信息](../debugger/media/dbg-tips-modules-window.png "ViewSymbolInformation")
 
-您可以加载符号信息直接从**模块**窗口中的右键单击并选择**加载符号**。
+您可以直接从 **模块** 窗口中，右键单击选择 **加载符号** 加载符号信息。
 
-有时，应用程序开发人员如果没有匹配符号文件 （若要减少占用的空间），但保留一份匹配的符号文件生成，以便它们可以调试已发布的版本更高版本交付应用。
+有时，应用开发人员发布的应用，不包含匹配的符号文件 （减少占用的空间），但为了以后调试发布版本，会保留一份匹配的符号文件。
 
-若要了解如何在调试器将分类为用户代码的代码，请参阅[仅我的代码](../debugger/just-my-code.md)。 若要了解有关符号文件的详细信息，请参阅[在 Visual Studio 调试器中指定符号 (.pdb) 和源文件](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。
+了解如何调试器如何区分用户代码，请参阅[仅我的代码](../debugger/just-my-code.md)。 若要了解有关符号文件的详细信息，请参阅[在 Visual Studio 调试器中指定符号 (.pdb) 和源文件](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。
 
 ## <a name="learn-more"></a>了解详细信息
 
-有关更多提示和技巧以及更多详细的信息，请参阅以下博客文章：
+有关更多提示和技巧，以及更多详细的信息，请参阅以下博客文章：
 
-- [7 较小的已知的技巧，在 Visual Studio 中进行调试](https://blogs.msdn.microsoft.com/visualstudio/2017/06/26/7-lesser-known-hacks-for-debugging-in-visual-studio/)
-- [在 Visual Studio 中的 7 隐藏的 gem](https://blogs.msdn.microsoft.com/visualstudio/2017/10/05/7-hidden-gems-in-visual-studio-2017/)
+- [使用 Visual Studio 调试时，7个简单的已知技巧](https://blogs.msdn.microsoft.com/visualstudio/2017/06/26/7-lesser-known-hacks-for-debugging-in-visual-studio/)
+- [在 Visual Studio 中7个隐藏的gem](https://blogs.msdn.microsoft.com/visualstudio/2017/10/05/7-hidden-gems-in-visual-studio-2017/)
 
 ## <a name="see-also"></a>请参阅
 [键盘快捷键](../ide/tips-and-tricks-for-visual-studio.md)
