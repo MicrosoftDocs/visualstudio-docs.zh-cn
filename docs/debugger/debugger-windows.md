@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Studio 中的调试器窗口 |Microsoft Docs
+title: Visual Studio 中的调试器窗口 |Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 04/25/2017
 ms.technology: vs-ide-debug
@@ -19,7 +19,7 @@ ms.locfileid: "39178301"
 ---
 # <a name="learn-about-debugger-windows-in-visual-studio"></a>学习有关 Visual Studio 中的调试器 窗口
 
-当正在调试程序时可以打开多数调试器窗口。若要查看调试器窗口列表，请在开始调试之前设置断点。 当命中断点并且执行停止时，单击**调试 > Windows**。
+调试程序时可打开绝大多数调试器窗口。要查看调试器窗口列表，请在开始调试之前设置断点。 当命中断点并在执行停止时，单击**调试 > 窗口**。
 
 ||||
 |-|-|-|
