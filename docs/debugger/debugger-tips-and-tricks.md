@@ -99,29 +99,29 @@ ms.locfileid: "45612722"
 
 ## <a name="string_visualizer"></a>检查可视化工具中的字符串
 
-可视化工具可处理字符串，它有助于查看整个带格式的字符串。 若要查看纯文本、 XML、 HTML 或 JSON 字符串，当悬停在包含一个字符串值的变量，请单击放大镜图标![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "可视化工具图标")。
+可视化工具可处理字符串，它有助于查看完整的格式化字符串。 若要查看纯文本、 XML、 HTML 或 JSON 字符串，当悬停在包含一个字符串值的变量时，请单击放大镜图标![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "可视化工具图标")。
 
 ![打开字符串可视化工具](../debugger/media/dbg-tips-string-visualizers.png "OpenStringVisualizer")
 
-字符串可视化工具可以帮助您找出字符串是否格式不正确，具体取决于字符串类型。 例如，空白**值**字段指示可视化工具类型无法识别该字符串。 有关详细信息，请参阅[字符串可视化工具对话框](../debugger/string-visualizer-dialog-box.md)。
+字符串可视化工具可以帮助您找出字符串是否格式不正确，具体取决于字符串类型。 例如，可视化工具无法识别出string类型字段空白 **值** 。有关详细信息，请参阅[字符串可视化工具对话框](../debugger/string-visualizer-dialog-box.md)。
 
 ![JSON 字符串可视化工具](../debugger/media/dbg-tips-string-visualizer-json.png "JSONStringVisualizer")
 
-对于如调试器窗口中出现的 WPF 对象的几个其他类型，也可以打开可视化工具。
+对于在调试器窗口中出现的 WPF 对象的几个其他类型，同样可以打开可视化工具。
 
-## <a name="break-into-code-on-handled-exceptions"></a>中断上已处理的异常的代码
+## <a name="break-into-code-on-handled-exceptions"></a>在已捕获异常处中断
 
-调试器将中断你的代码上未经处理的异常。 但是，处理异常 (如内出现的异常`try/catch`块) 也可以是 bug 的源，可能想要调查发生时。 可以配置调试器通过配置选项中的为已处理的异常的代码中断**异常设置**对话框。 打开此对话框中，请选择**调试 > Windows > 异常设置**。
+调试器将在你的代码发生未经处理异常处中断。 但是，已捕获的异常 (如`try/catch`块内出现的异常) 也可能是 bug 源，因此您可能想调查这种情况。可设置**异常设置**对话框中的选项，使调试器在已捕获的异常处中断。通过选择**调试 > Windows > 异常设置**打开此对话框。
 
-**异常设置**对话框中，可让调试器中断对特定异常的代码。 在下图中，调试器将中断你的代码时`System.NullReferenceException`时发生。 有关详细信息，请参阅[管理异常](../debugger/managing-exceptions-with-the-debugger.md)。
+通过**异常设置**对话框，可让调试器在特定异常处中断。 在下图中，调试器将在发生 `System.NullReferenceException` 时中断。 有关详细信息，请参阅[管理异常](../debugger/managing-exceptions-with-the-debugger.md)。
 
 ![异常设置对话框](../debugger/media/dbg-tips-exception-settings.png "ExceptionSettingsDialogBox")
 
-## <a name="debug-deadlocks-and-race-conditions"></a>调试死锁和争用条件
+## <a name="debug-deadlocks-and-race-conditions"></a>调试死锁和竞态条件
 
-如果需要进行调试的问题所共有的多线程应用程序的类型，它通常有助于在调试时查看线程的位置。 你可以使用轻松**源中显示线程**按钮。
+如果需要通过调试，解决多线程应用程序的问题，在调试时查看线程的位置，通常有所帮助。 可使用**源中显示线程**按钮轻松完成此操作。
 
-#### <a name="to-show-threads-in-your-source-code"></a>若要在源代码中显示线程
+#### <a name="to-show-threads-in-your-source-code"></a在源代码中显示线程
 
 1.  调试时，单击**源中显示线程**按钮![在源中显示线程](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker")中**调试**工具栏。
   
