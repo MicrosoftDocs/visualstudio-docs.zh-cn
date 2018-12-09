@@ -27,7 +27,7 @@ ms.locfileid: "45612670"
 
 有效地使用调试器，是需要时间和练习来学习的技能，但从根本上说是每个软件开发人员的一项基本技能。 在本文中，我们将介绍调试的核心原理，并提供提示帮助你入门。
 
-## <a name="clarify-the-problem-by-asking-yourself-the-right-questions"></a>通过正确的问题问自己，明确问题
+## <a name="clarify-the-problem-by-asking-yourself-the-right-questions"></a>通过向自己提出正确的问题，来理清问题
 
 它有助于阐明在尝试修复此错误之前遇到了问题。 我们希望，您已经遇到了问题在代码中，否则您不会在此处尝试找出如何对其进行调试 ！ 因此，在开始调试之前，请确保您已确定尝试解决的问题：
 
