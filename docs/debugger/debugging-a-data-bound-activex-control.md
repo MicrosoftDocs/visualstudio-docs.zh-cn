@@ -1,5 +1,5 @@
 ---
-title: 调试数据绑定 ActiveX 控件 |Microsoft Docs
+title: 调试已数据绑定的 ActiveX 控件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -26,7 +26,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 09/10/2018
 ms.locfileid: "44278278"
 ---
-# <a name="debugging-a-data-bound-activex-control"></a>调试数据绑定 ActiveX 控件
+# <a name="debugging-a-data-bound-activex-control"></a>调试已数据绑定的 ActiveX 控件
 如果开发的是将被绑定到数据源控件的 ActiveX 控件，可以通过创建自己的容器应用程序并将该容器用于调试该 ActiveX 控件。  
   
  例如，创建基于对话的 MFC 应用程序并将数据绑定控件和数据源控件放在该对话框上。 可将该 MFC 应用程序用于运行时测试和用作调试数据绑定 ActiveX 控件的容器可执行文件。  
