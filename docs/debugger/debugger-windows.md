@@ -17,9 +17,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/20/2018
 ms.locfileid: "39178301"
 ---
-# <a name="learn-about-debugger-windows-in-visual-studio"></a>学习有关 Visual Studio 中的调试器 窗口
+# <a name="learn-about-debugger-windows-in-visual-studio"></a>学习 Visual Studio 中的调试器窗口
 
-调试程序时可打开绝大多数调试器窗口。要查看调试器窗口列表，请在开始调试之前设置断点。 当命中断点并在执行停止时，单击**调试 > 窗口**。
+调试程序时可打开绝大多数调试器窗口。要查看调试器窗口列表，请在开始调试之前设置断点。 当命中断点执行停止时，单击**调试 > 窗口**。
 
 ||||
 |-|-|-|
