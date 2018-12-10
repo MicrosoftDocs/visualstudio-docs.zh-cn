@@ -301,35 +301,35 @@ ms.locfileid: "45612670"
 
     ![发现拼写错误](../debugger/media/beginners-typo.png)
 
-    查看代码，请参阅中的存在拼写错误`case 'l'`语句。 它应该是`case 'I'`。
+    查看代码，查看`case 'l'`语句中的拼写错误。 它应该是`case 'I'`。
 
 1. 在代码中单击`case 'l'`并将其替换为`case 'I'`。
 
-1. 删除断点，然后依次**重新启动**按钮以重新启动该应用程序。
+1. 删除断点，然后点击**重新启动**按钮，以重新启动该应用程序。
 
-    现在已修复 bug，请参阅预期的输出 ！
+    现在已修复 bug，现在为预期的输出 ！
 
-    按任意键以完成应用程序。
+    按任意键结束应用程序。
 
 ## <a name="summary"></a>总结
 
-查看问题，请使用的调试器和[单步命令](../debugger/navigating-through-code-with-the-debugger.md)如**F10**并**F11**若要查找的问题的代码区域。
+当需要了解问题，请在需要查找问题的代码区域，使用的调试器和[单步命令](../debugger/navigating-through-code-with-the-debugger.md)如**F10**和**F11**。
 
 > [!NOTE]
-> 如果很难确定出现问题的代码区域，在之前出现此问题，运行的代码中设置断点，然后使用单步执行命令，直到看到问题清单。 此外可以使用[跟踪点](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)来记录向消息**输出**窗口。 通过查看记录的消息 （并且注意到的消息尚未登录 ！），通常可以隔离的问题的代码区域。 您可能需要多次重复此过程，以缩小它。
+> 如果很难确定出现问题的代码区域，在出现此问题之前的代码中设置断点，然后使用单步命令，直到问题出现为止。 此外可以使用[跟踪点](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)在**输出**窗口中记录消息。 通过查看记录的消息 （并且注意未被记录的消息！），通常可以将普通区域和问题区域隔离。 您可能需要多次重复此过程，以缩小它。
 
-发现的问题的代码区域，使用的调试器进行调查。 若要查找问题的原因，请在调试器中运行你的应用时检查问题的代码：
+当发现出问题的代码区域，请使用的调试器进行调查。 若要查找发生问题的原因，请在调试器中运行你的应用时，检查出问题代码区域：
 
-* [检查变量](../debugger/view-data-values-in-data-tips-in-the-code-editor.md)并检查它们是否包含应包含的值的类型。 如果您发现错误的值，找出其中设置值不正确 (若要查找的值已设置，您可能需要重新启动调试器，看看[调用堆栈](../debugger/how-to-use-the-call-stack-window.md)，和 / 或)。
+* [检查变量](../debugger/view-data-values-in-data-tips-in-the-code-editor.md)检查它们是否包含应包含的值类型。 如果您发现错误的值，找出其中在哪设置错误的值 (要找到设置值的位置，您可能需要重新启动调试器，查看[调用堆栈](../debugger/how-to-use-the-call-stack-window.md)，或同时进行)。
 
-* 检查你的应用程序是否执行预期的代码。 （例如，在示例应用程序，我们将 galaxy 类型设置为异常，则 switch 语句的代码但应用程序跳过由于拼写错误的代码。）
+* 检查你的应用程序是否按预期执行代码。 （例如，在示例应用程序，我们将 galaxy （星系）类型设置为Irregular（不定期），但由于拼写错误，该应用跳过了此代码。）
 
 > [!TIP]
-> 使用调试程序来帮助你发现 bug。 调试工具可以发现 bug*为您*仅在知道代码的意图。 如果您开发人员，表达该意图，一种工具可以只知道代码的意图。 编写[单元测试](../test/improve-code-quality.md)是如何实现的。
+> 使用调试器可帮助你找出 bug。 调试工具仅在知道代码的意图时，才能为 *为您* 找出bug。对于开发人员，一个工具可以让你向其表明代码的意图。 编写[单元测试](../test/improve-code-quality.md)是让你做这件事情的。
 
 ## <a name="next-steps"></a>后续步骤
 
-在本文中，已了解的一些常规调试概念。 接下来，您可以开始学习如何使用 Visual Studio 进行调试。
+在本文中，您已了解的一些常规调试概念。 接下来，您可以开始学习如何使用 Visual Studio 进行调试。
 
 > [!div class="nextstepaction"]
 > [了解如何使用 Visual Studio 进行调试](../debugger/getting-started-with-the-debugger.md)
