@@ -26,7 +26,7 @@ ms.lasthandoff: 08/02/2018
 ms.locfileid: "39468255"
 ---
 # <a name="debugging-and-the-hosting-process"></a>调试和托管进程
-Visual Studio 托管进程提高了调试器性能，并启用了新的调试器功能，如部分信任调试和设计时表达式计算。 如果需要，你可以禁用宿主进程。 以下部分描述用宿主进程和不用宿主进程进行调试的一些差异。
+Visual Studio 托管进程提高了调试器性能，并启用了新的调试器功能，如部分信任调试和设计时表达式计算。 如果需要，你可以禁用托管进程。 以下部分描述用托管进程和不用托管进程进行调试的一些差异。
 
 > [!NOTE]
 > 在 Visual Studio 2017 中，不再需要使用托管进程进行调试的选项，并且已删除了该项。 有关详细信息，请参阅[调试： Visual Studio 2017 旨在加速您最不喜欢的工作](https://vslive.com/Blogs/News-and-Tips/2017/02/Debugging-Visual-Studio-2017-aims-to-speed-up-your-least-favorite-job.aspx)。
