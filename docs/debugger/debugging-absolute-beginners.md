@@ -213,7 +213,7 @@ ms.locfileid: "45612670"
 
 ### <a name="debug-the-app"></a>调试应用程序
 
-1. 仍在运行应用时，设置断点旁边的左边距中单击`Console.WriteLine`这行代码中的方法调用。
+1. 在应用运行时，单击调用 `Console.WriteLine` 方法旁边的左边距，给这行代码设置断点。
 
     ```csharp
     foreach (Galaxy theGalaxy in theGalaxies)
@@ -222,31 +222,31 @@ ms.locfileid: "45612670"
     }    
     ```
 
-    在设置断点，在左边距中显示的红点。
+    当设置断点后，左边距中将显示红点。
 
-    因为我们看到的输出中的问题，我们将开始通过查看前面的代码在调试器中设置输出调试。
+    因为我们之前看到输出中的问题，我们将开始通过查看前面的代码，在调试器中设置输出调试。
 
-1. 单击**重新启动**![重新启动应用程序](../debugger/media/dbg-tour-restart.png "RestartApp")调试工具栏中的按钮 (**Ctrl** + **Shift**  +  **F5**)。
+1. 在调试工具栏中单击**重新启动**![重新启动应用程序](../debugger/media/dbg-tour-restart.png "RestartApp")按钮 (**Ctrl** + **Shift**  +  **F5**)。
 
-    应用程序会在你设置的断点处暂停。 黄色的突出显示指示调试器暂停的位置 （黄色的代码行具有尚未执行）。
+    应用程序会在你设置的断点处暂停。 调试器暂停的位置将黄色高亮显示（黄色的代码行还未执行）。
 
-1. 将鼠标悬停`GalaxyType`变量在右侧，再到左侧的扳手图标，展开`theGalaxy.GalaxyType`。 可以看到`GalaxyType`包含的属性`MyGType`，并且属性值设置为`Spiral`。
+1. 将鼠标悬停在 `GalaxyType` 变量右侧，再到左侧的扳手图标，展开`theGalaxy.GalaxyType`。 可看到`GalaxyType`包含属性`MyGType`，将属性值设置为`Spiral`。
 
     ![检查变量](../debugger/media/beginners-inspect-variable.png)
 
-    "循环"是实际上你想要打印到控制台的正确值 ！ 因此，您可以在运行应用时访问此值在此代码中的一个不错的起点。 在此方案中，我们将使用不正确的 API。 我们将看到是否我们可以解决此问题时在调试器中运行代码。
+    "循环"是实际上你想要打印到控制台的正确值 ！ 因此，做为一个好的起点，您可在应用运行时，访问代码中的此值。 在此方案中，我们将使用错误的 API。 我们将看到，在调试器执行时，修复此代码。
 
-1. 在相同的代码中，仍在调试时，将光标放在末尾`theGalaxy.GalaxyType`并将其更改为`theGalaxy.GalaxyType.MyGType`。 尽管可以进行此更改，代码编辑器将显示一个错误，指示它不能编译此代码。
+1. 用相同的代码，在调试暂停时，将光标放在`theGalaxy.GalaxyType`末尾，并将其修改为`theGalaxy.GalaxyType.MyGType`。 虽然可以进行此修改，但代码编辑器将显示一个错误，指示它不能编译此代码。
 
     ![语法错误](../debugger/media/beginners-edit.png)
 
-1. 单击**编辑**中**编辑并继续**消息框。 请参阅现在中的错误消息**错误列表**窗口。 错误指示`'object'`不包含的定义`MyGType`。
+1. 在**编辑并继续**消息框中单击**编辑**。 请参阅**错误列表**窗口中的错误消息。 该错误指出 `'object'` 不包含的`MyGType` 定义。
 
     ![语法错误](../debugger/media/beginners-no-definition.png)
 
-    即使我们设置类型的对象与每个 galaxy `GType` (其中包含`MGType`属性)，调试器不能识别`theGalaxy`对象类型的对象作为`GType`。 这是怎么回事？ 你想要浏览设置 galaxy 类型的任何代码。 时执行此操作时，可以看到`GType`类肯定有的一个属性`MyGType`，但某些内容不正确。 有关的错误消息`object`证明是线索; 到语言解释器，似乎是类型的对象类型`object`而不是类型的对象`GType`。
+    即使我们给每个 galaxy 都设置一个 `GType` 类型对象(其中包含`MGType`属性)，调试器仍不能将 `theGalaxy` 对象当做 `GType` 类型对象。 这是怎么回事？ 你想要查看设置 galaxy 类型的任何代码。当进行查看时，可以看到`GType`类确实有的一个`MyGType`属性，但有些地方不对。 关于 `object` 的错误消息是线索; 到语言解释器，类型似乎是 `object` 对象，而不是`GType`类型对象。
 
-1. 通过代码与设置 galaxy 类型相关的查找，找到`GalaxyType`的属性`Galaxy`类指定为`object`而不是`GType`。
+1. 查看与设置 galaxy 类型相关的代码，您会发现`Galaxy`类`GalaxyType`的属性，被指定为`object`而不是`GType`类型。
 
     ```csharp
     public object GalaxyType { get; set; }     
@@ -258,9 +258,9 @@ ms.locfileid: "45612670"
     public GType GalaxyType { get; set; }     
     ```
 
-1. 单击**重新启动**![重新启动应用程序](../debugger/media/dbg-tour-restart.png "RestartApp")调试工具栏中的按钮 (**Ctrl** + **Shift**  +  **F5**) 重新编译代码并重新启动。
+1. 单击调试工具栏中 **重新启动**![重新启动应用程序](../debugger/media/dbg-tour-restart.png "RestartApp")按钮 (**Ctrl** + **Shift**  +  **F5**)， 重新编译代码并重新启动。
 
-    现在，调试器暂停上`Console.WriteLine`，你可以通过将鼠标悬停在`theGalaxy.GalaxyType.MyGType`，并确保正确设置值。
+    现在，调试器暂停在`Console.WriteLine`，可将鼠标悬停在`theGalaxy.GalaxyType.MyGType` 上，查看设置的值。
 
 1. 通过单击左边距中的断点圆上删除断点 (或右键单击，然后选择**断点** > **删除断点**)，然后按**F5**以继续。
 
