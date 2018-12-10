@@ -23,7 +23,7 @@ ms.lasthandoff: 04/18/2018
 ms.locfileid: "31472657"
 ---
 # <a name="debugging-applications"></a>调试应用程序
-以下各节介绍了对不同类型的应用程序进行调试的信息。 应用程序类型和语言不同，需要的设置和技术也会不同，并且需要调试的问题也不同。  
+以下各节介绍了对不同类型的应用程序进行调试的信息。 不同类型的应用程序和编程语言，需要的设置和技术也会不同，需要调试的问题也不同。  
   
 ## <a name="debugging-for-different-types-of-applications"></a>对不同类型的应用程序进行调试  
   
