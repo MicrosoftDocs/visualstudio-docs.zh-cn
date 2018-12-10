@@ -185,9 +185,9 @@ ms.locfileid: "45612670"
 
 ### <a name="run-the-app"></a>运行应用
 
-1. 按**F5**或**开始调试**按钮![启动调试](../debugger/media/dbg-tour-start-debugging.png "开始调试")在调试工具栏中，位于代码编辑器上方。
+1. 在调试工具栏中按**F5**或**开始调试**按钮![启动调试](../debugger/media/dbg-tour-start-debugging.png "开始调试")，位于代码编辑器上方。
 
-    该应用启动时和有向我们显示由调试器没有例外情况。 但是，在控制台窗口中看到的输出是未达预期。 下面是预期的输出：
+    调试器启动该应用时，没有向我们显示异常。但是，在控制台窗口中，看到未预期的输出。下面是预期的输出：
 
     ```
     Tadpole  400,  Spiral 
@@ -198,7 +198,7 @@ ms.locfileid: "45612670"
     Maffei 1,  Elliptical
     ```
 
-    但是，我们看到的这只是：
+    但是，相反我们看到：
 
     ```
     Tadpole  400,  ConsoleApp_FirstApp.GType 
@@ -209,7 +209,7 @@ ms.locfileid: "45612670"
     Maffei 1, 11,  ConsoleApp_FirstApp.GType
     ```
 
-    查找在输出和我们的代码，我们知道`GType`存储 galaxy 类型的类的名称。 我们尝试显示实际 galaxy 类型 （如"循环"），不是类名称 ！
+    查看输出和我们的代码，我们知道`GType`存储 galaxy 类型的类名。 我们尝试显示实际的 galaxy 类型 （如"循环"），不是类名称 ！
 
 ### <a name="debug-the-app"></a>调试应用程序
 
