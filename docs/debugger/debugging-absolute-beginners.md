@@ -74,31 +74,31 @@ ms.locfileid: "45612670"
 
 为了说明这些概念，我们带你了解一些已经有几个 bug 的示例代码。 虽然本次我们使用 C# ，但调试功能适用于 Visual Basic、 c + +、 JavaScript、 Python 和其他支持的语言。
 
-### <a name="create-a-sample-app-with-some-bugs"></a>创建示例应用 （具有一些 bug)
+### <a name="create-a-sample-app-with-some-bugs"></a>创建示例应用 （包含一些 bug)
 
-接下来，我们将创建具有几个 bug 的应用程序。
+接下来，我们将创建包含几个 bug 的应用程序。
 
-1. 您必须安装 Visual Studio 和任何一个。**NET 桌面开发**工作负荷或。**.NET Core 跨平台开发**安装工作负载，具体的应用类型取决于想要创建。
+1. 您必须已安装了 Visual Studio ，以及已安装 **.NET 桌面开发** 工作负载或 **.NET Core 跨平台开发** 工作负载其中一个，具体的安装哪一个，取决于想要创建的应用类型。
 
-    如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)页免费安装。
+    如果尚未安装 Visual Studio，请访问 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 页面，免费安装。
 
-    如果您需要安装工作负载，但已有 Visual Studio 中，单击**工具** > **获取工具和功能**。 Visual Studio 安装程序启动。 选择。**NET 桌面开发**(或。**.NET Core 跨平台开发**) 工作负荷中，然后选择**修改**。
+    如果您需要安装工作负载，但已安装了 Visual Studio ，单击**工具** > **获取工具和功能**。 Visual Studio 安装程序将启动。 选择 **.NET 桌面开发** (或 **.NET Core 跨平台开发**) 工作负荷，然后选择**修改**。
 
-1. 打开 Visual Studio 中，并选择**文件** > **新建** > **项目**。
+1. 打开 Visual Studio，选择**文件** > **新建** > **项目**。
 
-1. 选择用于你的应用程序代码的模板。
+1. 选择用于你应用程序代码的模板。
 
-    用于.NET Framework 中**新的项目**对话框框中，选择**Visual C#**， **Windows 桌面**从已安装的模板部分中，然后在中间窗格中选择**控制台应用 (.NET Framework)**。
+    对于.NET Framework， 在 **新的项目** 对话框中，从已安装的模板部分中选择 **Visual C#**， **Windows 桌面** ，然后在中间窗格中选择 **控制台应用 (.NET Framework)** 。
 
-    有关.NET Core 中**新项目**对话框框中，选择**Visual C#**， **.NET Core**从已安装的模板部分中，然后在中间窗格中选择**控制台应用程序 （.NET Core）**。
+    对于.NET Core， 在**新项目**对话框中，从已安装的模板部分中选择 **Visual C#** ， **.NET Core** ，然后在中间窗格中选择 **控制台应用程序 （.NET Core）** 。
 
     如果看不到这些模板，则必须安装相应的工作负荷 （请参阅前面的步骤）。
 
-1. 在中**名称**字段中，键入**ConsoleApp FirstApp**然后单击**确定**。
+1. 在 **名称** 栏位中，输入 **ConsoleApp FirstApp** ，然后单击 **确定** 。
 
-    Visual Studio 创建控制台项目，在右窗格中将显示在解决方案资源管理器中。
+    Visual Studio 在右窗格中的解决方案资源管理器中，将显示创建的控制台项目。
 
-1. 在中*Program.cs*，所有的默认代码替换为以下代码：
+1. 在 *Program.cs* 中，将所有的默认代码替换为以下代码：
 
     ```csharp
     using System;
@@ -179,7 +179,7 @@ ms.locfileid: "45612670"
     }
     ```
 
-    我们为此代码的意图是所有在列表中显示 galaxy 名称，与 galaxy 和 galaxy 类型之间的距离。 若要调试，务必了解代码的目的。 下面是我们想要在输出中显示的列表的一个行的格式：
+    此代码的目的是在列表中显示 galaxy 名称、到galaxy星系的距离和 galaxy 类型。在调试之前，理解代码的目的很重要。 下面是我们想要在输出中显示的列表，其中一个行的格式：
 
     *galaxy 名称*，*距离*， *galaxy 类型*。
 
