@@ -97,7 +97,7 @@ ms.locfileid: "49818414"
  你可以在启动项目的“调试”属性页上设置以下部署选项。  
   
  **允许网络环回**  
- 出于安全原因，UWP 或[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]以标准方式安装应用程序不允许进行网络调用安装的设备。 默认情况下，Visual Studio 部署功能为所部署的应用程序创建此规则的例外。 通过此例外，在一台计算机上即可测试通信过程。 向 [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)]提交应用之前，应在没有例外的情况下测试应用。  
+ 出于安全原因，UWP 或[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]以标准方式安装的应用程序，不允许通过网络调用安装在设备上。 默认情况下，Visual Studio 部署功能为所部署的应用程序创建例外的规则。 通过此例外，在一台计算机上即可测试通信过程。 向 [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)]提交应用之前，在没有例外的情况下测试应用。  
   
  若要从应用中移除网络环回例外，请执行以下操作：  
   
@@ -106,7 +106,8 @@ ms.locfileid: "49818414"
 - 在 JavaScript 和调试属性页上，将 **“允许网络环回”** 值设置为 **“否”**。  
   
   **不启动，但在启动时调试代码（C# 和 VB）/启动应用程序（JavaScript 和 C++）时调试我的代码**  
-  配置部署以在应用启动时自动启动调试会话：  
+  
+  将部署配置为在启动应用程序时，自动启动调试会话：  
   
 - 在 C# 和 VB 调试属性页上，选中 **“不启动，但在启动时调试代码”** 复选框。  
   
