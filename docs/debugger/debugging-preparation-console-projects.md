@@ -1,5 +1,5 @@
 ---
-title: 调试准备： 控制台项目 |Microsoft Docs
+title: 调试准备：控制台项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -39,14 +39,14 @@ ms.locfileid: "49902071"
   
   可能必须为控制台应用程序指定命令行自变量。 有关详细信息，请参阅[c + + 调试配置的项目设置](../debugger/project-settings-for-a-cpp-debug-configuration.md)， [Visual Basic 调试配置的项目设置](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)，或[的 C# 调试配置项目设置](../debugger/project-settings-for-csharp-debug-configurations.md).  
   
-  同所有项目属性一样，这些自变量将在调试会话之间和 Visual Studio 会话之间保留。 因此，如果以前调试过的其中一个控制台应用程序，请记住可能是从以前的会话中输入的参数**\<项目 > 属性页**对话框。  
+  同所有项目属性一样，这些自变量将在调试会话之间和 Visual Studio 会话之间保留。 因此，如果以前调试过的其中一个控制台应用程序，请记住可能是从以前的会话中输入的参数 **\<项目> 属性页** 对话框。  
   
   控制台应用程序使用**控制台**窗口接受输入以及显示输出消息。 要写入到**控制台**窗口中，你的应用程序必须使用**控制台**对象而不是 Debug 对象。 要写入到**Visual Studio 输出**窗口中，像往常一样使用 Debug 对象。 确保知道应用程序正在写入的位置，否则可能在错误的位置中查找消息。 有关详细信息，请参阅[Console 类](/dotnet/api/system.console)，[调试类](/dotnet/api/system.diagnostics.debug)，并[输出窗口](../ide/reference/output-window.md)。  
   
 ## <a name="starting-the-application"></a>启动应用程序  
  某些控制台应用程序在启动后将运行完成，然后退出。 此行为可能不会为您提供足够的时间来中断执行并调试。 若要能够调试应用程序，请使用下列过程之一来启动应用程序：  
   
-- 应用程序开始执行，并运行，直至到达该断点。  
+- 应用程序开始运行，直至到达该断点。  
   
 - 应用程序将启动并立即在源代码的第一行处中断。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "49902071"
   
    应用程序将启动并运行到选定的行或运行到某个断点（如果在该行之前命中此断点）。  
   
-  调试控制台应用程序时，您可能希望从命令提示符处而不是从 Visual Studio 中启动该应用程序。 在这种情况下，可以从命令提示处启动应用程序并将 Visual Studio 调试器附加到该应用程序。 有关详细信息，请参阅[将附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)。  
+  调试控制台应用程序时，您可能希望从命令提示符处而不是从 Visual Studio 中启动该应用程序。 在这种情况下，可以从命令提示处启动应用程序并将 Visual Studio 调试器附加到该应用程序。 有关详细信息，请参阅[附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)。  
   
   从 Visual Studio 中，启动控制台应用程序时**控制台**窗口有时会出现在 Visual Studio 窗口的后面。 如果尝试从 Visual Studio 中启动控制台应用程序但似乎未产生任何结果，请尝试移动 Visual Studio 窗口。  
   
