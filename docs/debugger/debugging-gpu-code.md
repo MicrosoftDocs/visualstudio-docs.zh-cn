@@ -62,12 +62,12 @@ ms.locfileid: "35670692"
 -   [如何：使用“GPU 线程”窗口](../debugger/how-to-use-the-gpu-threads-window.md)  
   
 ## <a name="data-synchronization-exceptions"></a>数据同步异常  
- 调试器可以在执行期间标识多个数据同步条件。 在检测条件，调试器会进入中断状态。 有两种选择 —**中断**或**继续**。 通过使用**异常**对话框中，您可以配置是否调试器检测这些条件，并还何种条件则会中断的。 有关详细信息，请参阅[管理调试器的异常](../debugger/managing-exceptions-with-the-debugger.md)。 此外可以使用**选项**对话框来指定调试器应忽略异常，是否写入的数据不会更改数据的值。 有关详细信息，请参阅[General，Debugging，Options Dialog Box](../debugger/general-debugging-options-dialog-box.md)。  
+ 调试器可以在执行期间标识多个数据同步条件。 当检测到条件成立时，调试器会进入中断状态。 这时有两种选择 — **中断** 或 **继续** 。 通过使用**异常**对话框，您可以配置调试器是否检测这些条件，以及它将中断哪些条件。 有关详细信息，请参阅[管理调试器的异常](../debugger/managing-exceptions-with-the-debugger.md)。 此外可以使用**选项**对话框来指定调试器应忽略哪些异常，是否写入的数据不会更改数据的值。 有关详细信息，请参阅[General，Debugging，Options Dialog Box](../debugger/general-debugging-options-dialog-box.md)。  
   
 ## <a name="troubleshooting"></a>疑难解答  
   
 ### <a name="specifying-an-accelerator"></a>指定加速器  
- 如果运行这段代码仅命中 GPU 代码中的断点[accelerator::direct3d_ref](/cpp/parallel/amp/reference/accelerator-class#direct3d_ref) (REF) 加速器。 如果在代码中未指定加速器，REF 加速器自动被选作**的调试加速器类型**项目属性中。 如果你的代码显式选择加速器，则在调试期间将不会使用 REF 加速器，并且将不会命中断点，除非你的 GPU 硬件具有调试支持。 你可以通过编写代码来对此情况进行补救，以便在调试期间使用 REF 加速器。 有关详细信息，请参阅项目属性和[使用 accelerator 和 accelerator_view 对象](/cpp/parallel/amp/using-accelerator-and-accelerator-view-objects)并[c + + 调试配置的项目设置](../debugger/project-settings-for-a-cpp-debug-configuration.md)。  
+ 如果运行这段代码仅命中 GPU 代码中的断点[accelerator::direct3d_ref](/cpp/parallel/amp/reference/accelerator-class#direct3d_ref) (REF) 加速器。 如果在代码中未指定加速器，REF 加速器自动被选作**调试加速器类型**项目属性中。 如果你的代码显式选择加速器，则在调试期间将不会使用 REF 加速器，并且将不会命中断点，除非你的 GPU 硬件具有调试支持。 你可以通过编写代码来对此情况进行补救，以便在调试期间使用 REF 加速器。 有关详细信息，请参阅项目属性和[使用 accelerator 和 accelerator_view 对象](/cpp/parallel/amp/using-accelerator-and-accelerator-view-objects)并[c + + 调试配置的项目设置](../debugger/project-settings-for-a-cpp-debug-configuration.md)。  
   
 ### <a name="conditional-breakpoints"></a>条件断点  
  GPU 代码中的条件断点是受支持的，但并不能在设备上计算所有表达式。 当无法在设备上计算某个表达式时，将在调试器中计算该表达式。 调试器的运行速度比设备的运行速度慢得多。  
