@@ -29,12 +29,12 @@ ms.lasthandoff: 11/09/2018
 ms.locfileid: "51349421"
 ---
 # <a name="debugging-linq"></a>调试 LINQ
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 支持对语言集成查询 (LINQ) 代码进行调试，但是有一些限制。 大多数调试功能都使用 LINQ 语句，其中包括单步执行、设置断点以及在调试器窗口中查看结果。 本主题介绍 LINQ 调试的主要限制。  
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 支持对语言集成查询 (LINQ) 代码进行调试，但是有一些限制。 大多数调试功能都对 LINQ 语句有效，其中包括单步执行、设置断点以及在调试器窗口中查看结果。 本主题介绍 LINQ 调试的主要限制。  
   
 ##  <a name="BKMK_ViewingLINQResults"></a> 查看 LINQ 结果  
  使用数据提示功能、“监视”窗口和“快速监视”对话框，可以查看 LINQ 语句的结果。 在使用源窗口时，可以将指针停放在源窗口中的某个查询上，这样会出现“数据提示”。 可以将一个 LINQ 变量复制并粘贴到“监视”窗口或“快速监视”对话框中。  
   
- 在 LINQ 中，查询不会在创建或声明时进行计算，而只在使用时才进行计算。 因此，查询经过计算后才具有值。 有关查询创建和计算的完整说明，请参阅[LINQ 查询 (C#) 简介](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)或[编写你的第一个 LINQ 查询](/dotnet/visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query)。  
+ 在 LINQ 中，查询不会在创建或声明时进行计算，而只在使用时才进行计算。 因此，查询在计算之前没值。 有关查询创建和计算的完整说明，请参阅[LINQ 查询 (C#) 简介](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)或[编写你的第一个 LINQ 查询](/dotnet/visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query)。  
   
  若要显示某个查询的结果，调试器必须计算该查询。 在调试器中查看 LINQ 查询结果时，这种隐式计算具有的某些影响，应当加以考虑：  
   
