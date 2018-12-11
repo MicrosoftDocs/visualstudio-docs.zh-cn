@@ -17,26 +17,26 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/29/2018
 ms.locfileid: "50219908"
 ---
-# <a name="diagnose-problems-after-deployment-using-intellitrace"></a>使用 IntelliTrace 部署后诊断问题
+# <a name="diagnose-problems-after-deployment-using-intellitrace"></a>使用 IntelliTrace 在部署后诊断问题
 
 要在使用 IntelliTrace 部署后诊断 ASP.NET Web 应用中的问题，请加入发行版本信息，以便 Visual Studio 自动查找调试 IntelliTrace 日志所需的正确源文件及符号文件。
 
- 如果正使用 Microsoft Monitoring Agent 控制 IntelliTrace，则你还需在 Web 服务器上设置应用程序性能监视。 这将在应用运行时记录诊断事件，并将这些事件保存到 IntelliTrace 日志文件。 然后你可以在 Visual Studio Enterprise（但不是 Professional 或 Community 版本）中查看事件，转到发生事件的代码，查看在该时间点记录的值，然后在已运行的代码中向前或向后移动。 在找到并解决问题后，重复生成、发布和监控发布这一循环，以便可以更早更快地解决将来的潜在问题。
+ 如果正使用 Microsoft Monitoring Agent 控制 IntelliTrace，则你还需在 Web 服务器上设置应用程序性能监视。 这将在应用运行时记录诊断事件，并将这些事件保存到 IntelliTrace 日志文件。 然后你可以在 Visual Studio 企业版（但不是 专业版 或 社区版）中查看事件，转到发生事件的代码，查看在该时间点记录的值，然后在已运行的代码中向前或向后移动。 在找到并解决问题后，重复生成、发布和监控发布这一循环，以便可以更早更快地解决将来的潜在问题。
 
  ![代码、 生成、 发布、 监视、 诊断和修复](../debugger/media/ffr_cycle.png "FFR_Cycle")
 
  **你将需要：**
 
--   Visual Studio、 Azure DevOps 或 Team Foundation Server 2017、 2015年、 2013年、 2012年或 2010 来设置生成
+-   Visual Studio、 Azure DevOps 或 Team Foundation Server 2017、 2015年、 2013年、 2012年或 2010 来设置您的生成
 
 -   用于监视应用和记录诊断数据的 Microsoft Monitoring Agent
 
--   用于查看诊断数据并使用 IntelliTrace 调试代码的 Visual Studio Enterprise（但不是 Professional 或 Community 版本）
+-   用于查看诊断数据并使用 IntelliTrace 调试代码的 Visual Studio 企业版（但不是 专业版 或 社区版）
 
-##  <a name="SetUpBuild"></a> 步骤 1： 包含生成信息与你的发布
+##  <a name="SetUpBuild"></a> 步骤 1： 包含发布的生成信息
  设置你的生成过程以创建生成清单 (*BuildInfo.config*文件) 的 web 项目，并包含在发布此清单。 此清单包含有关项目、源代码管理和用于创建特定生成的生成系统的信息。 在你打开 IntelliTrace 日志以查看记录的事件时，此信息可帮助 Visual Studio 查找匹配的源和符号。
 
-###  <a name="AutomatedBuild"></a> 创建使用 Team Foundation Server 的自动生成的生成清单
+###  <a name="AutomatedBuild"></a> 创建使用 Team Foundation Server 自动生成的生成清单
 
  无论你使用 Team Foundation 版本控制还是 Git，请按照这些步骤进行操作。
 
