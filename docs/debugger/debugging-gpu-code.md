@@ -42,11 +42,11 @@ ms.locfileid: "35670692"
  您可以使用 Visual Studio 调试命令来启动和停止 GPU 调试。 有关详细信息，请参阅[使用调试器浏览代码](../debugger/navigating-through-code-with-the-debugger.md)。 你还可以将 GPU 调试器附加到正在运行的进程，但仅在该进程执行 GPU 代码时才能这样做。 有关详细信息，请参阅[附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)。  
   
 ## <a name="run-current-tile-to-cursor-and-run-to-cursor"></a>“将当前 Tile 运行到光标处”和“运行到光标处”  
- 当您在 GPU 上进行调试时，您可以通过两个选项运行到光标位置。 代码编辑器的快捷菜单上提供了这两个选项的命令。  
+ 当您在 GPU 上进行调试时，您可以通过两个选项运行到光标位置。代码编辑器的快捷菜单上提供了这两个选项的命令。  
   
-1.  **运行到光标处**命令可运行您的应用程序直到其达到光标位置，然后中断。 这并不表示当前线程运行到光标处；相反，这意味着第一个到达光标点的线程会触发中断。 请参阅[使用调试器浏览代码](../debugger/navigating-through-code-with-the-debugger.md)  
+1.  **运行到光标处**命令可运行您的应用程序直达光标位置，然后中断。 这并不表示当前线程运行到光标处；相反，这意味着第一个到达光标点的线程会触发中断。 请参阅[使用调试器浏览代码](../debugger/navigating-through-code-with-the-debugger.md)  
   
-2.  **当前 Tile 运行到光标处**命令运行您的应用程序的所有当前平铺中线程直到游标，然后中断。  
+2.  **当前 Tile 运行到光标处**命令运行您的应用程序的当前所有Tile线程直达光标处，然后中断。  
   
 ## <a name="debugging-windows"></a>“调试”窗口  
  通过使用某些调试窗口，您可以检查、标记和冻结 GPU 线程。 有关详细信息，请参见:  
@@ -62,7 +62,7 @@ ms.locfileid: "35670692"
 -   [如何：使用“GPU 线程”窗口](../debugger/how-to-use-the-gpu-threads-window.md)  
   
 ## <a name="data-synchronization-exceptions"></a>数据同步异常  
- 调试器可以在执行期间标识多个数据同步条件。 在检测条件时，调试器会进入中断状态。 有两种选择 —**中断**或**继续**。 通过使用**异常**对话框中，您可以配置是否调试器检测这些条件，并还何种条件则会中断的。 有关详细信息，请参阅[管理调试器的异常](../debugger/managing-exceptions-with-the-debugger.md)。 此外可以使用**选项**对话框来指定调试器应忽略异常，是否写入的数据不会更改数据的值。 有关详细信息，请参阅[General，Debugging，Options Dialog Box](../debugger/general-debugging-options-dialog-box.md)。  
+ 调试器可以在执行期间标识多个数据同步条件。 在检测条件，调试器会进入中断状态。 有两种选择 —**中断**或**继续**。 通过使用**异常**对话框中，您可以配置是否调试器检测这些条件，并还何种条件则会中断的。 有关详细信息，请参阅[管理调试器的异常](../debugger/managing-exceptions-with-the-debugger.md)。 此外可以使用**选项**对话框来指定调试器应忽略异常，是否写入的数据不会更改数据的值。 有关详细信息，请参阅[General，Debugging，Options Dialog Box](../debugger/general-debugging-options-dialog-box.md)。  
   
 ## <a name="troubleshooting"></a>疑难解答  
   
