@@ -42,19 +42,19 @@ ms.locfileid: "50219908"
 
 ####  <a name="TFS2017"></a> Azure DevOps 和 Team Foundation Server 2017
 
-Visual Studio 2017 不包括*BuildInfo.config*文件，它已不推荐使用，之后被删除。 若要在部署后调试 ASP.NET web 应用程序，请使用以下方法之一：
+Visual Studio 2017 不包括*BuildInfo.config*文件，它已不推荐使用，之后将被删除。 若要在部署后调试 ASP.NET web 应用程序，请使用以下方法之一：
 
 * 对于部署到 Azure，请使用[Application Insights](https://docs.microsoft.com/azure/application-insights/)。
 
-* 如果需要使用 IntelliTrace，在 Visual Studio 中打开项目并从匹配生成加载符号文件。 您可以加载符号文件从**模块**窗口中或通过配置中的符号**工具** > **选项** > **调试**  > **符号**。
+* 如果需要使用 IntelliTrace，在 Visual Studio 中打开项目，并在匹配后加载符号文件。 您可以从**模块**窗口中或通过 **工具** > **选项** > **调试**  > **符号** 配置中的符号，加载符号文件。
 
 
 ####  <a name="TFS2013"></a> Team Foundation Server 2013
- 设置生成管道以将源、 生成和符号的位置添加到生成清单 （BuildInfo.config 文件）。 Team Foundation Build 自动创建此文件并将其放置在项目的输出文件夹中。
+ 设置生成管道以将源代码、 生成的文件和符号文件的位置添加到生成清单 （BuildInfo.config 文件）。 Team Foundation Build 自动创建此文件并将其放置在项目的输出文件夹中。
 
 1.  [编辑生成管道或创建新的生成管道。](/azure/devops/pipelines/get-started-designer?view=vsts)
 
-     ![查看生成在 TFS 2013 中的管道](../debugger/media/ffr_tfs2013viewbuilddefinition.png "FFR_TFS2013ViewBuildDefinition")
+     ![查看在 TFS 2013 中的生成管道](../debugger/media/ffr_tfs2013viewbuilddefinition.png "FFR_TFS2013ViewBuildDefinition")
 
 2.  选择默认模板 (TfvcTemplate.12.xaml) 或自己的自定义模板。
 
