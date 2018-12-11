@@ -236,9 +236,9 @@ Visual Studio 2017 不包括*BuildInfo.config*文件，它已不推荐使用，�
 
      [所有这些其他事件和 IntelliTrace 日志中的信息是什么？](../debugger/using-saved-intellitrace-data.md)
 
-###  <a name="WhatElse"></a> 做些什么可以我在这里？
+###  <a name="WhatElse"></a> 我在这里可以做些什么？
 
--   [获取有关此代码的详细信息](../ide/find-code-changes-and-other-history-with-codelens.md)。 若要查找对此代码的引用，其更改历史记录、 相关的 bug、 工作项、 代码审阅或单元测试-全部而无需离开编辑器-使用 CodeLens 指示器在编辑器中。
+-   [获取有关此代码的详细信息](../ide/find-code-changes-and-other-history-with-codelens.md)。 若要查找对此代码的引用，其更改历史记录、 相关的 bug、 工作项、 代码审阅或单元测试-全部无需离开编辑器-使用 CodeLens 指示器在编辑器中。
 
      ![CodeLens&#45;查看对此代码的引用](../debugger/media/ffr_itsummarypageperformancecodelensreferences.png "FFR_ITSummaryPagePerformanceCodeLensReferences")
 
@@ -250,8 +250,8 @@ Visual Studio 2017 不包括*BuildInfo.config*文件，它已不推荐使用，�
 
 ###  <a name="FAQ"></a> 问题解答
 
-####  <a name="WhyInclude"></a> 问： 为什么都包含有关我的项目、 源代码管理、 生成和符号与我的发布？
- Visual Studio 使用此信息针对你尝试调试的发布查找匹配的解决方案和源。 在你打开 IntelliTrace 日志并选择要开始调试的事件后，Visual Studio 使用符号查找并向你显示发生事件的代码。 然后你可以查看记录的值，并在代码的执行中向前或向后移动。
+####  <a name="WhyInclude"></a> 问： 为什么发布版包含的信息有关于我的项目、 源代码管理、 生成和符号？
+ Visual Studio 使用此信息针对你尝试调试的发布，查找匹配的解决方案和源文件。 在你打开 IntelliTrace 日志并选择要开始调试的事件后，Visual Studio 使用符号查找并向你显示发生事件的代码。 然后你可以查看记录的值，并在代码的执行中向前或向后移动。
 
  如果你使用 TFS，而且此信息不在生成清单 （BuildInfo.config 文件）、 Visual Studio 查找匹配的源和当前连接的 TFS 上的符号。 如果 Visual Studio 找不到正确的 TFS 或匹配的源，将提示你选择不同的 TFS。
 
@@ -387,4 +387,4 @@ Visual Studio 2017 不包括*BuildInfo.config*文件，它已不推荐使用，�
 ####  <a name="UntrustedSymbols"></a> 问： 为什么收到有关不受信任的符号的此消息？
  ![使用不受信任的符号路径进行调试？] (../debugger/media/ffr_ituntrustedsymbolpaths.png "FFR_ITUntrustedSymbolPaths")
 
- **答：** 何时会出现此消息中生成清单文件的符号路径 (\<*ProjectName*>。中的受信任的符号路径列表不包含 BuildInfo.config)。 你可将路径添加到调试器选项中的符号路径列表。
+ **答：** 当出现消息中提示生成清单文件的符号路径 (\<*ProjectName*>.BuildInfo.config) 中不包含受信任的符号路径列表。 你可将路径添加到调试器选项中的符号路径列表。
