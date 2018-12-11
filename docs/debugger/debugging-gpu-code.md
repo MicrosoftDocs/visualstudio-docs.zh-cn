@@ -23,23 +23,23 @@ ms.lasthandoff: 09/06/2018
 ms.locfileid: "35670692"
 ---
 # <a name="debugging-gpu-code"></a>调试 GPU 代码
-你可以调试在图形处理单元 (GPU) 上运行的 C++ 代码。 Visual Studio 中的 GPU 调试支持包括争用检测、启动进程并附加到进程以及集成到调试窗口中。  
+你可以调试在图形处理单元 (GPU) 上运行的 C++ 代码。 Visual Studio 中的 GPU 调试支持包括竞争检测、启动进程和附加进程，这些已集成到调试窗口中。  
   
 ## <a name="supported-platforms"></a>受支持的平台  
  [!INCLUDE[win7](../debugger/includes/win7_md.md)]、[!INCLUDE[win8](../debugger/includes/win8_md.md)]、[!INCLUDE[winsvr08_r2](../debugger/includes/winsvr08_r2_md.md)] 和 [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)] 上支持调试。 对于在软件模拟器上进行的调试，需要 [!INCLUDE[win8](../debugger/includes/win8_md.md)] 或 [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)]。 对于在硬件上进行的调试，您必须为图形卡安装驱动程序。 并非所有硬件供应商都实现所有调试器功能。 有关限制，请参阅供应商文档。  
   
 > [!NOTE]
->  希望在 Visual Studio 中支持 GPU 调试的独立硬件供应商必须创建一个实现 VSD3DDebug 接口并面向其自己的驱动程序的 DLL。  
+>  希望在 Visual Studio 中支持 GPU 调试的独立硬件供应商必须创建一个DLL, 该DLL面向其自己的驱动程序实现 VSD3DDebug 接口。  
   
 ## <a name="configuring-gpu-debugging"></a>配置 GPU 调试  
- 调试器无法同时在同一应用执行中的 CPU 代码和 GPU 代码处中断。 默认情况下，调试器在 CPU 代码处中断。 若要调试 GPU 代码，请使用以下两个步骤之一：  
+ 调试器无法同时在同一应用中执行 CPU 代码和 GPU 代码中断。 默认情况下，调试器在 CPU 代码处中断。 若要调试 GPU 代码，请使用以下两个步骤之一：  
   
--   在中**调试类型**上列出**标准**工具栏中，选择**仅限 GPU**。  
+-   在* *标准** 工具栏上 **调试类型** 列表中，选择 **仅限 GPU** 。  
   
--   在中**解决方案资源管理器**，在项目的快捷菜单，选择**属性**。 在中**属性页**对话框中，选择**调试**，然后选择**仅限 GPU**中**调试器类型**列表。  
+-   在 **解决方案资源管理器** ，项目的快捷菜单中，选择 **属性** 。 在 **属性页** 对话框中，选择**调试**，然后在 **调试器类型** 列表中选择 **仅限 GPU** 。  
   
 ## <a name="launching-and-attaching-to-applications"></a>启动并附加到应用程序  
- 您可以使用 Visual Studio 调试命令来启动和停止 GPU 调试。 有关详细信息，请参阅[使用调试器浏览代码](../debugger/navigating-through-code-with-the-debugger.md)。 你还可以将 GPU 调试器附加到正在运行的进程，但仅在该进程执行 GPU 代码时才能这样做。 有关详细信息，请参阅[将附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)。  
+ 您可以使用 Visual Studio 调试命令来启动和停止 GPU 调试。 有关详细信息，请参阅[使用调试器浏览代码](../debugger/navigating-through-code-with-the-debugger.md)。 你还可以将 GPU 调试器附加到正在运行的进程，但仅在该进程执行 GPU 代码时才能这样做。 有关详细信息，请参阅[附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)。  
   
 ## <a name="run-current-tile-to-cursor-and-run-to-cursor"></a>“将当前 Tile 运行到光标处”和“运行到光标处”  
  当您在 GPU 上进行调试时，您可以通过两个选项运行到光标位置。 代码编辑器的快捷菜单上提供了这两个选项的命令。  
