@@ -68,7 +68,7 @@ Visual Studio 2017 不包括*BuildInfo.config*文件，它已不推荐使用，�
 
      有关符号的详细信息，请参阅 [发布符号数据](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols?view=vsts)。
 
-4.  添加此 MSBuild 参数以在生成清单文件中包含 TFS 和符号位置：
+4.  在生成清单文件中添加此 MSBuild 参数以包含 TFS 和符号位置：
 
      **/p:IncludeServerNameInBuildInfo = true**
 
@@ -119,7 +119,7 @@ Visual Studio 2017 不包括*BuildInfo.config*文件，它已不推荐使用，�
 
     转到[步骤 2： 发布你的应用](#DeployRelease)
 
-###  <a name="ManualBuild"></a> 创建手动生成使用 Visual Studio 的生成清单
+###  <a name="ManualBuild"></a> 手动创建使用 Visual Studio 的生成清单
  若要为项目自动创建生成清单（BuildInfo.config 文件）并将其置于你的项目的输出文件夹中，请执行以下步骤。 此文件在输出文件夹中显示为“*ProjectName*.BuildInfo.config”，但是在你发布应用后将在部署文件夹中重命名为“BuildInfo.config”。
 
 1.  在“解决方案资源管理器” 中，卸载 Web 项目。
@@ -146,7 +146,7 @@ Visual Studio 2017 不包括*BuildInfo.config*文件，它已不推荐使用，�
 
     转到[步骤 2： 发布你的应用](#DeployRelease)
 
-###  <a name="MSBuild"></a> 创建手动生成使用 MSBuild.exe 的生成清单
+###  <a name="MSBuild"></a> 手动创建使用 MSBuild.exe 的生成清单
  运行生成时添加这些生成参数：
 
  **/p:GenerateBuildInfoConfigFile = true**
@@ -164,11 +164,11 @@ Visual Studio 2017 不包括*BuildInfo.config*文件，它已不推荐使用，�
  在 Web 服务器上设置应用程序性能监视，以便可以监视应用程序中的问题、记录诊断事件并将这些事件保存到 IntelliTrace 日志文件中。 请参阅 [监视你的发布的部署问题](../debugger/using-the-intellitrace-stand-alone-collector.md)。
 
 ##  <a name="InvestigateEvents"></a> 步骤 4： 找出问题
- 你的开发计算机或另一台计算机上将需要 Visual Studio Enterprise，以查看记录的事件并使用 IntelliTrace 调试代码。 你还可以使用诸如 CodeLens、调试器映射和代码映射等工具帮助你诊断问题。
+ 你的开发计算机或另一台计算机上需要使用 Visual Studio 企业版，以查看记录的事件并使用 IntelliTrace 调试代码。 你还可以使用诸如 CodeLens、调试器映射和代码映射等工具帮助你诊断问题。
 
 ### <a name="open-the-intellitrace-log-and-matching-solution"></a>打开 IntelliTrace 日志和匹配的解决方案
 
-1.  从 Visual Studio Enterprise 中打开 IntelliTrace 日志（.iTrace 文件）。 或者，如果在同一台计算机上装有 Visual Studio Enterprise，则只需双击该文件。
+1.  从 Visual Studio 企业版中打开 IntelliTrace 日志（.iTrace 文件）。 或者，如果在同一台计算机上装有 Visual Studio 企业版，则只需双击该文件。
 
 2.  如果该项目没有作为解决方案的一部分而生成，请选择“打开解决方案”  以让 Visual Studio 自动打开匹配的解决方案或项目。 [问： IntelliTrace 日志缺少有关部署的应用程序的信息。为何发生这种情况？我该怎么办？](#InvalidConfigFile)
 
