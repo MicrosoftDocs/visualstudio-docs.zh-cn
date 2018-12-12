@@ -33,7 +33,7 @@ ms.locfileid: "31471039"
   
  每次进入中断模式时都可以使用“编辑并继续”功能。 在中断模式下指令指针、 源窗口中的黄色箭头，指向方法或属性中下一步将被执行的语句。
 
- “编辑并继续”支持在调试会话期间，可能做出的大多数更改，但有某些例外。 有关详细信息，请参阅[支持的代码更改 （C# 和 Visual Basic）](../debugger/supported-code-changes-csharp.md)。   
+ “编辑并继续”支持在调试会话期间，可能做出的大多数更改，但有某些例外。 有关详细信息，请参阅[(C# 和 Visual Basic)支持的代码更改](../debugger/supported-code-changes-csharp.md)。   
   
  如果进行了未经授权的编辑，则所做更改会被加上紫色波浪下划线标记，并且会在任务列表中显示一个任务。 如果要继续使用“编辑并继续”功能，必须撤消未经授权的编辑。 在“编辑并继续”之外，可能允许执行某些未经授权的编辑。 如果要保留这种未经授权的编辑的结果，必须停止调试并重新启动应用程序。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "31471039"
  > [!NOTE]
  > 不受支持的应用程序和平台包括 ASP.NET 5、 Silverlight 5 和 Windows 8.1。
   
- 在开始调试使用时不支持编辑并继续**附加到进程**。 为优化代码或混合不支持编辑并继续托管和本机代码。 有关详细信息，请参阅[支持的代码更改 (C# 和 Visual Basic](../debugger/supported-code-changes-csharp.md)。
+ 使用 **附加到进程** 启动的调试不支持编辑并继续。 优化代码或混合代码（托管和原生）不支持编辑并继续。有关详细信息，请参阅[(C# 和 Visual Basic)支持的代码更改](../debugger/supported-code-changes-csharp.md)。
   
  本节中各个主题提供的详细信息涉及：如何使用此功能，允许进行哪些类型的更改。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "31471039"
  [如何：使用“编辑并继续”在中断模式下应用编辑](../debugger/how-to-apply-edits-in-break-mode-with-edit-and-continue.md)  
  解释如何在中断模式下应用代码编辑。  
   
- [受支持的代码更改 （C# 和 Visual Basic](../debugger/supported-code-changes-csharp.md)   
+ [(C# 和 Visual Basic)支持的代码更改](../debugger/supported-code-changes-csharp.md)   
  描述了无法在 [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)]“编辑并继续”中执行的编辑的类型。  
   
 ## <a name="related-sections"></a>相关章节  
