@@ -1,5 +1,5 @@
 ---
-title: 启用调试 Visual c + + 中的功能 (-D_DEBUG) |Microsoft Docs
+title:  在 Visual C++ 中启用调试功能 (-D_DEBUG) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -34,7 +34,7 @@ ms.lasthandoff: 10/23/2018
 ms.locfileid: "49949612"
 ---
 # <a name="enabling-debug-features-in-visual-c-ddebug"></a>在 Visual C++ 中启用调试功能 (/D_DEBUG)
-在中[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]，调试功能，如当符号重新编译程序时，启用断言 **_DEBUG**定义。 您可以定义 **_DEBUG**中两种方式之一：  
+在[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]中，调试功能，如当符号重新编译程序时，启用断言 **_DEBUG**定义。 您可以定义 **_DEBUG**中两种方式之一：  
   
 - 指定 **#define _DEBUG**在源代码中或  
   
