@@ -1,5 +1,5 @@
 ---
-title: 编辑并继续 （Visual c + +） |Microsoft Docs
+title: 编辑并继续 （Visual C++） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/31/2017
 ms.technology: vs-ide-debug
@@ -26,14 +26,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49867697"
 ---
-# <a name="edit-and-continue-visual-c"></a>Edit and Continue (Visual C++)
-可以使用 Visual C++ 项目中的“编辑并继续”。 请参阅[支持的代码更改 （c + +）](../debugger/supported-code-changes-cpp.md)有关限制的编辑并继续的信息。
+# <a name="edit-and-continue-visual-c"></a> 编辑并继续 (Visual C++)
+可以使用 Visual C++ 项目中的“编辑并继续”。 请参阅[(C++)支持的代码更改](../debugger/supported-code-changes-cpp.md)有关限制编辑并继续的信息。
   
-有关 Visual Studio 2015 Update 3 的改进的详细信息，请参阅[c + + 编辑并继续在 Visual Studio 2015 Update 3](https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/)。  
+有关 Visual Studio 2015 Update 3 的改进的详细信息，请参阅[C++编辑并继续在 Visual Studio 2015 Update 3](https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/)。  
   
- [/Zo （增强优化调试）](/cpp/build/reference/zo-enhance-optimized-debugging)在 Visual Studio 2013 Update 3 中引入的编译器选项将其他信息添加到.pdb （符号） 文件以二进制文件的编译而无需[/Od （禁用 （调试））](https://msdn.microsoft.com/library/aafb762y.aspx)选项。  
+ 在 Visual Studio 2013 Update 3 中引入的编译器选项 [/Zo （增强优化调试）](/cpp/build/reference/zo-enhance-optimized-debugging) , 无需[/Od （禁用 （调试））](https://msdn.microsoft.com/library/aafb762y.aspx)选项，将在编译二进制文件时将其他信息添加到 .pdb （符号） 文件。  
   
- **/Zo**禁用编辑并继续。 请参阅[如何： 调试优化的代码](../debugger/how-to-debug-optimized-code.md)。  
+ **/Zo** 禁用编辑并继续。 请参阅[如何： 调试优化的代码](../debugger/how-to-debug-optimized-code.md)。  
   
 ##  <a name="BKMK_Enable_or_disable_automatic_invocation_of_Edit_and_Continue"></a> 启用或禁用“编辑并继续”  
  如果要对代码进行编辑而又不希望在当前调试会话过程中应用这些编辑，则可以禁用自动调用“编辑并继续”。 也可以重新启用“编辑并继续”的自动操作。
