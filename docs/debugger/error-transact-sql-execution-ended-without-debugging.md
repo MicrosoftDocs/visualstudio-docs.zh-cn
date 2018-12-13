@@ -26,7 +26,7 @@ ms.locfileid: "51348995"
 ---
 # <a name="error-transact-sql-execution-ended-without-debugging"></a>错误：Transact-SQL 执行未经调试便已结束
 
-当你尝试调试 TRANSACT-SQL 或 SQLCLR 过程，调试器不会从 SQL Server 接收调试消息时，将发生此错误。  
+当你尝试调试 TRANSACT-SQL 或 SQLCLR 程序，调试器未从 SQL Server 接收调试消息时，将发生此错误。  
   
 此问题可能是由于网络问题或 SQL 服务器上的问题，但最可能的原因是权限问题。  
   
