@@ -48,7 +48,7 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
   
 1.  在目标计算机上打开**启动**菜单，依次指向**附件**，然后单击**命令提示符下**。  
   
-2.  在中**命令提示符下**窗口中，键入：  
+2.  在**命令提示符下**窗口中，键入：  
   
     ```cmd
     ping <debugger_host_computer_name>  
