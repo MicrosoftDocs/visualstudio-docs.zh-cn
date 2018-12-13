@@ -38,8 +38,7 @@ ms.locfileid: "49934439"
     或
 * （对于 ToString)在类型上定义 DebuggerDisplay 特性（attribute），调试器可以计算 ToString 以外的值。
     或
-* （对于 getter 属性)在属性上定义 `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]`特性（attribute）。 如果您有一个方法出于API兼容性的原因需要保留属性，那么这可能非常有用，但它实际上应该是一个方法。
- 
+* （对于 getter 属性)在属性上定义 `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]`特性（attribute）。 如果需要保持属性 API 的兼容性，这很有用，但这里应该使用一个方法。
 ### <a name="solution-2-have-the-target-code-ask-the-debugger-to-abort-the-evaluation"></a>解决方案 #2： 要求调试器中止计算的目标代码
  
 错误消息将告知调试器尝试调用的函数的名称。 如果属性 getter 或 ToString 方法有时无法正确运行，尤其是需要另一个线程来运行此代码的情况下，实现函数可以调用`System.Diagnostics.Debugger.NotifyOfCrossThreadDependency`询问调试器中止该函数求值。 使用此解决方案，仍可以显式计算了这些函数，但默认行为是 NotifyOfCrossThreadDependency 调用时执行停止。
