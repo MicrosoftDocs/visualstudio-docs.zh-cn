@@ -1,5 +1,5 @@
 ---
-title: 错误： 远程计算机未显示在远程连接对话框中，|Microsoft Docs
+title: 错误： 未显示在远程连接对话框中远程计算机 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
