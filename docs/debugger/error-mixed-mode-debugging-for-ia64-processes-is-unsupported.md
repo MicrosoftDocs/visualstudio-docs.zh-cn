@@ -1,5 +1,5 @@
 ---
-title: 错误： 的 IA64 进程执行混合的模式调试不支持 |Microsoft 文档
+title: 错误：不支持对 IA64 进程执行混合模式调试 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
