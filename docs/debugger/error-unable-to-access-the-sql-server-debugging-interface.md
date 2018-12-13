@@ -25,7 +25,7 @@ ms.lasthandoff: 09/10/2018
 ms.locfileid: "44281515"
 ---
 # <a name="error-unable-to-access-the-sql-server-debugging-interface"></a>错误：无法访问 SQL Server 调试界面
-当在未启用 SQL 调试的计算机上尝试 SQL 调试时，此消息会出现。  
+当在未启用 SQL 调试的计算机上尝试 SQL 调试时，会出现此消息。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
