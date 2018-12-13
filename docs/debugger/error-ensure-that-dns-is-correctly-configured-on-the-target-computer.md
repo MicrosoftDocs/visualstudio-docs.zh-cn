@@ -1,5 +1,5 @@
 ---
-title: 错误： 请确保 DNS 是目标计算机上正确配置 |Microsoft Docs
+title: 错误： 请确保目标计算机上正确配置了 DNS  |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
