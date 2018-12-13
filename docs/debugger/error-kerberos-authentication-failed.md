@@ -1,5 +1,5 @@
 ---
-title: '错误: Kerberos 身份验证失败，|Microsoft Docs'
+title: '错误: Kerberos 身份验证失败 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -30,7 +30,7 @@ ms.locfileid: "49857642"
 Error: The Visual Studio Remote Debugger on the target computer cannot connect back to this computer. Kerberos authentication failed.  
 ```  
   
- 当 Visual Studio 远程调试器监视器在“本地系统”帐户或“网络服务”帐户下运行时，会发生此错误。 在其中任何一个帐户下，远程调试器都必须建立 Kerberos 身份验证连接，以便向 Visual Studio 调试器主机提供反馈。  
+ 当 Visual Studio 远程调试监视器在“本地系统”帐户或“网络服务”帐户下运行时，会发生此错误。 在其中任何一个帐户下，远程调试器都必须建立 Kerberos 身份验证连接，以便向 Visual Studio 调试器主机提供反馈。  
   
  Kerberos 身份验证在下列条件下不可用：  
   
