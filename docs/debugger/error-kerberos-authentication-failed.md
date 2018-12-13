@@ -46,7 +46,7 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
   
 ### <a name="to-verify-that-dns-on-the-target-computer-is-correctly-resolving-the-debugger-host-computer-name"></a>验证目标计算机上的 DNS 是否正确解析了调试器主机名称  
   
-1.  在目标计算机上打开**启动**菜单，依次指向**附件**，然后单击**命令提示符下**。  
+1.  在目标计算机上打开**开始**菜单，依次指向**附件**，然后单击**命令提示符下**。  
   
 2.  在**命令提示符下**窗口中，键入：  
   
