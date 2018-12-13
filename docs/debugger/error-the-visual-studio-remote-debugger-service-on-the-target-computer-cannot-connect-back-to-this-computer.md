@@ -1,5 +1,5 @@
 ---
-title: 错误： 目标计算机上的 Visual Studio 远程调试器服务无法连接到此计算机返回 |Microsoft 文档
+title: “错误： 目标计算机上的 Visual Studio 远程调试器服务无法重新连接到此计算机 | Microsoft 文档”
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -24,7 +24,7 @@ ms.lasthandoff: 04/18/2018
 ms.locfileid: "31471747"
 ---
 # <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>错误: 目标计算机上的 Visual Studio 远程调试器服务无法重新连接到此计算机
-此错误表示“Visual Studio 远程调试器”服务正在运行，但是运行它的用户帐户在连接到正在从中进行调试的计算机时无法进行身份验证。  
+此错误表示“Visual Studio 远程调试器”服务正在运行，但是运行它的用户帐户在连接到正在调试中的计算机时无法进行身份验证。  
   
  下表显示可访问该计算机的帐户：  
   
@@ -52,9 +52,9 @@ ms.locfileid: "31471747"
   
 ### <a name="to-add-log-on-as-a-service-privilege"></a>添加“作为服务登录”特权  
   
-1.  上**启动**菜单上，选择**控制面板**。  
+1.  **开始**菜单上，选择**控制面板**。  
   
-2.  在 Control Panel 中，选择**经典视图**，如果有必要。  
+2.  在控制面板中，选择**经典视图**，如果有必要。  
   
 3.  双击 **“管理工具”**。  
   
