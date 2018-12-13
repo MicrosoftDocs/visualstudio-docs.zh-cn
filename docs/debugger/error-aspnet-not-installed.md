@@ -39,10 +39,10 @@ ms.locfileid: "49949561"
    \WINDOWS\Microsoft.NET\Framework\version\aspnet_regiis -i  
    ```  
   
-    其中*版本*表示您的计算机，例如，v1.0.370 上安装的.NET Framework 的版本号。 你可以通过查看确定的 framework 版本`\WINDOWS\Microsoft.NET\Framework`目录。  
+    在您的计算机中 *版本* 表示安装的.NET Framework 的版本号，例如，v1.0.370 。 你可以通过查看`\WINDOWS\Microsoft.NET\Framework` 目录确定的 framework 版本 。  
   
    > [!NOTE]
-   >  对于 Windows Server 2003，可以安装[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]通过使用**添加或删除程序**控制面板中。  
+   >  对于 Windows Server 2003，可以通过在控制面板中使用**添加或删除程序**安装[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]。  
   
 ## <a name="see-also"></a>请参阅  
  [调试 Web 应用程序：错误和疑难解答](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
