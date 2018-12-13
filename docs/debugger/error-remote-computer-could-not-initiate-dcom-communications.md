@@ -1,5 +1,5 @@
 ---
-title: 错误： 远程计算机无法启动 DCOM 通信 |Microsoft 文档
+title: 错误：远程计算机未能启动 DCOM 通信 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
