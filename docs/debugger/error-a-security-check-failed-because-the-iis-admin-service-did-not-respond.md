@@ -26,15 +26,15 @@ ms.lasthandoff: 06/27/2018
 ms.locfileid: "37058056"
 ---
 # <a name="error-a-security-check-failed-because-the-iis-admin-service-did-not-respond"></a>错误：安全检查失败，因为 IIS 管理服务没有响应
-当 IIS 管理服务没有响应时，会发生此错误。 这通常表示 IIS 的安装有问题。 首先，验证该服务是否正在运行使用**Services**工具**管理工具**。  
+当 IIS 管理服务没有响应时，会发生此错误。 这通常表示 IIS 的安装有问题。 首先，验证该服务是否正在运行 **管理工具** 中的 **服务** 工具。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
--   重新安装 IIS，使用**添加或删除程序**控制面板。  
+-   重新安装 IIS，使用 **添加或删除程序** 控制面板。  
   
 -   或  
   
--   使用“添加/删除程序”控制面板从计算机中删除 IIS。 如果已移除 IIS，但是仍存在问题，请检查注册表，并确保下面的项不再存在：  
+-   使用控制面板中 “添加/删除程序” 从计算机中删除 IIS。 如果已移除 IIS，但是仍存在问题，请检查注册表，并确保下面的项不再存在：  
   
     `HKEY_CLASSES_ROOT\CLSID\{A9E69610-B80D-11D0-B9B9-00A0C922E750}`  
   
