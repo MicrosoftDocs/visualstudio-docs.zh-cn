@@ -141,9 +141,9 @@ ms.locfileid: "31478247"
 
 - 使用管理员特权重新启动 Visual Studio，然后重试。
 
-    例如，使用 Web 部署一些 ASP.NET 调试方案 for Visual Studio 需要提升的权限。
+    例如，使用 Web 部署一些需要提升 Visual Studio 权限的 ASP.NET 调试方案。
     
-- 如果正在运行的 Visual Studio 的多个实例，重新打开你的 Visual Studio （使用管理员权限） 的一个实例中的项目，然后重试。
+- 如果正在运行 Visual Studio 多个实例，（使用管理员权限）重新打开你的 Visual Studio 一个实例中的项目，然后重试。
 
 - 如果你使用本地地址使用主机文件，请尝试使用环回地址而不计算机的 IP 地址。
 
