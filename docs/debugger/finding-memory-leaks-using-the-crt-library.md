@@ -1,5 +1,5 @@
 ---
-title: 查找内存泄漏的 CRT 库 |Microsoft Docs
+title: 查找CRT 库的内存泄漏  |Microsoft Docs
 ms.custom: ''
 ms.date: 10/04/2018
 ms.technology: vs-ide-debug
@@ -38,9 +38,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50050100"
 ---
-# <a name="find-memory-leaks-with-the-crt-library"></a>查找内存泄漏 CRT 库
+# <a name="find-memory-leaks-with-the-crt-library"></a>查找CRT 库的内存泄漏
 
-在 C/c + + 应用程序中最难捉摸也硬检测 bug 都是内存泄漏。 内存泄漏未能正确释放以前分配的内存中的结果。 少量内存泄漏不开始时，会注意到，但随着时间的推移可能导致性能不佳范围到发生故障时应用程序内存不足的症状。 将占用所有可用内存可能会导致其他应用崩溃的泄漏应用，创建不清楚哪些应用程序负责。 即使无害的内存泄漏可能表示应更正其他问题。  
+内存泄漏是 C/C++ 应用程序中最微妙、最难以发现的 bug 。 内存泄漏是由于之前分配的内存未能正确释放导致的。 最开始可能没有注意到少量内存泄漏，但随着时间的推移，导致 bug 由性能差变为内存不足，从而导致程序崩溃。 应用内存泄漏可能会耗尽全部内存，从而导致其它程序崩溃，导致难以分辨哪个程序引发的该问题。 即使无害的内存泄漏可能表示应纠正其他问题。  
 
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]调试器和 C 运行时库 (CRT) 可以帮助你检测和识别内存泄漏。  
 
