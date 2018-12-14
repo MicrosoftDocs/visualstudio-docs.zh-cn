@@ -1,5 +1,5 @@
 ---
-title: 调试会话对话框中可执行文件 |Microsoft 文档
+title: “调试会话的可执行文件”对话框 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
