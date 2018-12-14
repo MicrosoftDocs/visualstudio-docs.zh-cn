@@ -37,7 +37,7 @@ Visual Studio 调试器包括表达式计算器，当您在 **“快速监视”
  无法识别 F# 表达式。 如果正在调试 F# 代码，你需要在向调试器窗口或对话框中输入表达式之前，将表达式转换为 C# 语法。 当把表达式从 F # 转换到 C# 时，请务必记住 C# 使用 `==` 运算符来测试相等性，而 F # 使用单个 `=`。  
   
 ## <a name="c-expressions"></a>C++ 表达式  
- 有关将上下文运算符用于 C++ 中的表达式的信息，请参阅 [Context Operator (C++)](../debugger/context-operator-cpp.md)。  
+ 有关将上下文运算符用于 C++ 中的表达式的信息，请参阅 [上下文运算符 (C++)](../debugger/context-operator-cpp.md)。  
   
 ### <a name="unsupported-expressions-in-c"></a>不支持的 C++ 表达式  
   
@@ -61,7 +61,7 @@ new Date(2,3,1985)
 ```  
   
 #### <a name="preprocessor-macros"></a>预处理器宏  
- 调试器中不支持预处理器宏。 例如，如果常量 `VALUE` 被声明为： `#define VALUE 3`，则不能使用“监视” `VALUE`**窗口中的** 。 若要避免此限制，只要有可能就应将 `#define`替换为枚举和函数。  
+ 调试器中不支持预处理器宏。 例如，如果常量 `VALUE` 被声明为： `#define VALUE 3`，则不能使用 **监视** 窗口中的 `VALUE` 。 若要避免此限制，只要有可能就应将 `#define`替换为枚举和函数。  
   
 ### <a name="using-namespace-declarations"></a>使用命名空间声明  
  不能使用 `using namespace` 声明。  若要访问一个类型名称或当前命名空间之外的变量，必须使用完全限定的名称。  
