@@ -1,5 +1,5 @@
 ---
-title: 错误： 无法启动 Web 服务器上调试 |Microsoft 文档
+title: 错误： 无法在 Web 服务器上启动调试 |Microsoft 文档
 ms.custom: ''
 ms.date: 05/23/2017
 ms.technology: vs-ide-debug
@@ -39,11 +39,11 @@ ms.locfileid: "31478247"
 
 当你尝试调试 Web 服务器上运行的 ASP.NET 应用程序时，你可能会收到此错误消息： `Unable to start debugging on the Web server`。
 
-通常情况下，由于错误或配置更改发生，需要更新你的应用程序池和 / 或 IIS 重置，将出现此错误。 可以重置 IIS，通过打开提升的命令提示符并键入`iisreset`。 
+通常情况下，由于错误或配置发生更改，需要更新应用程序池、将 IIS 重置，甚至两个操作都进行。 可通过打开命令提示符并键入 `iisreset` 重置 IIS。 
 
 ## <a name="specificerrors"></a>详细的错误消息是什么？
 
-`Unable to start debugging on the Web server`消息是泛型。 通常情况下，更具体的消息包含在错误字符串，也许能够帮助你确定问题或搜索更精确的修补程序的原因。 下面是几个附加到主错误消息的更常见的错误消息：
+`Unable to start debugging on the Web server` 是通用消息。 通常情况下，更具体的消息包含在错误字符串，也许能够帮助你确定问题或搜索更精确的修补程序的原因。 下面是几个附加到主错误消息的更常见的错误消息：
 
 - [IIS 不会列出网站相匹配的启动 url](#IISlist)
 - [Web 服务器配置不正确](#web_server_config)
@@ -57,7 +57,7 @@ ms.locfileid: "31478247"
 
 ## <a name="IISlist"></a> IIS 不会列出网站相匹配的启动 url
 
-- 重新启动 Visual Studio 以管理员身份，然后重试调试。 （某些 ASP.NET 调试方案需要提升的权限。）
+- 以管理员身份重新启动 Visual Studio ，然后重试调试。 （某些 ASP.NET 调试方案需要提升权限。）
 
     你可以配置 Visual Studio 始终以管理员身份运行，请右键单击 Visual Studio 快捷方式图标，选择**属性 > 高级**，然后选择要始终以管理员身份运行。
 
@@ -67,9 +67,9 @@ ms.locfileid: "31478247"
 
 ## <a name="unabletoconnect"></a> 无法连接到 web 服务器
 
-- 是否在同一台计算机上运行 Visual Studio 和 Web 服务器和调试使用**F5** (而不是**附加到进程**)？ 打开项目属性，并确保将项目配置为连接到正确的 Web 服务器并启动 URL。 (打开**属性 > Web > 服务器**或**属性 > 调试**具体取决于你的项目类型。 对于 Web 窗体项目，打开**属性页 > 启动选项 > 服务器**。)
+- 是否在同一台计算机上运行 Visual Studio 和 Web 服务器，并使用**F5** (而不是**附加到进程**)进入调试？ 打开项目属性，并确保将项目配置为连接到正确的 Web 服务器并启动 URL。 (打开**属性 > Web > 服务器**或**属性 > 调试** 具体取决于你的项目类型。 对于 Web 窗体项目，打开**属性页 > 启动选项 > 服务器**。)
 
-- 否则为请重新启动应用程序池，然后重置 IIS。 有关详细信息，请参阅[检查 IIS 配置](#vxtbshttpservererrorsthingstocheck)。
+- 否则，请重新启动应用程序池，然后重置 IIS。 有关详细信息，请参阅[检查 IIS 配置](#vxtbshttpservererrorsthingstocheck)。
 
 ## <a name="webservertimeout"></a> Web 服务器未及时响应
 
@@ -82,23 +82,23 @@ ms.locfileid: "31478247"
 
 ## <a name="server_error"></a> 远程服务器返回了错误
 
-检查你[IIS 日志文件](https://support.microsoft.com/help/943891/the-http-status-code-in-iis-7-0--iis-7-5--and-iis-8-0)错误子代码和其他信息，以及此 IIS 7[博客文章](https://blogs.iis.net/tomkmvp/troubleshoot-a-403)。
+检查[IIS 日志文件](https://support.microsoft.com/help/943891/the-http-status-code-in-iis-7-0--iis-7-5--and-iis-8-0)错误子代码和其他信息，以及此 IIS 7[博客文章](https://blogs.iis.net/tomkmvp/troubleshoot-a-403)。
 
 此外，以下是一些常见的错误代码和一些建议。
-- (403) 禁止访问。 有许多可能的原因，此错误，因此请检查您的日志文件和网站的 IIS 安全设置。 请确保服务器的 web.config 包含`debug=true`编译元素中。 请确保你的 Web 应用程序文件夹有正确的权限并验证你的应用程序池配置正确 （密码可能已更改）。 请参阅[检查 IIS 配置](#vxtbshttpservererrorsthingstocheck)。 如果这些设置是否已正确和本地调试，还验证连接到正确的服务器类型和 URL (在**属性 > Web > 服务器**或**属性 > 调试**，具体取决于你的项目类型）。
+- (403) 禁止访问。此错误有许多可能的原因，因此请检查您的日志文件和网站的 IIS 安全设置。 请确保服务器的 web.config 包含`debug=true`编译元素中。 请确保你的 Web 应用程序文件夹有正确的权限并验证你的应用程序池配置正确 （密码可能已更改）。 请参阅[检查 IIS 配置](#vxtbshttpservererrorsthingstocheck)。 如果这些设置是否已正确和本地调试，还验证连接到正确的服务器类型和 URL (在**属性 > Web > 服务器**或**属性 > 调试**，具体取决于你的项目类型）。
 - 不可用 (503) 服务器。 由于错误或配置更改，应用程序池可能已停止。 重新启动应用程序池。
 - (404) 找不到。 请确保应用程序池配置为 ASP.NET 的正确版本。
 
 ## <a name="aspnet"></a> 无法启动 ASP.NET 调试
 
 - 重新启动应用程序池和重置 IIS。 有关详细信息，请参阅[检查 IIS 配置](#vxtbshttpservererrorsthingstocheck)。
-- 如果进行 URL 重写时，测试与任何 URL 重写基本 web.config。 请参阅**注意**有关 URL 重写中的模块[检查 IIS 配置](#vxtbshttpservererrorsthingstocheck)。
+- 如果正在 URL 重写，测试一个基本 web.config，没有 URL 重写的配置。 请参阅 **注意** 有关 URL 重写中的模块[检查 IIS 配置](#vxtbshttpservererrorsthingstocheck)。
 
 ## <a name="cannot_connect"></a> 调试器无法连接到远程计算机
 
-如果正在进行本地调试，因为 Visual Studio 是一个 32 位应用程序中，因此它使用 64 位版远程调试器来调试 64 位应用程序可能发生此错误。 打开项目属性，并确保将项目配置为连接到正确的 Web 服务器和 URL。 (打开**属性 > Web > 服务器**或**属性 > 调试**具体取决于你的项目类型。)
+如果正在本地调试，因为 Visual Studio 是一个 32 位应用程序中，所以它使用 64 位版远程调试器来调试 64 位应用程序时可能发生此错误。 打开项目属性，并确保将项目配置为连接到正确的 Web 服务器和 URL。 (打开**属性 > Web > 服务器**或**属性 > 调试**具体取决于你的项目类型。)
 
-此外，如果你使用的主机文件，请确保配置正确。 例如，主机文件中必须包含相同的项目 URL 如下所示项目属性中，**属性 > Web > 服务器**或**属性 > 调试**，具体取决于项目类型。
+此外，如果你使用HOSTS文件，请确保配置正确。 例如，HOSTS文件中必须包含相同的项目 URL 在项目属性中，**属性 > Web > 服务器**或**属性 > 调试**，具体取决于项目类型。
 
 ## <a name="see_help"></a> 请参阅有关常见配置错误的帮助。 运行在调试器外部的网页，可能会提供进一步的信息。
 
