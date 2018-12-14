@@ -108,30 +108,30 @@ ms.locfileid: "31478247"
 
 ##  <a name="vxtbshttpservererrorsthingstocheck"></a> 请检查您的 IIS 配置
 
-后执行步骤此处详细描述来解决此问题，并在再次尝试调试前，你可能还需要重置 IIS。 你可以执行该操作通过打开提升的命令提示符并键入`iisreset`。 
+在详细介绍了解决问题的步骤之后，在再次尝试调试前，你可能还需要重置 IIS。 你可以通过打开命令提示符并键入 `iisreset` 执行该操作。 
 
 * 停止并重新启动 IIS 应用程序池，然后重试。 
 
     由于出错，应用程序池可能已停止。 或者，你所做的另一个配置更改可能需要你停止并重新启动应用程序池。
     
     > [!NOTE]
-    > 如果保留停止应用程序池，你可能需要从控制面板卸载 URL 重写模块。 你可以重新安装它使用 Web 平台安装程序 (WebPI)。 大量的系统升级后可能出现此问题。
+    > 如果应用程序池保持停止，你可能需要从控制面板卸载 URL 重写模块。 你也可以使用 Web 平台安装程序 (WebPI) 重新安装它。 大量的系统升级后可能出现此问题。
 
-* 请检查您的应用程序池配置、 其如果需要更正，然后重试。
+* 请检查您的应用程序池配置，如果需要就进行更正，然后重试。
 
-    可能的版本不匹配 Visual Studio 项目的 ASP.NET 配置应用程序池。 更新应用程序池中的 ASP.NET 版本并重新启动它。 有关详细信息，请参阅[IIS 8.0 使用 ASP.NET 3.5 和 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)。
+    可能 Visual Studio 项目版本不匹配 ASP.NET 配置的应用程序池。 更新应用程序池中的 ASP.NET 版本并重新启动它。 有关详细信息，请参阅[IIS 8.0 使用 ASP.NET 3.5 和 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)。
 
     此外，如果密码凭据已更改，你可能需要在你的应用程序池或网站中更新它们。  在应用程序池中，更新中的凭据**高级设置 > 进程模型 > 标识**。 对于网站，更新中的凭据**基本设置 > 作为连接...**.重新启动应用程序池。
     
 * 请检查你的 Web 应用程序文件夹有正确的权限。
 
-    请确保你为提供 IIS_IUSRS，IUSR，或与特定用户关联[应用程序池](/iis/manage/configuring-security/application-pool-identities)读取和执行的 Web 应用程序文件夹的权限。 修复该问题并重新启动应用程序池。
+    请确保你提供 IIS_IUSRS、IUSR、或与特定用户关联[应用程序池](/iis/manage/configuring-security/application-pool-identities)读取和执行的 Web 应用程序文件夹的权限。 修复该问题并重新启动应用程序池。
 
 * 请确保在 IIS 上安装正确版本的 ASP.NET。
 
-    ASP.NET 在 IIS 上和 Visual Studio 项目中的不匹配的版本可能会导致此问题。 你可能需要在 web.config 中设置的 framework 版本。若要在 IIS 上安装 ASP.NET，请使用[Web 平台安装程序 (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)。 另请参阅[IIS 8.0 使用 ASP.NET 3.5 和 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)或为 ASP.NET Core[使用 IIS 的 Windows 上的主机](https://docs.asp.net/en/latest/publishing/iis.html)。
+     IIS 中的ASP.NET 与 Visual Studio 项目的版本不匹配可能会导致此问题。 你可能需要在 web.config 中设置的 framework 版本。若要在 IIS 上安装 ASP.NET，请使用[Web 平台安装程序 (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)。 另请参阅[IIS 8.0 使用 ASP.NET 3.5 和 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)或为 ASP.NET Core[使用 IIS 的 Windows 上的主机](https://docs.asp.net/en/latest/publishing/iis.html)。
   
-* 如果你使用的仅为 IP 地址，则解决验证错误
+* 如果只使用 IP 地址，则解决身份验证错误
 
      默认情况下，IP 地址被假定为 Internet 的一部分，而在 Internet 上不进行 NTLM 身份验证。 如果您的网站配置为要求身份验证的 IIS 中，此身份验证失败。 若要更正此问题，你可以指定远程计算机而不是 IP 地址的名称。
      
