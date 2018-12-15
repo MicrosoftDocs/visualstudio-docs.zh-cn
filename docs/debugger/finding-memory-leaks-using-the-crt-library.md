@@ -161,7 +161,7 @@ void main() {
 }
 ```  
 
-在 Visual Studio 中运行此代码时调试器中调用`_CrtDumpMemoryLeaks`生成中的报表**输出**看起来类似于的窗口：  
+在 Visual Studio 调试器中运行此代码，调用`_CrtDumpMemoryLeaks` 在**输出**窗口中生成中的报表看起来类似于如下：  
 
 ```Output  
 Detected memory leaks!
@@ -172,14 +172,14 @@ c:\users\username\documents\projects\debug_new\debug_new.cpp(20) : {75}
 Object dump complete.
 ```  
 
-此输出的第 20 行已泄漏的分配的报告*debug_new.cpp*。  
+此分配泄漏报告位于 *debug_new.cpp* 第 20 行。  
 
 >[!NOTE]
->我们不建议创建一个名为的预处理器宏`new`，或任何其他语言关键字。 
+>我们不建议创建一个名为`new`的预处理器宏，或任何其他语言关键字。 
 
 ## <a name="set-breakpoints-on-a-memory-allocation-number"></a>内存分配编号上设置断点  
 
-如果分配了泄漏内存块，内存分配编号会通知你。 块内存分配编号为 18，例如，是内存的应用程序运行期间分配的第 18 块。 CRT 报告包含运行期间，其中包括 CRT 库和 MFC 等其他库由分配所有内存块分配情况。 因此，内存分配块编号 18 可能不是分配你的代码的第 18 内存块。 
+如果分配了泄漏内存块，内存分配编号会通知你。 块内存分配编号为 18，例如，是应用程序运行期间分配的第 18 块内存。 CRT 报告包含运行期间，其中包括 CRT 库和 MFC 等其他库由分配所有内存块分配情况。 因此，内存分配块编号 18 可能不是你代码分配的第 18 内存块。 
 
 可以使用分配编号在内存分配位置设置断点。  
 
