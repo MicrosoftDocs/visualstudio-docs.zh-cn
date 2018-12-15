@@ -46,9 +46,9 @@ ms.locfileid: "50050100"
 
 ## <a name="enable-memory-leak-detection"></a>启用内存泄漏检测  
 
-检测内存泄漏是 C/c + + 调试器和 C 运行时库 (CRT) 的主要工具调试堆函数。  
+检测内存泄漏的主要工具是 C/C++ 调试器和 C 运行时库 (CRT) 调试堆函数。  
 
-若要启用调试堆的所有函数，在 c + + 程序中，按以下顺序包含以下语句：  
+若要启用调试堆的所有函数，在 C++ 程序中，按以下顺序包含以下语句：  
 
 ```cpp
 #define _CRTDBG_MAP_ALLOC  
@@ -58,15 +58,15 @@ ms.locfileid: "50050100"
 
 `#define` 语句将 CRT 堆函数的基础版本映射到对应的调试版本。 如果您忽略`#define`语句，为内存泄漏转储[不够详尽](#interpret-the-memory-leak-report)。  
 
-包括*crtdbg.h*映射`malloc`并`free`到其调试版本中，函数[_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg)并[_free_dbg](/cpp/c-runtime-library/reference/free-dbg)，它们将跟踪内存分配和解除分配。 此映射只在包含 `_DEBUG`的调试版本中发生。 发布版本使用普通的 `malloc` 和 `free` 函数。  
+包括 *crtdbg.h* 头文件将映射`malloc`和`free` 为其调试版本函数[_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg)和[_free_dbg](/cpp/c-runtime-library/reference/free-dbg)，它们将跟踪内存分配和解除分配。 此映射只在包含 `_DEBUG`的调试版本中发生。 发布版本使用普通的 `malloc` 和 `free` 函数。  
 
-通过使用上面的语句启用调试堆函数后，将调用[_CrtDumpMemoryLeaks](/cpp/c-runtime-library/reference/crtdumpmemoryleaks)之前应用程序退出时显示的内存泄漏报告的应用程序退出点。  
+使用上面的语句启用调试堆函数后，将在应用结束时，在出口点之前，放置 [_CrtDumpMemoryLeaks](/cpp/c-runtime-library/reference/crtdumpmemoryleaks) 显示内存泄漏报告。  
 
 ```cpp
 _CrtDumpMemoryLeaks();  
 ```  
 
-如果您的应用程序有多个退出，无需手动设置`_CrtDumpMemoryLeaks`在每个退出点。 若要使自动调用`_CrtDumpMemoryLeaks`在每个退出点，将调用`_CrtSetDbgFlag`使用如下所示的位域对应用程序的开头：
+如果您的应用程序有多个退出，无需在每个退出点手动设置`_CrtDumpMemoryLeaks`。 若要自动在每个退出点调用`_CrtDumpMemoryLeaks` ，使用此处的位字段在应用程序开头调用 `_CrtSetDbgFlag` ：
 
 ```cpp
 _CrtSetDbgFlag ( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );  
