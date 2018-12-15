@@ -72,9 +72,9 @@ _CrtDumpMemoryLeaks();
 _CrtSetDbgFlag ( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );  
 ```  
 
-默认情况下， `_CrtDumpMemoryLeaks` 将内存泄漏报告输出到  “输出”窗口的  “调试”窗格中。 如果使用库，该库可能会将输出重置到另一位置。 
+默认情况下， `_CrtDumpMemoryLeaks` 在 **输出** 窗口的  **调试** 窗口中进行内存泄漏报告。 如果使用库，该库可能会将输出重置到另一位置。 
 
-可以使用`_CrtSetReportMode`该报告重定向到其他位置，或返回到**输出**窗口如下所示：  
+可以使用 `_CrtSetReportMode` 该报告重定向到其他位置，或如下所示返回到 **输出** 窗口：  
 
 ```cpp
 _CrtSetReportMode( _CRT_ERROR, _CRTDBG_MODE_DEBUG );  
@@ -82,7 +82,7 @@ _CrtSetReportMode( _CRT_ERROR, _CRTDBG_MODE_DEBUG );
 
 ## <a name="interpret-the-memory-leak-report"></a>解释内存泄漏报告  
 
-如果应用没有定义`_CRTDBG_MAP_ALLOC`， [_CrtDumpMemoryLeaks](/cpp/c-runtime-library/reference/crtdumpmemoryleaks)显示如下所示的内存泄漏报告：  
+如果应用没有定义 `_CRTDBG_MAP_ALLOC` ， [_CrtDumpMemoryLeaks](/cpp/c-runtime-library/reference/crtdumpmemoryleaks)显示如下所示的内存泄漏报告：  
 
 ```cmd
 Detected memory leaks!  
@@ -103,23 +103,23 @@ normal block at 0x00780E80, 64 bytes long.
 Object dump complete.  
 ```  
 
-第二个报表显示首次分配泄漏的内存的文件名和行号。  
+第二个报表显示首次分配泄漏内存的文件名和行号。  
 
 该值指示是否定义`_CRTDBG_MAP_ALLOC`，内存泄漏报告将显示：  
 
-- 内存分配编号，即`18`在示例  
-- 块类型，`normal`在示例中。  
-- 十六进制内存位置`0x00780E80`在示例中。  
-- 块的大小`64 bytes`在示例中。  
+- 内存分配编号，在示例中为 `18`  
+- 块类型，在示例中为 `normal` 。  
+- 十六进制内存位置，在示例中为 `0x00780E80`。  
+- 块的大小，在示例中为 `64 bytes`。  
 - 块中前 16 个字节的数据（十六进制形式）。  
 
-内存块类型*正常*，*客户端*，或*CRT*。  “普通块”是由程序分配的普通内存。  “客户端块”是由 MFC 程序用于需要析构函数的对象的特殊类型内存块。 MFC `new` 运算符根据正在创建的对象的需要创建普通块或客户端块。 
+内存块类型*正常*、*客户端*、或*CRT*。  *普通块* 是由程序分配的普通内存。  *客户端块* 是由 MFC 程序用于需要析构函数的对象的特殊类型内存块。 MFC `new` 运算符根据正在创建的对象的需要创建普通块或客户端块。 
 
- “CRT 块”是由 CRT 库为自己使用而分配的内存块。 CRT 库处理这些块，解除分配，因此 CRT 块不会显示在内存泄漏报告中，除非使用 CRT 库的严重问题。  
+ *CRT 块* 是由 CRT 库为自己使用而分配的内存块。 CRT 库处理这些块，解除分配，因此 CRT 块不会显示在内存泄漏报告中，除非使用 CRT 库的严重问题。  
 
-内存泄漏报告中绝对不会出现另外两个内存块类型。 一个*释放的块*是已释放，以便根据定义不会泄漏的内存。 *忽略块*是已显式标记要从内存泄漏报告中排除。  
+内存泄漏报告中绝对不会出现另外两个内存块类型。 一个*释放的块*是已释放内存块，以便定义不会泄漏的内存。 *忽略块* 是已标记要从内存泄漏报告中排除。  
 
-以前的技术确定内存泄漏的内存分配使用标准 CRT`malloc`函数。 如果您的程序分配内存使用 c + +`new`运算符，但是，你可能只能看到文件名和行号位置`operator new`调用`_malloc_dbg`内存泄漏报告中。 若要创建更有用的内存泄漏报告，可以编写如下所示来报告进行分配的行的宏： 
+以前的技术确定内存泄漏的内存分配使用标准 CRT`malloc`函数。 如果您的程序内存分配使用 c + +`new`运算符，但是，你可能只能看到`operator new`调用`_malloc_dbg`内存泄漏报告中文件名和行号位置。 若要创建更有用的内存泄漏报告，可以编写如下所示来报告进行分配的行的宏： 
 
 ```cpp  
 #ifdef _DEBUG
@@ -131,7 +131,7 @@ Object dump complete.
 #endif
 ```  
 
-现在可以替换`new`运算符使用`DBG_NEW`在代码中的宏。 在调试版本中，`DBG_NEW`使用的全局重载`operator new`采用附加参数的块类型、 文件和行号。 重载`new`调用`_malloc_dbg`记录的额外信息。 内存泄漏报告显示文件名和行号泄漏的对象的分配位置。 发行版本仍然使用默认值`new`。 下面是技术的示例：  
+现在可以使用`DBG_NEW`宏在代码中的替换`new`运算符。 在调试版本中，`DBG_NEW`使用全局重载`operator new`，采用块类型、 文件和行号的附加参数。 重载`new`为`_malloc_dbg`， 用其记录额外信息。 内存泄漏报告显示号泄漏的对象的分配位置，包含文件名和行。 发行版本仍然使用默认值`new`。 下面是技术的示例：  
 
 ```cpp  
 // debug_new.cpp
