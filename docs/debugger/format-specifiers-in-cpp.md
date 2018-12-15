@@ -1,5 +1,5 @@
 ---
-title: 格式说明符在调试器中 （c + +） |Microsoft Docs
+title: 在调试器中的（C++）格式说明符 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -36,7 +36,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49820494"
 ---
-# <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>在 c + + 在 Visual Studio 调试器中的格式说明符
+# <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>在 Visual Studio 调试器中的C++格式说明符
 你可以使用格式说明符更改在“监视”  窗口中显示值所用的格式。  
   
  此外可以使用中的格式说明符**即时**窗口中，**命令**窗口中，在[跟踪点](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)，并且即使在源窗口中。 如果暂停这些窗口中的表达式时，将在数据提示中显示结果。 “数据提示”显示格式说明符。  
