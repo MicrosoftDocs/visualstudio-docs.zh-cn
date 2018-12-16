@@ -1,7 +1,7 @@
 ---
-title: 格式说明符在调试器中 (C#) |Microsoft Docs
+title: 调试器中(C#)格式说明符 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: "11/21/2018"
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
@@ -34,13 +34,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 06/25/2018
 ms.locfileid: "36756855"
 ---
-# <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>在 C# 中的 Visual Studio 调试器中的格式说明符
-你可以使用格式说明符更改在“监视”  窗口中显示值所用的格式。 此外可以使用中的格式说明符**即时**窗口中，**命令**窗口中，在[跟踪点](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)，并且即使在源窗口中。 如果将鼠标悬停在这些窗口中的表达式上，结果将在数据提示中显示。 数据提示将在数据提示的显示内容中反映格式说明符。  
+# <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>在 Visual Studio 调试器中的（C#）格式说明符
+你可以使用格式说明符更改在 **监视** 窗口中显示值的格式。 此外可以在 **即时** 窗口、**命令**窗口、[跟踪点](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)、源窗口中使用格式说明符。 如果你在暂停在表达式上，在这些窗口结果将以已指定的格式显示[DataTip](../debugger/view-data-values-in-data-tips-in-the-code-editor.md) 。  
   
- 若要使用格式说明符，请键入后跟逗号的表达式。 在逗号后面，添加适当的说明符。  
+ 若要使用格式说明符，在适当的说明符和逗号后输入一个变量表达式。  
   
-## <a name="using-format-specifiers"></a>使用格式说明符  
- 如果你有以下代码：  
+## <a name="using-format-specifiers"></a>设置格式说明符  
+我们使用以下代码：  
   
 ```csharp  
 {  
@@ -50,12 +50,12 @@ ms.locfileid: "36756855"
 }  
 ```  
   
- 添加`my_var1`变量到监视窗口 (调试时，**调试 > Windows > 观看 > 监视 1**) 并将显示设置为十六进制 (在**监视**窗口中，右键单击该变量和选择**十六进制显示**)。 现在“监视”  窗口将显示它包含值 0x0065。 若要看到表示为十进制整数而不是十六进制整数的该值，请在“名称”列的变量名之后添加十进制格式说明符：“, d” 。 “值”列现在显示十进制值 101  
+ 在调试时，添加`my_var1`变量到 **监视** 窗口，**调试 > Windows > 观看 > 监视 1**。然后，右键单击该变量，选择**十六进制显示**。 现在 **监视**  窗口将显示它包含值 0x0065。 若要看到该值表示为十进制整数而不是十六进制整数，请在**名称** 列的变量名之后添加十进制格式说明符 **, d** 。 **值**列现在显示十进制值 **101**。  
   
  ![WatchFormatCSharp](../debugger/media/watchformatcsharp.png "WatchFormatCSharp")  
   
 ## <a name="format-specifiers"></a>格式说明符  
- 下表显示调试器所识别的 C# 格式说明符。  
+ 下表显示 Visual Studio 调试器中的 C# 格式说明符。  
   
 |说明符|格式|原始监视值|显示|  
 |---------------|------------|--------------------------|--------------|  
@@ -70,5 +70,5 @@ ms.locfileid: "36756855"
 |results|与实现 IEnumerable 或 IEnumerable 的类型的变量一起使用\<T >，通常在查询表达式的结果。 仅显示包含查询结果的成员。|显示所有成员。|显示满足查询条件的成员。|  
   
 ## <a name="see-also"></a>请参阅  
- [监视窗口和快速监视 Windows](../debugger/watch-and-quickwatch-windows.md)   
+ [监视窗口和快速监视窗口](../debugger/watch-and-quickwatch-windows.md)   
  [“自动”和“局部变量”窗口](../debugger/autos-and-locals-windows.md)
