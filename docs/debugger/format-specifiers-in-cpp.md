@@ -1,28 +1,28 @@
 ---
 title: 在调试器中的（C++）格式说明符 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
-ms.technology: vs-ide-debug
-ms.topic: conceptual
-f1_keywords:
-- vs.debug
-dev_langs:
-- CSharp
-- VB
-- FSharp
-- C++
-helpviewer_keywords:
-- QuickWatch dialog box, format specifiers in C++
-- variables [debugger], watch variable symbols
-- symbols, watch variable formatting
-- QuickWatch dialog box, using format specifiers
-- expressions [C++], format specifiers
-- specifiers, watch variable format
-- specifiers
-- Watch window, format specifiers in C++
-- watch variable symbols
-- format specifiers, debugger
-- debugger, format specifiers recognized by
+ms.date: "11/20/2018"
+ms.technology: "vs-ide-debug"
+ms.topic: "conceptual"
+f1_keywords: 
+  - "vs.debug"
+dev_langs: 
+  - "CSharp"
+  - "VB"
+  - "FSharp"
+  - "C++"
+helpviewer_keywords: 
+  - "QuickWatch dialog box, format specifiers in C++"
+  - "variables [debugger], watch variable symbols"
+  - "symbols, watch variable formatting"
+  - "QuickWatch dialog box, using format specifiers"
+  - "expressions [C++], format specifiers"
+  - "specifiers, watch variable format"
+  - "specifiers"
+  - "Watch window, format specifiers in C++"
+  - "watch variable symbols"
+  - "format specifiers, debugger"
+  - "debugger, format specifiers recognized by"
 ms.assetid: 0f6f3b7c-ce2c-4b4d-b14f-7589dbed5444
 author: mikejo5000
 ms.author: mikejo
@@ -37,18 +37,15 @@ ms.lasthandoff: 10/23/2018
 ms.locfileid: "49820494"
 ---
 # <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>在 Visual Studio 调试器中的C++格式说明符
-你可以使用格式说明符更改在“监视”  窗口中显示值所用的格式。  
+你可以在 **监视** 窗口中使用格式说明符更改显示值的格式。  
   
- 此外可以使用中的格式说明符**即时**窗口中，**命令**窗口中，在[跟踪点](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)，并且即使在源窗口中。 如果暂停这些窗口中的表达式时，将在数据提示中显示结果。 “数据提示”显示格式说明符。  
+ 此外在 **即时** 窗口、**命令** 窗口、 [跟踪点](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints) 、甚至源窗口中可以使用格式说明符。 如果在这些窗口中暂停一个表达式，将在数据提示中显示结果。 “数据提示” 显示格式说明符。  
   
 > [!NOTE]
->  如果 Visual Studio 本机调试器更改为新的调试引擎中，添加了一些新的格式说明符和某些旧的已删除。 当你使用 C++/CLI 进行互操作（混合本机和托管）调试时，仍使用较早的调试器。 本主题的以下各部分介绍每种调试引擎的格式说明符。
-> 
-> - [格式说明符](#BKMK_Visual_Studio_2012_format_specifiers) 描述新的调试引擎中的格式说明符。  
->   -   [使用 C++/CLI 的互操作调试的格式说明符](#BKMK_Format_specifiers_for_interop_debugging_and_C___edit_and_continue) 描述较早的调试引擎中的格式说明符。  
+>  如果 Visual Studio 本机调试器更改为新的调试引擎，将添加一些新的格式说明符，并移除一些旧的格式说明符。 当你使用 C++/CLI 进行互操作（混合本机和托管）调试时，仍使用较早的调试器。
   
 ## <a name="using-format-specifiers"></a>使用格式说明符  
- 如果你有以下代码：  
+ 我们使用以下代码：  
   
 ```C++  
 int main() {  
@@ -58,12 +55,12 @@ int main() {
 }  
 ```  
   
- 添加`my_var1`变量**观看**窗口 (调试时，**调试 > Windows > 观看 > 监视 1**)，然后将显示设置为十六进制 (在**观看**窗口中，右键单击该变量，然后选择**十六进制显示**)。 现在，“监视”窗口显示其包含值 0x0065。 若要查看表示为字符而不是整数的该值，在“名称”列中，变量名之后添加字符格式说明符“, c” 。 “值”  列现在显示为 101 'e' 。  
+ 在调试时添加`my_var1`变量到 **监视** 窗口，**调试** > **窗口** > **监视** > **监视 1**，然后右键点击变量，选择**十六进制显示**。 现在，**监视** 窗口显示其值为 0x0065。 若要将该值显示为字符而不是整数，首先右键点击取消选择**十六进制显示**，在 **名称** 列中变量名之后，添加字符格式说明符 **, c** 。 **值** 列现在显示为 **101 'e'** 。  
   
  ![WatchFormatCPlus1](../debugger/media/watchformatcplus1.png "WatchFormatCPlus1")  
   
 ##  <a name="BKMK_Visual_Studio_2012_format_specifiers"></a> 格式说明符  
- 下表显示了可以在 Visual Studio 中使用的格式说明符。 加粗的说明符不支持使用 C++/CLI 的互操作调试。  
+ 下表显示了可以在 Visual Studio 中使用的格式说明符。 加粗的说明符只支持重新设置的本机调试器，不支持使用 C++/CLI 的互操作调试。  
   
 |说明符|格式|原始监视值|显示的值|  
 |---------------|------------|--------------------------|---------------------|  
@@ -92,7 +89,7 @@ int main() {
 |!|原始格式，忽略任何数据类型视图自定义项|\<自定义表示形式 >|4|  
   
 > [!NOTE]
->  如果存在“hv”  格式说明符，调试器会尝试确定缓冲区的长度并显示相应的元素数。 由于调试器并非总是可以查找确切的数组缓冲区大小，只要可能时，就应该使用大小说明符 `(pBuffer,[bufferSize])` 。 “Hv”  格式说明符用于缓冲区大小尚不可使用的情况。  
+>  如果存在 **hv** 格式说明符，调试器会尝试确定缓冲区的长度并显示相应的元素数。 由于调试器并非总是可以查找确切的数组缓冲区大小，只要可能时，就应该使用大小说明符 `(pBuffer,[bufferSize])` 。 **hv**  格式说明符用于缓冲区大小尚不可使用的情况。  
   
 ###  <a name="BKMK_Size_specifiers_for_pointers_as_arrays_in_Visual_Studio_2012"></a> 指针的大小说明符作为数组  
  如果有一个指针指向要以数组形式查看的对象，则可以使用一个整数或表达式来指定数组中元素的数量：  
@@ -127,7 +124,7 @@ int main() {
 |!|原始格式，忽略任何数据类型视图自定义项|\<自定义表示形式 >|4|  
   
 ###  <a name="BKMK_Format_specifiers_memory_locations_in_interop_debugging_and_C___edit_and_continue"></a> 与 C++/CLI 进行交互操作调试的格式说明符内存位置  
- 下表包含用于内存位置的格式化符号。 可以使用带有计算为位置的任何值或表达式的内存位置说明符。  
+ 下表包含用于内存位置的格式化符号。 您可以使用内存位置指定符，该指定符的任何值或表达式计算结果为某个位置。  
   
 |符号|格式|原始监视值|显示的值|  
 |------------|------------|--------------------------|---------------------|  
@@ -139,7 +136,7 @@ int main() {
 |**mq**|2 个双字|0x0012ffac|0x0012ffac 7ffdf00000000000 5f441a790012fdd4|  
 |**mu**|双字节字符 (Unicode)|0x0012ffac|0x0012ffac 8478 77f4 ffff ffff 0000 0000 0000 0000|  
   
-###  <a name="BKMK_Size_specifier_for_pointers_as_arrays_in_interop_debugging_and_C___edit_and_continue"></a> 作为使用 C + 互操作调试中的数组的指针的大小说明符 + CLI  
+###  <a name="BKMK_Size_specifier_for_pointers_as_arrays_in_interop_debugging_and_C___edit_and_continue"></a> 在 C++/CLI 互操作调试中，指针作为数组的大小说明符   
  如果有一个指针指向要以数组形式查看的对象，则可以使用一个整数来指定数组中元素的数量：  
   
 |说明符|格式|Expression|显示的值|  
