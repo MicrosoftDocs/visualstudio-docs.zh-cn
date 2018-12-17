@@ -20,7 +20,7 @@ ms.lasthandoff: 04/18/2018
 ms.locfileid: "31471695"
 ---
 # <a name="general-tab-process-properties-dialog-box"></a>常规选项卡，进程属性对话框
-使用**常规**选项卡以找出有关特定的进程的详细信息。 若要显示[进程属性对话框](../debugger/process-properties-dialog-box.md)，移动焦点到[进程视图](../debugger/processes-view.md)窗口。 在树中，选择任何进程节点，然后从**视图**菜单选择**属性**。  
+使用**常规**选项卡以找出有关特定的进程的详细信息。 若要显示[进程属性对话框](../debugger/process-properties-dialog-box.md)，移动焦点到[进程视图](../debugger/processes-view.md)窗口。 在树中选择任何进程节点，然后从**视图**菜单选择**属性**。  
   
  以下设置可在**常规**选项卡中获得：  
   
