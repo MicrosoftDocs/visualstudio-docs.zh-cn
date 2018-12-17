@@ -105,36 +105,36 @@ ms.locfileid: "51730677"
     告知 Visual Studio 调试器下载源文件 *.pdb* 文件包含源链接信息。 源链接的详细信息，请参阅[源链接规范](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/source_link.md)。
 
 > [!IMPORTANT]
->  由于源链接将使用 http 或 https 下载文件，因此请确保您信任 *.pdb* 文件。
+>  由于源链接将使用 http 或 https 下载文件，因此请确保您信任该 *.pdb* 文件。
 
-- **对于所有源链接请求，请回到 Git 凭据管理器身份验证**:  
-    当启用源链接支持，如果源链接请求身份验证时失败，Visual Studio 将调用 Git 凭据管理器。
+- **对于所有源链接请求，请回退到 Git 凭据管理器身份验证**:  
+    当启用源链接支持，如果源链接请求身份验证失败，Visual Studio 将调用 Git 凭据管理器。
 
 **高亮显示断点所在的整行和当前语句 （仅限C++）**:  
 调试器突出显示断点或当前语句时，会高亮显示断点所在的整行。
 
-**要求源文件与完全匹配的原始版本**:  
-指示调试器验证源文件是否与用于生成正在调试的可执行文件的源代码版本匹配。 当版本不匹配时，系统会提示以查找匹配的源。 如果未找到匹配源，则在调试过程中不会显示源代码。
+**要求源文件与原始版本完全匹配**:  
+指示调试器对于正在调试的可执行文件，验证指定的源代码版本与生成其的是否匹配。 当版本不匹配时，系统会提示查找匹配源。 如果未找到匹配源，则在调试过程中不会显示源代码。
 
-**将所有输出窗口文本重都定向到即时窗口**:  
-将发送的所有调试器消息将通常显示在**输出**到窗口**即时**窗口相反。
+**将所有输出窗口文本都重定向到即时窗口**:  
+将通常显示在 **输出** 窗口中的调试器消息，发送到 **即时** 窗口。
 
-**变量窗口中显示对象的原始结构**:  
-关闭所有对象结构视图自定义。 有关视图自定义的详细信息，请参阅[创建.managed 对象的自定义视图](../debugger/create-custom-views-of-dot-managed-objects.md)。
+**在变量窗口中显示对象的原始结构**:  
+关闭所有对象自定义结构视图。 有关视图自定义的详细信息，请参阅[创建.managed 对象的自定义视图](../debugger/create-custom-views-of-dot-managed-objects.md)。
 
 **在模块加载 （仅限托管） 取消 JIT 优化**:  
-如果附加调试器，则在加载模块并编译 JIT 后，禁用托管代码的 JIT 优化。 禁用优化可能更易于调试某些问题，尽管这会降低性能。 如果正在使用“仅我的代码”，则禁用 JIT 优化会导致非用户代码显示为用户代码（“我的代码”）。 有关详细信息，请参阅[JIT 优化和调试](../debugger/jit-optimization-and-debugging.md)。
+在加载模块和附加调试器后编译 JIT 时，禁用托管代码的 JIT 优化。 禁用优化可能更易于调试某些问题，尽管这会降低性能。 如果正在使用“仅我的代码”，则禁用 JIT 优化会导致非用户代码显示为用户代码（“我的代码”）。 有关详细信息，请参阅[JIT 优化和调试](../debugger/jit-optimization-and-debugging.md)。
 
-**启用 JavaScript 调试 （Chrome、 Edge 和 IE） 的 asp.net**:  
-启用脚本调试程序对 ASP.NET 应用程序。 在 Chrome 中的第一次使用，可能需要登录到浏览器来启用已安装的 Chrome 扩展。 禁用此选项可还原为旧行为。
+**启用适用于ASP.NET应用的 JavaScript 调试其 （Chrome、 Edge 和 IE）** :  
+启用对于 ASP.NET 应用程序的脚本调试程序。第一次在 Chrome 中使用时，可能需要登录到浏览器来启用已安装的 Chrome 扩展。 禁用此选项可还原为旧行为。
 
-**适用于 UWP JavaScript 应用 （实验性） 启用 Edge 开发人员工具**:  
-启用适用于 UWP JavaScript 应用在 Edge 中开发人员工具。
+**启动适用于 UWP JavaScript 应用 （实验性）的 Edge 开发人员工具**:  
+启用适用于 UWP JavaScript 应用的 Edge 开发人员工具。
 
-**启用旧版 Chrome JavaScript 调试器 asp.net**:  
-启用旧版 Chrome JavaScript 脚本调试器对 ASP.NET 应用程序。 在 Chrome 中的第一次使用，可能需要登录到浏览器来启用已安装的 Chrome 扩展。
+**启用适用于ASP.NET应用的旧版 Chrome JavaScript 调试器**:  
+启用适用于 ASP.NET 应用程序的旧版 Chrome JavaScript 脚本调试器。 第一次在 Chrome 中使用时，可能需要登录到浏览器来启用已安装的 Chrome 扩展。
 
-**使用启动 Chrome JavaScript 调试时以管理员身份运行 Visual Studio 的实验性方法**:  
+**以管理员身份运行 Visual Studio时，使用实验性方法启动 Chrome JavaScript 调试**:  
 告知 Visual Studio 尝试在 JavaScript 调试期间启动 Chrome 的新方法。
 
 **加载 dll 导出 （仅限本机）**:  
@@ -142,24 +142,24 @@ ms.locfileid: "51730677"
 
 若要查看 DLL 导出表中的可用符号，请使用 `dumpbin /exports`。 符号可用于任何 32 位系统 DLL。 从 `dumpbin /exports` 输出中，可以查看到精确的函数名，包括非字母数字字符。 这对于在函数上设置断点很有用。 DLL 导出表中的函数名在调试器的其他位置似乎被截断了。 调用将按调用顺序列出，当前函数（嵌套最深的函数）位于顶端。 有关详细信息，请参阅 [dumpbin /exports](/cpp/build/reference/dash-exports)。
 
-**显示并行堆栈关系图自下而上**:  
-控制在其中堆栈中的显示的方向**并行堆栈**窗口。
+**自下而上显示并行堆栈关系图**:  
+控制在**并行堆栈**窗口中显示的堆栈方向。
 
 **如果写入的数据未更改值，则忽略 GPU 内存访问异常**:  
-将忽略的数据未更改调试期间检测到的争用条件。 有关详细信息，请参阅[调试 GPU 代码](../debugger/debugging-gpu-code.md)。
+在调试时如果数据未更改，将忽略检测到的争用条件。 有关详细信息，请参阅[调试 GPU 代码](../debugger/debugging-gpu-code.md)。
 
 **使用托管的兼容模式**:  
 将默认调试引擎替换为旧版本，以支持以下方案：
 
-- 使用.NET Framework 语言不C#，Visual Basic 或F#，它提供其自己的表达式计算器 (包括 C + + CLI)。
+- 使用 .NET Framework 除C#以外的语言，Visual Basic 或F#，它提供自己的表达式计算器 (包括 C + + CLI)。
 
-- 你想要在混合的模式调试过程中 c + + 项目启用编辑并继续。
+- 你想要在混合模式调试 C++ 项目过程中,启用编辑并继续。
 
 > [!NOTE]
 > 选择托管兼容模式会禁用仅在默认调试引擎中实现某些功能。
 
 **使用旧C#和 VB 表达式计算器**:  
-调试器将使用 Visual Studio 2013C#或 Visual Basic 表达式计算器而不是基于 Visual Studio 2015 Roslyn 的表达式计算器。
+调试器将使用 Visual Studio 2013 C#或 Visual Basic 表达式计算器而不是基于 Visual Studio 2015 Roslyn 的表达式计算器。
 
 **使用自定义调试器可视化工具可能不安全进程 （仅限托管） 时，则发出警告**:  
 Visual Studio 会警告你如果你使用正在调试的进程中运行代码的自定义调试器可视化工具，因为它可能在运行不安全代码。
