@@ -1,5 +1,5 @@
 ---
-title: 常规选项卡上，处理属性对话框中 |Microsoft 文档
+title: 常规选项卡，进程属性对话框 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -19,10 +19,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/18/2018
 ms.locfileid: "31471695"
 ---
-# <a name="general-tab-process-properties-dialog-box"></a>“进程属性”对话框 ->“常规”选项卡
-使用**常规**选项卡以找出有关特定的进程的详细信息。 若要显示[过程属性对话框中](../debugger/process-properties-dialog-box.md)，焦点移到[进程视图](../debugger/processes-view.md)窗口。 在树中，选择任何进程节点，然后选择**属性**从**视图**菜单。  
+# <a name="general-tab-process-properties-dialog-box"></a>常规选项卡，进程属性对话框
+使用**常规**选项卡以找出有关特定的进程的详细信息。 若要显示[进程属性对话框](../debugger/process-properties-dialog-box.md)，移动焦点到[进程视图](../debugger/processes-view.md)窗口。 在树中，选择任何进程节点，然后从**视图**菜单选择**属性**。  
   
- 以下设置子网上有**常规**选项卡：  
+ 以下设置可在**常规**选项卡中获得：  
   
 |条目|描述|  
 |-----------|-----------------|  
