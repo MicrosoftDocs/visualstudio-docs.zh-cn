@@ -220,44 +220,32 @@ Visual Studio 提供多种工具和用户界面元素，以帮助您调试多线
   
 2. 在**调试**菜单上，单击**开始调试**(**F5**)。  
   
-    Visual Studio 生成该解决方案，应用程序在被调试器附加的情况下开始运行，应用程序在断点处停止。  
+    Visual Studio 将生成该解决方案，应用程序在被调试器附加的情况下开始运行，然后应用程序在断点处停止。  
   
    > [!NOTE]
    > 如果焦点切换到控制台窗口中，单击在[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]窗口，以使焦点返回到[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]。  
   
-3. 在源代码编辑器中，找到包含该断点的行：  
+3. 在源代码编辑器中，找到该断点所在的行。  
   
-   ```csharp  
-   Thread.Sleep(3000);  
-   ```  
-  
-   ```C++  
-   this_thread::sleep_for(chrono::seconds(3)); 
-   ```
+#### <a name="ShowThreadsInSource"></a>发现线程标记  
 
-   ```VB
-   Thread.Sleep(3000)
-   ```    
-  
-#### <a name="ShowThreadsInSource"></a>若要发现线程标记  
+1.  在调试工具栏中，单击**在源中显示线程**按钮![在源中显示线程](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker")。
 
-1.  在调试工具栏中，单击**源中显示线程**按钮![在源中显示线程](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker")。
+2. 按一下 **F11** 使调试器前进一个代码行。
+  
+3.  查看窗口左侧的滚动条槽。 在此行中，你会看到*线程标记* 图标![线程标记](../debugger/media/dbg-thread-marker.png "ThreadMarker") ，类似于两根细线。 线程标记指示线程在此位置停止。
 
-2. 按**F11**一次以前进的调试器一个代码行。
+    线程标记可以被断点部分隐藏。 
   
-3.  查看窗口左侧的滚动条槽。 在此行中，你会看到*线程标记*图标![线程标记](../debugger/media/dbg-thread-marker.png "ThreadMarker") ，类似于两根细线。 线程标记指示线程在此位置停止。
-
-    请注意，可能会通过断点部分隐藏线程标记。 
+4.  将指针悬停在线程标记上。 将出现一个数据提示。 该数据提示将告诉您每个已停止线程的名称和线程 ID 号。 在这种情况下，名称可能是`<noname>`。 
   
-4.  将指针悬停在线程标记上。 屏幕上显示数据提示。 数据提示将告诉您每个已停止线程的名称和线程 ID 号。 在这种情况下，名称可能是`<noname>`。 
-  
-5.  右键单击要查看的快捷菜单上的可用选项的线程标记。
+5.  选择线程标记，以查看快捷菜单上可用的选项。
     
 ## <a name="ParallelStacks"></a>查看线程的位置
 
-在中**并行堆栈**窗口中，您可以切换线程视图之间和 （适用于基于任务的编程） 任务视图，您可以查看每个线程的调用堆栈信息。 在此应用中，我们可以使用线程视图。
+在 **并行堆栈** 窗口中，您可以切换线程视图和 （适用于基于任务的编程） 任务视图，您可以查看每个线程的调用堆栈信息。 在此应用中，我们可以使用线程视图。
 
-1. 打开**并行堆栈**通过选择窗口**调试 > Windows > 并行堆栈**。 您应看到类似于以下内容 （的确切信息将当前的位置每个线程，您的硬件，以及您的编程语言而异）。
+1. 通过选择**调试 > Windows > 并行堆栈**，打开**并行堆栈**窗口。 您应看到类似于以下内容 （的确切信息将当前的位置每个线程，您的硬件，以及您的编程语言而异）。
 
     ![并行堆栈窗口](../debugger/media/dbg-multithreaded-parallel-stacks.png "ParallelStacksWindow")
 
