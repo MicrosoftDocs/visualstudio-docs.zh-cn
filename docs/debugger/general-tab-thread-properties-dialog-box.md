@@ -1,5 +1,5 @@
 ---
-title: 常规选项卡上，线程属性对话框中 |Microsoft 文档
+title: 常规选项卡，线程属性对话框 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -20,10 +20,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/18/2018
 ms.locfileid: "31474601"
 ---
-# <a name="general-tab-thread-properties-dialog-box"></a>“线程属性”对话框 ->“常规”选项卡
-使用此对话框中，若要了解有关特定线程的详细信息。 若要显示此对话框中，将焦点移至[线程视图](../debugger/threads-view.md)窗口中或打开[消息视图](../debugger/messages-view.md)展开一条消息。 在树中，选择任何线程节点，然后选择**属性**从**视图**菜单。  
+# <a name="general-tab-thread-properties-dialog-box"></a>常规选项卡，线程属性对话框
+使用常规选项卡，发现有关特定线程的更多信息。 若要显示此对话框，将焦点移至[线程视图](../debugger/threads-view.md)窗口或打开[消息视图](../debugger/messages-view.md)展开一条消息。 在树中选择任何线程节点，然后从**视图**菜单选择**属性**。  
   
- **线程属性**对话框中包含一个窗格中，**常规**选项卡。以下设置将可用：  
+ **线程属性**对话框中包含一个窗格，**常规**选项卡。以下设置将可用：  
   
 |条目|描述|  
 |-----------|-----------------|  
