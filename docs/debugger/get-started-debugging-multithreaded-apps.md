@@ -2,7 +2,7 @@
 title: 了解如何调试多线程应用程序
 description: 使用 Visual Studio 中的并行堆栈和并行监视窗口进行调试
 ms.custom: H1HackMay2017
-ms.date: 08/01/2018
+ms.date: "11/16/2018"
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
@@ -26,38 +26,38 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49936846"
 ---
-# <a name="get-started-debugging-multithreaded-applications-in-visual-studio"></a>开始调试 Visual Studio 中的多线程应用程序
-Visual Studio 提供多种工具和用户界面元素，以帮助您调试多线程应用程序。 本教程演示如何使用线程标记**并行堆栈**窗口中，**并行监视**窗口中，条件断点，并筛选器断点。 本教程中，只需要几分钟，但完成它将使您熟悉用于调试多线程应用程序的功能。
+# <a name="get-started-debugging-multithreaded-applications"></a>调试多线程应用程序入门
+Visual Studio 提供多种工具和用户界面元素，以帮助您调试多线程应用程序。 本教程演示如何使用线程标记、**并行堆栈**窗口、**并行监视**窗口、条件断点、筛选器断点。 本教程中，只需要几分钟，但完成它将使您熟悉用于调试多线程应用程序的功能。
 
 | | |
 |---------|---------|
 | ![视频的摄像机图标](../install/media/video-icon.png "观看视频") | [观看视频](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugging-Multi-threaded-Apps-in-Visual-Studio-2017-MoZPKMD6D_111787171)上显示了类似的步骤的多线程调试。 |
 
-其他主题提供有关使用其他多线程调试工具的其他信息：
+另外两个主题提供有关使用其他多线程调试工具的额外信息：
 
-- 有关演示如何使用的类似主题**调试位置**工具栏和**线程**窗口中，请参阅[演练： 调试多线程应用程序](../debugger/how-to-use-the-threads-window.md)。
+- 有关演示如何使用**调试位置**工具栏和**线程**窗口，请参阅[演练： 调试多线程应用程序](../debugger/how-to-use-the-threads-window.md)。
 
-- 与使用的示例类似主题<xref:System.Threading.Tasks.Task>（托管代码） 和并发运行时 （c + +），请参阅[演练： 调试并行应用程序](../debugger/walkthrough-debugging-a-parallel-application.md)。 有关适用于最多线程应用程序类型的常规调试技巧，阅读本主题和链接的主题。
+- 使用<xref:System.Threading.Tasks.Task>（托管代码）和并发运行时 （C++）示例，请参阅[演练： 调试并行应用程序](../debugger/walkthrough-debugging-a-parallel-application.md)。 有关对于大多数多线程应用程序类型的常规调试技巧，请阅读本主题和链接的主题。
   
-若要开始学习本教程，需要一个多线程应用程序项目。 请按照下面列出的步骤创建该项目。  
+你首先需要一个多线程应用程序项目。 如下的示例。  
   
-#### <a name="to-create-the-multithreaded-app-project"></a>若要创建多线程应用程序项目  
+#### <a name="create-a-multithreaded-app-project"></a>创建一个多线程应用项目  
   
-1.  上**文件**菜单中，选择**新建**，然后单击**项目**。  
+1.  打开**文件**菜单，选择**新建** > **项目**。  
   
-     此时将出现 “新建项目” 对话框。  
+     此时将出现 **新建项目** 对话框。  
   
-2.  单击所选的语言： **Visual C#**， **Visual c + +**，或**Visual Basic**。  
+2.  选择右侧某个语言： **Visual C#**， **Visual c + +**，或**Visual Basic**。  
   
-3.  下**Windows 桌面**，选择**控制台应用**。  
+3.  **Windows 桌面** 中，选择**控制台应用**。  
   
-4.  在中**名称**框中，键入名称 MyThreadWalkthroughApp。  
+4.  在 **名称** 栏中，键入名称 MyThreadWalkthroughApp。  
   
 5.  单击 **“确定”**。  
   
-     新的控制台项目随即显示。 创建该项目后，将显示源文件。 根据您选择的语言，源文件可能 Program.cs、 MyThreadWalkthroughApp.cpp 或 Module1.vb 调用。  
+     新的控制台项目随即显示。 创建该项目后，将显示源文件。 根据您选择的语言，源文件名称可能是 Program.cs、 MyThreadWalkthroughApp.cpp 或 Module1.vb 。  
   
-6.  删除出现在源代码文件中的代码并将替换此处显示的示例代码。
+6.  删除出现在源代码文件中的代码，并替换为此处显示的示例代码。
 
     ```csharp
     using System;
@@ -67,15 +67,15 @@ Visual Studio 提供多种工具和用户界面元素，以帮助您调试多线
     {
 
         static int count = 0;
-        // The method that will be called when the thread is started.
+        // 此方法将在线程启动时被调用。
         public void InstanceMethod()
         {
             Console.WriteLine(
                 "ServerClass.InstanceMethod is running on another thread.");
 
             int data = count++;
-            // Pause for a moment to provide a delay to make
-            // threads more apparent.
+            // 暂停片刻，提供一个延迟
+            // 使线程更明显。
             Thread.Sleep(3000);
             Console.WriteLine(
                 "The instance method called by the worker thread has ended.");
@@ -96,7 +96,7 @@ Visual Studio 提供多种工具和用户界面元素，以帮助您调试多线
             ServerClass serverObject = new ServerClass();
 
             Thread InstanceCaller = new Thread(new ThreadStart(serverObject.InstanceMethod));
-            // Start the thread.
+            // 启动线程。
             InstanceCaller.Start();
 
             Console.WriteLine("The Main() thread calls this after "
@@ -147,15 +147,15 @@ Visual Studio 提供多种工具和用户界面元素，以帮助您调试多线
     Imports System.Threading
 
     Public Class ServerClass
-        ' The method that will be called when the thread is started.
+        ' 此方法将在线程启动时被调用。
         Public count = 0
         Public Sub InstanceMethod()
             Console.WriteLine(
                     "ServerClass.InstanceMethod is running on another thread.")
 
             Dim data = count + 1
-            ' Pause for a moment to provide a delay to make
-            ' threads more apparent.
+            ' 暂停片刻，提供一个延迟
+            ' 使线程更明显。
             Thread.Sleep(3000)
             Console.WriteLine(
                     "The instance method called by the worker thread has ended.")
@@ -179,12 +179,11 @@ Visual Studio 提供多种工具和用户界面元素，以帮助您调试多线
         Public Sub CreateThreads()
             Dim serverObject As New ServerClass()
 
-            ' Create the thread object, passing in the
-            ' serverObject.InstanceMethod method using a
-            ' ThreadStart delegate.
+            ' 创建线程对象, 使用 ThreadStart delegate
+            ' 传递 serverObject.InstanceMethod 方法。
             Dim InstanceCaller As New Thread(AddressOf serverObject.InstanceMethod)
 
-            ' Start the thread.
+            ' 启动线程。
             InstanceCaller.Start()
 
             Console.WriteLine("The Main() thread calls this after " _
@@ -194,9 +193,9 @@ Visual Studio 提供多种工具和用户界面元素，以帮助您调试多线
     End Class
     ```
   
-7.  在“文件”  菜单上，单击“全部保存” 。  
+7.  在 **文件** 菜单上，单击 **全部保存** 。  
   
-#### <a name="to-begin-the-tutorial"></a>若要开始学习教程  
+#### <a name="begin-the-multithreaded-app"></a>调试多线程应用
   
 -   在源代码编辑器中，查找以下代码： 
   
@@ -215,15 +214,13 @@ Visual Studio 提供多种工具和用户界面元素，以帮助您调试多线
     Console.WriteLine()
     ```
   
-#### <a name="to-start-debugging"></a>开始调试  
+1. 在左侧滚动条槽中左键单击`Thread.Sleep`或`this_thread::sleep_for`语句插入新断点。  
   
-1. 左侧滚动条槽中单击`Thread.Sleep`或`this_thread::sleep_for`语句将新断点。  
+    在源代码编辑器左侧的滚动条槽，将显示一个红色圆圈。 这表示在该位置已设置一个断点。 
   
-    在源代码编辑器左侧的滚动条槽，将显示一个红色圆圈。 这表示现在已在该位置设置了一个断点。 
+2. 在**调试**菜单上，单击**开始调试**(**F5**)。  
   
-2. 上**调试**菜单上，单击**开始调试**(**F5**)。  
-  
-    Visual Studio 生成该解决方案、 应用程序开始运行附带，调试器，然后应用程序停止在断点处。  
+    Visual Studio 生成该解决方案，应用程序在被调试器附加的情况下开始运行，应用程序在断点处停止。  
   
    > [!NOTE]
    > 如果焦点切换到控制台窗口中，单击在[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]窗口，以使焦点返回到[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]。  
