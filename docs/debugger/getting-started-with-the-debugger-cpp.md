@@ -1,5 +1,5 @@
 ---
-title: 了解如何使用 Visual Studio 调试器调试 C++
+title: 学习使用 Visual Studio 调试器调试 C++
 ms.description: Learn how to start the Visual Studio debugger, step through code, and inspect data.
 ms.custom: debug-experiment
 ms.date: 08/01/2018
@@ -22,43 +22,43 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52825874"
 ---
-# <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>教程：了解如何使用 Visual Studio 调试 C++ 代码
+# <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>教程：学习使用 Visual Studio 调试 C++ 代码
 
-本文通过分步演练介绍了 Visual Studio 调试器的功能。 如果需要更加深入地了解调试器功能，请参阅[调试器功能浏览](../debugger/debugger-feature-tour.md)。 当你调试应用时，通常意味着运行附带有调试器的应用程序。 执行此操作时，调试器在运行过程中可提供许多方法让你查看代码的情况。 你可以逐步浏览代码、查看变量中存储的值、设置对变量的监视以查看值何时改变、检查代码的执行路径、查看代码分支是否正在运行等等。 如果这是你第一次尝试调试代码，可能需要在浏览本文之前阅读[零基础调试](../debugger/debugging-absolute-beginners.md)。
+本文通过分步演练介绍了 Visual Studio 调试器的功能。 如果需要更加深入地了解调试器功能，请参阅[调试器功能之旅](../debugger/debugger-feature-tour.md)。 当你 *调试应用* 时，通常意味着调试器已附加到运行中的应用程序。 当执行此操作时，调试器在运行中提供许多方法让你查看代码正在做什么。 你可以单步跟踪代码、查看变量中存储的值、设置对变量的监视以查看值何时改变、检查代码的执行路径、查看代码分支是否正在运行等等。 如果这是你第一次尝试调试代码，可能需要在浏览本文之前阅读[零基础调试](../debugger/debugging-absolute-beginners.md)。
 
 | | |
 |---------|---------|
-| ![视频的摄像机图标](../install/media/video-icon.png "观看视频") | [观看有关调试的视频](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171)，其中展示了类似的步骤。 |
+| ![视频的摄像机图标](../install/media/video-icon.png "观看视频") | [观看视频](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171)，其中展示了类似的步骤。 |
 
 在本教程中，你将：
 
 > [!div class="checklist"]
 > * 启动调试器并命中断点。
-> * 了解在调试器中逐步执行代码的命令
+> * 了解在调试器中单步跟踪代码的命令
 > * 检查数据提示和调试器窗口中的变量
 > * 检查调用堆栈
 
 ## <a name="prerequisites"></a>系统必备
 
-* 须安装 Visual Studio 2017 且具有“C++ 桌面开发”工作负载。
+* 必须已安装 Visual Studio 2017 和 **C++ 桌面开发** 工作负载。
 
     如果尚未安装 Visual Studio，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 页免费安装。
 
-    如果需要安装工作负载，但已有 Visual Studio，则单击“新建项目”对话框左窗格中的“打开 Visual Studio 安装程序”链接（选择“文件” > “新建” > “项目”）。 Visual Studio 安装程序启动。 选择“使用 C++ 的桌面开发”工作负载，然后选择“修改”按钮。
+    如果需要安装工作负载，但已安装 Visual Studio，单击 **新建项目** 对话框左窗格中的 **打开 Visual Studio 安装程序** 链接（选择 **文件** > **新建** > **项目**）。 将启动 Visual Studio 安装程序。 选择 **使用 C++ 的桌面开发** 工作负载，然后选择 **修改** 。
 
 ## <a name="create-a-project"></a>创建项目
 
-1. 在 Visual Studio 中，依次选择“文件”>“新建项目”。
+1. 在 Visual Studio 中，依次选择 **文件 > 新建项目** 。
 
-2. 在“Visual C++”下，选择“Windows 桌面”，然后在中间窗格中选择“Windows 控制台应用程序”。
+2. 在 **Visual C++** 下，选择 **Windows 桌面** ，然后在中间窗格中选择**Windows 控制台应用程序**。
 
-    如果没有看到“Windows 控制台应用程序”项目模板，请单击“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接。 Visual Studio 安装程序启动。 选择“使用 C++ 的桌面开发”工作负载，然后选择“修改”按钮。
+    如果没有看到 **Windows 控制台应用程序** 项目模板，请单击 **新建项目** 对话框左侧窗格中的 **打开 Visual Studio 安装程序** 链接。 将启动 Visual Studio 安装程序。 选择 **使用 C++ 的桌面开发** 工作负载，然后选择 **修改** 按钮。
 
-3. 键入名称（如“get-started-debugging”），然后单击“确定”。
+3. 键入名称（如 **get-started-debugging**），然后单击 **确定**。
 
     Visual Studio 随即创建项目。
 
-4. 在“get-started-debugging.cpp”中，将以下代码
+4. 在 *get-started-debugging.cpp* 中，按如下替换代码：
 
     ```c++
     int main()
@@ -163,7 +163,7 @@ ms.locfileid: "52825874"
 
 ## <a name="start-the-debugger"></a>启动调试器！
 
-1. 按 F5（“调试”>“开始调试”）或调试工具栏中的“开始调试”按钮（![开始调试](../debugger/media/dbg-tour-start-debugging.png "Start Debugging")）。
+1. 按 **F5**（**调试 > 开始调试**）或调试工具栏中的 **开始调试** 按钮（![开始调试](../debugger/media/dbg-tour-start-debugging.png "Start Debugging")）。
 
      通过 **F5** 启动应用时，调试器会附加到应用进程，但现在我们还未执行任何特殊操作来检查代码。 因此应用只会加载，控制台输出如你所见。
 
