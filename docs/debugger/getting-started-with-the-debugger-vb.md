@@ -1,5 +1,5 @@
 ---
-title: "Learn to debug Visual Basic code using the Visual Studio debugger"
+title: "学习使用 Visual Studio 调试 Visual Basic 代码"
 ms.description: "Learn how to start the Visual Studio debugger, step through code, and inspect data."
 ms.custom: "debug-experiment"
 ms.date: "11/27/2018"
@@ -16,7 +16,7 @@ manager: douge
 ms.workload:
   - "multiple"
 ---
-# Tutorial: Learn to debug Visual Basic code using Visual Studio
+# 教程: 学习使用 Visual Studio 调试 Visual Basic 代码
 
 This article introduces the features of the Visual Studio debugger in a step-by-step walkthrough. If you want a higher-level view of the debugger features, see [Debugger Feature Tour](../debugger/debugger-feature-tour.md). When you *debug your app*, it usually means that you are running your application with the debugger attached. When you do this, the debugger provides many ways to see what your code is doing while it runs. You can step through your code and look at the values stored in variables, you can set watches on variables to see when values change, you can examine the execution path of your code, see whether a branch of code is running, and so on. If this is the first time that you've tried to debug code, you may want to read [Debugging for absolute beginners](../debugger/debugging-absolute-beginners.md) before going through this article.
 
