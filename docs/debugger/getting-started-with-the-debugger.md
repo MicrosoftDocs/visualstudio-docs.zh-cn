@@ -23,9 +23,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/12/2018
 ms.locfileid: "51561668"
 ---
-# <a name="tutorial-learn-to-debug-using-visual-studio"></a>教程：学习使用 Visual Studio 进行调试
+# <a name="tutorial-learn-to-debug-using-visual-studio"></a>教程：学习使用 Visual Studio 调试C#代码
 
-本文通过分步演练介绍了 Visual Studio 调试器的功能。 如果需要更加深入地了解调试器功能，请参阅[调试器功能浏览](../debugger/debugger-feature-tour.md)。 当你调试应用时，通常意味着运行附带有调试器的应用程序。 执行此操作时，调试器在运行过程中可提供许多方法让你查看代码的情况。 你可以逐步浏览代码、查看变量中存储的值、设置对变量的监视以查看值何时改变、检查代码的执行路径、查看代码分支是否正在运行等等。 如果这是你第一次尝试调试代码，可能需要在浏览本文之前阅读[零基础调试](../debugger/debugging-absolute-beginners.md)。
+本文通过分步演练介绍了 Visual Studio 调试器的功能。当你在 *调试你的应用* 时，通常意味着调试器已附加在运行中的应用。当你这样做的时候，调试器提供很多种方法，在此时查看代码在做什么。你可以单步跟踪代码查看变量中存储的值，可以给变量设置监视，以查看变量何时发生改变，可以检查代码的执行路径，查看代码的分支是否在运行等等。如果这是你第一次尝试调试代码，在继续阅读本文前，你可能需要阅读 [Debugging for absolute beginners](../debugger/debugging-absolute-beginners.md) 和 [Fix bugs by writing better C# code](../debugger/write-better-code-with-visual-studio.md)。
 
 | | |
 |---------|---------|
