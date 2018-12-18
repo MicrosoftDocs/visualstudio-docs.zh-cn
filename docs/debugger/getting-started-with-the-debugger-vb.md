@@ -18,29 +18,29 @@ ms.workload:
 ---
 # 教程: 学习使用 Visual Studio 调试 Visual Basic 代码
 
-This article introduces the features of the Visual Studio debugger in a step-by-step walkthrough. If you want a higher-level view of the debugger features, see [Debugger Feature Tour](../debugger/debugger-feature-tour.md). When you *debug your app*, it usually means that you are running your application with the debugger attached. When you do this, the debugger provides many ways to see what your code is doing while it runs. You can step through your code and look at the values stored in variables, you can set watches on variables to see when values change, you can examine the execution path of your code, see whether a branch of code is running, and so on. If this is the first time that you've tried to debug code, you may want to read [Debugging for absolute beginners](../debugger/debugging-absolute-beginners.md) before going through this article.
+本文通过分步演练介绍了 Visual Studio 调试器的功能。如果你想要更深入的了解调试器的功能，请参阅[Debugger Feature Tour](../debugger/debugger-feature-tour.md)。当你在 *调试自己的应用* 时，通常意味着调试器已附加到运行中的应用。当你这样做的时候，调试器提供很多方法查看在此时你的代码正在做什么。你可以在单步跟踪代码时，查看变量中存储的值，你可以对变量设置监视，以查看变量的更改，你可以检查代码的执行路径，查看代码的分支是否运行等等。如果当前是你首次尝试调试代码，你可能需要继续阅读本文之前，浏览这篇文章  [Debugging for absolute beginners](../debugger/debugging-absolute-beginners.md)。
 
 | | |
 |---------|---------|
-| ![movie camera icon for video](../install/media/video-icon.png "Watch a video") | [Watch a video](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171) on debugging that shows similar steps. |
+| ![视频的摄像机图标](../install/media/video-icon.png "观看视频") | [观看视频](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171) 展示调试时的类似步骤。 |
 
-In this tutorial, you will:
+在本教程中, 你将:
 
 > [!div class="checklist"]
-> * Start the debugger and hit breakpoints.
-> * Learn commands to step through code in the debugger
-> * Inspect variables in data tips and debugger windows
-> * Examine the call stack
+> * 启动调试器并命中断点。
+> * 学习调试器中单步跟踪命令。
+> * 检查数据提示和调试器窗口中的变量
+> *检查调用堆栈
 
-## Prerequisites
+## 先决条件
 
-* You must have Visual Studio 2017 installed and the **.NET desktop development** workload.
+* 你必须已安装 Visual Studio 2017 和 **.NET 桌面开发** 工作流。
 
-    If you haven't already installed Visual Studio, go to the [Visual Studio downloads](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) page to install it for free.
+    如果你未安装 Visual Studio, 请去 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 页免费安装。
 
-    If you need to install the workload but already have Visual Studio, click the **Open Visual Studio Installer** link in the left pane of the **New Project** dialog box (select **File** > **New** > **Project**). The Visual Studio Installer launches. Choose the .**NET desktop development** workload, then choose **Modify**.
+    如果你需要安装工作流，但是已安装 Visual Studio，在 **新建项目** 对话框(选择 **文件** > **新建** > **项目**) 左侧窗格中点击 **打开 Visual Studio 安装程序**。将启动 Visual Studio 安装程序。选择 **.NET 桌面开发** 工作流, 然后选择 **修改**。
 
-## Create a project
+## 创建一个项目
 
 1. In Visual Studio, choose **File > New Project**.
 
