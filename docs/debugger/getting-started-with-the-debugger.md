@@ -29,25 +29,25 @@ ms.locfileid: "51561668"
 
 | | |
 |---------|---------|
-| ![视频的摄像机图标](../install/media/video-icon.png "观看视频") | [观看有关调试的视频](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171)，其中展示了类似的步骤。 |
+| ![视频的摄像机图标](../install/media/video-icon.png "观看视频") | [观看视频](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171)，其中展示了在调试时的类似步骤。 |
 
-尽管演示应用为 C# 和 C++，但这些功能也适用于 Visual Basic、JavaScript 和 Visual Studio 支持的其他语言（除非另有说明）。 屏幕截图为 C#。
+尽管是C#例子程序，大多数功能也适用于 C++、Visual Basic、 F#、 Python、 JavaScript 和 Visual Studio 支持的其他语言（F#不支持编辑并继续。F#和JavaScript不支持 **自动** 窗口）。 屏幕截图为 C#。
 
 在本教程中，你将：
 
 > [!div class="checklist"]
 > * 启动调试器并命中断点。
-> * 了解在调试器中逐步执行代码的命令
+> * 了解在调试器中单步跟踪代码的命令
 > * 检查数据提示和调试器窗口中的变量
 > * 检查调用堆栈
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
-* 必须安装有 Visual Studio 2017 并具有“.NET 桌面开发”或“使用 C++ 的桌面开发”工作负载。
+* 必须已安装 Visual Studio 2017 和 **.NET 桌面开发** 工作负载。
 
-    如果尚未安装 Visual Studio，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 页免费安装。
+    如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 页免费安装。
 
-    如果需要安装工作负载，但已有 Visual Studio，则单击“新建项目”对话框左窗格中的“打开 Visual Studio 安装程序”链接（选择“文件” > “新建” > “项目”）。 Visual Studio 安装程序启动。 选择“.NET 桌面开发”或“使用 C++ 的桌面开发”工作负载，然后选择“修改”。
+    如果需要安装工作负载，但已安装 Visual Studio，单击 ***新建项目** 对话框（选择 **文件** > **新建** > **项目**）左窗格中的 **打开 Visual Studio 安装程序** 链接。将自动启动 Visual Studio 安装程序。 选择 **.NET 桌面开发** 工作负载，然后选择 **修改**。
 
 ## <a name="create-a-project"></a>创建项目
 
