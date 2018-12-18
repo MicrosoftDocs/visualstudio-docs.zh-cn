@@ -46,7 +46,7 @@ ms.locfileid: "52825874"
 
     如果需要安装工作负载，但已安装 Visual Studio，单击 **新建项目** 对话框左窗格中的 **打开 Visual Studio 安装程序** 链接（选择 **文件** > **新建** > **项目**）。 将启动 Visual Studio 安装程序。 选择 **使用 C++ 的桌面开发** 工作负载，然后选择 **修改** 。
 
-## <a name="create-a-project"></a>创建项目
+## <a name="create-a-project"></a>创建一个项目
 
 1. 在 Visual Studio 中，依次选择 **文件 > 新建项目** 。
 
