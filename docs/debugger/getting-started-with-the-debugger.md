@@ -49,22 +49,20 @@ ms.locfileid: "51561668"
 
     如果需要安装工作负载，但已安装 Visual Studio，单击 ***新建项目** 对话框（选择 **文件** > **新建** > **项目**）左窗格中的 **打开 Visual Studio 安装程序** 链接。将自动启动 Visual Studio 安装程序。 选择 **.NET 桌面开发** 工作负载，然后选择 **修改**。
 
-## <a name="create-a-project"></a>创建项目
+## <a name="create-a-project"></a>创建一个项目
 
-1. 在 Visual Studio 中，依次选择“文件”>“新建项目”。
+1. 在 Visual Studio 中，依次选择 **文件 > 新建项目** 。
 
-2. 在“Visual C#”或“Visual C++”下，选择“Windows 桌面”，然后在中间窗格中选择“控制台应用”（C++ 中的“Windows 控制台应用程序”）。
+2. 在 **Visual C#** 中，选择 **Windows 桌面** ，然后在中间窗格中选择 **控制台应用**。
 
-    如果没有看到“控制台应用程序”项目模板，请单击“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接。 Visual Studio 安装程序启动。 选择“.NET 桌面开发”或“使用 C++ 的桌面开发”工作负载，然后选择“修改”。
+    如果没有看到 **控制台应用程序** 项目模板，请单击 **新建项目** 对话框左侧窗格中的 **打开 Visual Studio 安装程序** 链接。 将自动启动 Visual Studio 安装程序。 选择 **.NET 桌面开发** 工作负载，然后选择 **修改** 。
 
-3. 键入名称（如“get-started-debugging”），然后单击“确定”。
+3. 键入名称（如 **get-started-debugging** ），然后单击 **确定** 。
 
     Visual Studio 随即创建项目。
 
-    > [!NOTE]
-    > 若要在本文中在 C# 和 C++ 示例代码间切换，请使用本页右上角的语言筛选器。
 
-4. 在“Program.cs”(C#) 或“get-started-debugging.cpp”(C++) 中，将以下代码
+4. 在“Program.cs”中，替换以下代码
 
     ```csharp
     using System;
@@ -81,13 +79,6 @@ ms.locfileid: "51561668"
             {
             }
         }
-    }
-    ```
-
-    ```c++
-    int main()
-    {
-        return 0;
     }
     ```
 
@@ -176,97 +167,6 @@ ms.locfileid: "51561668"
     */
     ```
 
-    ```c++
-    #include "pch.h"
-
-    #include <string>
-    #include <vector>
-    #include <iostream>
-
-    class Shape
-    {
-        int privateX = 0;
-        int privateY = 0;
-        int privateHeight = 0;
-        int privateWidth = 0;
-
-        int getX() const { return privateX; }
-        void setX(int value) { privateX = value; }
-
-        int getY() const { return privateY; }
-        void setY(int value) { privateY = value; }
-
-        int getHeight() const { return privateHeight; }
-        void setHeight(int value) { privateHeight = value; }
-
-        int getWidth() const { return privateWidth; }
-        void setWidth(int value) { privateWidth = value; }
-
-        public:
-        // Virtual method
-        virtual void Draw()
-        {
-            std::wcout << L"Performing base class drawing tasks" << std::endl;
-        }
-    };
-
-    class Circle : public Shape
-    {
-        public:
-        void Draw() override
-        {
-        // Code to draw a circle...
-        std::wcout << L"Drawing a circle" << std::endl;
-        Shape::Draw();
-        }
-    };
-
-    class Rectangle : public Shape
-    {
-        public:
-        void Draw() override
-        {
-        // Code to draw a rectangle...
-        std::wcout << L"Drawing a rectangle" << std::endl;
-        Shape::Draw();
-        }
-    };
-
-    class Triangle : public Shape
-    {
-        public:
-        void Draw() override
-        {
-        // Code to draw a triangle...
-        std::wcout << L"Drawing a trangle" << std::endl;
-        Shape::Draw();
-        }
-    };
-
-    int main(std::vector<std::wstring> &args)
-    {
-        auto shapes = std::vector<Shape*>
-        {
-            new Rectangle(),
-            new Triangle(),
-            new Circle()
-        };
-
-        for (auto shape : shapes)
-        {
-            shape->Draw();
-        }
-    }
-
-    /* Output:
-    Drawing a rectangle
-    Performing base class drawing tasks
-    Drawing a triangle
-    Performing base class drawing tasks
-    Drawing a circle
-    Performing base class drawing tasks
-    */
-    ```
 
 ## <a name="start-the-debugger"></a>启动调试器！
 
