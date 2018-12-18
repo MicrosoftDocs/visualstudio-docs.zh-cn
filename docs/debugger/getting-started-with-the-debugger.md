@@ -172,7 +172,7 @@ ms.locfileid: "51561668"
 
 1. 在调试器工具条中按 **F5** (**调试 > 开始调试**) 或者 **开始调试** 按键 ![开始调试](../debugger/media/dbg-tour-start-debugging.png "开始调试")。
 
-     按**F5**启动应用时，调试器会附加到应用进程, 但现在我们还未执行任何特殊操作来检查代码。所以应用只会加载，你可以看到控制台输出。
+     按 **F5** 启动应用后，调试器会附加到应用进程, 但现在我们还未执行任何特殊操作来检查代码。所以应用只是加载，控制台输出如下信息。
 
     ```
     Drawing a rectangle
@@ -185,60 +185,60 @@ ms.locfileid: "51561668"
 
      在本教程，我们将使用调试器仔细查看此应用，并了解调试器功能。
 
-2. 按红色的停止（![停止调试](../debugger/media/dbg-tour-stop-debugging.png "Stop Debugging")）按钮来停止调试器。
+2. 按红色的停止（![停止调试](../debugger/media/dbg-tour-stop-debugging.png "停止调试")）按钮使调试器停止调试。
 
 ## <a name="set-a-breakpoi## 设置断点并启动调试器
 
-1. 在 `Main` 函数的 `foreach` 循环（C++ `main` 函数中的 `for` 循环）中，通过单击以下代码行的左端来设置断点：
+1. 在 `Main` 函数的 `foreach` 循环中，通过单击以下代码行的左侧空白处来设置断点：
 
-    `shape.Draw()`（或者，C++ 中的 `shape->Draw()`）
+    `shape.Draw()`
 
     设置断点的位置会出现一个红色圆圈。
 
     断点是可靠调试最基本和最重要的功能。 断点指示 Visual Studio 应在哪个位置挂起你的运行代码，以使你可以查看变量的值或内存的行为，或确定代码的分支是否运行。 
 
-2. 按 **F5** 或**开始调试**按钮，应用随即启动，调试器将运行到你设置断点的代码行。
+2. 按 **F5** 或 **开始调试** 按钮，应用随即启动，调试器将运行到你设置断点的代码行。
 
     ![设置并命中断点](../debugger/media/get-started-set-breakpoint.gif)
 
-    黄色箭头表示调试器暂停处的语句，它还在同一点上挂起正在运行的应用（此语句尚未执行）。
+    黄色箭头表示调试器暂停所在的语句，它还在同一点上挂起正在运行的应用（此语句尚未执行）。
 
-     如果应用尚未运行，则按 **F5** 会启动调试器并在第一个断点处停止。 另外，按 **F5** 将继续运行应用至下一个断点。
+     如果应用尚未运行，按 **F5** 会启动调试器并在第一个断点处停止。 另外，按 **F5** 将继续运行应用至下一个断点。
 
     当你想要详细检查代码行或代码段时，断点功能非常有用。
 
-## <a name="navigate-code-in-the-debugger-using-step-commands"></a>在调试器中使用单步执行命令定位代码
+## <a name="navigate-code-in-the-debugger-using-step-commands"></a>在调试器中使用单步执行命令浏览代码
 
-大多数情况下，我们使用键盘快捷方式，因为这是在调试器中快速执行应用的好方法（括号中显示了等效的命令，如菜单命令）。
+大多数情况下，我们使用键盘快捷键，因为这是在调试器中快速执行应用的好方法（括号中显示了等效的命令，如菜单命令）。
 
-1. 在 `Main` 方法（C++ 中的 `shape->Draw`）的 `shape.Draw` 方法调用中暂停时，按 **F11**（或选择**调试 > 单步执行**）前进到 `Rectangle` 类的代码。
+1. 在 `Main` 方法中调用 `shape.Draw` 方法的语句处暂停时，按 **F11**（或选择**调试 > 逐语句**）前进到 `Rectangle` 类中的代码。
 
-     ![使用 F11 单步执行代码](../debugger/media/get-started-f11.png "F11单步执行")
+     ![使用 F11 逐语句跟踪代码](../debugger/media/get-started-f11.png "F11 逐语句")
 
-     F11 是**单步执行**命令，每单击一次，应用就执行一个语句。 F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地浏览代码，我们还向你展示一些其他选项。）默认情况下，调试器会跳过非用户代码（如果需要更多详细信息，请参阅[仅我的代码](../debugger/just-my-code.md)）。
+     F11 是**逐语句**命令，每单击一次，应用就执行一条语句。 F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地浏览代码，我们还向你展示一些其他选项。）默认情况下，调试器会跳过非用户代码（如果需要更多详细信息，请参阅[仅我的代码](../debugger/just-my-code.md)）。
 
-2. 按几次 **F10**（或选择**调试 > 逐过程**），直到调试器停止于 `base.Draw` 方法调用（C++ 中的 `Shape::Draw`），然后再按一次 **F10**。
+2. 按几下 **F10**（或选择**调试 > 逐过程**），直到调试器停止于 `base.Draw` 方法调用，然后再按一次 **F10**。
 
-     ![使用 F10 单步跳过代码](../debugger/media/get-started-step-over.png "F10 Step Over")
+     ![使用 F10 逐过程跟踪代码](../debugger/media/get-started-step-over.png "F10 逐过程r")
 
-     请注意，这次调试器不会单步执行基类 (`Shape`) 的 `Draw` 方法。 按 F10 将使调试器前进，但不会逐语句执行应用程序代码中的函数或方法（代码仍将执行）。 通过在进行 `base.Draw`（或 `Shape::Draw`）方法调用时按 F10（而不是 F11），我们跳过了 `base.Draw` 的实现代码（或许我们现在对此已不感兴趣）。
+     请注意，这次调试器不会单步执行基类 (`Shape`) 的 `Draw` 方法。 按 F10 将使调试器前进，但不会逐语句执行应用程序代码中的函数或方法（代码仍将执行）。 通过在调用 `base.Draw`（或 `Shape::Draw`）方法的语句处，按 F10（而不是 F11），我们跳过了 `base.Draw` 的实现代码（或许我们现在对此已不感兴趣）。
 
-## <a name="navigate-code-using-run-to-click"></a> 使用“点击运行”定位代码
+## <a name="navigate-code-using-run-to-click"></a> 使用“运行以单击”定位代码
 
-1. 在代码编辑器中，向下滚动并将鼠标悬停在 `Triangle` 类中的 `Console.WriteLine` 方法（C++ 中的 `std::cout`）上，直到左侧出现绿色的**点击运行**按钮（![点击](../debugger/media/dbg-tour-run-to-click.png "RunToClick")）。
+1. 在代码编辑器中，向下滚动并将鼠标悬停在 `Triangle` 类中的 `Console.WriteLine` 方法上，直到左侧出现绿色的**运行以单击**按钮（![点击](../debugger/media/dbg-tour-run-to-click.png "RunToClick")）。
 
-     ![使用“点击运行”功能](../debugger/media/get-started-run-to-click.png "点击运行")
+     ![使用“运行以单击”功能](../debugger/media/get-started-run-to-click.png "运行以单击")
 
    > [!NOTE]
-   > “点击运行”是 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] 中的新增按钮。 如果未看到绿色箭头按钮，请在此示例中改为使用 **F11** 以使调试器前进到正确的位置。
+   > “运行以单击”是 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] 中的新增按钮。 如果未看到绿色箭头按钮，请在此示例中改为使用 **F11** 以使调试器前进到正确的位置。
 
-2. 单击**点击运行**按钮（![点击运行](../debugger/media/dbg-tour-run-to-click.png "RunToClick")）。
+2. 单击**运行以单击**按钮（![运行以单击](../debugger/media/dbg-tour-run-to-click.png "RunToClick")）。
 
-    使用此按钮类似于设置临时断点。 **点击运行**对于快速到达应用代码的可见区域十分方便（你可在任何打开的文件中点击）。
+    使用此按钮类似于设置临时断点。 **运行以单击** 可非常方便的快速到达应用代码的可见区域（你可在任何打开的文件中点击）。
 
-    调试器前进到 `Triangle` 类的 `Console.WriteLine` 方法实现（C++ 中的 `std::cout`）。
+    调试器前进到 `Triangle` 类的 `Console.WriteLine` 方法实现。
 
-    暂停时，你注意到有拼写错误！ “Drawing a trangle”输出拼写错误。 在调试器中运行应用时，我们可直接在此处修复它。
+    暂停时，你注意到有拼写错误！显示 “Drawing a trangle” 拼写错误。 在调试器中运行应用时，我们可直接在此处修复它。
 
 ## <a name="edit-code-and-continue-debugging"></a>编辑代码并继续调试
 
@@ -247,7 +247,7 @@ ms.locfileid: "51561668"
 1. 再按一次 **F11**，你会看到调试器再次前进。
 
     > [!NOTE]
-    > 根据你在调试器中编辑的代码类型，可能会看到一条警告消息。 在某些情况下，代码需要重新编译才能继续。
+    > 根据你在调试器中编辑的代码类型，可能会看到一条警告消息。 在某些情况下，代码需要重新编译才能继续运行。
 
 ## <a name="step-out"></a>跳出
 
