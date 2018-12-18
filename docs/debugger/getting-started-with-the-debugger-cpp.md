@@ -1,5 +1,5 @@
 ---
-title: 学习使用 Visual Studio 调试器调试 C++
+title: "学习使用 Visual Studio 调试器调试 C++"
 ms.description: Learn how to start the Visual Studio debugger, step through code, and inspect data.
 ms.custom: debug-experiment
 ms.date: 08/01/2018
@@ -334,7 +334,7 @@ ms.locfileid: "52825874"
 
 ## <a name="next-steps"></a>后续步骤
 
-在本教程中，你已了解了如何启动调试器、单步跟踪代码以及检查变量。 你可能会希望更深入地了解调试器功能以及查看指向更多信息的链接。
+在本教程中，你已了解了如何启动调试器、单步跟踪代码以及检查变量。 你可能会希望更深入地了解调试器功能，以及查看指向更多信息的链接。
 
 > [!div class="nextstepaction"]
 > [初探调试器](../debugger/debugger-feature-tour.md)
