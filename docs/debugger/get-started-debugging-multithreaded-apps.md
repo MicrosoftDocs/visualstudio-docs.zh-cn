@@ -338,27 +338,19 @@ Visual Studio 提供多种工具和用户界面元素，以帮助您调试多线
 
 4. 单击重启![重新启动应用程序](../debugger/media/dbg-tour-restart.png "RestartApp")按钮以重启调试会话。
 
-    将分解为其数据变量为 5 的线程上的代码。 黄色箭头 （当前调试器上下文） 中查找**并行监视**窗口，验证是否。
+    将在数据变量为 5 的线程中，中断代码执行。请在**并行监视**窗口中，寻找表示调试器上下文的黄色箭头。
 
-5. 现在，可以单步执行代码 (F10) 和单步执行代码 (F11) 并遵循单一线程的执行。
+5. 现在，可以逐过程 (**F10**) 和逐语句 (**F11**)开始单步跟踪代码， 跟踪单线程的执行。
 
-    只要断点条件是唯一的线程，并且调试器不会命中 （可能需要禁用它们） 的其他线程上的任何其他断点，可以单步执行代码并单步执行代码而无需切换到其他线程。
+    只要断点条件对于线程是唯一的，并且调试器不会命中 （可能需要禁用它们） 其他线程上的任何其他断点，可以逐过程和逐语句跟踪代码而无需切换到其他线程。
 
     > [!NOTE]
-    > 当您推进调试器进度时，将运行所有线程。 但是，调试器不会中断到其他线程上的代码中，除非其中一个其他线程遇到断点。 
-  
-## <a name="more-about-the-multithreaded-debugging-windows"></a>有关多线程调试窗口的详细信息 
-
-#### <a name="to-switch-to-another-thread"></a>若要切换到另一个线程 
-
-- 若要切换到另一个线程，请参阅[如何： 切换到另一个线程时调试](../debugger/how-to-switch-to-another-thread-while-debugging.md) 
-
-#### <a name="to-learn-more-about-the-parallel-stack-and-parallel-watch-windows"></a>若要了解有关并行堆栈和并行监视窗口的详细信息  
-  
-- 请参阅[如何： 使用并行堆栈窗口](../debugger/using-the-parallel-stacks-window.md) 
-
-- 请参阅[如何： 使用并行监视窗口](../debugger/how-to-use-the-parallel-watch-window.md) 
+    > 当您推进调试器时，将运行所有线程。但是，调试器不会中断其他线程上的代码中，除非某个其他线程发生中断。 
   
 ## <a name="see-also"></a>请参阅  
- [调试多线程应用程序](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [如何：在调试时切换到另一个线程](../debugger/how-to-switch-to-another-thread-while-debugging.md)
+ [调试多线程应用程序]
+ (../debugger/debug-multithreaded-applications-in-visual-studio.md)   
+ [如何：在调试时切换到另一个线程]
+ (../debugger/how-to-switch-to-another-thread-while-debugging.md)
+ [如何： 使用并行堆栈窗口](../debugger/using-the-parallel-stacks-window.md) 
+ [如何： 使用并行监视窗口](../debugger/how-to-use-the-parallel-watch-window.md) 
