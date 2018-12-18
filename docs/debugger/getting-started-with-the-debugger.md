@@ -1,5 +1,5 @@
 ﻿---
-title: 学习使用 Visual Studio 调试器进行调试
+title: "学习调试"
 ms.description: Learn how to start the Visual Studio debugger, step through code, and inspect data.
 ms.custom: debug-experiment
 ms.date: 08/01/2018
