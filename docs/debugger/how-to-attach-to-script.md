@@ -63,12 +63,12 @@ ms.locfileid: "49852903"
    所有 **调试** 菜单执行命令都会影响活动程序。 您可以从进程对话框中断任何已调试的程序。请参阅[使用断点](../debugger/using-breakpoints.md)。  
   
 > [!NOTE]
->  如果尝试附加到不受信任的用户帐户拥有的进程，则会出现安全警告对话框确认。 有关详细信息，请参阅[安全警告： 附加到不受信任的用户所拥有的进程可能很危险。以下信息看上去可疑或者你不确定，如果未附加到此进程](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)。  
+>  如果尝试附加到不受信任的用户帐户拥有的进程，则会出现安全警告对话框。 有关详细信息，请参阅[安全警告： 附加到不受信任的用户所拥有的进程可能很危险。以下信息看上去可疑或者你不确定时，不要附加此进程](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)。  
   
- 在某些情况下，在“终端服务”（“远程桌面”）会话中进行调试时，“可用进程”列表不会显示所有可用进程。 在 [!INCLUDE[WinXPSvr](../debugger/includes/winxpsvr_md.md)] 或更高版本中，如果以受限用户的身份运行 Visual Studio，“可用进程”列表将不显示在会话 0 中运行的进程，该会话用于运行服务与其他服务器进程（包括 w3wp.exe）。 您可以通过以下方法解决该问题：使用管理员帐户运行 Visual Studio 或从服务器控制台而不是“终端服务”会话运行 Visual Studio。 如果可能都不奏效，第三个选项是附加到进程通过键入 vsjitdebugger.exe-p ProcessId 在 Windows 命令行。 您可以使用 tlist.exe 来确定进程 ID。 若要获取 tlist.exe，请下载并安装调试工具的 Windows，网址[Windows 硬件开发人员中心](/windows-hardware/drivers/dashboard/)。  
+ 在某些情况下，在“终端服务”（“远程桌面”）会话中进行调试时，“可用进程”列表不会显示所有可用进程。 在 [!INCLUDE[WinXPSvr](../debugger/includes/winxpsvr_md.md)] 或更高版本中，如果以受限用户的身份运行 Visual Studio，“可用进程”列表将不显示在会话 0 中运行的进程，该会话用于运行服务与其他服务器进程（包括 w3wp.exe）。 您可以通过以下方法解决该问题：使用管理员帐户运行 Visual Studio 或从服务器控制台而不是“终端服务”会话运行 Visual Studio。 如果可能都不奏效，第三个选项是通过在 Windows 命令行键入 vsjitdebugger.exe-p ProcessId 附加到进程。 您可以使用 tlist.exe 来确定进程 ID。 若要获取 tlist.exe，请下载并安装Windows调试工具，网址[Windows 硬件开发人员中心](/windows-hardware/drivers/dashboard/)。  
   
 ## <a name="see-also"></a>请参阅  
  [客户端脚本调试](../debugger/client-side-script-debugging.md)   
- [将附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
- [安全警告：附加到不受信任的用户所拥有的进程可能很危险。以下信息看上去可疑或者你不确定，如果未附加到此进程](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)   
+ [附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
+ [安全警告：附加到不受信任的用户所拥有的进程可能很危险。以下信息看上去可疑或者你不确定，不要附加此进程](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)   
  [调试器安全](../debugger/debugger-security.md)
