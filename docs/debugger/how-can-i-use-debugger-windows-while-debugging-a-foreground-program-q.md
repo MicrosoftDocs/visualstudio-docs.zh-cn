@@ -1,6 +1,6 @@
 ---
-title: 调试前台程序时如何使用调试器窗口？ | Microsoft Docs
-ms.custom: ''
+title: "调试前台程序时使用调试器窗口 | Microsoft Docs"
+ms.custom: "seodec18"
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -32,7 +32,7 @@ ms.locfileid: "31473048"
 ---
 # <a name="how-can-i-use-debugger-windows-while-debugging-a-foreground-program"></a>调试前台程序时如何使用调试器窗口？
 ## <a name="problem-description"></a>问题描述  
- 我在尝试调试屏幕绘制问题。 若要观察该问题，必须将程序保持在前台，这意味着不能访问调试窗口。 我该怎么办？  
+ 我在尝试调试屏幕绘制问题。若要观察该问题，必须将程序保持在前台，这意味着不能访问调试窗口。我该怎么办？  
   
 ## <a name="solution"></a>解决方案  
  如果有另一台计算机，则可以使用远程调试。 通过两台计算机的设置，当在主机上运行调试器时，可以监视远程计算机上的屏幕绘制。 有关远程调试的详细信息，请参阅[远程调试](../debugger/remote-debugging.md)。  
