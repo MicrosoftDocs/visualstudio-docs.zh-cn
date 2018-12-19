@@ -1,6 +1,6 @@
 ---
 title: "调试时 c + + 访问冲突 | Microsoft Docs"
-ms.custom: 'seodec18'
+ms.custom: "seodec18"
 ms.date: 05/23/2017
 ms.technology: vs-ide-debug
 ms.topic: conceptual

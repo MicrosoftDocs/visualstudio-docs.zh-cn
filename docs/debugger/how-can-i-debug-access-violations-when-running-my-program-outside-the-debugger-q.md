@@ -1,6 +1,6 @@
 ---
 title: "在调试器外部运行程序时，发生调试访问冲突 | Microsoft Docs"
-ms.custom: 'seodec18'
+ms.custom: "seodec18"
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
