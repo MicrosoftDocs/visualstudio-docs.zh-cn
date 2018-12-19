@@ -231,7 +231,7 @@ ms.locfileid: "52825874"
 
     调试器前进到 `Triangle` 类的 `std::cout` 方法实现。
 
-    暂停时，你注意到有拼写错误！ 提示 **rawing a trangle** 拼写错误。 我们可以在调试器中运行应用时，直接在此处修复它。
+    暂停时，你注意到有拼写错误！ 窗口提示 **rawing a trangle** 拼写错误。 我们可以在调试器中运行应用时，直接在此处修复它。
 
 ## <a name="edit-code-and-continue-debugging"></a>编辑代码并继续调试
 
