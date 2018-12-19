@@ -1,6 +1,6 @@
 ---
-title: 如何查明谁在传递错误的参数值？ | Microsoft Docs
-ms.custom: ''
+title: "查明谁在传递错误的参数值 | Microsoft Docs"
+ms.custom: "seodec18"
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -32,7 +32,7 @@ ms.locfileid: "44284167"
 ---
 # <a name="how-can-i-find-out-who-is-passing-a-wrong-parameter-value"></a>如何查明谁在传递错误的参数值？
 ## <a name="problem-description"></a>问题描述  
- 给我的某个函数传递的是错误的参数值。 很多地方都在调用该函数。 如何查明是谁在传递错误值？  
+ 给某个函数传递的是错误的参数值。很多地方都在调用该函数。如何查明是谁在传递错误值？  
   
 ## <a name="solution"></a>解决方案  
   
@@ -40,13 +40,13 @@ ms.locfileid: "44284167"
   
 1.  在函数的开始处设置一个位置断点。  
   
-2.  右键单击断点并选择**条件**。  
+2.  右键单击断点并选择 **条件** 。  
   
-3.  在中**断点条件**对话框中，单击**条件**复选框。 请参阅[高级断点](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)。  
+3.  在 **断点条件** 对话框中，单击 **条件** 复选框。 请参阅[高级断点](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)。  
   
-4.  在文本框中输入一个表达式（例如 `Var==3`），此处 `Var` 是包含错误值的参数的名称，`3` 是传给此参数的错误值。  
+4.  在文本框中输入一个表达式，例如 `Var==3`，此处 `Var` 是包含错误值的参数名称，`3` 是传给此参数的错误值。  
   
-5.  选择**为 True**单选按钮，然后单击**确定**按钮。  
+5.  选择 **为 True** 单选按钮，然后单击 **确定** 按钮。  
   
 6.  现在再次运行程序。 当 `Var` 参数的值为 `3` 时，断点导致程序在函数开始处暂停。  
   
