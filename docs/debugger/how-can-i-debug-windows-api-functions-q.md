@@ -1,6 +1,6 @@
 ---
 title: "调试 Windows API 函数 | Microsoft Docs"
-ms.custom: ''
+ms.custom: "seodec18"
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -35,7 +35,7 @@ ms.locfileid: "44281671"
   
 ### <a name="to-set-a-breakpoint-on-a-windows-api-function-with-nt-symbols-loaded"></a>若要在加载了 NT 符号的 Windows API 函数中设置断点  
   
--   输入函数名以及函数所在 DLL 的名称。 在 32 位代码中，使用函数名的修饰形式。 若要设置断点**MessageBeep**，例如，你必须输入以下。  
+-   输入函数名以及函数所在 DLL 的名称。 在 32 位代码中，使用函数名的修饰形式。 若要给**MessageBeep** 设置断点，例如，你必须如下输入。  
   
     ```cpp
     {,,USER32.DLL}_MessageBeep@4  
