@@ -18,7 +18,7 @@ ms.lasthandoff: 09/21/2018
 ms.locfileid: "46542398"
 ---
 # <a name="historical-debugging"></a>历史调试
-历史调试是取决于 IntelliTrace 所收集的信息的调试模式。 它允许你向前和前后移动应用程序的执行，并检查其状态。  
+历史调试是取决于 IntelliTrace 所收集信息的调试模式。 它允许你向前和前后移动应用程序的执行，并检查其状态。  
   
  可以在 Visual Studio 企业版（但不可在专业版或社区版）中使用 IntelliTrace。  
   

@@ -1,5 +1,5 @@
 ---
-title: "调试时 c + + 访问冲突 | Microsoft Docs"
+title: "调试 c + + 时访问冲突 | Microsoft Docs"
 ms.custom: "seodec18"
 ms.date: 05/23/2017
 ms.technology: vs-ide-debug
@@ -27,12 +27,12 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/18/2018
 ms.locfileid: "31475345"
 ---
-# <a name="how-can-i-debug-a-c-access-violation"></a>如何处理调试时 c + + 访问冲突？
+# <a name="how-can-i-debug-a-c-access-violation"></a>如何处理调试 c + + 时访问冲突？
 ## <a name="problem-description"></a>问题描述  
  我的程序产生了访问冲突。 如何调试它？  
   
 ## <a name="solution"></a>解决方案  
- 如果在取消引用多个指针的代码行上出现访问冲突，则可能很难辨别引起访问冲突的指针。 从 Visual Studio 2015 Update 1 起，异常对话框现对导致访问冲突的指针进行显式命名。  
+ 如果在取消引用多个指针的代码行上出现访问冲突，可能很难辨别引起访问冲突的指针。 从 Visual Studio 2015 Update 1 起，异常对话框现对导致访问冲突的指针进行显式命名。  
   
  例如，以下代码中，将出现访问冲突：  
   
