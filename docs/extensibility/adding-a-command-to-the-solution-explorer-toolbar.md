@@ -21,7 +21,7 @@ ms.locfileid: "66313531"
 ---
 # <a name="add-a-command-to-the-solution-explorer-toolbar"></a>将命令添加到解决方案资源管理器工具栏
 本演练演示如何将添加到按钮**解决方案资源管理器**工具栏。
-
+<!--test-->
  在 Visual Studio 中，工具栏或菜单上的任何命令称为一个按钮。 当单击按钮时，将执行命令处理程序中的代码。 通常情况下，相关的命令组合在一起以形成一个组。 菜单或工具栏作为容器的组。 优先级确定菜单中或在工具栏上的组中的单个命令的显示的顺序。 您可以防止一个按钮工具栏或菜单上显示通过控制其可见性。 中列出的命令`<VisibilityConstraints>`一部分 *.vsct*文件仅在关联的上下文中出现。 可见性不能应用于组。
 
  有关菜单、 工具栏命令的详细信息和 *.vsct*文件，请参阅[命令、 菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)。
