@@ -126,7 +126,7 @@ C# 中有很多新颖有用的重构，更便于组织代码。 它们在灯泡�
 
 启动窗口还包括用于打开项目或解决方案、打开本地文件夹，或创建新项目的选项。
 
-有关详细信息，请参阅博客文章 [Get to code:How we designed the new Visual Studio start window](https://devblogs.microsoft.com/visualstudio/get-to-code-how-we-designed-the-new-visual-studio-start-window/)（开始编码：如何设计新的 Visual Studio 开始窗口）。
+有关详细信息，请参阅博客文章 [Get to code:How we designed the new Visual Studio start window](https://devblogs.microsoft.com/visualstudio/get-to-code-how-we-designed-the-new-visual-studio-start-window/)（开始编码：我们是如何设计了新的 Visual Studio 开始窗口）。
 
 ### <a name="live-share"></a>Live Share
 
