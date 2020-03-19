@@ -46,7 +46,7 @@ Visual Studio 提供了 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 接
 
 5. 在清单编辑器中，选择窗口左侧的 "**资产**" 选项卡。
 
-6. 在 "**资产**" 选项卡中，选择 "**新建**"。 在 "**添加新资产**" 窗口中，为 "类型" 字段选择 " **VisualStudio**"。 在 "**源**" 字段中，选择 "**当前解决方案中的项目**"。 在 "**项目**" 字段中，选择 " **MyProjectTemplate**"。 然后单击“确定”。
+6. 在 "**资产**" 选项卡中，选择 "**新建**"。 在 "**添加新资产**" 窗口中，为 "类型" 字段选择 " **Microsoft.VisualStudio.ProjectTemplate**"。 在 "**源**" 字段中，选择 "**当前解决方案中的项目**"。 在 "**项目**" 字段中，选择 " **MyProjectTemplate**"。 然后单击“确定”。
 
 7. 生成解决方案并启动调试。 将出现 Visual Studio 的第二个实例。 （这可能需要几分钟时间。）
 
@@ -66,7 +66,7 @@ Visual Studio 提供了 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 接
 
    - **在本地 VSIX 部署中包含调试符号**
 
-3. 将程序集作为资产添加到 VSIX 项目。 打开*source.extension.vsixmanifest*文件，然后选择 "**资产**" 选项卡。在 "**添加新资产**" 窗口中，为 "**类型**" 选择 " **VisualStudio**"，对于 "**源**"，选择 "**当前解决方案中的项目**"，然后选择 "**项目**" " **MyProjectWizard**"。
+3. 将程序集作为资产添加到 VSIX 项目。 打开*source.extension.vsixmanifest*文件，然后选择 "**资产**" 选项卡。在 "**添加新资产**" 窗口中，为 "**类型**" 选择 " **Microsoft.VisualStudio.Assembly**"，对于 "**源**"，选择 "**当前解决方案中的项目**"，然后选择 "**项目**" " **MyProjectWizard**"。
 
 4. 将以下引用添加到 VSIX 项目。 （在**解决方案资源管理器**的 "VSIX 项目" 节点下，选择 "**引用**"，右键单击，然后选择 "**添加引用**"。）在 "**添加引用**" 对话框的 "**框架**" 选项卡中，找到 " **Windows 窗体**" 程序集，然后选择它。 同时，查找并选择 "**系统**" 和 "**系统**" 程序集。 现在选择 "**扩展**" 选项卡。找到**EnvDTE**程序集并将其选中。 同时，查找**TemplateWizardInterface**程序集并将其选中。 单击 **“确定”** 。
 
