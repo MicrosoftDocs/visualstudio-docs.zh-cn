@@ -64,7 +64,7 @@ ms.locfileid: "75929228"
 |[CA2147](../code-quality/ca2147.md)|透明方法不得使用安全断言|
 |[CA2149](../code-quality/ca2149.md)|透明方法不得调入本机代码|
 |[CA2210](../code-quality/ca2210.md)|程序集应具有有效的强名称|
-|[CA2300](ca2300.md)|请勿使用不安全的反序列化程序 BinaryFormatte|
+|[CA2300](ca2300.md)|请勿使用不安全的反序列化程序 BinaryFormatter|
 |[CA2301](ca2301.md)|在未先设置 BinaryFormatter.Binder 的情况下，请不要调用 BinaryFormatter.Deserialize|
 |[CA2302](ca2302.md)|在调用 BinaryFormatter.Deserialize 之前，确保设置 BinaryFormatter.Binder|
 |[CA2305](ca2305.md)|请勿使用不安全的反序列化程序 LosFormatter|
