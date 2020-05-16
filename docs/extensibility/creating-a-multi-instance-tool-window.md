@@ -44,7 +44,7 @@ ms.locfileid: "80739623"
     {. . .}
     ```
 
-2. 在*MIToolWindowCommand.cs*文件中，查找方法`ShowToolWindos()`。 在此方法中，调用<xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A>方法并将其`create`标志设置为`false`，以便它将遍接现有工具窗口实例，直到找到可用实例。 `id`
+2. 在*MIToolWindowCommand.cs*文件中，查找方法`ShowToolWindow()`。 在此方法中，调用<xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A>方法并将其`create`标志设置为`false`，以便它将遍接现有工具窗口实例，直到找到可用实例。 `id`
 
 3. 要创建工具窗口实例，请调用<xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A>方法并将其`id`设置为可用值，其`create`标志设置为`true`。
 
