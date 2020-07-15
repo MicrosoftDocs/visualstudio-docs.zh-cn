@@ -29,20 +29,20 @@ Blend for Visual Studio 是 Visual Studio 的一个组件。 若要安装 Blend�
 
 ## <a name="tools-panel"></a>“工具”面板
 
-可在应用程序中通过 Blend for Visual Studio 的**工具** 面板创建和修改对象。 打开 .xaml 文件时，**工具**面板显示在 XAML 设计器的左侧。
+可在应用程序中通过 Blend for Visual Studio 的“**工具**”面板创建和修改对象。 打开 .xaml 文件时，“**工具**”面板显示在 XAML 设计器的左侧。
 
 可以通过使用鼠标选择工具并在美工板上进行绘制来创建对象。
 
 ![Blend for Visual Studio 中的“工具”面板](media/blend-tools-panel.png)
 
 > [!TIP]
-> **工具**面板中的某些工具具有变体，例如，可以选择椭圆形或直线，而不是矩形。 要访问这些变体，请右键单击或单击并按住该工具。
+> “**工具**”面板中的某些工具具有变体，例如，可以选择椭圆形或直线，而不是矩形。 要访问这些变体，请右键单击或单击并按住该工具。
 >
 > ![Blend for Visual Studio 中的形状工具变体](media/blend-rectangle-tool-variations.png)
 
 ### <a name="selection-tools"></a>选择工具
 
-选择对象和路径。 使用**直接选择**工具可选择嵌套对象和路径段。
+选择对象和路径。 使用“**直接选择**”工具可选择嵌套对象和路径段。
 
 ### <a name="view-tools"></a>视图工具
 
@@ -62,16 +62,16 @@ Blend for Visual Studio 是 Visual Studio 的一个组件。 若要安装 Blend�
 
 ## <a name="assets-window"></a>“资产”窗口
 
-**资产**窗口包含所有可用控件，类似于 Visual Studio 中的**工具箱**。 除控件外，**资产** 窗口还包括所有可添加到美工板的内容，例如样式、媒体、行为和效果等。 要打开**资产**窗口，请选择**视图** > **资产窗口**或按 **Ctrl+Alt+X**。
+“**资产**”窗口包含所有可用控件，类似于 Visual Studio 中的“**工具箱**”。 除控件外，“**资产**”窗口还包括所有可添加到美工板的内容，例如样式、媒体、行为和效果等。 要打开“**资产**”窗口，请选择“**视图**” > “**资产窗口**” 或按  **Ctrl+Alt+X**。
 
 ![Blend for Visual Studio 中的“资产”窗口](media/blend-assets-window.png)
 
-- 在**搜索资产**框中输入文本来筛选资产列表。
+- 在“**搜索资产**”框中输入文本来筛选资产列表。
 - 使用右上角的按钮在资产视图的网格模式和列表模式之间切换。
 
 ## <a name="objects-and-timeline-window"></a>“对象和时间线”窗口
 
-使用此窗口可在美工板上组织对象以及（如果需要）对它们进行动画处理。 若要打开**对象和时间线**窗口，请选择**查看** > **文档大纲**。 除了 Visual Studio 中的[“文档大纲”窗口](creating-a-ui-by-using-xaml-designer-in-visual-studio.md#document-outline-window)提供的功能外，Blend for Visual Studio 中的“对象和时间线”窗口的右侧具有时间线组合区域。 创建和编辑动画时使用时间线。
+使用此窗口可在美工板上组织对象以及（如果需要）对它们进行动画处理。 若要打开“**对象和时间线**”窗口，请选择“**查看**” > “**文档大纲**”。 除了 Visual Studio 中的[“文档大纲”窗口](creating-a-ui-by-using-xaml-designer-in-visual-studio.md#document-outline-window)提供的功能外，Blend for Visual Studio 中的“对象和时间线”窗口的右侧具有时间线组合区域。 创建和编辑动画时使用时间线。
 
 ![动画模式下的“对象和时间线”窗口](media/storyboard-timeline.png)
 
