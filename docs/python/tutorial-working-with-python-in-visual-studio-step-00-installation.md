@@ -31,11 +31,11 @@ ms.locfileid: "62431275"
     >[!Tip]
     > Community Edition 适用于个体开发者、课堂学习、学术研究和开放源代码开发。 对于其他用途，请安装 [Visual Studio Professional](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_gettingstarted) 或 [Visual Studio Enterprise](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_gettingstarted)。
 
-1. 安装程序提供工作负载列表，即一组用于特定开发领域的相关选项。 对于 Python，请选择 **Python 开发**工作负载，然后选择“安装”：
+1. 安装程序提供工作负载列表，即一组用于特定开发领域的相关选项。 对于 Python，请选择 **Python 开发** 工作负载，然后选择“安装”：
 
     ![Visual Studio 安装程序中的 Python 开发工作负载](media/installation-python-workload.png)
 
-1. 若要快速测试 Python 支持，请启动 Visual Studio，按 Alt+I 打开 Python 交互窗口，然后输入 `2+2`。 如果看不到输出 4，请重新检查步骤。
+1. 若要快速测试 Python 支持，请启动 Visual Studio，按 Alt+I 打开 Python 交互窗口，然后输入 `2+2`。 如果看不到输出 `4`，请重新检查步骤。
 
     ![通过交互窗口测试 Python](media/installation-interactive-test.png)
 
