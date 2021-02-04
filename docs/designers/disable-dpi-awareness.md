@@ -15,7 +15,7 @@ ms.locfileid: "91493304"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>在 Visual Studio 中禁用 DPI 感知
 
-Visual Studio 是一个每英寸点数 (DPI) 感知应用程序，因此其显示可以自动缩放。 如果某个应用程序声明自己是非 DPI 感知应用程序，则操作系统作将该应用程序作为位图缩放。 此行为也称为 DPI 虚拟化。 应用程序仍会认为它以 100% 缩放比例（即 96 dpi）运行。
+Visual Studio 是一个每英寸点数 (DPI) 感知应用程序，因此其显示可以自动缩放。 如果某个应用程序声明自己是非 DPI 感知应用程序，则操作系统将该应用程序作为位图缩放。 此行为也称为 DPI 虚拟化。 应用程序仍会认为它以 100% 缩放比例（即 96 dpi）运行。
 
 本文讨论 HDPI 监视器上 Windows 窗体设计器的限制，以及如何以非 DPI 感知进程的形式运行 Visual Studio。
 
