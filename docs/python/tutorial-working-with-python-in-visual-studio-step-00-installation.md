@@ -35,7 +35,7 @@ ms.locfileid: "99970538"
 
     ![Visual Studio 安装程序中的 Python 开发工作负载](media/installation-python-workload.png)
 
-1. 若要快速测试 Python 支持，请启动 Visual Studio，按 Alt+I 打开 Python 交互窗口，然后输入 `2+2`。 如果看不到输出 4，请重新检查步骤。
+1. 若要快速测试 Python 支持，请启动 Visual Studio，按 Alt+I 打开 Python 交互窗口，然后输入 `2+2`。 如果看不到输出 `4`，请重新检查步骤。
 
     ![通过交互窗口测试 Python](media/installation-interactive-test.png)
 
