@@ -202,7 +202,7 @@ c:\vslayout\vs_enterprise.exe --noweb --add Microsoft.VisualStudio.Workload.Mana
 | ----------------------- | --------------- |
 | cs-CZ | 捷克语 |
 | de-DE | 德语 |
-| zh-CN | 英语 |
+| en-US | 英语 |
 | es-ES | 西班牙语 |
 | fr-FR | 法语 |
 | it-IT | 意大利语 |
