@@ -66,6 +66,6 @@ ms.locfileid: "107296256"
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 5：添加标签引用。
+- 要转到下一个教程步骤，请参阅[步骤 5：添加标签引用](../ide/step-5-add-label-references.md)。
 
 - 要返回上一个教程步骤，请参阅[步骤 3：向每个标签分配一个随机图标](../ide/step-3-assign-a-random-icon-to-each-label.md)。

@@ -65,6 +65,6 @@ ms.locfileid: "107297101"
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 7：保持对可见  。
+- 要转到下一个教程步骤，请参阅[步骤 7：保持对可见](../ide/step-7-keep-pairs-visible.md)。
 
 - 要返回上一个教程步骤，请参阅[步骤 5：添加标签引用](../ide/step-5-add-label-references.md)。
