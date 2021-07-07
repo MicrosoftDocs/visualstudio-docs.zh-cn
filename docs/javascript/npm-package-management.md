@@ -140,7 +140,7 @@ npm 包显示在解决方案资源管理器中。 “npm”节点下的条目模
 
    ![将 package.json 添加到项目](../javascript/media/npm-add-package-json.png)
 
-   如果看不到列出的 npm 配置文件，则不会安装 Node.js 开发工具。 可以使用 Visual Studio 安装程序添加“Node.js 开发”工作负载  。 然后重复执行上一步骤。
+   如果看不到列出的 npm 配置文件，则没有安装 Node.js 开发工具。 可以使用 Visual Studio 安装程序添加“Node.js 开发”工作负载  。 然后重复执行上一步骤。
 
 1. 在 package.json 的 `dependencies` 或 `devDependencies` 部分中添加一个或多个 npm 包  。 例如，可以向文件添加以下内容：
 
